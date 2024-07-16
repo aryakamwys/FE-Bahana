@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+section {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+}
+.right img {
+  width: 270px;
+  height: 230px;
+  object-fit: contain;
+}
+
+.left {
+  width: 100%;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+.left::after {
+  content: " ";
+  width: 1px;
+  position: absolute;
+  height: 100vh;
+  background-color: #000000;
+  top: 0px;
+  left: 50%;
+}
+.right {
+  width: 100%;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+button {
+  border: none;
+  outline: none;
+}
+
+.reg-btn {
+  background-color: #d9e8e1;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.reg-btn a {
+  font-size: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.reg-btn .reg {
+  background-color: #005e32;
+  color: #fff;
+  padding: 4px 15px;
+  border-radius: 15px;
+}
+
+.log {
+  color: #002414;
+  padding: 4px 15px;
+  border-radius: 15px;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+  margin-top: -1rem;
+}
+.inputs input {
+  padding: 6px 5px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  font-size: 9px;
+  border: 0.7px solid rgba(32, 32, 32, 0.678);
+  font-weight: 500;
+  min-width: 97%;
+}
+.inputs input::placeholder {
+  font-weight: 500;
+  color: #5d5d5d;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 2px;
+  height: auto;
+  margin-top: -10px;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3px;
+  margin-left: 0;
+}
+
+.checkbox p {
+  font-size: 6px;
+  font-weight: 600;
+}
+.checkbox input {
+  width: 10px;
+  height: 10px;
+}
+
+.create-btn {
+  width: 100%;
+  background: #005e32;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  padding: 7px 0;
+}
+.create-btn p {
+  font-size: 9px;
+  font-weight: 500;
+  color: #fff;
+}

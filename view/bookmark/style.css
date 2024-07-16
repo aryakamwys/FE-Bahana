@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+li {
+  font-size: 9.5px;
+  font-weight: 500;
+}
+body {
+  height: auto;
+  width: 100%;
+}
+
+section {
+  margin: 5px 4rem;
+}
+
+section nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.342);
+  padding-bottom: 10px;
+  margin-top: 4px;
+}
+
+section nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+section .Title {
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: start;
+  align-items: center;
+  gap: 7px;
+}
+
+section .Title span {
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 1px;
+}
+
+section .Title h4 {
+  font-weight: 600;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+
+  border: 1px solid rgba(107, 106, 106, 0.158);
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  height: 130px;
+  overflow: hidden;
+  gap: 10px;
+  padding: 10px;
+}
+
+.left img {
+  object-fit: fill;
+  width: 100%;
+  height: 130px;
+}
+
+.left {
+  width: 200px;
+  height: 130px;
+}
+
+.right p {
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.bookmark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bookmark span {
+  font-size: 15px;
+  fill: black;
+  background-color: rgba(189, 185, 185, 0.158);
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.right .price {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 7px;
+}
+
+.right .first {
+  font-size: 15px;
+  font-weight: 700;
+  color: #005e32;
+}
+
+.right .price .side {
+  font-size: 11px;
+  color: rgba(189, 185, 185, 0.774);
+  text-decoration: line-through;
+}
