@@ -1,12 +1,14 @@
 import React from "react";
+import NavbarPembeli from "../components/specific/navbar";
+import HeaderHome from "../sections/home/header";
 
 const HomePage = () => {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the homepage of our website.</p>
+      <NavbarPembeli />
+      <HeaderHome />
     </div>
   );
-}
+};
 
 export default HomePage;
