@@ -59,7 +59,7 @@ const NavbarPembeli = () => {
             </li>
           </ul>
         </div>
-        <div className="order-2">
+        <div className="order-2 w-6 h-6">
           <img src={CartIcon} alt="cart" />
         </div>
       </div>
