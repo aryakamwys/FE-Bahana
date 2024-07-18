@@ -18,7 +18,7 @@ const CardProductRecomendations = ({ image, title, isActive }) => {
       };
 
   return (
-    <div>
+    <div className="px-3">
       <div className="max-w-sm bg-white border border-black rounded-xl">
         <div className="flex items-center justify-center">
           <img

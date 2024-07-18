@@ -22,6 +22,7 @@ module.exports = {
         gray: "#5D5D5D",
         white: "#FFFFFF",
         greenLight: "#D9E8E1",
+        yellow: '#FFAC33',
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

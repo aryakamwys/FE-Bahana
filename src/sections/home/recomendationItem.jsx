@@ -22,13 +22,11 @@ const Recomendation = () => {
   };
 
   return (
-    <div
-      className="flex flex-col items-start"
-      style={{ paddingLeft: 310, paddingTop: 63 }}
-    >
+    <div className="flex flex-col items-start" style={{ paddingTop: 63 }}>
       <div className="font-bold font-inter text-black" style={{ fontSize: 40 }}>
         Must-Have Items
       </div>
+      <div style={{ height: 60 }}></div>
       <div className="flex flex-row row-auto">
         <img src={ArrowLeft} alt="arrow left" onClick={handlePreviousCard} />
         <div style={{ width: 52 }}></div>
