@@ -21,7 +21,7 @@ const NavbarPembeli = () => {
                 style={{ width: 101, height: 44 }}
               >
                 <a
-                  href="#"
+                  href="/"
                   className="block text-primary700 py-2 px-3 text-gray-900 rounded"
                   aria-current="page"
                 >

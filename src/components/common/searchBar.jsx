@@ -28,7 +28,7 @@ const SearchBar = () => {
             placeholder="Search"
             value={searchTerm}
             onChange={handleInputChange}
-            className="flex-1 px-4 py-2 font-bold text-black font-inter rounded-none focus:outline-none"
+            className="flex-1 px-4 py-2 font-bold text-black font-inter rounded-none focus:outline-none placeholder-black"
           />
           <img src={SearchIcon} alt="search icon" />
         </span>
