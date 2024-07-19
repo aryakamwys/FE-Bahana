@@ -96,10 +96,11 @@ const OurProduct = () => {
         <div style={{ height: 40 }}></div>
         <div>
           <button
-            className="border border-black rounded-xl p-5 hover:bg-primary hover:text-greenLight text-primary font-bold font-inter"
+            className="border border-black rounded-xl p-5 hover:bg-primary hover:text-white text-primary font-bold font-inter"
             style={{ fontSize: 22 }}
+            onClick={() => (window.location.href = "/allproducts")}
           >
-            See Out Product
+            See Our Product
           </button>
         </div>
       </div>

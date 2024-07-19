@@ -26,7 +26,7 @@ const CardWishList = () => {
               Nama product loren ipsum ddee
             </div>
             <div
-              className="flex items-center justify-center bg-gray bg-opacity-50 rounded-full"
+              className="flex items-center justify-center bg-gray bg-opacity-15 rounded-full"
               style={{ width: 37, height: 37 }}
             >
               <img src={BookmarkFill} alt="bookmark fill" />
