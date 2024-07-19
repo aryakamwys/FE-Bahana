@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History Transaction Table</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="mx-[4rem] my-[5px]">
+      <nav
+        class="flex justify-between items-center py-[5px] mt-[4px] border-b-[0.5px] border-[#808080]"
+      >
+        <ul>
+          <li class="text-[9.5px] font-medium">Logo Website</li>
+        </ul>
+        <ul class="flex justify-center items-center gap-6">
+          <li class="text-[9.5px] font-medium">Harga Pasar</li>
+          <li class="text-[9.5px] font-medium">Riwayat Transaksi</li>
+          <li class="text-[9.5px] font-medium">Bookmark</li>
+          <li class="text-[9.5px] font-medium">Profile</li>
+        </ul>
+        <ul>
+          <span class="material-symbols-outlined text-[1rem]">
+            local_mall
+          </span>
+        </ul>
+      </nav>
+      <div class="flex items-center mt-[1rem] gap-[7px] mb-[1rem]">
+        <span
+          class="material-symbols-outlined text-[1rem] p-[1px] rounded-full border border-black"
+        >
+          arrow_back
+        </span>
+        <h4 class="font-medium">Riwayat Pesanan</h4>
+      </div>
+      <main class="mt-[1rem]">
+        <div class="border-b-[0.5px] gap-1 border-[#000000] mt-[1rem]">
+          <div
+            class="grid grid-cols-[200px,auto] items-center py-[4px] px-[6px] h-auto"
+          >
+            <div
+              class="w-[150px] h-[80px] flex items-center justify-center gap-[2px] ml-[5px]"
+            >
+              <img
+                src="../../auth/assets/login/wortel.png"
+                class="w-full h-[80px] object-fill"
+                alt=""
+              />
+            </div>
+            <div class="ml-[-2rem] mr-[10px]">
+              <h5 class="text-[1.1rem] font-medium">
+                Lorem ipsum dolor sit amet.
+              </h5>
+
+              <p class="font-medium text-[12px]">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Corrupti
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <a
+                    class="text-[11px] font-medium px-2 py-[1px] rounded-md border-black border"
+                  >
+                    5 kg
+                  </a>
+                  <p class="font-[700] md:text-[1rem] text-[#005E32]">
+                    Total Pesanan : Rp 100.000
+                  </p>
+                </div>
+                <button class="border border-black rounded-md py-[4px] px-6">
+                  <p class="text-[11px] font-medium">Nilai</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-[0.8rem]">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[14px]">
+                local_shipping
+              </span>
+
+              <p class="md:text-[1rem]">
+                Pesanan telah sampai diterima oleh yang bersangkutan
+              </p>
+            </div>
+            <span class="material-symbols-outlined"> chevron_right </span>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
