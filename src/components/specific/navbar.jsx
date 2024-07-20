@@ -4,10 +4,10 @@ import CartIcon from "../../assets/images/cart.svg";
 const NavbarPembeli = () => {
   return (
     <div>
-      <nav className="bg-white fixed">
+      <nav className="bg-white fixed pt-2">
         <div
-          className="max-w-screen-xl flex row-auto items-center justify-between border-b border-gray pb-5"
-          style={{ width: 1240 }}
+          className="max-w-screen-xl flex row-auto items-center justify-between border-b border-gray pb-5 pl-3 pr-3"
+          style={{ width: 1300 }}
         >
           <a href="/home">
             <div className="text-black text-h5 font-semibold font-inter">
@@ -33,7 +33,7 @@ const NavbarPembeli = () => {
                 style={{ width: 207, height: 44 }}
               >
                 <a
-                  href="#"
+                  href="/marketprice"
                   className="block text-primary700 py-2 px-3 text-gray-900 rounded"
                 >
                   Market Price
@@ -55,7 +55,7 @@ const NavbarPembeli = () => {
                 style={{ width: 95, height: 44 }}
               >
                 <a
-                  href="#"
+                  href="/profile"
                   className="block text-primary700 py-2 px-3 text-gray-900 rounded"
                 >
                   Profile
@@ -63,9 +63,12 @@ const NavbarPembeli = () => {
               </li>
             </ul>
           </div>
-          <div className="order-2 w-6 h-6">
+          <button
+            className="order-2 w-6 h-6"
+            onClick={() => (window.location.href = "/cart")}
+          >
             <img src={CartIcon} alt="cart" />
-          </div>
+          </button>
         </div>
       </nav>
       <div style={{ height: 50 }}></div>

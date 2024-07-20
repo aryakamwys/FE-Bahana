@@ -6,7 +6,7 @@ import Footer from "../components/specific/footer";
 
 const Wishlist = () => {
   return (
-    <div style={{ paddingLeft: 310, paddingRight: 310 }}>
+    <div style={{ paddingLeft: 310, paddingRight: 315 }}>
       <NavbarPembeli />
       <BackWishlist />
       <CardWishList />

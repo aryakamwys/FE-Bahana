@@ -10,6 +10,11 @@ import Wishlist from "./pages/wishlist";
 import AllProducts from "./pages/all_product";
 import DetailProduct from "./pages/detail_product";
 import ChatPage from "./pages/chat";
+import CartPage from "./pages/keranjang";
+import MarketPrice from "./pages/market_price";
+import DetailBlog from "./pages/detail_blog";
+import ProfilePage from "./pages/profile";
+import EditProfile from "./pages/edit_profile";
 
 function App() {
   return (
@@ -24,6 +29,11 @@ function App() {
           <Route path="/allproducts" element={<AllProducts />} />
           <Route path="/detailproduct" element={<DetailProduct />} />
           <Route path="/chat" element={<ChatPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/marketprice" element={<MarketPrice />} />
+          <Route path="/detailblog" element={<DetailBlog />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/editprofile" element={<EditProfile />} />
         </Routes>
       </BrowserRouter>
     </div>
