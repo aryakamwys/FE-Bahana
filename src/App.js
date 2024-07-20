@@ -15,6 +15,8 @@ import MarketPrice from "./pages/market_price";
 import DetailBlog from "./pages/detail_blog";
 import ProfilePage from "./pages/profile";
 import EditProfile from "./pages/edit_profile";
+import EditAlamat from "./pages/edit_alamat";
+import RiwayatPesanan from "./pages/riwayat_pesanan";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route path="/detailblog" element={<DetailBlog />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/editprofile" element={<EditProfile />} />
+          <Route path="/editalamat" element={<EditAlamat />} />
+          <Route path="/riwayatpesanan" element={<RiwayatPesanan />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,18 +1,18 @@
 import React from "react";
 import NavbarPembeli from "../components/specific/navbar";
-import HeaderEditProfile from "../sections/edit_profile/header";
-import ContentEditProfile from "../sections/edit_profile/content";
+import HeaderRiwayatPesanan from "../sections/riwayat_pesanan/header";
+import ContentRiwayatPesanan from "../sections/riwayat_pesanan/content";
 import Footer from "../components/specific/footer";
 
-const EditProfile = () => {
+const RiwayatPesanan = () => {
   return (
     <div style={{ paddingLeft: 310, paddingRight: 315 }}>
       <NavbarPembeli />
-      <HeaderEditProfile />
-      <ContentEditProfile />
+      <HeaderRiwayatPesanan />
+      <ContentRiwayatPesanan />
       <Footer />
     </div>
   );
 };
 
-export default EditProfile;
+export default RiwayatPesanan;

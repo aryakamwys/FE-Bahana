@@ -51,7 +51,10 @@ const ContentProfile = () => {
               </button>
             </div>
             <div className="py-1">
-              <button className="flex items-center w-full justify-center py-2 border border-black rounded-lg">
+              <button
+                className="flex items-center w-full justify-center py-2 border border-black rounded-lg"
+                onClick={() => (window.location.href = "/editalamat")}
+              >
                 <div
                   className="font-inter font-semibold text-black text-start"
                   style={{ fontSize: 18 }}
@@ -61,7 +64,10 @@ const ContentProfile = () => {
               </button>
             </div>
             <div className="py-1">
-              <button className="flex items-center w-full justify-center py-2 border border-black rounded-lg">
+              <button
+                className="flex items-center w-full justify-center py-2 border border-black rounded-lg"
+                onClick={() => (window.location.href = "/riwayatpesanan")}
+              >
                 <div
                   className="font-inter font-semibold text-black text-start"
                   style={{ fontSize: 18 }}
@@ -89,30 +95,35 @@ const ContentProfile = () => {
             placeholder="Difa Rindng Utari"
             type="text"
             readOnly={true}
+            width={766}
           />
           <TextfieldProfile
             title="Email"
             placeholder="bahanaaaaa@gmail.com"
             type="email"
             readOnly={true}
+            width={766}
           />
           <TextfieldProfile
             title="Contact Number"
             placeholder="628120929172"
             type="text"
             readOnly={true}
+            width={766}
           />
           <TextfieldProfile
             title="Tanggal Lahir"
             placeholder="12 Juli 2004"
             type="text"
             readOnly={true}
+            width={766}
           />
           <TextfieldProfile
             title="Password"
             placeholder="*************"
             type="password"
             readOnly={true}
+            width={766}
           />
         </div>
       </div>

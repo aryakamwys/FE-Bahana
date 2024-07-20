@@ -19,7 +19,7 @@ const ContainerCart = () => {
         <div className="flex felx-row items-center justify-around pl-10 pr-10 pt-7 pb-7">
           <button
             className={`w-10 h-10 border border-black rounded-lg flex items-center justify-center ${
-              isChecked ? "bg-black" : ""
+              isChecked ? "bg-primary" : ""
             }`}
             onClick={handleClick}
           >

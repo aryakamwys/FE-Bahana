@@ -75,6 +75,7 @@ const PetaniLoginPage = () => {
             <button
               className="flex items-center justify-center bg-primary text-white font-semibold font-inter rounded-full "
               style={{ borderRadius: 10, width: 563, height: 54, fontSize: 20 }}
+              onClick={() => (window.location.href = "/")}
             >
               Login
             </button>
