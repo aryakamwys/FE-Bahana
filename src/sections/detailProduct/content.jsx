@@ -88,7 +88,7 @@ const ContentDetailProduct = () => {
           </div>
           <div style={{ height: 15 }}></div>
           <div className="flex flex-row row-auto">
-            <button className="bg-primary rounded-xl px-20 py-5">
+            <button className="bg-primary rounded-xl px-20 py-5" onClick={() => (window.location.href = "/payment")}>
               <div
                 className="flex items-start justify-center text-white font-inter font-medium"
                 style={{ fontSize: 20 }}

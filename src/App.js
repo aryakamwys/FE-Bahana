@@ -18,6 +18,9 @@ import EditProfile from "./pages/edit_profile";
 import EditAlamat from "./pages/edit_alamat";
 import RiwayatPesanan from "./pages/riwayat_pesanan";
 import TrackingOrder from "./pages/tracking_order";
+import Payment from "./pages/payment";
+import PembayaranPage from "./sections/payment/pembayaran";
+import SuccessPayment from "./components/specific/success";
 
 function App() {
   return (
@@ -40,6 +43,9 @@ function App() {
           <Route path="/editalamat" element={<EditAlamat />} />
           <Route path="/riwayatpesanan" element={<RiwayatPesanan />} />
           <Route path="/trackingorder" element={<TrackingOrder />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/pembayaran" element={<PembayaranPage />} />
+          <Route path="/sucsess" element={<SuccessPayment />} />
         </Routes>
       </BrowserRouter>
     </div>

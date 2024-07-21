@@ -77,7 +77,10 @@ const ContentProfile = () => {
               </button>
             </div>
             <div className="py-1">
-              <button className="flex items-center w-full justify-center py-2 border border-black rounded-lg">
+              <button
+                className="flex items-center w-full justify-center py-2 border border-black rounded-lg"
+                onClick={() => (window.location.href = "/trackingorder")}
+              >
                 <div
                   className="font-inter font-semibold text-black text-start"
                   style={{ fontSize: 18 }}

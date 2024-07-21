@@ -95,6 +95,7 @@ const stepsVertical = [
 const ContentTrackingOrder = ({ currentStep }) => {
   return (
     <div className="flex flex-col">
+      <div style={{ height: 40 }}></div>
       <div className="flex justify-between items-center w-full border border-gray border-opacity-50 rounded-xl pt-9 pb-9">
         {steps.map((step, index) => (
           <div
