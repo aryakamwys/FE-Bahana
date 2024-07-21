@@ -17,6 +17,7 @@ import ProfilePage from "./pages/profile";
 import EditProfile from "./pages/edit_profile";
 import EditAlamat from "./pages/edit_alamat";
 import RiwayatPesanan from "./pages/riwayat_pesanan";
+import TrackingOrder from "./pages/tracking_order";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/editprofile" element={<EditProfile />} />
           <Route path="/editalamat" element={<EditAlamat />} />
           <Route path="/riwayatpesanan" element={<RiwayatPesanan />} />
+          <Route path="/trackingorder" element={<TrackingOrder />} />
         </Routes>
       </BrowserRouter>
     </div>

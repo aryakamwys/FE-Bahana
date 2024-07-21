@@ -4,7 +4,7 @@ import CartIcon from "../../assets/images/cart.svg";
 const NavbarPembeli = () => {
   return (
     <div>
-      <nav className="bg-white fixed pt-2">
+      <nav className="bg-white fixed pt-2 z-50">
         <div
           className="max-w-screen-xl flex row-auto items-center justify-between border-b border-gray pb-5 pl-3 pr-3"
           style={{ width: 1300 }}

@@ -62,7 +62,7 @@ const ContainerRiwayatPesanan = () => {
               Pesanan telah sampai diterima oleh yang bersangkutan
             </div>
           </div>
-          <button>
+          <button onClick={() => (window.location.href = "/trackingorder")}>
             <img src={ArrowNext} alt="next" />
           </button>
         </div>
