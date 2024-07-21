@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History Transaction Table</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="mx-[4rem] my-[5px]">
+      <nav
+        class="flex justify-between items-center py-[5px] mt-[4px] border-b-[0.5px] border-[#808080]"
+      >
+        <ul>
+          <li class="lg:text-[1.2rem] text-[12px] font-medium">Logo Website</li>
+        </ul>
+        <ul class="flex justify-center items-center gap-6">
+          <li class="lg:text-[1.2rem] text-[12px] font-medium">Harga Pasar</li>
+          <li class="lg:text-[1.2rem] text-[12px] font-medium">
+            Riwayat Transaksi
+          </li>
+          <li class="lg:text-[1.2rem] text-[12px] font-medium">Bookmark</li>
+          <li class="lg:text-[1.2rem] text-[12px] font-medium">Profile</li>
+        </ul>
+        <ul>
+          <span class="material-symbols-outlined lg:text-[2rem] text-[1.1rem]">
+            local_mall
+          </span>
+        </ul>
+      </nav>
+      <div class="flex items-center mt-[1rem] gap-[1rem] mb-[1rem]">
+        <span
+          class="material-symbols-outlined text-[1rem] lg:text-[2rem] p-[1px] rounded-full border border-black"
+        >
+          arrow_back
+        </span>
+        <h4 class="font-medium lg:text-[2rem]">Riwayat Pesanan</h4>
+      </div>
+      <main>
+        <!-- tracking pertama -->
+        <aside
+          class="p-6 px-10 border border-black rounded-lg h-auto overflow-hidden"
+        >
+          <div class="flex items-center justify-between overflow-hidden">
+            <ul class="flex flex-col items-center justify-center relative">
+              <li
+                class="p-3 bg-[#003E22] rounded-full flex justify-center items-center after:content[''] after:absolute relative lg:after:w-[450px] after:-z-50 after:h-[1px] md:after:w-[160px] after:bg-[#004E2A] after:left-[10%]"
+              >
+                <span
+                  class="material-symbols-outlined lg:text-[2rem] text-[1.6rem] text-white"
+                >
+                  list_alt
+                </span>
+              </li>
+              <p class="font-medium w-[60px]">Pesanan Dibuat</p>
+            </ul>
+            <ul class="flex flex-col items-center justify-center">
+              <li
+                class="p-3 bg-[#003E22] rounded-full flex justify-center items-center after:content[''] after:absolute relative lg:after:w-[450px] after:-z-50 after:h-[1px] md:after:w-[160px] after:bg-[#004E2A] after:left-[10%]"
+              >
+                <span
+                  class="material-symbols-outlined lg:text-[2rem] text-white text-[1.6rem]"
+                >
+                  pace
+                </span>
+              </li>
+              <p class="font-medium w-[60px]">Pesanan Dibuat</p>
+            </ul>
+            <ul class="flex flex-col items-center justify-center">
+              <li
+                class="p-3 bg-[#003E22] rounded-full flex justify-center items-center after:content[''] after:absolute relative lg:after:w-[450px] after:-z-50 after:h-[1px] md:after:w-[160px] after:bg-[#004E2A] after:left-[10%]"
+              >
+                <span
+                  class="material-symbols-outlined lg:text-[2rem] text-white text-[1.6rem]"
+                >
+                  local_shipping
+                </span>
+              </li>
+              <p class="font-medium w-[60px]">Pesanan Dibuat</p>
+            </ul>
+            <ul class="flex flex-col items-center justify-center">
+              <li
+                class="p-3 bg-[#003E22] rounded-full flex justify-center items-center after:content[''] after:absolute relative lg:after:w-[410px] md:after:w-[160px] after:-z-50 after:h-[1px] after:bg-[#004E2A] after:left-[10%]"
+              >
+                <span
+                  class="material-symbols-outlined lg:text-[2rem] text-white text-[1.6rem]"
+                >
+                  list_alt
+                </span>
+              </li>
+              <p class="font-medium w-[60px]">Pesanan Dibuat</p>
+            </ul>
+            <ul class="flex flex-col items-center justify-center">
+              <li
+                class="p-3 bg-[#003E22] rounded-full flex justify-center items-center"
+              >
+                <span
+                  class="material-symbols-outlined lg:text-[2rem] text-white text-[1.6rem]"
+                >
+                  check
+                </span>
+              </li>
+              <p class="font-medium w-[60px]">Pesanan Dibuat</p>
+            </ul>
+          </div>
+        </aside>
+        <!-- lacak dan delivered -->
+        <div
+          class="flex flex-wrap items-stretch mt-[1.5rem] h-auto gap-[2.5rem] w-full"
+        >
+          <!-- LACAk -->
+          <div
+            class="lg:border lg:rounded-lg lg:border-black py-4 px-5 lg:w-[25rem] md:w-full mb-6"
+          >
+            <ul class="border-b-[1px] border-black pb-3 mb-3">
+              <h2 class="md:text-[1.5rem] text-[1.1rem] font-medium">Lacak</h2>
+            </ul>
+            <div
+              class="sm:flex sm:flex-wrap sm:gap-[2rem] sm:items-center sm:justify-items-stretch lg:block"
+            >
+              <ul class="mb-6">
+                <li class="text-[#888888] font-medium lg:text-[1rem]">
+                  Nomor Resi
+                </li>
+                <h1 class="text-[1.2rem] text-black font-medium">
+                  SPXID091232829212
+                </h1>
+              </ul>
+              <ul class="mb-6">
+                <li class="text-[#888888] font-medium lg:text-[1rem]">
+                  Pengirim
+                </li>
+                <h1 class="text-[1.2rem] text-black font-medium">
+                  Nama Petani
+                </h1>
+              </ul>
+              <ul class="mb-6">
+                <li class="text-[#888888] font-medium lg:text-[1rem]">
+                  Tanggal Pengiriman
+                </li>
+                <h1 class="text-[1.2rem] text-black font-medium">
+                  17 Juli 2005
+                </h1>
+              </ul>
+              <ul class="mb-6">
+                <li class="text-[#888888] font-medium lg:text-[1rem]">
+                  Estimasi Tiba
+                </li>
+                <h1 class="text-[1.2rem] text-black font-medium">
+                  17 Juli - 20 Juli
+                </h1>
+              </ul>
+              <ul class="mb-6">
+                <li class="text-[#888888] font-medium lg:text-[1rem]">
+                  Pembeli
+                </li>
+                <h1 class="text-[1.2rem] text-black font-medium">
+                  Difa Rindang
+                </h1>
+              </ul>
+            </div>
+          </div>
+          <!-- DELIVERED -->
+          <div class="flex-1 border rounded-lg border-black py-4 px-5">
+            <ul class="border-b-[1px] border-black pb-3 mb-3">
+              <h2 class="md:text-[1.5rem] text-[1.1rem] font-medium">
+                Delivered
+              </h2>
+            </ul>
+            <!-- TRACKKINGGG -->
+            <div>
+              <!-- TRACK 1 -->
+              <div class="flex items-center gap-5 mb-[2.5rem]">
+                <li class="list-none">
+                  <p class="text-[13px] text-black">28 Jun</p>
+                  <p class="text-[13px] text-black">13:21</p>
+                </li>
+                <ul class="flex flex-col items-center justify-center relative">
+                  <li
+                    class="w-[50px] h-[50px] bg-[#003E22] rounded-full flex justify-center items-center after:absolute relative lg:after:h-[70px] lg:after:w-[1px] md:after:w-[55px] after:-z-50 after:h-[1px] lg:rotate-0 md:rotate-90 md:after:left-[90%] md:after:top-[50%] after:bg-[#004E2A] lg:after:left-[50%] lg:after:top-[90%]"
+                  >
+                    <span
+                      class="material-symbols-outlined md:text-[1.5rem] text-white"
+                    >
+                      list_alt
+                    </span>
+                  </li>
+                </ul>
+                <h2 class="font-medium lg:text-[1.3rem] md:text-[1rem]">
+                  Terkirim
+                </h2>
+              </div>
+              <div class="flex items-center gap-5 mb-[2.5rem]">
+                <li class="list-none">
+                  <p class="text-[13px] text-black">28 Jun</p>
+                  <p class="text-[13px] text-black">13:21</p>
+                </li>
+                <ul class="flex flex-col items-center justify-center relative">
+                  <li
+                    class="w-[50px] h-[50px] bg-[#003E22] rounded-full flex justify-center items-center after:absolute relative lg:after:h-[70px] lg:after:w-[1px] md:after:w-[55px] after:-z-50 after:h-[1px] lg:rotate-0 md:rotate-90 md:after:left-[90%] md:after:top-[50%] after:bg-[#004E2A] lg:after:left-[50%] lg:after:top-[90%]"
+                  >
+                    <span
+                      class="material-symbols-outlined md:text-[1.5rem] text-[1.1rem] text-white"
+                    >
+                      list_alt
+                    </span>
+                  </li>
+                </ul>
+                <h2 class="font-medium lg:text-[1.3rem] md:text-[1rem]">
+                  Pesanan telah sampai di lokasi transit Hub terakhir Daan Mogot
+                  Hub
+                </h2>
+              </div>
+              <div class="flex items-center gap-5 mb-[2.5rem]">
+                <li class="list-none">
+                  <p class="text-[13px] text-black">28 Jun</p>
+                  <p class="text-[13px] text-black">13:21</p>
+                </li>
+                <ul class="flex flex-col items-center justify-center relative">
+                  <li
+                    class="w-[40px] h-[40px] bg-[#003E22] md:ml-[4px] rounded-full flex justify-center items-center after:absolute relative lg:after:h-[70px] lg:after:w-[1px] md:after:w-[55px] after:-z-50 after:h-[1px] lg:rotate-0 md:rotate-90 md:after:left-[90%] md:after:top-[50%] after:bg-[#004E2A] lg:after:left-[50%] lg:after:top-[90%]"
+                  >
+                    <span class="w-[40px] h-[40px] bg-[#003E22] rounded-full">
+                    </span>
+                  </li>
+                </ul>
+                <h2 class="font-medium lg:text-[1.3rem] md:text-[1rem]">
+                  Pesanan telah sampai di lokasi sortir Cakung DC
+                </h2>
+              </div>
+              <div class="flex items-center gap-5 mb-[2.5rem]">
+                <li class="list-none">
+                  <p class="text-[13px] text-black">28 Jun</p>
+                  <p class="text-[13px] text-black">13:21</p>
+                </li>
+                <ul class="flex flex-col items-center justify-center relative">
+                  <li
+                    class="w-[40px] h-[40px] bg-[#003E22] rounded-full md:ml-[4px] flex justify-center items-center after:absolute relative lg:after:h-[70px] lg:after:w-[1px] md:after:w-[55px] after:-z-50 after:h-[1px] lg:rotate-0 md:rotate-90 md:after:left-[90%] md:after:top-[50%] after:bg-[#004E2A] lg:after:left-[50%] lg:after:top-[90%]"
+                  >
+                    <span class="w-[40px] h-[40px] bg-[#003E22] rounded-full">
+                    </span>
+                  </li>
+                </ul>
+                <h2 class="font-medium lg:text-[1.3rem] md:text-[1rem]">
+                  Pesanan telah sampai di lokasi sortir Bandung DC
+                </h2>
+              </div>
+              <div class="flex items-center gap-5 mb-[2.5rem]">
+                <li class="list-none">
+                  <p class="text-[13px] text-black">28 Jun</p>
+                  <p class="text-[13px] text-black">13:21</p>
+                </li>
+                <ul class="flex flex-col items-center justify-center relative">
+                  <li
+                    class="w-[40px] h-[40px] bg-[#003E22] rounded-full md:ml-[4px] flex justify-center items-center after:absolute relative lg:after:h-[70px] lg:after:w-[1px] md:after:w-[55px] after:-z-50 after:h-[1px] lg:rotate-0 md:rotate-90 md:after:left-[90%] md:after:top-[50%] after:bg-[#004E2A] lg:after:left-[50%] lg:after:top-[90%]"
+                  >
+                    <span class="w-[40px] h-[40px] bg-[#003E22] rounded-full">
+                    </span>
+                  </li>
+                </ul>
+                <h2 class="font-medium lg:text-[1.3rem] md:text-[1rem]">
+                  Pesanan sedang diproses di pusat penyortiran
+                </h2>
+              </div>
+              <div class="flex items-center gap-5 mb-[2.5rem]">
+                <li class="list-none">
+                  <p class="text-[13px] text-black">28 Jun</p>
+                  <p class="text-[13px] text-black">13:21</p>
+                </li>
+                <ul class="flex flex-col items-center justify-center relative">
+                  <li
+                    class="w-[40px] h-[40px] bg-[#003E22] rounded-full md:ml-[4px] flex justify-center items-center after:absolute relative lg:after:h-[70px] lg:after:w-[1px] md:after:w-[55px] after:-z-50 after:h-[1px] lg:rotate-0 md:rotate-90 md:after:left-[90%] md:after:top-[50%] after:bg-[#004E2A] lg:after:left-[50%] lg:after:top-[90%]"
+                  >
+                    <span class="w-[40px] h-[40px] bg-[#003E22] rounded-full">
+                    </span>
+                  </li>
+                </ul>
+                <h2 class="font-medium lg:text-[1.3rem] md:text-[1rem]">
+                  Pesanan telah diserahkan ke jasa kirim
+                </h2>
+              </div>
+              <div class="flex items-center gap-5 mb-[2.5rem]">
+                <li class="list-none">
+                  <p class="text-[13px] text-black">28 Jun</p>
+                  <p class="text-[13px] text-black">13:21</p>
+                </li>
+                <ul class="flex flex-col items-center justify-center relative">
+                  <li
+                    class="w-[50px] h-[50px] bg-[#003E22] rounded-full flex justify-center items-center after:absolute relative lg:after:h-[70px] lg:after:w-[1px] md:after:w-[55px] after:-z-50 after:h-[1px] lg:rotate-0 md:rotate-90 md:after:left-[90%] md:after:top-[50%] after:bg-[#004E2A] lg:after:left-[50%] lg:after:top-[90%]"
+                  >
+                    <span
+                      class="material-symbols-outlined md:text-[1.5rem] text-[1.1rem] text-white"
+                    >
+                      list_alt
+                    </span>
+                  </li>
+                </ul>
+                <h2 class="font-medium lg:text-[1.3rem] md:text-[1rem]">
+                  Sedang Dikemas
+                </h2>
+              </div>
+              <div class="flex items-center gap-5 mb-[2.5rem]">
+                <li class="list-none">
+                  <p class="text-[13px] text-black">28 Jun</p>
+                  <p class="text-[13px] text-black">13:21</p>
+                </li>
+                <ul class="flex flex-col items-center justify-center relative">
+                  <li
+                    class="w-[50px] h-[50px] bg-[#003E22] rounded-full flex justify-center items-center"
+                  >
+                    <span
+                      class="material-symbols-outlined md:text-[1.5rem] text-[1.1rem] text-white"
+                    >
+                      list_alt
+                    </span>
+                  </li>
+                </ul>
+                <h2 class="font-medium lg:text-[1.3rem] md:text-[1rem]">
+                  Pesan Dibuat
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
