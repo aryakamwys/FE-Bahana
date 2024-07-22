@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import UploadProductField from "../../components/common/upload_product_field";
 import AddProductIcon from "../../assets/images/add_product.svg";
 import AddImagesIcon from "../../assets/images/add_image2.png";
 
 const ContentUploadProduct = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const fileInputRef = useRef(null);
+
+  const handleButtonClick = () => {
+    fileInputRef.current.click();
+  };
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedFile(file);
+      // Optionally, you can handle the file upload here
+      console.log(file);
+    }
+  };
   return (
     <div>
       <div className="py-3">
@@ -46,6 +61,7 @@ const ContentUploadProduct = () => {
           <button
             className="w-full flex flex-col items-center justify-center border-4 border-dashed border-gray border-opacity-30 rounded-xl"
             style={{ height: 300 }}
+            onClick={handleButtonClick}
           >
             <img src={AddImagesIcon} alt="add_image" />
             <div
@@ -55,6 +71,17 @@ const ContentUploadProduct = () => {
               Browser or Dekstop
             </div>
           </button>
+          <input
+            type="file"
+            ref={fileInputRef}
+            style={{ display: "none" }}
+            onChange={handleFileChange}
+          />
+          {selectedFile && (
+            <div className="mt-2 text-sm text-gray-600">
+              Selected file: {selectedFile.name}
+            </div>
+          )}
         </div>
       </div>
       <div className="py-3">

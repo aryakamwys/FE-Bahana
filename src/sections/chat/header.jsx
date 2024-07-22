@@ -8,7 +8,7 @@ const HeaderChat = () => {
   return (
     <div>
       <div style={{ height: 20 }}></div>
-      <div className="flex flex-row row-auto">
+      <div className="hidden lg:flex flex-row row-auto">
         <button
           className="flex items-center justify-center border border-black rounded-full"
           style={{ width: 40, height: 40 }}

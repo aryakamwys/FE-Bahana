@@ -8,132 +8,101 @@ import twitterIcon from "../../assets/images/twitter_footer.svg";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="bg-white">
       <div style={{ height: 120 }}></div>
-      <footer className="flex flex-row row-auto justify-between items-start">
-        <div className="flex flex-col text-start" style={{ width: 400 }}>
-          <div
-            className="font-inter text-black font-bold"
-            style={{ fontSize: 30, lineHeight: 3 }}
-          >
-            Logo Website
+      <footer className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row md:justify-between items-start">
+          <div className="flex flex-col text-start" style={{ width: 400 }}>
+            <div
+              className="font-inter text-black font-bold text-2xl mb-2"
+              style={{ lineHeight: 1 }}
+            >
+              Logo Website
+            </div>
+            <div
+              className="font-normal font-inter text-gray opacity-50"
+              style={{ fontSize: 16 }}
+            >
+              The website specializes in reducing farmers’ dependency on
+              middlemen.
+            </div>
           </div>
-          <div
-            className="font-normal font-inter text-gray opacity-50"
-            style={{ fontSize: 16 }}
-          >
-            The website specializes in reducing farmers’ dependency on
-            middlemen.
+          <div className="flex flex-col md:flex-row md:items-start md:justify-start md:content-start mt-8 md:mt-0 w-full md:w-auto">
+            <div className="w-full md:w-auto md:mr-4">
+              <div
+                className="font-inter text-black font-bold text-lg mb-2"
+                style={{ lineHeight: 1 }}
+              >
+                Product
+              </div>
+              <a href="#">
+                <div
+                  className="text-gray opacity-50 font-inter"
+                  style={{ fontSize: 16 }}
+                >
+                  Must-Have Items
+                </div>
+              </a>
+              <a href="#">
+                <div
+                  className="text-gray opacity-50 font-inter"
+                  style={{ fontSize: 16 }}
+                >
+                  Produk Utama
+                </div>
+              </a>
+              <a href="#">
+                <div
+                  className="text-gray opacity-50 font-inter"
+                  style={{ fontSize: 16 }}
+                >
+                  Wishlist
+                </div>
+              </a>
+            </div>
+            <div className="w-full md:w-auto md:ml-4">
+              <div
+                className="font-inter text-black font-bold text-lg mb-2"
+                style={{ lineHeight: 1 }}
+              >
+                Information
+              </div>
+              <a href="#">
+                <div
+                  className="text-gray opacity-50 font-inter"
+                  style={{ fontSize: 16 }}
+                >
+                  Term of use
+                </div>
+              </a>
+              <a href="#">
+                <div
+                  className="text-gray opacity-50 font-inter"
+                  style={{ fontSize: 16 }}
+                >
+                  Blog
+                </div>
+              </a>
+              <a href="#">
+                <div
+                  className="text-gray opacity-50 font-inter"
+                  style={{ fontSize: 16 }}
+                >
+                  Cookies Policy
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col items-start" style={{ width: 130 }}>
-          <div
-            className="font-inter text-black font-bold"
-            style={{ fontSize: 16, lineHeight: 2.8 }}
-          >
-            Product
-          </div>
-          <a href="#">
+          <div className="flex flex-col items-start mt-8 md:mt-0">
             <div
-              className="text-gray opacity-50 font-inter"
-              style={{ fontSize: 16, lineHeight: 1.9 }}
-            >
-              Must-Have Items
+              className="text-black1 font-inter font-bold text-lg mb-2"
+              style={{ lineHeight: 1 }}
+            >Payment Methods</div>
+            <div className="flex flex-row row-auto">
+              <img src={qrisIcon} alt="QRIS" />
+              <div style={{ width: 39 }}></div>
+              <img src={bankIcon} alt="QRIS" />
             </div>
-          </a>
-          <a href="#">
-            <div
-              className="text-gray opacity-50 font-inter"
-              style={{ fontSize: 16, lineHeight: 1.9 }}
-            >
-              Produk Utama
-            </div>
-          </a>
-          <a href="#">
-            <div
-              className="text-gray opacity-50 font-inter"
-              style={{ fontSize: 16, lineHeight: 1.9 }}
-            >
-              Wishlist
-            </div>
-          </a>
-        </div>
-        <div className="flex flex-col items-start" style={{ width: 130 }}>
-          <div
-            className="font-inter text-black font-bold"
-            style={{ fontSize: 16, lineHeight: 2.8 }}
-          >
-            Information
-          </div>
-          <a href="#">
-            <div
-              className="text-gray opacity-50 font-inter"
-              style={{ fontSize: 16, lineHeight: 1.9 }}
-            >
-              Term of use
-            </div>
-          </a>
-          <a href="#">
-            <div
-              className="text-gray opacity-50 font-inter"
-              style={{ fontSize: 16, lineHeight: 1.9 }}
-            >
-              Blog
-            </div>
-          </a>
-          <a href="#">
-            <div
-              className="text-gray opacity-50 font-inter"
-              style={{ fontSize: 16, lineHeight: 1.9 }}
-            >
-              Cookies Policy
-            </div>
-          </a>
-        </div>
-        <div className="flex flex-col items-start" style={{ width: 130 }}>
-          <div
-            className="font-inter text-black font-bold"
-            style={{ fontSize: 16, lineHeight: 2.8 }}
-          >
-            Company
-          </div>
-          <a href="/aboutus">
-            <div
-              className="text-gray opacity-50 font-inter"
-              style={{ fontSize: 16, lineHeight: 1.9 }}
-            >
-              About us
-            </div>
-          </a>
-          <a href="#">
-            <div
-              className="text-gray opacity-50 font-inter"
-              style={{ fontSize: 16, lineHeight: 1.9 }}
-            >
-              Contact us
-            </div>
-          </a>
-          <a href="#">
-            <div
-              className="text-gray opacity-50 font-inter"
-              style={{ fontSize: 16, lineHeight: 1.9 }}
-            >
-              TaniDirect
-            </div>
-          </a>
-        </div>
-
-        <div className="flex flex-col items-start">
-          <div
-            className="text-black1 font-inter font-bold"
-            style={{ fontSize: 16, lineHeight: 2.8 }}
-          >
-            Payment Methods
-          </div>
-          <div className="flex flex-row row-auto ">
-            <img src={qrisIcon} alt="QRIS" />
-            <div style={{ width: 39 }}></div>
-            <img src={bankIcon} alt="QRIS" />
           </div>
         </div>
       </footer>

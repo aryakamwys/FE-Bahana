@@ -13,18 +13,19 @@ const PembeliRegisterPage = () => {
   return (
     <div
       id="login"
-      className="flex flex-row items-center justify-evenly bg-no-repeat min-h-screen bg-neutral"
-      
+      className="flex flex-col lg:flex-row items-center justify-evenly bg-no-repeat min-h-screen bg-neutral"
     >
-      <div className="flex items-center">
+      <div className="hidden lg:flex items-center lg:mb-0">
         <img src={LoginImage} alt="login-image" />
       </div>
       <Divider
         orientation="vertical"
         flexItem
-        className="bg-black3 opacity-50"
+        className="hidden lg:block bg-black3 opacity-50"
       />
-      <div className="flex flex-col items-center justify-center" style={{paddingBottom:25}}>
+      <div
+        className="flex flex-col items-center justify-center md:mt-24 md:mb-24 mb-28 pb-10 lg:pb-6"
+      >
         <div
           className="flex items-center justify-around bg-greenLight rounded-full p-3"
           style={{ width: 329, height: 59 }}
@@ -47,51 +48,58 @@ const PembeliRegisterPage = () => {
           </div>
         </div>
         <div
-          className="font-semibold font-inter text-black"
-          style={{ fontSize: 60 }}
+          className="font-semibold font-inter text-black text-center text-3xl lg:text-6xl  mt-10"
         >
           Create your account
         </div>
-        <div className="flex flex-col">
+        <div className="md:flex lg:hidden md:justify-center items-center py-4 lg:py-0 lg:mb-0">
+            <img src={LoginImage} className="w-60 h-40 md:w-72 md:h-48" alt="login-image" />
+          </div>
+        <div className="relative md:mt-0 lg:mt-10">
           <div>
-            <Textfield
-              id="username"
-              type="text"
-              placeholder="Username"
-              className="bg-white border border-gray font-inter text-gray font-semibold text-h5 pl-5"
-              style={{ width: 563, height: 60, borderRadius: 10 }}
+          <Textfield
+              id={"username"}
+              type={"text"}
+              placeholder={"Username"}
+              className={
+                "h-10 lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] lg:w-[563px]"
+              }
             />
             <div style={{ height: 15 }}></div>
             <Textfield
-              id="email"
-              type="email"
-              placeholder="Email"
-              className="bg-white border border-gray font-inter text-gray font-semibold text-h5 pl-5"
-              style={{ width: 563, height: 60, borderRadius: 10 }}
+              id={"email"}
+              type={"email"}
+              placeholder={"Email"}
+              className={
+                "h-10 lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] lg:w-[563px]"
+              }
             />
             <div style={{ height: 15 }}></div>
             <Textfield
-              id="phone"
-              type="text"
-              placeholder="Phone"
-              className="bg-white border border-gray font-inter text-gray font-semibold text-h5 pl-5"
-              style={{ width: 563, height: 60, borderRadius: 10 }}
+              id={"phone"}
+              type={"text"}
+              placeholder={"Phone"}
+              className={
+                "h-10 lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] lg:w-[563px]"
+              }
             />
             <div style={{ height: 15 }}></div>
             <Textfield
-              id="password"
-              type="password"
-              placeholder="Password"
-              className="bg-white border border-gray font-inter text-gray font-semibold text-h5 pl-5"
-              style={{ width: 563, height: 60, borderRadius: 10 }}
+              id={"password"}
+              type={"password"}
+              placeholder={"Password"}
+              className={
+                "h-10 lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] lg:w-[563px]"
+              }
             />
             <div style={{ height: 15 }}></div>
             <Textfield
-              id="password"
-              type="password"
-              placeholder="Confirm Password"
-              className="bg-white border border-gray font-inter text-gray font-semibold text-h5 pl-5"
-              style={{ width: 563, height: 60, borderRadius: 10 }}
+              id={"password"}
+              type={"password"}
+              placeholder={"Confirm Password"}
+              className={
+                "h-10 lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] lg:w-[563px]"
+              }
             />
           </div>
           <div style={{ height: 20 }}></div>
@@ -118,8 +126,7 @@ const PembeliRegisterPage = () => {
               </button>
               <div style={{ width: 10 }}></div>
               <div
-                className="font-inter font-medium text-black"
-                style={{ fontSize: 17 }}
+                className="font-inter font-medium text-black text-xs lg:text-base"
               >
                 I agree with our{" "}
                 <span className="font-semibold">
@@ -132,13 +139,12 @@ const PembeliRegisterPage = () => {
         </div>
 
         <div>
-          <button
-            className="flex items-center justify-center bg-primary text-white font-semibold font-inter rounded-full "
-            style={{ borderRadius: 10, width: 563, height: 54, fontSize: 20 }}
-            onClick={() => (window.location.href = "/home")}
-          >
-            Register
-          </button>
+        <button
+              className="h-10 lg:h-14 flex items-center justify-center rounded-lg lg:rounded-xl bg-primary text-white font-semibold font-inter text-sm lg:text-h5 w-[350px] lg:w-[563px]"
+              onClick={() => (window.location.href = "/home")}
+            >
+              Create Account
+            </button>
         </div>
         <div style={{ height: 30 }}></div>
       </div>

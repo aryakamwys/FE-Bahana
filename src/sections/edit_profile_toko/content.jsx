@@ -1,63 +1,31 @@
 import React from "react";
 
-import AddImageIcon from "../../assets/images/add_image.svg";
 import TextfieldProfile from "../../components/common/textfieldProfile";
 
 const ContentEditProfileToko = () => {
   return (
     <div>
-      <div style={{ height: 50 }}></div>
-      <button className="flex flex-col items-start">
-        <div
-          className="font-inter font-semibold text-black"
-          style={{ fontSize: 26 }}
-        >
-          Gambar Toko
-        </div>
-        <div className="h-3"></div>
-        <div
-          className="w-40 h-40 flex items-center justify-center border-2 rounded-xl"
-          style={{
-            borderColor: "#ddd",
-            borderStyle: "dashed",
-            borderRadius: "0.75rem",
-          }}
-        >
-          <div className="flex flex-col w-20 h-20 items-center">
-            <div>
-              <img src={AddImageIcon} alt="add_image" />
-            </div>
-            <div style={{ height: 10 }}></div>
-            <div>Tambahkan Gambar</div>
-          </div>
-        </div>
-      </button>
       <TextfieldProfile
         title={"Nama Toko"}
         placeholder={"Low Range"}
         type={"text"}
-        width={1300}
+        className={
+          "font-inter font-medium text-[14px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[1240px]"
+        }
         readOnly={false}
       />
       <div className="py-3">
         <div className="flex flex-col items-start">
-          <div
-            className="font-inter font-semibold text-black"
-            style={{ fontSize: 26 }}
-          >
+          <div className="font-inter font-semibold text-black text-[14px] lg:text-[26px]">
             Deskripsi Toko
           </div>
           <div style={{ height: 7 }}></div>
-          <form
-            className="flex items-center justify-start"
-            style={{ width: 1300 }}
-          >
+          <form className="flex items-center justify-start ">
             <span className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 w-full ring-opacity-50 focus:ring-gray">
               <textarea
-                placeholder="Toko ini menjual blablbalba"
-                className="font-inter font-medium focus:outline-none w-full"
-                style={{ fontSize: 24, height: 171, resize: "none" }}
-                readOnly={true}
+                placeholder="Toko ini menjual blablabla."
+                className="font-inter font-medium focus:outline-none text-[12px] lg:text-[24px] h-[67px] lg:h-[171px] resize-none w-[350px] lg:w-[1240px]"
+                readOnly={false}
               />
             </span>
           </form>
@@ -67,7 +35,9 @@ const ContentEditProfileToko = () => {
         title={"Email"}
         placeholder={"difautari@gmail.com"}
         type={"email"}
-        width={1300}
+        className={
+          "font-inter font-medium text-[14px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[1240px]"
+        }
         readOnly={false}
       />
       <TextfieldProfile
@@ -75,27 +45,25 @@ const ContentEditProfileToko = () => {
         placeholder="628120929172"
         type="text"
         readOnly={false}
-        width={1300}
+        className={
+          "font-inter font-medium text-[14px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[1240px]"
+        }
       />
       <TextfieldProfile
         title="Password"
         placeholder="*************"
         type="password"
         readOnly={false}
-        width={1300}
+        className={
+          "font-inter font-medium text-[14px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[1240px]"
+        }
       />
-      <div className="flex flex-row justify-start py-12">
-        <button
-          className="border-2 border-primary rounded-md pl-11 pr-11 pt-2 pb-2 font-inter font-medium text-primary"
-          style={{ fontSize: 28 }}
-        >
+      <div className="flex flex-row justify-start pt-[20px] lg:pt-0">
+        <button className="border-2 border-primary rounded-md pl-[26px] pr-[26px] lg:pl-11 lg:pr-11 pt-2 pb-2 font-inter font-medium text-primary text-[16px] lg:text-[28px] ">
           Cancel
         </button>
-        <div className="w-10"></div>
-        <button
-          className="bg-primary rounded-md pl-14 pr-14 pt-2 pb-2 font-inter font-medium text-white"
-          style={{ fontSize: 28 }}
-        >
+        <div className="w-[24px] lg:w-10"></div>
+        <button className="bg-primary rounded-md pl-[26px] pr-[26px] lg:pl-14  lg:pr-14 pt-2 pb-2 font-inter font-medium text-white text-[16px] lg:text-[28px]">
           Save
         </button>
       </div>

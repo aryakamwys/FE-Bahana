@@ -2,19 +2,13 @@ import React from "react";
 
 const ContentBlog = () => {
   return (
-    <div className="pl-14 py-10">
+    <div className="lg:pl-14 py-[15px] lg:py-10">
       <div className="flex flex-col items-start">
-        <div
-          className="font-inter font-semibold text-black"
-          style={{ fontSize: 20 }}
-        >
+        <div className="font-inter font-semibold text-black text-[14px] lg:text-[20px]">
           What is the issue?
         </div>
-        <div style={{ height: 10 }}></div>
-        <div
-          className="font-inter font-medium text-black text-start"
-          style={{ fontSize: 15, lineHeight: 1.5 }}
-        >
+        <div className="h-[5] lg:h-[10px] "></div>
+        <div className="font-inter font-medium text-black text-start text-[10px] lg:text-[15px] lg:leading-normal">
           Lorem ipsum dolor sit amet consectetur. Mauris feugiat leo venenatis
           morbi quam viverra. Velit lectus rhoncus molestie gravida dolor sem
           commodo suspendisse pellentesque. Quam placerat vitae duis turpis
@@ -25,10 +19,7 @@ const ContentBlog = () => {
           id sed libero vulputate duis eu odio aenean. Pulvinar vel sodales sed
           tortor. Non lectus amet est nisl feugiat.
         </div>
-        <div
-          className="font-inter font-medium text-black text-start py-2"
-          style={{ fontSize: 15, lineHeight: 1.5 }}
-        >
+        <div className="font-inter font-medium text-black text-start py-2 text-[10px] lg:text-[15px] lg:leading-normal">
           Tempus maecenas integer auctor in sollicitudin elementum lorem leo
           nisi. Egestas laoreet egestas egestas volutpat. Vulputate suspendisse
           tincidunt nibh habitant id. Turpis mi aliquet enim natoque risus
@@ -42,10 +33,7 @@ const ContentBlog = () => {
           Tincidunt luctus varius praesent viverra congue consectetur commodo
           duis ipsum.
         </div>
-        <div
-          className="font-inter font-medium text-black text-start py-2"
-          style={{ fontSize: 15, lineHeight: 1.5 }}
-        >
+        <div className="font-inter font-medium text-black text-start py-2  text-[10px] lg:text-[15px] lg:leading-normal">
           Nunc in urna blandit et. Condimentum nunc justo sagittis integer velit
           ut adipiscing nunc. Mauris nulla vivamus semper arcu diam est eget
           ultrices morbi. Tellus imperdiet vitae integer lorem mi. Congue diam
@@ -56,10 +44,7 @@ const ContentBlog = () => {
           natoque libero feugiat. Integer ac nulla id risus sagittis metus
           aliquam blandit. Habitant volutpat vitae interdum in at nunc.
         </div>
-        <div
-          className="font-inter font-medium text-black text-start py-2"
-          style={{ fontSize: 15, lineHeight: 1.5 }}
-        >
+        <div className="font-inter font-medium text-black text-start py-2  text-[10px] lg:text-[15px] lg:leading-normal">
           Risus lectus magna penatibus a eu fermentum. Purus pharetra amet sit
           arcu consectetur faucibus quam. Ac habitant mauris dui mollis. Nulla
           odio vestibulum in parturient viverra et non risus turpis. Placerat
@@ -71,10 +56,7 @@ const ContentBlog = () => {
           nec. Lectus ultrices egestas risus posuere quam elementum pulvinar sit
           diam.
         </div>
-        <div
-          className="font-inter font-medium text-black text-start py-2"
-          style={{ fontSize: 15, lineHeight: 1.5 }}
-        >
+        <div className="font-inter font-medium text-black text-start py-2  text-[10px] lg:text-[15px] lg:leading-normal">
           Venenatis congue morbi magna dolor at scelerisque. Eleifend adipiscing
           lacus laoreet vel amet netus. Diam quis imperdiet faucibus risus
           turpis commodo lacus id. Suspendisse dictum ultrices aenean ornare

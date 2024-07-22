@@ -30,22 +30,26 @@ const ContentEditProfile = () => {
     { label: "2005", value: "2005" },
   ];
   return (
-    <div className="w-full">
-      <div className="h-10"></div>
-      <div className="flex flex-row justify-between">
+    <div>
+      <div className="lg:h-10"></div>
+      <div className="flex flex-row w-full justify-between">
         <TextfieldProfile
           title={"Firstname"}
           placeholder={"Difa"}
           type={"text"}
           readOnly={false}
-          width={580}
+          className={
+            "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[125px] lg:w-[580px]"
+          }
         />
         <TextfieldProfile
           title={"Lastname"}
           placeholder={"Utari"}
           type={"text"}
           readOnly={false}
-          width={590}
+          className={
+            "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[135px] lg:w-[590px]"
+          }
         />
       </div>
       <TextfieldProfile
@@ -53,55 +57,55 @@ const ContentEditProfile = () => {
         placeholder={"difautari@gmail.com"}
         readOnly={false}
         type={"email"}
-        width={1300}
+        className={
+          "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1300px]"
+        }
       />
       <TextfieldProfile
         title={"Contact Number"}
         placeholder={"62812121212"}
         readOnly={false}
         type={"text"}
-        width={1300}
+        className={
+          "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1300px]"
+        }
       />
       <div className="flex flex-row justify-between">
         <DropdownValue
           title={"Tanggal lahir"}
           placeholder={"12"}
           options={dates}
-          width={345}
+          className={"relative w-[104px] lg:w-[345px] "}
         />
         <DropdownValue
           title={"Bulan lahir"}
           placeholder={"Juli"}
           options={months}
-          width={345}
+          className={"relative w-[104px] lg:w-[345px] "}
         />
         <DropdownValue
           title={"Tahun lahir"}
           placeholder={"2023"}
           options={years}
-          width={345}
+          className={"relative w-[104px] lg:w-[345px] "}
         />
       </div>
       <TextfieldProfile
         title={"Password"}
         placeholder={"sbdfbnd65sfdvb s"}
         type={"password"}
-        width={1300}
         readOnly={false}
+        className={
+          "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1300px]"
+        }
       />
-      <div style={{ height: 26 }}></div>
+      <div className="h-[15px] lg:h-[26px]"></div>
       <div className="flex flex-row justify-start">
-        <button
-          className="border-2 border-primary rounded-md pl-11 pr-11 pt-2 pb-2 font-inter font-medium text-primary"
-          style={{ fontSize: 28 }}
-        >
+        <button className="border-2 border-primary rounded-md pl-[26px] pr-[26px] lg:pl-11 lg:pr-11 pt-2 pb-2 font-inter font-medium text-primary text-[16px] lg:text-[28px] ">
           Cancel
         </button>
-        <div className="w-10"></div>
-        <button
-          className="bg-primary rounded-md pl-14 pr-14 pt-2 pb-2 font-inter font-medium text-white"
-          style={{ fontSize: 28 }}
-        >
+        <div className="w-[24px] lg:w-10"></div>
+        <button className="bg-primary rounded-md pl-[26px] pr-[26px] lg:pl-14  lg:pr-14 pt-2 pb-2 font-inter font-medium text-white text-[16px] lg:text-[28px]">
           Save
         </button>
       </div>

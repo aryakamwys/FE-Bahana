@@ -5,18 +5,17 @@ import GlobeImage from "../../assets/images/header-globe.png";
 const HeaderHome = () => {
   return (
     <div className="bg-neutral">
-      <div style={{height:35}}></div>
+      <div style={{ height: 35 }}></div>
       <div className="flex row-auto justify-between">
         <div
-          className="font-inter text-black font-bold text-start"
-          style={{ width: 610, height: 255, fontSize: 70 }}
+          className="font-inter text-black font-bold text-start lg:text-7xl lg:leading-normal md:text-5xl md:leading-normal max-w-xl h-64"
         >
           The future of agriculture is now
         </div>
 
-        <img src={GlobeImage} alt="Globe" />
+        <img src={GlobeImage} className="md:max-w-md lg:max-w-lg h-auto object-cover" alt="Globe" />
       </div>
-      <div style={{height:35}}></div>
+      <div style={{ height: 35 }}></div>
       <div className="flex row-auto items-start">
         <button
           className="text-primary text-h5 font-inter border border-primary cursor-pointer hover:bg-primary hover:text-white"

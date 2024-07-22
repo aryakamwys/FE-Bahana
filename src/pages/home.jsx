@@ -8,10 +8,10 @@ import Footer from "../components/specific/footer";
 
 const PembeliHomePage = () => {
   return (
-    <div style={{ paddingLeft: 310, paddingRight: 310 }}>
+    <div className="max-w-screen-sm lg:max-w-full pl-5 pr-5 lg:pl-[310px] lg:pr-[315px]">
       <NavbarPembeli />
       <HeaderHome />
-      <div style={{ height: 74 }}></div>
+      <div className="my-8"></div>
       <SearchBar />
       <Recomendation />
       <OurProduct />

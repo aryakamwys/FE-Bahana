@@ -52,77 +52,108 @@ const ContentEditAlamat = () => {
     { label: "28121", value: "28121" },
   ];
   return (
-    <div className="w-full">
-      <div className="h-10"></div>
-      <div>
+    <div>
+      <div className="lg:h-10"></div>
+      <div className="w-full">
         <TextfieldProfile
           title={"Nama Lengkap"}
           placeholder={"Difa Rindang Utari"}
           type={"text"}
           readOnly={false}
-          width={1300}
+          className={
+            "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1239px]"
+          }
         />
         <TextfieldProfile
           title={"Contact Number"}
           placeholder={"62812121212"}
           type={"text"}
           readOnly={false}
-          width={1300}
+          className={
+            "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1239px]"
+          }
         />
-        <div className="flex flex-row justify-between">
+        <div className="hidden lg:flex flex-row justify-between">
           <DropdownValue
             title={"Provinsi"}
-            width={292}
+            className={"relative w-[163px] lg:w-[200px] "}
             placeholder={"Riau"}
             options={provinces}
+            width={"292px"}
           />
           <DropdownValue
             title={"Kota"}
-            width={292}
+            className={"relative w-[163px] lg:w-[200px] "}
             placeholder={"Pekanbaru"}
             options={cities}
+            width={"292px"}
           />
           <DropdownValue
             title={"Kecamatan"}
-            width={292}
+            className={"relative w-[163px] lg:w-[200px] "}
             placeholder={"Pekanbaru Kota"}
             options={districts}
+            width={"292px"}
           />
           <DropdownValue
             title={"Kode Pos"}
-            width={292}
+            className={"relative w-[163px] lg:w-[200px] "}
             placeholder={"28111"}
             options={postalCodes}
+            width={"292px"}
+          />
+        </div>
+        <div className="flex lg:hidden flex-row justify-between">
+          <DropdownValue
+            title={"Provinsi"}
+            placeholder={"Riau"}
+            options={provinces}
+            className={"relative w-[163px] lg:w-[292px] "}
+            width={"163px"}
+          />
+          <DropdownValue
+            title={"Kota"}
+            placeholder={"Pekanbaru"}
+            options={cities}
+            className={"relative w-[163px] lg:w-[292px] "}
+            width={"163px"}
+          />
+        </div>
+        <div className="flex lg:hidden flex-row justify-between">
+          <DropdownValue
+            title={"Kecamatan"}
+            placeholder={"Pekanbaru Kota"}
+            options={districts}
+            className={"relative w-[163px] lg:w-[292px] "}
+            width={"163px"}
+          />
+          <DropdownValue
+            title={"Kode Pos"}
+            placeholder={"28111"}
+            options={postalCodes}
+            className={"relative w-[163px] lg:w-[292px] "}
+            width={"163px"}
           />
         </div>
         <TextfieldProfile
           title={"Detail Lainnya (Cth: Blok / Unit No., Patokan)"}
-          width={1300}
           placeholder={"difautari@gmail.com"}
           type={"text"}
+          className={
+            "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1239px]"
+          }
         />
-        <div className="py-3 pb-12">
+        <div className="py-3">
           <div className="flex flex-col items-start">
-            <div
-              className="font-inter font-semibold text-black"
-              style={{ fontSize: 26 }}
-            >
-              Nama Jalan, Gedung, No. Rumah
+            <div className="font-inter font-semibold text-black text-[14px] lg:text-[26px]">
+              Nama Jalan, Gedung atau Rumah
             </div>
-            <div style={{ height: 25 }}></div>
-            <form
-              className="flex items-center justify-start"
-              style={{ width: 1300, height: 70 }}
-            >
-              <span
-                className="flex items-start justify-start rounded-md ring-1 ring-gray p-5 w-full ring-opacity-50 focus:ring-gray"
-                style={{ height: 110 }}
-              >
-                <input
-                  type={"text"}
-                  placeholder={"sbdfbnd65sfdvbs"}
-                  className="font-inter font-medium focus:outline-none"
-                  style={{ fontSize: 24 }}
+            <div style={{ height: 7 }}></div>
+            <form className="flex items-center justify-start ">
+              <span className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 w-full ring-opacity-50 focus:ring-gray">
+                <textarea
+                  placeholder="Lorem ipsum dolor sit amet consectetur. Eu quis eget velit maecenas. Enim viverra nulla tellus eu aliquam. Augue risus sed orci at ut mauris vel. Enim donec fusce sed varius lacus ipsum ac. Sed quam commodo faucibus faucibus pellentesque magna mattis non tincidunt. Vulputate."
+                  className="font-inter font-medium focus:outline-none text-[12px] lg:text-[24px] h-[67px] lg:h-[189px] resize-none w-[350px] lg:w-[1239px]"
                   readOnly={false}
                 />
               </span>
@@ -130,17 +161,11 @@ const ContentEditAlamat = () => {
           </div>
         </div>
         <div className="flex flex-row justify-start">
-          <button
-            className="border-2 border-primary rounded-md pl-11 pr-11 pt-2 pb-2 font-inter font-medium text-primary"
-            style={{ fontSize: 28 }}
-          >
+          <button className="border-2 border-primary rounded-md pl-[26px] pr-[26px] lg:pl-11 lg:pr-11 pt-2 pb-2 font-inter font-medium text-primary text-[16px] lg:text-[28px] ">
             Cancel
           </button>
-          <div className="w-10"></div>
-          <button
-            className="bg-primary rounded-md pl-14 pr-14 pt-2 pb-2 font-inter font-medium text-white"
-            style={{ fontSize: 28 }}
-          >
+          <div className="w-[24px] lg:w-10"></div>
+          <button className="bg-primary rounded-md pl-[26px] pr-[26px] lg:pl-14  lg:pr-14 pt-2 pb-2 font-inter font-medium text-white text-[16px] lg:text-[28px]">
             Save
           </button>
         </div>

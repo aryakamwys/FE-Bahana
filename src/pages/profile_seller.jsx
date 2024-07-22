@@ -5,8 +5,8 @@ import ContentPetaniProfilePage from "../sections/profile_seller/content";
 
 const PetaniProfilePage = () => {
   return (
-    <div style={{ paddingLeft: 310, paddingRight: 315 }}>
-      <NavbarPetani />
+    <div className="max-w-screen-sm lg:max-w-full pl-5 pr-5 lg:pl-[310px] lg:pr-[315px] ">
+      {/* <NavbarPetani /> */}
       <HeaderPetaniProfilePage />
       <ContentPetaniProfilePage />
     </div>

@@ -8,16 +8,14 @@ const HeaderEditProfileToko = () => {
       <div style={{ height: 50 }}></div>
       <div className="flex flex-row row-auto items-center ">
         <button
-          className="flex items-center justify-center border border-black rounded-full"
-          style={{ width: 40, height: 40 }}
+          className="flex items-center justify-center border border-black rounded-full w-6 h-6 lg:w-10 lg:h-10"
           onClick={() => window.history.back()}
         >
-          <img src={ArrowBack} alt="arrow back" />
+          <img src={ArrowBack} className="w-3 h-3 lg:w-4 lg:h-4"  alt="arrow back" />
         </button>
-        <div style={{ width: 20 }}></div>
+        <div className="w-2 lg:w-5"></div>
         <div
-          className="font-inter font-semibold text-black"
-          style={{ fontSize: 28 }}
+          className="font-inter font-semibold text-black text-[16px] lg:text-3xl"
         >
           Edit Profile Toko
         </div>
