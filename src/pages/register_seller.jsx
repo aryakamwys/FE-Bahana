@@ -4,7 +4,7 @@ import LoginImage from "../assets/images/login-image.png";
 import Divider from "@mui/material/Divider";
 import Textfield from "../components/common/textfield";
 
-const PembeliRegisterPage = () => {
+const PetaniRegisterPage = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const toggleCheck = () => {
@@ -33,14 +33,14 @@ const PembeliRegisterPage = () => {
             <div
               className="flex items-center justify-center font-inter text-primary font-semibold cursor-pointer"
               style={{ width: 146, height: 40 }}
-              onClick={() => (window.location.href = "/login")}
+              onClick={() => (window.location.href = "/loginseller")}
             >
               Login
             </div>
             <div
               className="bg-primary rounded-full flex items-center justify-center text-neutral font-inter font-bold"
               style={{ width: 146, height: 40 }}
-              onClick={() => (window.location.href = "/register")}
+              onClick={() => (window.location.href = "/registerseller")}
             >
               Register
             </div>
@@ -50,7 +50,7 @@ const PembeliRegisterPage = () => {
           className="font-semibold font-inter text-black"
           style={{ fontSize: 60 }}
         >
-          Create your account
+          Register As a Seller
         </div>
         <div className="flex flex-col">
           <div>
@@ -135,7 +135,7 @@ const PembeliRegisterPage = () => {
           <button
             className="flex items-center justify-center bg-primary text-white font-semibold font-inter rounded-full "
             style={{ borderRadius: 10, width: 563, height: 54, fontSize: 20 }}
-            onClick={() => (window.location.href = "/home")}
+            onClick={() => (window.location.href = "/homeseller ")}
           >
             Register
           </button>
@@ -146,4 +146,4 @@ const PembeliRegisterPage = () => {
   );
 };
 
-export default PembeliRegisterPage;
+export default PetaniRegisterPage;

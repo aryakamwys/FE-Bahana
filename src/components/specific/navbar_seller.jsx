@@ -1,7 +1,7 @@
 import React from "react";
 import CartIcon from "../../assets/images/cart.svg";
 
-const NavbarPembeli = () => {
+const NavbarPetani = () => {
   return (
     <div>
       <nav className="bg-white fixed pt-2 z-50">
@@ -21,7 +21,7 @@ const NavbarPembeli = () => {
                 style={{ width: 101, height: 44 }}
               >
                 <a
-                  href="/home"
+                  href="/homeseller"
                   className="block text-primary700 py-2 px-3 text-gray-900 rounded"
                   aria-current="page"
                 >
@@ -33,7 +33,7 @@ const NavbarPembeli = () => {
                 style={{ width: 207, height: 44 }}
               >
                 <a
-                  href="/marketprice"
+                  href="/marketpriceseller"
                   className="block text-primary700 py-2 px-3 text-gray-900 rounded"
                 >
                   Market Price
@@ -44,7 +44,7 @@ const NavbarPembeli = () => {
                 style={{ width: 130, height: 44 }}
               >
                 <a
-                  href="/wishlist"
+                  href="/wishlistseller"
                   className="block text-primary700 py-2 px-3 text-gray-900 rounded"
                 >
                   Wishlist
@@ -55,7 +55,7 @@ const NavbarPembeli = () => {
                 style={{ width: 95, height: 44 }}
               >
                 <a
-                  href="/profile"
+                  href="/profileseller"
                   className="block text-primary700 py-2 px-3 text-gray-900 rounded"
                 >
                   Profile
@@ -75,4 +75,4 @@ const NavbarPembeli = () => {
     </div>
   );
 };
-export default NavbarPembeli;
+export default NavbarPetani;

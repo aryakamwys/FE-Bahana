@@ -9,7 +9,7 @@ import ButtonWithImage from "../components/common/button";
 import Textfield from "../components/common/textfield";
 import Divider from "@mui/material/Divider";
 
-const PembeliLoginPage = () => {
+const PetaniLoginPage = () => {
   return (
     <div
       id="login"
@@ -34,14 +34,14 @@ const PembeliLoginPage = () => {
               <div
                 className="bg-primary rounded-full flex items-center justify-center text-neutral font-inter font-bold"
                 style={{ width: 146, height: 40 }}
-                onClick={() => (window.location.href = "/login")}
+                onClick={() => (window.location.href = "/loginseller")}
               >
                 Login
               </div>
               <div
                 className="flex items-center justify-center text-primary font-inter font-bold cursor-pointer"
                 style={{ width: 146, height: 40 }}
-                onClick={() => (window.location.href = "/register")}
+                onClick={() => (window.location.href = "/registerseller")}
               >
                 Register
               </div>
@@ -51,7 +51,7 @@ const PembeliLoginPage = () => {
             className="font-semibold font-inter text-black"
             style={{ fontSize: 60 }}
           >
-            Welcome Back!
+            Log in As a Seller
           </div>
           <div className="relative">
             <Textfield
@@ -75,7 +75,7 @@ const PembeliLoginPage = () => {
             <button
               className="flex items-center justify-center bg-primary text-white font-semibold font-inter rounded-full "
               style={{ borderRadius: 10, width: 563, height: 54, fontSize: 20 }}
-              onClick={() => (window.location.href = "/home")}
+              onClick={() => (window.location.href = "/homeseller")}
             >
               Login
             </button>
@@ -105,8 +105,8 @@ const PembeliLoginPage = () => {
             />
           </div>
           <div style={{height:20}}></div>
-          <div className="font-inter font-bold text-primary cursor-pointer" style={{fontSize:20}} onClick={() => (window.location.href = "/loginseller")}>
-            Log in As a Seller
+          <div className="font-inter font-bold text-primary cursor-pointer" style={{fontSize:20}} onClick={() => (window.location.href = "/login")}>
+            Log in As a Customer
           </div>
         </div>
       </div>
@@ -114,4 +114,4 @@ const PembeliLoginPage = () => {
   );
 };
 
-export default PembeliLoginPage;
+export default PetaniLoginPage;

@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import imageDummy from "../../assets/images/sayur.jpg";
 import starIcon from "../../assets/images/star.svg";
 import buyIcon from "../../assets/images/buy.svg";
 import bookmarkIcon from "../../assets/images/bookmark.svg";
+import bookmarkIconFilled from "../../assets/images/bookmark_fill2.svg"; // Add the filled bookmark icon
 
 const CardProduct = ({ product }) => {
+  const [isBookmarked, setIsBookmarked] = useState(false);
+
+  const handleBookmarkClick = () => {
+    setIsBookmarked((prev) => !prev);
+  };
+
   return (
     <div className="max-w-sm bg-white border border-black rounded-xl">
       <div>
@@ -42,7 +49,7 @@ const CardProduct = ({ product }) => {
           <img src={starIcon} style={{ width: 24, height: 24 }} alt="star" />
           <div style={{ width: 12 }}></div>
           <div className="font-inter font-semibold" style={{ fontSize: 20 }}>
-            <span className="text-yellow ">{product.rating}</span>
+            <span className="text-yellow">{product.rating}</span>
             <span className="text-yellow ml-1">/ 5</span>
           </div>
         </div>
@@ -63,8 +70,14 @@ const CardProduct = ({ product }) => {
           </div>
           <div style={{ width: 30 }}></div>
           <div>
-            <button className="p-4 border border-gray opacity-50 rounded-full">
-              <img src={bookmarkIcon} alt="bookmark icon" />
+            <button
+              className="p-4 border border-gray border-opacity-50 rounded-full"
+              onClick={handleBookmarkClick}
+            >
+              <img
+                src={isBookmarked ? bookmarkIconFilled : bookmarkIcon}
+                alt="bookmark icon"
+              />
             </button>
           </div>
         </div>

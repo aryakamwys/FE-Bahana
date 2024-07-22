@@ -178,7 +178,7 @@ const ContentTrackingOrder = ({ currentStep }) => {
                     <div
                       className={`p-1 rounded-full flex items-center justify-center z-10 border-4 border-white ${
                         index <= currentStep - 1 ? "bg-green-500" : "bg-primary"
-                      } ${step.isBlank ? "w-11 h-11 " : "w-11 h-11"}`}
+                      } ${step.isBlank ? "w-11 h-11" : "w-11 h-11"}`}
                     >
                       {step.isBlank ? " " : step.icon}
                     </div>
