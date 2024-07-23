@@ -79,16 +79,15 @@ const OurProduct = () => {
 
   return (
     <div>
-      <div style={{ height: 120 }}></div>
+      <div className="h-[40px] lg:h-[120px] "></div>
       <div className="flex flex-col items-center justify-center">
         <div
-          className="font-inter font-bold text-black"
-          style={{ fontSize: 60 }}
+          className="font-inter text-[20px] lg:text-[60px] font-bold text-black"
         >
           Our Products
         </div>
-        <div style={{ height: 60 }}></div>
-        <div className="grid grid-cols-3 gap-x-5 gap-y-16">
+        <div className="h-[20px] lg:h-[60px] "></div>
+        <div className="grid grid-cols-3 gap-x-[11px] gap-y-[13px] lg:gap-x-5 lg:gap-y-16">
           {products.map((product) => (
             <CardProduct key={product.id} product={product} />
           ))}
@@ -96,8 +95,7 @@ const OurProduct = () => {
         <div style={{ height: 40 }}></div>
         <div>
           <button
-            className="border border-black rounded-xl p-5 hover:bg-primary hover:text-white text-primary font-bold font-inter"
-            style={{ fontSize: 22 }}
+            className="border border-black rounded-md lg:rounded-xl p-[10px] lg:p-5 hover:bg-primary hover:text-white text-primary font-bold text-[10px] lg:text-[22px] font-inter"
             onClick={() => (window.location.href = "/allproducts")}
           >
             See Our Product

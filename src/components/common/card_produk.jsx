@@ -17,65 +17,61 @@ const CardProduct = ({ product }) => {
       <div>
         <img
           src={imageDummy}
-          className="p-6"
-          style={{ width: 350, height: 305 }}
+          className="p-[5px] lg:p-6 w-[100px] h-[84px] lg:w-[350px] lg:h-[305px] "
           alt={product.name}
         />
       </div>
-      <div className="p-6">
+      <div className="p-[5px] lg:p-6">
         <div
-          className="font-inter text-black font-semibold text-start"
-          style={{ fontSize: 25 }}
+          className="font-inter text-[8px] lg:text-[25px] text-black font-semibold text-start"
         >
           {product.name}
         </div>
         <div className="flex flex-row row-auto items-center">
           <div
-            className="font-inter font-semibold text-primary"
-            style={{ fontSize: 25, lineHeight: 1.2 }}
+            className="font-inter font-semibold text-primary text-[8px] lg:text-[25px] lg:leading-normal"
           >
             Rp {product.price.toLocaleString()}
           </div>
-          <div style={{ width: 10 }}></div>
+          <div className="w-[5px] lg:w-[10px] "></div>
           <div
-            className="font-inter font-semibold text-gray opacity-50 line-through"
-            style={{ fontSize: 20, lineHeight: 1.2 }}
+            className="font-inter text-[6px] lg:text-[20px] lg:leading-normal font-semibold text-gray opacity-50 line-through"
           >
             Rp {product.originalPrice.toLocaleString()}
           </div>
         </div>
-        <div style={{ height: 12 }}></div>
+        <div className="lg:h-[12px] h-[5px] "></div>
         <div className="flex flex-row row-auto items-center justify-start">
-          <img src={starIcon} style={{ width: 24, height: 24 }} alt="star" />
+          <img src={starIcon} className="w-[12px] h-[12px] lg:w-[24px] lg:h-[24px]" alt="star" />
           <div style={{ width: 12 }}></div>
-          <div className="font-inter font-semibold" style={{ fontSize: 20 }}>
+          <div className="font-inter font-semibold text-[8px] lg:text-[20px]">
             <span className="text-yellow">{product.rating}</span>
             <span className="text-yellow ml-1">/ 5</span>
           </div>
         </div>
-        <div style={{ height: 12 }}></div>
+        <div className="lg:h-[12px] h-[5px] "></div>
         <div className="flex flex-row row-auto">
           <div>
             <button
-              className="flex flex-row row-auto border border-black rounded-full pt-4 pb-4"
-              style={{ paddingLeft: 49, paddingRight: 49 }}
+              className="w-[78px] h-[18px] lg:w-[261px] lg:h-[55px] flex flex-row row-auto justify-center items-center border-[1px] lg:border-2 border-gray border-opacity-50 rounded-full lg:pt-4 lg:pb-4"
               onClick={() => (window.location.href = "/detailproduct")}
             >
-              <img src={buyIcon} alt="buy icon" />
+              <img src={buyIcon} className="w-[8px] h-[8px] lg:w-[24px] lg:h-[24px] " alt="buy icon" />
               <div style={{ width: 10 }}></div>
-              <span className="font-inter font-semibold text-black">
+              <span className="font-inter font-semibold text-black text-[5px] lg:text-[16px]">
                 Beli Sekarang
               </span>
             </button>
           </div>
-          <div style={{ width: 30 }}></div>
+          <div className="w-[6px] lg:w-[30px] "></div>
           <div>
             <button
-              className="p-4 border border-gray border-opacity-50 rounded-full"
+              className="flex items-center justify-center w-[20px] h-[20px] lg:w-[55px] lg:h-[55px] border border-gray border-opacity-50 rounded-full"
               onClick={handleBookmarkClick}
             >
               <img
                 src={isBookmarked ? bookmarkIconFilled : bookmarkIcon}
+                className="w-[8px] h-[8px] lg:w-[24px] lg:h-[24px] "
                 alt="bookmark icon"
               />
             </button>
