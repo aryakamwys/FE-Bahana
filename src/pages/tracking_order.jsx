@@ -7,10 +7,10 @@ import Footer from "../components/specific/footer";
 const TrackingOrder = () => {
   return (
     <div className="max-w-screen-sm lg:max-w-full pl-5 pr-5 lg:pl-[310px] lg:pr-[315px]">
-      {/* <NavbarPembeli /> */}
+      <NavbarPembeli />
       <HeaderTrackingOrder />
       <ContentTrackingOrder />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

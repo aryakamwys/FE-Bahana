@@ -16,8 +16,8 @@ const TextKeyboard = () => {
     console.log("Search term:", searchTerm);
   };
   return (
-    <div>
-      <div style={{ height: 52 }}></div>
+    <div className="py-[20px] lg:py-[20px]">
+      <div className="lg:h-[52px]"></div>
       <form
         onSubmit={handleSubmit}
         className="flex items-center rounded-xl h-11 lg:h-28"

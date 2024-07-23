@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import CardProduct from "../../components/common/card_produk";
+import CardProductAll from "../../components/common/card_produk_all";
 
 const Products = () => {
   const productData = [
@@ -94,13 +95,13 @@ const Products = () => {
 
   return (
     <div>
-      <div style={{ height: 50 }}></div>
-      <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12">
+      <div className="h-[20px] lg:h-[50px] "></div>
+      <div className="mx-auto p-4 grid grid-cols-2 lg:grid-cols-3 lg:gap-x-4 gap-x-[10px] gap-y-5 lg:gap-y-12">
         {productData.map((product, index) => (
-          <CardProduct key={index} product={product} />
+          <CardProductAll key={index} product={product} />
         ))}
       </div>
-      <div className="flex justify-center mt-4">
+      <div className="hidden lg:flex justify-center mt-4">
         <div className="px-6">
           <button
             className="bg-white hover:bg-black hover:text-white text-black font-semibold py-2 px-4 border border-gray border-opacity-50 rounded"

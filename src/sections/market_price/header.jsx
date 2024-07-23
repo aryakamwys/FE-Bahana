@@ -5,7 +5,7 @@ import ArrowBack from "../../assets/images/arrow-back.svg";
 const HeaderMarketPrice = () => {
   return (
     <div>
-      <div style={{ height: 60 }}></div>
+      <div className="h-[20px] lg:h-[50px] "></div>{" "}
       <div className="flex flex-row row-auto items-center">
         <button
           className="flex items-center justify-center border border-black rounded-full w-6 h-6 lg:w-10 lg:h-10"
@@ -32,9 +32,7 @@ const HeaderMarketPrice = () => {
             Update-an harga pasar dari hasil bumi
           </div>
         </div>
-        <div
-          className="lg:hidden font-inter font-semibold text-black text-[16px] lg:text-[25px]"
-        >
+        <div className="lg:hidden font-inter font-semibold text-black text-[16px] lg:text-[25px]">
           Blog Harga Pasar
         </div>
       </div>

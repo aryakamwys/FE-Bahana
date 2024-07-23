@@ -44,66 +44,59 @@ const ContentPayment = () => {
 
   return (
     <div>
-      <div className="flex flex-col" style={{ width: 583 }}>
+      <div className="flex flex-col w-[350px] lg:w-full" >
         <div style={{ height: 34 }}></div>
         <div className="flex flex-row justify-between items-center">
           <div
-            className="font-inter font-semibold text-black"
-            style={{ fontSize: 22 }}
+            className="font-inter text-[18px] lg:text-[22px] font-semibold text-black"
           >
             Delivery Address
           </div>
           <button onClick={() => (window.location.href = "/editalamat")}>
-            <img src={EditAlamatIcon} alt="edit_alamat" />
+            <img src={EditAlamatIcon} className="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] " alt="edit_alamat" />
           </button>
         </div>
         <div className="flex flex-col items-start">
           <div
-            className="font-inter font-medium text-black"
-            style={{ fontSize: 20 }}
+            className="font-inter text-[14px] lg:text-[20px] font-medium text-black"
           >
             Difa Rindang Utari
           </div>
           <div
-            className="font-inter font-medium text-black"
-            style={{ fontSize: 20 }}
+            className="font-inter text-[14px] lg:text-[20px] font-medium text-black"
           >
             (+62) 811-2222-2222
           </div>
           <div
-            className="font-inter font-medium text-black text-start"
-            style={{ fontSize: 20 }}
+            className="font-inter text-[14px] lg:text-[20px] font-medium text-black text-start"
           >
             Kostella Tanjung Duren No. 123, KOTA JAKARTA BARAT, GROGOL
             PETAMBURAN
           </div>
         </div>
         <div style={{ height: 30 }}></div>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between lg:border-none border border-gray p-2 lg:p-0 rounded-[5px]">
           <div className="flex flex-row">
             <img
               src={CarrotImage}
-              className="border border-gray border-opacity-50 rounded-xl"
-              style={{ width: 150, height: 100 }}
+              className="border-none lg:border border-gray border-opacity-50 rounded-xl w-[85px] h-[62px] lg:w-[150px] lg:h-[100px] "
               alt="carrot"
             />
             <div style={{ width: 37 }}></div>
             <div className="flex flex-col items-start">
               <div
-                className="font-inter font-semibold text-black"
-                style={{ fontSize: 20 }}
+                className="font-inter font-semibold text-black text-[14px] lg:text-[20px]"
               >
                 Nama product
               </div>
               <div style={{ height: 5 }}></div>
               <div
-                className="font-inter font-medium text-black text-start"
-                style={{ fontSize: 18 }}
+                className="font-inter font-medium text-black text-start text-[10px] lg:text-[18px]"
               >
                 Lorem ipsum dolor sit amet blablalalblballllaf
               </div>
               <div style={{ height: 5 }}></div>
-              <div className="w-12 h-6">
+              <div className="hidden lg:flex w-12 h-6">
                 <div
                   className="border border-gray rounded-md pt-1 pb-1 pl-2 pr-2 font-inter font-medium text-black"
                   style={{ fontSize: 10 }}
@@ -114,14 +107,13 @@ const ContentPayment = () => {
               <div style={{ height: 5 }}></div>
               <div className="flex flex-row items-center">
                 <div
-                  className="font-inter font-bold text-primary"
-                  style={{ fontSize: 15 }}
+                  className="font-inter font-bold text-black lg:text-primary text-[12px] lg:text-[15px]"
                 >
                   Rp 100.000
                 </div>
                 <div style={{ width: 10 }}></div>
                 <div
-                  className="font-inter font-normal text-gray line-through"
+                  className="hidden lg:flex  font-inter font-normal text-gray line-through"
                   style={{ fontSize: 10 }}
                 >
                   Rp 150.000
@@ -129,51 +121,49 @@ const ContentPayment = () => {
               </div>
             </div>
           </div>
-          <button className="flex items-center justify-center bg-gray bg-opacity-20 w-9 h-9 rounded-full">
-            <img src={TrashIcon} alt="sampah" />
+          <button className="flex items-center justify-center bg-gray bg-opacity-20 w-5 h-5 lg:w-9 lg:h-9 rounded-full">
+            <img src={TrashIcon} className="w-[14px] h-[14px] lg:w-[22px] lg:h-[22px]" alt="sampah" />
           </button>
         </div>
         <div style={{ height: 34 }}></div>
         <div className="flex flex-col items-start">
           <div
-            className="font-inter font-bold text-black"
-            style={{ fontSize: 22 }}
+            className="font-inter font-bold text-black text-[16px] lg:text-[22px]"
           >
             Pilih Pengiriman
           </div>
           <div style={{ height: 20 }}></div>
           <div className="flex flex-col items-start">
             <div style={{ height: 7 }}></div>
-            <div className="relative" style={{ width: 583 }}>
+            <div className="relative w-[350px] lg:w-[583px] ">
               <div
-                className="flex flex-row justify-between items-center border border-gray-300 border-opacity-50 rounded-xl pl-10 pr-10 cursor-pointer"
+                className="flex flex-row justify-between h-[44px] lg:h-[58px] items-center border border-gray-300 border-opacity-50 rounded-xl pl-10 pr-10 cursor-pointer"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <div className="w-80 h-18 flex items-center font-medium font-inter text-xl">
                   {selectedOption ? selectedOption.label : "J&T Express"}
                 </div>
                 {isOpen ? (
-                  <img src={DropdownUpIcon} alt="dropdown up" />
+                  <img src={DropdownUpIcon} className="w-[24px] h-[24px] lg:w-[38px] lg:h-[38px]"  alt="dropdown up" />
                 ) : (
-                  <img src={DropdownIcon} alt="dropdown" />
+                  <img src={DropdownIcon} className="w-[24px] h-[24px] lg:w-[38px] lg:h-[38px]" alt="dropdown" />
                 )}
               </div>
               {isOpen && (
-                <div className="absolute w-full mt-3 bg-white border border-gray-300 rounded-xl shadow-lg z-10 max-h-96 overflow-y-auto">
+                <div className="absolute w-full mt-3 bg-white border border-gray-300 rounded-xl font-inter shadow-lg z-10 max-h-96 overflow-y-auto">
                   {options.map((option) => (
                     <div
                       key={option.value}
-                      className="p-4 hover:bg-gray-200 cursor-pointer hover:bg-greenLight border-b-2 border-gray border-opacity-10"
+                      className="p-4 hover:bg-gray-200 cursor-pointer hover:bg-greenLight border-b-2 border-gray border-opacity-10 text-[14px] lg:text-[20px]"
                       onClick={() => handleOptionClick(option)}
                     >
                       <div
-                        className="flex flex-row justify-between font-inter font-semibold text-black"
-                        style={{ fontSize: 20 }}
+                        className="flex flex-row justify-between font-inter font-semibold text-black text-[14px] lg:text-[20px]"
                       >
                         <div>{option.label}</div>
                         <div className="flex flex-row">
                           <div className="ml-2">{option.price}</div>
-                          <div className="ml-2 line-through">
+                          <div className="ml-2 line-through text-gray text-opacity-30 text-[14px] lg:text-[20px]">
                             {option.discountPrice}
                           </div>
                         </div>

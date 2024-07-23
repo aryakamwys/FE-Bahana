@@ -28,7 +28,7 @@ const PenjualSection = () => {
           </div>
         </div>
         <button
-          className="bg-primary rounded-sm lg:rounded-xl w-[80px] h-[26px] lg:w-[240px] lg:h-[64px] "
+          className="bg-primary rounded-md lg:rounded-xl w-[80px] h-[26px] lg:w-[240px] lg:h-[64px] "
           onClick={() => (window.location.href = "/chat")}
         >
           <div className="flex flex-row row-auto items-center justify-center">

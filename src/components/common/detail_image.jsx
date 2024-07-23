@@ -31,7 +31,7 @@ const DetailImage = () => {
         <div className=" absolute flex justify-between w-[350px] lg:w-[701px]">
           <div className="p-1">
             <button
-              className="flex items-center rounded-l-xl bg-gray bg-opacity-20 px-1 lg:px-2 h-[70px] lg:h-[171px] "
+              className="hidden lg:flex items-center rounded-l-xl bg-gray bg-opacity-20 px-1 lg:px-2 h-[70px] lg:h-[171px] "
               onClick={handleLeftClick}
             >
               <img src={SlideLeft} alt="slide_left" />

@@ -73,34 +73,30 @@ const ContentEditAlamat = () => {
             "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1239px]"
           }
         />
-        <div className="hidden lg:flex flex-row justify-between">
+        <div className="hidden lg:flex flex-row justify-between lg:w-[1237px]">
           <DropdownValue
             title={"Provinsi"}
-            className={"relative w-[163px] lg:w-[200px] "}
+            className={"relative w-[163px] lg:w-[258px] "}
             placeholder={"Riau"}
             options={provinces}
-            width={"292px"}
           />
           <DropdownValue
             title={"Kota"}
-            className={"relative w-[163px] lg:w-[200px] "}
+            className={"relative w-[163px] lg:w-[258px] "}
             placeholder={"Pekanbaru"}
             options={cities}
-            width={"292px"}
           />
           <DropdownValue
             title={"Kecamatan"}
-            className={"relative w-[163px] lg:w-[200px] "}
+            className={"relative w-[163px] lg:w-[258px] "}
             placeholder={"Pekanbaru Kota"}
             options={districts}
-            width={"292px"}
           />
           <DropdownValue
             title={"Kode Pos"}
-            className={"relative w-[163px] lg:w-[200px] "}
+            className={"relative w-[163px] lg:w-[258px] "}
             placeholder={"28111"}
             options={postalCodes}
-            width={"292px"}
           />
         </div>
         <div className="flex lg:hidden flex-row justify-between">
@@ -135,6 +131,7 @@ const ContentEditAlamat = () => {
             width={"163px"}
           />
         </div>
+        <div className="lg:h-[10px]"></div>
         <TextfieldProfile
           title={"Detail Lainnya (Cth: Blok / Unit No., Patokan)"}
           placeholder={"difautari@gmail.com"}
@@ -160,7 +157,7 @@ const ContentEditAlamat = () => {
             </form>
           </div>
         </div>
-        <div className="flex flex-row justify-start">
+        <div className="flex flex-row justify-start lg:py-3">
           <button className="border-2 border-primary rounded-md pl-[26px] pr-[26px] lg:pl-11 lg:pr-11 pt-2 pb-2 font-inter font-medium text-primary text-[16px] lg:text-[28px] ">
             Cancel
           </button>
