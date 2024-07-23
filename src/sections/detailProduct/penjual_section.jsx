@@ -7,7 +7,7 @@ const PenjualSection = () => {
   return (
     <div>
       <div style={{ height: 52 }}></div>
-      <div className="flex flex-row row-auto w-[350px] border rounded-md lg:w-full lg:border-t-[1px] lg:border-b-[1px] py-[27px] border-gray border-opacity-50 items-center justify-between">
+      <div className="flex flex-row row-auto w-[350px] lg:w-full border-t-[1px] border-b-[1px] py-[27px] border-gray border-opacity-50 items-center justify-between">
         <div className="flex flex-row row-auto">
           <img
             src={ProfilePenjual}
@@ -40,7 +40,7 @@ const PenjualSection = () => {
           </div>
         </button>
       </div>
-      <div style={{ height: 52 }}></div>
+      <div className="lg:h-[52px] "></div>
     </div>
   );
 };

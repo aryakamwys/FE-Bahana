@@ -11,6 +11,7 @@ import CartIcon from "../../assets/images/keranjang.svg";
 const ContentDetailProduct = () => {
   return (
     <div>
+      <div  className="h-[30px] lg:h-[0px]"></div>
       <div className="flex flex-col lg:flex-row row-auto">
         <div>
           <img
@@ -22,7 +23,7 @@ const ContentDetailProduct = () => {
         </div>
         <div style={{ width: 36 }}></div>
         <div
-          className="flex flex-col col-auto items-start w-[350px] h-[275px] lg:w-[505px] lg:h-[434px] "
+          className="flex flex-col col-auto items-start h-[275px] lg:w-[505px] lg:h-[434px] "
         >
           <div className="pt-[15px] lg:py-0 font-inter font-semibold text-black text-start text-[18px] lg:text-[32px]">
             Nama Product blabla bshhvdshsh
@@ -60,7 +61,7 @@ const ContentDetailProduct = () => {
                 Rp. 150.000
               </div>
             </div>
-            <div className="flex items-start py-[8px] ">
+            <div className="flex items-start py-[8px]">
               <div
                 className="font-inter text-[14px] lg:text-[25px] font-semibold text-black"
               >
