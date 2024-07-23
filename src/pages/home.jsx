@@ -8,7 +8,7 @@ import Footer from "../components/specific/footer";
 
 const PembeliHomePage = () => {
   return (
-    <div className="max-w-screen-sm lg:max-w-full pl-5 pr-5 lg:pl-[310px] lg:pr-[315px]">
+    <div className="max-w-screen-sm    md:max-w-full px-5 md:px-10  lg:px-[100px] 2xl:px-[315px]   xl:px-[200px]  ">
       <NavbarPembeli />
       <HeaderHome />
       <div className="my-8"></div>

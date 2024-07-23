@@ -32,9 +32,7 @@ const HeaderMarketPrice = () => {
             Update-an harga pasar dari hasil bumi
           </div>
         </div>
-        <div
-          className="lg:hidden font-inter font-semibold text-black text-[16px] lg:text-[25px]"
-        >
+        <div className="lg:hidden font-inter font-bold text-black text-[16px] md:text-[20px]  lg:text-[25px]">
           Blog Harga Pasar
         </div>
       </div>

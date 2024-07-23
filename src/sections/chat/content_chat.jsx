@@ -20,9 +20,9 @@ const ContentChat = () => {
           className="flex flex-row row-auto border border-gray border-opacity-50 "
           style={{ borderRadius: 10 }}
         >
-          <div className="p-2 lg:p-6 text-xs text-start lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl">
+          <div className="p-2 lg:p-6 text-xs text-start md:text-[14px] leading-normal   lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl">
             Lorem ipsum dolor sit amet consectetur. Montes semper mauris est
-            mollis netus amet ultrices. Turpis arcu ut dolor.
+            mollis netus amet ultrices. Turpis arcu ut dolor. lorem40
           </div>
           <div className="bg-primary w-2 rounded-r-full"></div>
         </div>
@@ -50,7 +50,7 @@ const ContentChat = () => {
           style={{ borderRadius: 10 }}
         >
           <div className="bg-primary w-2 rounded-l-full"></div>
-          <div className="p-2 lg:p-6 text-xs text-start lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl">
+          <div className="p-2 lg:p-6 text-xs text-start md:text-[14px] leading-normal lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl">
             Lorem ipsum dolor sit amet consectetur. Montes semper mauris est
             mollis netus amet ultrices. Turpis arcu ut dolor.
           </div>
@@ -78,7 +78,7 @@ const ContentChat = () => {
           className="flex flex-row row-auto border border-gray border-opacity-50 "
           style={{ borderRadius: 10 }}
         >
-          <div className="p-2 lg:p-6 text-xs text-start lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl">
+          <div className="p-2 lg:p-6 text-xs md:text-[14px] leading-normal text-start lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl">
             Thank you.
           </div>
           <div className="bg-primary w-2 rounded-r-full"></div>

@@ -85,7 +85,10 @@ const PembeliLoginPage = () => {
             </button>
           </div>
           <div style={{ height: 30 }}></div>
-          <Divider className="font-inter text-h5 font-semibold px-20 md:px-0" flexItem>
+          <Divider
+            className="font-inter text-h5 font-semibold px-20 md:px-0"
+            flexItem
+          >
             or
           </Divider>
           <div style={{ height: 30 }}></div>

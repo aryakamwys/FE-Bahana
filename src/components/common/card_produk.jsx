@@ -13,35 +13,31 @@ const CardProduct = ({ product }) => {
   };
 
   return (
-    <div className="max-w-sm bg-white border border-black rounded-xl">
+    <div className="w-auto bg-white border border-black rounded-xl overflow-hidden">
       <div>
         <img
           src={imageDummy}
-          className="p-6"
-          style={{ width: 350, height: 305 }}
+          className="lg:p-6  lg:w-[350px]   lg:h-[250px] xl:h-[305px] md:p-3 "
           alt={product.name}
         />
       </div>
-      <div className="p-6">
-        <div
-          className="font-inter text-black font-semibold text-start"
-          style={{ fontSize: 25 }}
-        >
+      <div className="lg:p-6 md:p-4 ">
+        <div className="font-inter text-black lg:font-semibold text-start  md:font-bold  lg:text-[1.5rem] xl:text-[25px] md:text-[1rem] ">
           {product.name}
         </div>
-        <div className="flex flex-row row-auto items-center">
+        <div className="flex flex-row row-auto items-center mt-2 gap-1">
           <div
-            className="font-inter font-semibold text-primary"
-            style={{ fontSize: 25, lineHeight: 1.2 }}
+            className="font-inter font-bold text-primary  lg:text-[25px]  md:text-[1.2rem] flex "
+            style={{ lineHeight: 1.2 }}
           >
-            Rp {product.price.toLocaleString()}
+            <p>Rp</p> {product.price.toLocaleString()}
           </div>
           <div style={{ width: 10 }}></div>
           <div
-            className="font-inter font-semibold text-gray opacity-50 line-through"
-            style={{ fontSize: 20, lineHeight: 1.2 }}
+            className="font-inter font-semibold text-gray opacity-50 line-through lg:text-[20px] md:text-[13px]  flex"
+            style={{ lineHeight: 1.2 }}
           >
-            Rp {product.originalPrice.toLocaleString()}
+            <p>Rp</p> {product.originalPrice.toLocaleString()}
           </div>
         </div>
         <div style={{ height: 12 }}></div>
@@ -54,24 +50,23 @@ const CardProduct = ({ product }) => {
           </div>
         </div>
         <div style={{ height: 12 }}></div>
-        <div className="flex flex-row row-auto">
+        <div className="flex flex-row row-auto items-center justify-between">
           <div>
             <button
-              className="flex flex-row row-auto border border-black rounded-full pt-4 pb-4"
-              style={{ paddingLeft: 49, paddingRight: 49 }}
+              className="flex flex-row row-auto border items-center lg:gap-2 border-black lg:rounded-full  lg:px-[20px] xl:px-[49px] px-[15px] md:py-2   xl:py-4  lg:py-3 rounded-[40px]  "
               onClick={() => (window.location.href = "/detailproduct")}
             >
               <img src={buyIcon} alt="buy icon" />
               <div style={{ width: 10 }}></div>
-              <span className="font-inter font-semibold text-black">
-                Beli Sekarang
+              <span className="font-inter font-semibold text-black  md:text-[14px]  lg:text-[1rem]">
+                Buy Now
               </span>
             </button>
           </div>
-          <div style={{ width: 30 }}></div>
+          <div className="md:hidden lg:block" style={{ width: 30 }}></div>
           <div>
             <button
-              className="p-4 border border-gray border-opacity-50 rounded-full"
+              className="xl:p-4 md:p-2 border border-gray border-opacity-50 rounded-full"
               onClick={handleBookmarkClick}
             >
               <img

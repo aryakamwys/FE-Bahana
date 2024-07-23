@@ -19,8 +19,7 @@ const SearchBar = () => {
     <div className="flex items-center justify-center">
       <form
         onSubmit={handleSubmit}
-        className="flex items-center rounded-xl"
-        style={{ width: 633, height: 58 }}
+        className="flex items-center rounded-xl  lg:w-[633px] lg:h-[58px] md:w-[450px] md:h-[45px]  "
       >
         <span className="flex items-center justify-center w-full h-full rounded-xl ring-2 ring-black opacity-50 pl-5 pr-5">
           <input

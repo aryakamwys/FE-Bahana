@@ -11,46 +11,34 @@ const ContainerCart = () => {
     setIsChecked(!isChecked);
   };
   return (
-    <div className="py-5">
-      <div
-        className="min-w-full border border-black rounded-3xl"
-        style={{ height: 240 }}
-      >
-        <div className="flex felx-row items-center justify-around pl-10 pr-10 pt-7 pb-7">
-          <button
-            className={`w-10 h-10 border border-black rounded-lg flex items-center justify-center ${
-              isChecked ? "bg-primary" : ""
-            }`}
-            onClick={handleClick}
-          >
-            {isChecked ? <img src={CheckIcon} alt="check" /> : ""}
-          </button>
-          <div className="flex flex-row">
+    <div className="lg:py-5 py-2">
+      <div className="min-w-full border border-black lg:rounded-3xl rounded-md  h-auto">
+        <div className="flex felx-row items-center justify-between lg:px-10 lg:py-7 px-3 py-1 gap-1 ">
+          <div className="flex flex-row items-center ">
+            <button
+              className={`lg:w-10 lg:h-10 border w-5 h-4 md:w-5 md:h-5  border-black  rounded-sm lg:rounded-lg flex items-center justify-center   ${
+                isChecked ? "bg-primary" : ""
+              }`}
+              onClick={handleClick}
+            >
+              {isChecked ? <img src={CheckIcon} alt="check" /> : ""}
+            </button>
             <div>
               <img
                 src={CartImage}
-                style={{ width: 200, height: 180 }}
                 alt="carrot"
+                className="lg:h-[100px] lg:w-[200px] h-[80px]  w-[170px]  md:h-[100px] "
               />
             </div>
-            <div style={{ width: 25 }}></div>
+            <div className="hidden lg:block" style={{ width: 25 }}></div>
             <div className="flex flex-col items-start">
-              <div
-                className="font-inter font-semibold text-black"
-                style={{ fontSize: 40 }}
-              >
+              <div className="font-inter font-semibold text-black lg:text-[40px] text-[21px] text-start ">
                 Wortel blabla
               </div>
-              <div
-                className="font-inter font-medium text-black"
-                style={{ fontSize: 35 }}
-              >
+              <div className="font-inter font-semibold text-black lg:text-[35px]  text-[15px] text-start ">
                 Lorem ipsum dolor sit amet consectetur
               </div>
-              <div
-                className="font-inter font-semibold text-black"
-                style={{ fontSize: 40 }}
-              >
+              <div className="font-inter font-semibold text-black text-start lg:text-[40px] text-[19px] ">
                 Rp 100.000
               </div>
             </div>

@@ -172,9 +172,9 @@ const stepsVertical = [
 
 const ContentTrackingOrder = ({ currentStep }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col md:mt-7 lg:mt-0">
       <div className="lg:h-[40px] "></div>
-      <div className="flex justify-between items-center w-full lg:border border-gray border-opacity-50 rounded-xl pt-9 pb-9">
+      <div className="flex justify-between items-center  md:border overflow-hidden border-gray border-opacity-50 rounded-xl py-9 ">
         {steps.map((step, index) => (
           <div
             key={index}
@@ -202,21 +202,18 @@ const ContentTrackingOrder = ({ currentStep }) => {
         ))}
       </div>
       <div className="lg:h-[24px] "></div>
-      <div className="flex flex-col lg:flex-row justify-between">
-        <div
-          className="hidden lg:flex lg:border border-gray border-opacity-50 rounded-xl"
-          style={{ width: 356, height: 658 }}
-        >
-          <div className="hidden lg:flex flex-col items-start pl-5 pr-5 pt-8">
+      <div className="flex flex-col lg:flex-row justify-between w-full lg:gap-8">
+        <div className="hidden md:flex lg:border border-gray border-opacity-50 rounded-x lg:w-[356px] lg:h-[658px] md:w-full bg- md:h-auto  ">
+          <div className="hidden lg:flex flex-col items-start pl-5 pr-5 pt-8 w-full ">
             <div
-              className="font-inter font-semibold text-black"
+              className="font-inter font-semibold text-start text-black border-b-[1px] border-gray border-opacity-50 w-full"
               style={{ fontSize: 20 }}
             >
               Lacak
             </div>
-            <div className="h-7"></div>
-            <hr className="w-[297px] border border-gray border-opacity-50" />
-            <div className="h-7"></div>
+            <div className="h-7 hidden lg:block"></div>
+
+            <div className="h-7 hidden lg:block"></div>
             <DetailOrder title={"Nomor resi"} value={"SPXID091232829212"} />
             <DetailOrder title={"Pengirim"} value={"Nama Petani"} />
             <DetailOrder title={"Tanggal pengiriman"} value={"23 April 2024"} />
@@ -224,33 +221,33 @@ const ContentTrackingOrder = ({ currentStep }) => {
             <DetailOrder title={"Tanggal pengiriman"} value={"23 April 2024"} />
           </div>
         </div>
-        <div className="lg:hidden flex flex-col items-start">
-          <div className="font-inter font-semibold text-[14px] text-black">
+        <div className="lg:hidden flex flex-col items-start md:w-full mb-5">
+          <div className="font-inter font-semibold text-[14px] text-black border-b-[1px] border-gray border-opacity-50 w-full md:pb-2 text-start">
             Lacak
           </div>
           <div className="h-[5px]"></div>
-          <hr className="w-[350px] border-t-[1px] border-gray border-opacity-50" />
+
           <div className="h-[5px]"></div>
-          <div className="flex flex-row  w-[350px] justify-between">
+          <div className="flex flex-row  w-[350px] md:w-[600px] justify-between">
             <DetailOrder title={"Nomor Resi"} value={"SPXID091232829212"} />
             <DetailOrder title={"Tanggal pengiriman"} value={"23 April 2024"} />
             <DetailOrder title={"Tanggal pengiriman"} value={"23 April 2024"} />
           </div>
-          <div className="flex flex-row w-[240px]  justify-between">
+          <div className="flex flex-row w-[240px]  md:w-[360px] justify-between">
             <DetailOrder title={"Pengirim"} value={"Nama Petani"} />
             <DetailOrder title={"Estimasi tiba"} value={"28 - 29 April 2024"} />
           </div>
         </div>
-        <div className="border border-gray border-opacity-50 rounded-xl ">
-          <div className="flex flex-col items-start w-[350px] h-[480px] lg:w-[865px] lg:h-[658px] p-[22px] lg:p-8">
+        <div className="border border-gray border-opacity-50 rounded-xl w-full">
+          <div className="flex flex-col items-start  h-[480px] lg:w-[865px] lg:h-[658px] p-[22px] lg:p-8 w-full">
             <div
-              className="font-inter font-bold text-black"
+              className="font-inter font-bold text-black border-b-[1px] border-gray border-opacity-50 w-full md:pb-2 text-start mb-2"
               style={{ fontSize: 20 }}
             >
               Delivered
             </div>
             <div className="h-[15px] lg:h-7"></div>
-            <hr className="w-[350px] lg:w-full border-[1px] border-gray border-opacity-50" />
+
             <div className="h-[15px] lg:h-7"></div>
             <div className="w-[350px] lg:w-full rounded-xl">
               {stepsVertical.map((step, index) => (

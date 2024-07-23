@@ -15,11 +15,8 @@ const HeaderCart = () => {
           <img src={ArrowBack} alt="arrow back" />
         </button>
         <div style={{ width: 20 }}></div>
-        <div
-          className="font-inter font-semibold text-black"
-          style={{ fontSize: 40 }}
-        >
-          Keranjang Belanja Anda
+        <div className="font-inter font-semibold text-black lg:text-[40px] text-[25px] ">
+          Keranjang Belanja
         </div>
       </div>
     </div>

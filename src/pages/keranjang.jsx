@@ -7,7 +7,7 @@ import FooterCart from "../sections/keranjang/footer";
 const CartPage = () => {
   return (
     <div>
-      <div style={{ paddingLeft: 310, paddingRight: 315 }}>
+      <div className="px-5 md:px-12 lg:px-[100px] 2xl:px-[315px]   xl:px-[200px]  max-w-screen-sm   md:max-w-full">
         <NavbarPembeli />
         <HeaderCart />
         <ContentCart />

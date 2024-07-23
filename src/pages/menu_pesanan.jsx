@@ -5,7 +5,7 @@ import ContentMenuPesanan from "../sections/menu_pesanan/content";
 
 const MenuPesanan = () => {
   return (
-    <div className="max-w-screen-sm lg:max-w-full pl-5 pr-5 lg:pl-[310px] lg:pr-[315px]">
+    <div className="px-5 md:px-12 lg:px-[100px] 2xl:px-[315px]   xl:px-[200px]  max-w-screen-sm   md:max-w-full">
       {/* <NavbarPetani /> */}
       <HeaderMenuPesanan />
       <ContentMenuPesanan />

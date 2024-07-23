@@ -7,10 +7,7 @@ import Star from "../../assets/images/star_review.svg";
 const CardReview = () => {
   return (
     <div className="pt-5 pb-5">
-      <div
-        className="w-full border border-gray border-opacity-50 rounded-xl"
-        style={{ height: 235 }}
-      >
+      <div className="w-full h-auto border border-gray border-opacity-50 rounded-xl">
         <div className="flex flex-col p-6">
           <div className="flex flex-row w-full justify-between">
             <div className="flex flex-row row-auto items-center">
@@ -34,7 +31,7 @@ const CardReview = () => {
           </div>
           <div className="h-4"></div>
           <div
-            className="text-start font-normal font-inter text-black"
+            className="text-start font-normal font-inter text-black "
             style={{ fontSize: 20, lineHeight: 1.3 }}
           >
             Lorem ipsum dolor sit amet consectetur. Faucibus vel quis tellus

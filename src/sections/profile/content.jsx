@@ -26,17 +26,17 @@ const ContentProfile = () => {
   return (
     <div className="lg:pl-16">
       <div style={{ height: 40 }}></div>
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row w-full">
         <div className="flex flex-col items-center">
-          <div className="flex flex-col w-52 lg:w-96 items-center border border-black rounded-xl p-5">
+          <div className="flex flex-col w-52 md:w-70 lg:w-96 items-center border border-black rounded-md lg:rounded-xl p-2 md:p-3 lg:p-5">
             <img
               src={ProfileImage}
-              className="w-36 h-30 lg:w-80 lg:h-72"
+              className="w-36 h-30  md:w-40 md:h-32 lg:w-80 lg:h-72"
               alt="profile_photo"
             />
             <div style={{ height: 25 }}></div>
             <button
-              className="flex items-center w-36 lg:w-full justify-center py-2 border border-black rounded"
+              className="flex items-center w-36 md:w-full justify-center py-1 lg:py-2 border border-black rounded"
               onClick={handleButtonClick}
             >
               <div
@@ -53,8 +53,8 @@ const ContentProfile = () => {
               onChange={handleFileChange}
             />
             <div style={{ height: 25 }}></div>
-            <div className="w-32 lg:w-80">
-              <div className="font-inter font-semibold text-black text-start text-xs lg:text-sm">
+            <div className="w-32 md:w-44 lg:w-80">
+              <div className="font-inter font-semibold text-black text-justify text-xs lg:text-sm">
                 Besar file: maksimum 10.000.000 bytes (10 Megabytes). Ekstensi
                 file yang diperbolehkan: .JPG .JPEG .PNG
               </div>
@@ -118,21 +118,21 @@ const ContentProfile = () => {
         </div>
         <div style={{ width: 50 }}></div>
         <div className="max-w-full lg:pl-14 lg:pr-4">
-          <div className="flex flex-col">
+          <div className="flex flex-col w-f">
             <TextfieldProfile
               title="Nama"
               placeholder="Difa Rindng Utari"
               type="text"
               readOnly={true}
               className={
-                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] md:w-[630px] lg:w-[766px]"
               }
             />
             <TextfieldProfile
               title="Email"
               placeholder="bahanaaaaa@gmail.com"
               className={
-                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px] md:w-[630px]"
               }
               type="email"
               readOnly={true}
@@ -141,7 +141,7 @@ const ContentProfile = () => {
               title="Contact Number"
               placeholder="628120929172"
               className={
-                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px] md:w-[630px]"
               }
               type="text"
               readOnly={true}
@@ -150,7 +150,7 @@ const ContentProfile = () => {
               title="Tanggal Lahir"
               placeholder="12 Juli 2004"
               className={
-                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px] md:w-[630px]"
               }
               type="text"
               readOnly={true}
@@ -159,7 +159,7 @@ const ContentProfile = () => {
               title="Password"
               placeholder="*************"
               className={
-                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px] md:w-[630px]"
               }
               type="password"
               readOnly={true}

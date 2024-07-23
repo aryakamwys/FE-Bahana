@@ -8,9 +8,9 @@ const HeaderChat = () => {
   return (
     <div>
       <div style={{ height: 20 }}></div>
-      <div className="hidden lg:flex flex-row row-auto">
+      <div className="hidden md:flex flex-row row-auto gap-2">
         <button
-          className="flex items-center justify-center border border-black rounded-full"
+          className="flex items-center justify-center border border-black rounded-full p-2 "
           style={{ width: 40, height: 40 }}
           onClick={() => window.history.back()}
         >

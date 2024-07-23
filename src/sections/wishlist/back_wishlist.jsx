@@ -15,10 +15,7 @@ const BackWishlist = () => {
           <img src={ArrowBack} alt="arrow back" />
         </button>
         <div style={{ width: 20 }}></div>
-        <div
-          className="font-inter font-semibold text-black"
-          style={{ fontSize: 45 }}
-        >
+        <div className="font-inter font-semibold text-black lg:text-[45px] text-[25px] ">
           Wishlist
         </div>
       </div>
