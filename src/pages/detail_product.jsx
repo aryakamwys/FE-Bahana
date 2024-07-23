@@ -8,13 +8,13 @@ import Footer from "../components/specific/footer";
 
 const DetailProduct = () => {
   return (
-    <div style={{ paddingLeft: 310, paddingRight: 310 }}>
-      <NavbarPembeli />
+    <div className="max-w-screen-sm lg:max-w-full pl-5 pr-5 lg:pl-[310px] lg:pr-[315px]">
+      {/* <NavbarPembeli /> */}
       <HeaderDetailProduct />
       <ContentDetailProduct />
       <PenjualSection />
       <ReviewRatings />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

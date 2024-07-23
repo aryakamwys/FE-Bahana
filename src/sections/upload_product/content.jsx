@@ -23,26 +23,18 @@ const ContentUploadProduct = () => {
     <div>
       <div className="py-3">
         <div className="flex flex-col items-start">
-          <div
-            className="font-inter font-semibold text-gray"
-            style={{ fontSize: 20 }}
-          >
+          <div className="font-inter font-semibold text-gray text-[16px] lg:text-[20px]">
             Product Name
           </div>
           <div style={{ height: 7 }}></div>
           <form
-            className="flex flex-row items-center justify-start"
-            style={{ width: 1300 }}
+            className="flex flex-row items-center justify-start w-[350px] lg:w-[1300px]"
           >
-            <span
-              className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 w-full ring-opacity-50 focus:ring-gray"
-              style={{ width: 1300, height: 46 }}
-            >
+            <span className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 ring-opacity-50 focus:ring-gray w-[350px] h-[34px] lg:w-[1300px] lg:h-[46px] ">
               <img src={AddProductIcon} className="pr-2" alt="add_product" />
               <input
                 type={"text"}
-                className="font-inter font-medium focus:outline-none"
-                style={{ fontSize: 24 }}
+                className="font-inter font-medium focus:outline-none text-[16px] lg:text-[24px]"
                 readOnly={false}
               />
             </span>
@@ -52,21 +44,18 @@ const ContentUploadProduct = () => {
       <div className="py-3">
         <div className="flex flex-col items-start">
           <div
-            className="font-inter font-semibold text-gray"
-            style={{ fontSize: 20 }}
+            className="font-inter font-semibold text-gray text-[16px] lg:text-[20px]"
           >
             Product Images
           </div>
           <div style={{ height: 7 }}></div>
           <button
-            className="w-full flex flex-col items-center justify-center border-4 border-dashed border-gray border-opacity-30 rounded-xl"
-            style={{ height: 300 }}
+            className="flex flex-col h-[206px] lg:h-[300px] w-[226px] lg:w-[1300px] items-center justify-center border-4 border-dashed border-gray border-opacity-30 rounded-xl"
             onClick={handleButtonClick}
           >
-            <img src={AddImagesIcon} alt="add_image" />
+            <img src={AddImagesIcon} className="w-[30px] h-[30px] lg:w-[56px] lg:h-[56px] " alt="add_image" />
             <div
-              className="font-inter font-normal text-gray"
-              style={{ fontSize: 20 }}
+              className="font-inter font-normal text-gray text-[12px] lg:text-[20px]"
             >
               Browser or Dekstop
             </div>
@@ -86,30 +75,24 @@ const ContentUploadProduct = () => {
       </div>
       <div className="py-3">
         <div className="flex flex-col items-start">
-          <div className=" w-full flex flex-row justify-between">
+          <div className="flex flex-row justify-between w-[350px] lg:w-[1300px]">
             <div
-              className="font-inter font-semibold text-gray"
-              style={{ fontSize: 20 }}
+              className="font-inter font-semibold text-gray text-[16px] lg:text-[20px]"
             >
               Product Description
             </div>
             <div
-              className="flex items-end font-inter font-light text-gray"
-              style={{ fontSize: 13 }}
+              className="flex items-end font-inter font-light text-gray text-[10px] lg:text-[13px]"
             >
               0/800
             </div>
           </div>
           <div style={{ height: 7 }}></div>
-          <form
-            className="flex flex-row items-center justify-start"
-            style={{ width: 1300 }}
-          >
-            <span className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 w-full ring-opacity-50 focus:ring-gray">
+          <form className="flex items-center justify-start ">
+            <span className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 ring-opacity-50 focus:ring-gray  w-[350px] lg:w-[1300px] h-[64px] lg:h-[142px]">
               <textarea
                 placeholder="A detailed description of the product helps customers to learn more about the product."
-                className="font-inter font-light focus:outline-none w-full"
-                style={{ fontSize: 16, height: 142, resize: "none" }}
+                className="font-inter font-medium focus:outline-none text-[12px] lg:text-[24px] w-[325px] lg:w-[1285px] resize-none"
                 readOnly={false}
               />
             </span>
@@ -130,18 +113,12 @@ const ContentUploadProduct = () => {
         height={46}
         readOnly={false}
       />
-      <div className="w-full flex flex-row justify-between py-5">
-        <button
-          className="border-2 border-primary rounded-md pl-11 pr-11 pt-2 pb-2 font-inter font-medium text-primary"
-          style={{ fontSize: 28 }}
-        >
+      <div className="flex flex-row justify-start pt-[20px] lg:pt-0">
+        <button className="border-2 border-primary rounded-md pl-[26px] pr-[26px] lg:pl-11 lg:pr-11 pt-2 pb-2 font-inter font-medium text-primary text-[16px] lg:text-[28px] ">
           Cancel
         </button>
-        <div className="w-10"></div>
-        <button
-          className="bg-primary rounded-md pl-14 pr-14 pt-2 pb-2 font-inter font-medium text-white"
-          style={{ fontSize: 28 }}
-        >
+        <div className="w-[24px] lg:w-10"></div>
+        <button className="bg-primary rounded-md pl-[26px] pr-[26px] lg:pl-14  lg:pr-14 pt-2 pb-2 font-inter font-medium text-white text-[16px] lg:text-[28px]">
           Save
         </button>
       </div>

@@ -24,16 +24,14 @@ const DetailImage = () => {
 
   return (
     <div>
-      <div style={{ height: 25 }}></div>
+      <div className="h-[10px] lg:h-[25px] "></div>
       <div
-        className="relative flex flex-row row-auto"
-        style={{ width: 701, height: 171 }}
+        className="relative flex flex-row row-auto w-[350px] h-[70px] lg:w-[701px] lg:h-[171px] "
       >
-        <div className=" absolute flex justify-between" style={{ width: 701 }}>
+        <div className=" absolute flex justify-between w-[350px] lg:w-[701px]">
           <div className="p-1">
             <button
-              className="flex items-center rounded-l-xl bg-gray bg-opacity-20 px-2"
-              style={{ height: 171 }}
+              className="flex items-center rounded-l-xl bg-gray bg-opacity-20 px-1 lg:px-2 h-[70px] lg:h-[171px] "
               onClick={handleLeftClick}
             >
               <img src={SlideLeft} alt="slide_left" />
@@ -41,8 +39,7 @@ const DetailImage = () => {
           </div>
           <div className="p-1">
             <button
-              className="flex items-center rounded-r-xl bg-gray bg-opacity-20 px-2"
-              style={{ height: 171 }}
+              className="flex items-center rounded-r-xl bg-gray bg-opacity-20 px-1 lg:px-2 h-[70px] lg:h-[171px] "
               onClick={handleRightClick}
             >
               <img src={SlideRight} alt="slide_right" />
@@ -52,32 +49,28 @@ const DetailImage = () => {
         <div className="p-1">
           <img
             src={CarrotImage}
-            className="border border-gray border-opacity-50 rounded-xl"
-            style={{ width: 170, height: 170 }}
+            className="border border-gray border-opacity-50 rounded-xl w-[80px] h-[70px] lg:w-[170px] lg:h-[170px]"
             alt="carrot"
           />
         </div>
         <div className="p-1">
           <img
             src={CarrotImage}
-            className="border border-gray border-opacity-50 rounded-xl"
-            style={{ width: 170, height: 170 }}
+            className="border border-gray border-opacity-50 rounded-xl w-[80px] h-[70px] lg:w-[170px] lg:h-[170px] "
             alt="carrot"
           />
         </div>
         <div className="p-1">
           <img
             src={CarrotImage}
-            className="border border-gray border-opacity-50 rounded-xl"
-            style={{ width: 170, height: 170 }}
+            className="border border-gray border-opacity-50 rounded-xl w-[80px] h-[70px] lg:w-[170px] lg:h-[170px]"
             alt="carrot"
           />
         </div>
         <div className="p-1">
           <img
             src={CarrotImage}
-            className="border border-gray border-opacity-50 rounded-xl"
-            style={{ width: 170, height: 170 }}
+            className="border border-gray border-opacity-50 rounded-xl w-[80px] h-[70px] lg:w-[170px] lg:h-[170px]"
             alt="carrot"
           />
         </div>

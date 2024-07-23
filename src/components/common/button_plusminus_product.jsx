@@ -14,42 +14,23 @@ const PlusMinusProduct = () => {
   };
 
   return (
-    <div className="px-2 py-4">
+    <div className="py-[10px] lg:py-[15px] ">
       <div
-        className="flex flex-row row-auto font-medium font-inter text-black"
-        style={{ fontSize: 25 }}
+        className="flex flex-row row-auto items-center font-medium font-inter text-[16px] lg:text-[25px] text-black w-[66px] h-[26px] lg:w-[106px] lg:h-[44px]"
       >
         <button
-          className=" border border-gray border-opacity-50 rounded-l-xl"
-          style={{
-            paddingTop: 5,
-            paddingBottom: 5,
-            paddingLeft: 10,
-            paddingRight: 10,
-          }}
+          className=" border border-gray border-opacity-50 rounded-l-[5px] lg:rounded-l-xl lg:px-[10px] py-[4] px-[5px] lg:py-[5px]"
           onClick={handleDecrement}
         >
           -
         </button>
         <div
-          className=" border border-gray border-opacity-50"
-          style={{
-            paddingTop: 7,
-            paddingBottom: 7,
-            paddingLeft: 10,
-            paddingRight: 10,
-          }}
+          className=" border border-gray border-opacity-50 lg:px-[10px] py-[4] px-[7px] lg:py-[5px]"
         >
           {count}
         </div>
         <button
-          className=" border border-gray border-opacity-50 rounded-r-xl"
-          style={{
-            paddingTop: 5,
-            paddingBottom: 5,
-            paddingLeft: 10,
-            paddingRight: 10,
-          }}
+          className=" border border-gray border-opacity-50 rounded-r-[5px] lg:rounded-r-xl lg:px-[10px] px-[5px] py-[4] lg:py-[5px]"
           onClick={handleIncrement}
         >
           +

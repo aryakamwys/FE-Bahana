@@ -11,36 +11,28 @@ import CartIcon from "../../assets/images/keranjang.svg";
 const ContentDetailProduct = () => {
   return (
     <div>
-      <div className="flex flex-row row-auto">
-        <img
-          src={ProductImage}
-          className="border border-gray border-opacity-50 rounded-3xl"
-          style={{ width: 700, height: 434 }}
-          alt="productimage"
-        />
+      <div className="flex flex-col lg:flex-row row-auto">
+        <div>
+          <img
+            src={ProductImage}
+            className="border border-gray border-opacity-50 rounded-3xl w-[350px] h-[222px] lg:w-[700px] lg:h-[434px] "
+            alt="productimage"
+          />
+          <DetailImage />
+        </div>
         <div style={{ width: 36 }}></div>
         <div
-          className="flex flex-col col-auto items-start"
-          style={{ width: 505, height: 434 }}
+          className="flex flex-col col-auto items-start w-[350px] h-[275px] lg:w-[505px] lg:h-[434px] "
         >
-          <div
-            className="font-inter font-semibold text-black text-start"
-            style={{ fontSize: 32 }}
-          >
+          <div className="pt-[15px] lg:py-0 font-inter font-semibold text-black text-start text-[18px] lg:text-[32px]">
             Nama Product blabla bshhvdshsh
           </div>
           <div style={{ height: 15 }}></div>
-          <div
-            className="font-inter font-medium text-black text-start"
-            style={{ fontSize: 32 }}
-          >
+          <div className="py-[6px] lg:py-0 font-inter font-medium text-black text-start text-[14px] lg:text-[32px]">
             Description
           </div>
           <div style={{ height: 15 }}></div>
-          <div
-            className="font-inter font-medium text-black text-start"
-            style={{ fontSize: 20 }}
-          >
+          <div className="font-inter font-medium text-black text-start text-[12px] lg:text-[20px]">
             Lorem ipsum dolor sit amet consectetur. Diam dui odio pulvinar
             scelerisque. Amet non habitant viverra orci egestas. Convallis
             adipiscing viverra sit amet lorem ac ultrices. Volutpat laoreet amet
@@ -54,59 +46,51 @@ const ContentDetailProduct = () => {
           </div>
           <PlusMinusProduct />
           <StatusPrice />
-        </div>
-      </div>
-      <div style={{ height: 25 }}></div>
-
-      <div className="flex flex-row row-auto">
-        <DetailImage />
-        <div style={{ width: 36 }}></div>
-        <div className="flex flex-col col-auto p-1">
-          <div className="flex flex-row row-auto items-center">
-            <div
-              className="font-inter font-bold text-primary"
-              style={{ fontSize: 40 }}
-            >
-              Rp. 100.000
-            </div>
-            <div style={{ width: 10 }}></div>
-            <div
-              className="font-inter font-normal text-gray text-opacity-50 line-through"
-              style={{ fontSize: 25 }}
-            >
-              Rp. 150.000
-            </div>
-          </div>
-          <div style={{ height: 15 }}></div>
-          <div className="flex items-start">
-            <div
-              className="font-inter font-semibold text-black"
-              style={{ fontSize: 25 }}
-            >
-              Stok: 10
-            </div>
-          </div>
-          <div style={{ height: 15 }}></div>
-          <div className="flex flex-row row-auto">
-            <button className="bg-primary rounded-xl px-20 py-5" onClick={() => (window.location.href = "/payment")}>
+          <div className="flex flex-col lg:h-[172px] col-auto p-1">
+            <div className="flex flex-row row-auto items-center">
               <div
-                className="flex items-start justify-center text-white font-inter font-medium"
-                style={{ fontSize: 20 }}
+                className="font-inter text-[20px] lg:text-[40px] font-bold text-primary"
               >
-                Buy
+                Rp. 100.000
               </div>
-            </button>
-            <div style={{ width: 25 }}></div>
-            <button className="flex flex-row row-auto items-center bg-white border border-primary rounded-xl px-7 py-5">
-              <img src={CartIcon} className="w-6 h-6" alt="cart icon" />
               <div style={{ width: 10 }}></div>
               <div
-                className="flex items-center justify-center text-primary font-inter font-medium"
-                style={{ fontSize: 20 }}
+                className="font-inter text-[16px] lg:text-[25px] font-normal text-gray text-opacity-50 line-through"
               >
-                Masukkan Keranjang
+                Rp. 150.000
               </div>
-            </button>
+            </div>
+            <div className="flex items-start py-[8px] ">
+              <div
+                className="font-inter text-[14px] lg:text-[25px] font-semibold text-black"
+              >
+                Stok: 10
+              </div>
+            </div>
+            <div className="hidden lg:flex flex-row row-auto">
+              <button
+                className="bg-primary rounded-xl w-[205px] h-[64px] "
+                onClick={() => (window.location.href = "/payment")}
+              >
+                <div
+                  className="flex items-start justify-center text-white font-inter font-medium"
+                  style={{ fontSize: 20 }}
+                >
+                  Buy
+                </div>
+              </button>
+              <div style={{ width: 25 }}></div>
+              <button className="flex flex-row row-auto items-center justify-center bg-white border border-primary rounded-xl w-[275px] h-[64px]">
+                <img src={CartIcon} className="w-6 h-6" alt="cart icon" />
+                <div style={{ width: 10 }}></div>
+                <div
+                  className="flex items-center justify-center text-primary font-inter font-medium"
+                  style={{ fontSize: 20 }}
+                >
+                  Masukkan Keranjang
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
