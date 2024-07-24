@@ -23,14 +23,14 @@ const Recomendation = () => {
 
   return (
     <div className="flex flex-col items-start pt-[40px] lg:pt-[63px]">
-      <div className="font-bold font-inter text-[20px] lg:text-[40px] text-black">
+      <div className="font-bold font-inter text-[20px] md:text-[25px] lg:text-[40px] text-black">
         Must-Have Items
       </div>
       <div className="h-[20px] lg:h-[60px] "></div>
-      <div className="flex flex-row row-auto items-center">
+      <div className="flex flex-row row-auto w-full items-center">
         <img
           src={ArrowLeft}
-          className="w-[20px] h-[20px] lg:w-[65px] lg:h-[65px]"
+          className="w-[20px] h-[20px] md:w-[35px] md:h-[35px] lg:w-[65px] lg:h-[65px]"
           alt="arrow left"
           onClick={handlePreviousCard}
         />
@@ -46,7 +46,7 @@ const Recomendation = () => {
         <div className="w-[5px] lg:w-[52px]"></div>
         <img
           src={ArrowRight}
-          className="w-[20px] h-[20px] lg:w-[65px] lg:h-[65px]"
+          className="w-[20px] h-[20px] md:w-[35px] md:h-[35px] lg:w-[65px] lg:h-[65px]"
           alt="arrow right"
           onClick={handleNextCard}
         />

@@ -44,59 +44,59 @@ const ContentPayment = () => {
 
   return (
     <div>
-      <div className="flex flex-col w-[350px] lg:w-full" >
+      <div className="flex flex-col w-[350px] md:w-full" >
         <div style={{ height: 34 }}></div>
         <div className="flex flex-row justify-between items-center">
           <div
-            className="font-inter text-[18px] lg:text-[22px] font-semibold text-black"
+            className="font-inter text-[18px] md:text-[22px] font-semibold text-black"
           >
             Delivery Address
           </div>
           <button onClick={() => (window.location.href = "/editalamat")}>
-            <img src={EditAlamatIcon} className="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] " alt="edit_alamat" />
+            <img src={EditAlamatIcon} className="w-[18px] h-[18px] md:w-[25px] md:h-[25px] " alt="edit_alamat" />
           </button>
         </div>
         <div className="flex flex-col items-start">
           <div
-            className="font-inter text-[14px] lg:text-[20px] font-medium text-black"
+            className="font-inter text-[14px] md:text-[20px] font-medium text-black"
           >
             Difa Rindang Utari
           </div>
           <div
-            className="font-inter text-[14px] lg:text-[20px] font-medium text-black"
+            className="font-inter text-[14px] md:text-[20px] font-medium text-black"
           >
             (+62) 811-2222-2222
           </div>
           <div
-            className="font-inter text-[14px] lg:text-[20px] font-medium text-black text-start"
+            className="font-inter text-[14px] md:text-[20px] font-medium text-black text-start"
           >
             Kostella Tanjung Duren No. 123, KOTA JAKARTA BARAT, GROGOL
             PETAMBURAN
           </div>
         </div>
         <div style={{ height: 30 }}></div>
-        <div className="flex flex-row justify-between lg:border-none border border-gray p-2 lg:p-0 rounded-[5px]">
+        <div className="flex flex-row justify-between md:border-none border border-gray p-2 lg:p-0 rounded-[5px]">
           <div className="flex flex-row">
             <img
               src={CarrotImage}
-              className="border-none lg:border border-gray border-opacity-50 rounded-xl w-[85px] h-[62px] lg:w-[150px] lg:h-[100px] "
+              className="border-none lg:border border-gray border-opacity-50 rounded-xl w-[85px] h-[62px] md:w-[150px] md:h-[100px] "
               alt="carrot"
             />
             <div style={{ width: 37 }}></div>
             <div className="flex flex-col items-start">
               <div
-                className="font-inter font-semibold text-black text-[14px] lg:text-[20px]"
+                className="font-inter font-semibold text-black text-[14px] md:text-[20px]"
               >
                 Nama product
               </div>
               <div style={{ height: 5 }}></div>
               <div
-                className="font-inter font-medium text-black text-start text-[10px] lg:text-[18px]"
+                className="font-inter font-medium text-black text-start text-[10px] md:text-[18px]"
               >
                 Lorem ipsum dolor sit amet blablalalblballllaf
               </div>
               <div style={{ height: 5 }}></div>
-              <div className="hidden lg:flex w-12 h-6">
+              <div className="hidden md:flex w-12 h-6">
                 <div
                   className="border border-gray rounded-md pt-1 pb-1 pl-2 pr-2 font-inter font-medium text-black"
                   style={{ fontSize: 10 }}
@@ -107,13 +107,13 @@ const ContentPayment = () => {
               <div style={{ height: 5 }}></div>
               <div className="flex flex-row items-center">
                 <div
-                  className="font-inter font-bold text-black lg:text-primary text-[12px] lg:text-[15px]"
+                  className="font-inter font-bold text-black md:text-primary text-[12px] md:text-[15px]"
                 >
                   Rp 100.000
                 </div>
                 <div style={{ width: 10 }}></div>
                 <div
-                  className="hidden lg:flex  font-inter font-normal text-gray line-through"
+                  className="hidden md:flex  font-inter font-normal text-gray line-through"
                   style={{ fontSize: 10 }}
                 >
                   Rp 150.000
@@ -128,16 +128,16 @@ const ContentPayment = () => {
         <div style={{ height: 34 }}></div>
         <div className="flex flex-col items-start">
           <div
-            className="font-inter font-bold text-black text-[16px] lg:text-[22px]"
+            className="font-inter font-bold text-black text-[16px] md:text-[22px]"
           >
             Pilih Pengiriman
           </div>
           <div style={{ height: 20 }}></div>
           <div className="flex flex-col items-start">
             <div style={{ height: 7 }}></div>
-            <div className="relative w-[350px] lg:w-[583px] ">
+            <div className="relative w-[350px] md:w-[583px] ">
               <div
-                className="flex flex-row justify-between h-[44px] lg:h-[58px] items-center border border-gray-300 border-opacity-50 rounded-xl pl-10 pr-10 cursor-pointer"
+                className="flex flex-row justify-between h-[44px] md:h-[58px] items-center border border-gray-300 border-opacity-50 rounded-xl pl-10 pr-10 cursor-pointer"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <div className="w-80 h-18 flex items-center font-medium font-inter text-xl">
@@ -158,7 +158,7 @@ const ContentPayment = () => {
                       onClick={() => handleOptionClick(option)}
                     >
                       <div
-                        className="flex flex-row justify-between font-inter font-semibold text-black text-[14px] lg:text-[20px]"
+                        className="flex flex-row justify-between font-inter font-semibold text-black text-[14px] md:text-[20px]"
                       >
                         <div>{option.label}</div>
                         <div className="flex flex-row">

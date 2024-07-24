@@ -12,8 +12,8 @@ const PembeliRegisterPage = () => {
   };
   return (
     <div
-      id="login"
-      className="flex flex-col lg:flex-row items-center justify-evenly bg-no-repeat min-h-screen bg-neutral"
+      id="register"
+      className="flex flex-col max-w-screen-sm md:max-w-screen-md lg:max-w-full md:flex-row md:items-center md:justify-evenly lg:flex-row items-center justify-evenly bg-no-repeat min-h-screen bg-neutral"
     >
       <div className="hidden lg:flex items-center lg:mb-0">
         <img src={LoginImage} alt="login-image" />
@@ -24,7 +24,7 @@ const PembeliRegisterPage = () => {
         className="hidden lg:block bg-black3 opacity-50"
       />
       <div
-        className="flex flex-col items-center justify-center md:mt-24 md:mb-24 mb-28 pb-10 lg:pb-6"
+        className="flex flex-col items-center justify-center md:mt-8 md:mb-0 mb-28 pb-10 lg:pb-24"
       >
         <div
           className="flex items-center justify-around bg-greenLight rounded-full p-3"
@@ -48,12 +48,12 @@ const PembeliRegisterPage = () => {
           </div>
         </div>
         <div
-          className="font-semibold font-inter text-black text-center text-3xl lg:text-6xl  mt-10"
+          className="font-semibold font-inter text-black text-center text-3xl md:text-[50px] lg:text-6xl  mt-10"
         >
           Create your account
         </div>
-        <div className="md:flex lg:hidden md:justify-center items-center py-4 lg:py-0 lg:mb-0">
-            <img src={LoginImage} className="w-60 h-40 md:w-72 md:h-48" alt="login-image" />
+        <div className="md:flex lg:hidden md:justify-center items-center py-4 md:pt-[52px] md:pb-[40px] lg:py-0 lg:mb-0">
+            <img src={LoginImage} className="w-60 h-40 md:w-[309px] md:h-[206px]" alt="login-image" />
           </div>
         <div className="relative md:mt-0 lg:mt-10">
           <div>
@@ -62,7 +62,7 @@ const PembeliRegisterPage = () => {
               type={"text"}
               placeholder={"Username"}
               className={
-                "h-10 lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] lg:w-[563px]"
+                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
               }
             />
             <div style={{ height: 15 }}></div>
@@ -71,7 +71,7 @@ const PembeliRegisterPage = () => {
               type={"email"}
               placeholder={"Email"}
               className={
-                "h-10 lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] lg:w-[563px]"
+                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
               }
             />
             <div style={{ height: 15 }}></div>
@@ -80,7 +80,7 @@ const PembeliRegisterPage = () => {
               type={"text"}
               placeholder={"Phone"}
               className={
-                "h-10 lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] lg:w-[563px]"
+                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
               }
             />
             <div style={{ height: 15 }}></div>
@@ -89,7 +89,7 @@ const PembeliRegisterPage = () => {
               type={"password"}
               placeholder={"Password"}
               className={
-                "h-10 lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] lg:w-[563px]"
+                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
               }
             />
             <div style={{ height: 15 }}></div>
@@ -98,7 +98,7 @@ const PembeliRegisterPage = () => {
               type={"password"}
               placeholder={"Confirm Password"}
               className={
-                "h-10 lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] lg:w-[563px]"
+                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
               }
             />
           </div>
@@ -126,7 +126,7 @@ const PembeliRegisterPage = () => {
               </button>
               <div style={{ width: 10 }}></div>
               <div
-                className="font-inter font-medium text-black text-xs lg:text-base"
+                className="font-inter font-medium text-black text-xs md:text-base lg:text-base"
               >
                 I agree with our{" "}
                 <span className="font-semibold">
@@ -140,7 +140,7 @@ const PembeliRegisterPage = () => {
 
         <div>
         <button
-              className="h-10 lg:h-14 flex items-center justify-center rounded-lg lg:rounded-xl bg-primary text-white font-semibold font-inter text-sm lg:text-h5 w-[350px] lg:w-[563px]"
+              className="h-10 md:h-[60px] lg:h-14 flex items-center justify-center rounded-lg lg:rounded-xl bg-primary text-white font-semibold font-inter text-sm lg:text-h5 w-[350px] md:w-[563px] lg:w-[563px]"
               onClick={() => (window.location.href = "/home")}
             >
               Create Account

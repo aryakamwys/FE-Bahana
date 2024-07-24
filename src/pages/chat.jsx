@@ -21,7 +21,7 @@ const ChatPage = () => {
   }, []);
 
   return (
-    <div className="h-screen grid grid-rows-[2fr,auto,1fr] max-w-screen-sm pl-5 pr-5 lg:max-w-full lg:pl-[310px] lg:pr-[315px] py-2">
+    <div className="h-screen grid grid-rows-[2fr,auto,1fr] max-w-screen-sm md:max-w-screen-md lg:max-w-full px-5 md:px-[70px] lg:px-[315px] py-2">
       {isLG ? <HeaderChat /> : <NavbarPembeli />}
       <div className="pt-[10px] lg:pt-0 "></div>
       <ContentChat />

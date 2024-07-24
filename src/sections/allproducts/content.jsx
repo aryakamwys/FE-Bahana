@@ -96,7 +96,7 @@ const Products = () => {
   return (
     <div>
       <div className="h-[20px] lg:h-[50px] "></div>
-      <div className="mx-auto p-4 grid grid-cols-2 lg:grid-cols-3 lg:gap-x-4 gap-x-[10px] gap-y-5 lg:gap-y-12">
+      <div className="mx-auto p-4 grid grid-cols-2 md:grid-cols-3 lg:gap-x-4 gap-x-[10px] gap-y-5 lg:gap-y-12">
         {productData.map((product, index) => (
           <CardProductAll key={index} product={product} />
         ))}

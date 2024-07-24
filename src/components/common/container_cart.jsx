@@ -11,12 +11,12 @@ const ContainerCart = () => {
     setIsChecked(!isChecked);
   };
   return (
-    <div className="lg:py-5 py-2">
-      <div className="min-w-full border border-black lg:rounded-3xl rounded-md  h-auto">
+    <div className="lg:py-5 md:py-[15px] py-2">
+      <div className="min-w-full border border-black md:rounded-3xl rounded-md  h-auto">
         <div className="flex felx-row items-center justify-around  lg:px-10 lg:py-7 px-3 py-1 gap-1">
           <button
             className={`lg:w-10 lg:h-10 border w-5 h-4 md:w-5 md:h-5 border-black rounded-sm lg:rounded-lg flex items-center justify-center ${
-              isChecked ? "bg-primary" : ""
+              isChecked ? "bg-black" : ""
             }`}
             onClick={handleClick}
           >

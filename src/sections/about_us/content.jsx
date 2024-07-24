@@ -7,20 +7,20 @@ import ProfileDummy from "../../assets/images/profile_dummy.png";
 const ContentAboutUs = () => {
   return (
     <div>
-      <div className="h-[35px] lg:h-[50px]"></div>
+      <div className="h-[20px] lg:h-[50px]"></div>
       <div className="flex flex-col">
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row items-center justify-between">
           <img
             src={Padi}
-            className="w-[109px] h-[109px] lg:w-[356px] lg:h-[340px] "
+            className="w-[109px] h-[109px] md:w-[199px] md:h-[199px] lg:w-[356px] lg:h-[340px] "
             alt="imagePadi"
           />
-          <div className="flex flex-col items-start" style={{ width: 610 }}>
-            <div className="font-semibold font-inter text-black text-[18px] lg:text-[50px] ">
+          <div className="flex flex-col items-start w-[204px] md:w-[312px] lg:w-[610px]">
+            <div className="font-semibold font-inter text-black text-[18px] md:text-[28px] lg:text-[50px] ">
               About Us
             </div>
             <div className="h-[5px] lg:h-[24px]"></div>
-            <div className="font-inter text-black font-medium text-start text-[11px] lg:text-[25px] lg:leading-normal">
+            <div className="font-inter text-black font-medium text-start text-[11px] md:text-[16px] lg:text-[25px] lg:leading-normal">
               Lorem ipsum dolor sit amet consectetur. Sed sed at elit magnis
               mollis. Erat molestie ornare pulvinar nulla pellentesque sagittis
               dui quis. Non varius venenatis lacus arcu tincidunt vulputate
@@ -29,14 +29,14 @@ const ContentAboutUs = () => {
             </div>
           </div>
         </div>
-        <div className="h-[42px] lg:h-[138] "></div>
+        <div className="h-[53px] lg:h-[138] "></div>
         <div className="flex flex-row row-auto justify-between items-center">
-          <div className="flex flex-col items-start w-[349px] lg:w-[1190px]">
-            <div className="font-inter font-semibold text-black  text-[16px] lg:text-[50px]">
+          <div className="flex flex-col items-start w-[349px] md:w-[383px] lg:w-[1190px]">
+            <div className="font-inter font-semibold text-black  text-[16px] md:text-[28px] lg:text-[50px]">
               How can we help farmers
             </div>
             <div className="h-[5px] lg:h-[24px]"></div>
-            <div className="font-inter font-medium text-black text-start text-[11px] lg:text-[25px] lg:leading-normal w-[204px] lg:w-[616px] ">
+            <div className="font-inter font-medium text-black text-start text-[11px] md:text-[14px] lg:text-[25px] lg:leading-normal w-[204px] md:w-[383px] lg:w-[616px] ">
               Lorem ipsum dolor sit amet consectetur. Et nisl purus mattis
               ultrices ultrices convallis. Ullamcorper faucibus id non purus
               nunc neque. In scelerisque amet tempus sem eleifend lectus.
@@ -55,10 +55,10 @@ const ContentAboutUs = () => {
                 />
                 <div className="w-[10px] lg:w-[21px]"></div>
                 <div className="flex flex-col items-start">
-                  <div className="font-inter font-bold text-black text-[12px] lg:text-[25px]">
+                  <div className="font-inter font-bold text-black text-[12px] md:text-[16px] lg:text-[25px]">
                     Loren ipsum ceunah
                   </div>
-                  <div className="font-inter font-medium text-black text-start text-[10px] lg:text-[20px] w-[159px] lg:w-[520px]">
+                  <div className="font-inter font-medium text-black text-start text-[10px] md:text-[14px] lg:text-[20px] w-[159px] md:w-[338px] lg:w-[520px]">
                     Lorem ipsum dolor sit amet consectetur. Sit nunc faucibus
                     sed habitant. Mi convallis aliquam ipsum nibh sed massa
                     ultrices.
@@ -82,7 +82,7 @@ const ContentAboutUs = () => {
                   <div className="font-inter font-bold text-black text-[12px] lg:text-[25px]">
                     Loren ipsum ceunah
                   </div>
-                  <div className="font-inter font-medium text-black text-start text-[10px] lg:text-[20px] w-[159px] lg:w-[520px]">
+                  <div className="font-inter font-medium text-black text-start text-[10px] md:text-[14px] lg:text-[20px] w-[159px] md:w-[338px] lg:w-[520px]">
                     Lorem ipsum dolor sit amet consectetur. Sit nunc faucibus
                     sed habitant. Mi convallis aliquam ipsum nibh sed massa
                     ultrices.
@@ -106,7 +106,7 @@ const ContentAboutUs = () => {
                   <div className="font-inter font-bold text-black text-[12px] lg:text-[25px]">
                     Loren ipsum ceunah
                   </div>
-                  <div className="font-inter font-medium text-black text-start text-[10px] lg:text-[20px] w-[159px] lg:w-[520px] ">
+                  <div className="font-inter font-medium text-black text-start text-[10px] md:text-[14px] lg:text-[20px] w-[159px] md:w-[338px] lg:w-[520px] ">
                     Lorem ipsum dolor sit amet consectetur. Sit nunc faucibus
                     sed habitant. Mi convallis aliquam ipsum nibh sed massa
                     ultrices.
@@ -117,12 +117,12 @@ const ContentAboutUs = () => {
           </div>
           <img
             src={Farmer}
-            className="w-[145px] h-[150px] lg:w-[470px] lg:h-[520px]"
+            className="w-[145px] h-[150px] md:w-[214px] md:h-[204px] lg:w-[470px] lg:h-[520px]"
             alt="petani"
           />
         </div>
       </div>
-      <div style={{ height: 100 }}></div>
+      <div className="md:h-[75px] h-[100px]"></div>
     </div>
   );
 };

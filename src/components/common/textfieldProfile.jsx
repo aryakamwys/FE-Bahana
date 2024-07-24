@@ -4,7 +4,7 @@ const TextfieldProfile = ({ title, placeholder, type, readOnly, className }) => 
   return (
     <div className="py-3">
       <div className="flex flex-col items-start">
-        <div className="font-inter font-semibold text-black text-base lg:text-2xl">
+        <div className="font-inter font-semibold text-black text-base md:text-[20px] lg:text-2xl">
           {title}
         </div>
         <div style={{ height: 7 }}></div>

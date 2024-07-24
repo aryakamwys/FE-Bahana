@@ -1,26 +1,26 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-import NavbarPembeli from "../components/specific/navbar";
-import HeaderDetailProduct from "../sections/detailProduct/header";
-import ContentDetailProduct from "../sections/detailProduct/content";
-import PenjualSection from "../sections/detailProduct/penjual_section";
-import ReviewRatings from "../sections/detailProduct/review_rating";
-import Footer from "../components/specific/footer";
+import HeaderDetailProduct from "../../sections/detailProduct/header";
+import ContentDetailProduct from "../../sections/detailProduct/content";
+import PenjualSection from "../../sections/detailProduct/penjual_section";
+import ReviewRatings from "../../sections/detailProduct/review_rating";
+import Footer from "../../components/specific/footer";
 
-import CartIcon from "../assets/images/keranjang.svg";
+import CartIcon from "../../assets/images/keranjang.svg";
+import NavbarPetani from "../../components/specific/navbar_seller";
 
 const DetailProduct = () => {
-  const isLg = useMediaQuery({ minWidth: 768 }); // adjust the breakpoint as needed
+  const isLg = useMediaQuery({ minWidth: 1024 }); // adjust the breakpoint as needed
 
   return (
-    <div className="max-w-screen-sm md:max-w-screen-md lg:max-w-full px-5 md:px-[70px] lg:px-[315px]">
-      <NavbarPembeli />
+    <div className="max-w-screen-sm lg:max-w-full pl-5 pr-5 lg:pl-[310px] lg:pr-[315px]">
+      <NavbarPetani />
       <HeaderDetailProduct />
       <ContentDetailProduct />
       <PenjualSection />
       <ReviewRatings />
       {isLg && <Footer />}
-      <div className="lg:hidden md:hidden flex flex-row py-2 lg:py-0">
+      <div className="lg:hidden flex flex-row py-2 lg:py-0">
         <button
           className="bg-primary rounded-md lg:rounded-xl w-[151px] h-[27px] lg:w-[205px] lg:h-[64px] "
           onClick={() => (window.location.href = "/payment")}

@@ -61,7 +61,7 @@ const ContentEditAlamat = () => {
           type={"text"}
           readOnly={false}
           className={
-            "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1239px]"
+            "font-inter font-medium text-[14px] md:tetx-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[602px] lg:w-[1239px]"
           }
         />
         <TextfieldProfile
@@ -70,10 +70,10 @@ const ContentEditAlamat = () => {
           type={"text"}
           readOnly={false}
           className={
-            "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1239px]"
+            "font-inter font-medium text-[14px] md:tetx-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[602px] lg:w-[1239px]"
           }
         />
-        <div className="hidden lg:flex flex-row justify-between lg:w-[1237px]">
+        <div className="hidden md:flex lg:flex flex-row justify-between md:w-[599px] lg:w-[1237px]">
           <DropdownValue
             title={"Provinsi"}
             className={"relative w-[163px] lg:w-[258px] "}
@@ -99,7 +99,7 @@ const ContentEditAlamat = () => {
             options={postalCodes}
           />
         </div>
-        <div className="flex lg:hidden flex-row justify-between">
+        <div className="flex md:hidden lg:hidden flex-row justify-between">
           <DropdownValue
             title={"Provinsi"}
             placeholder={"Riau"}
@@ -115,7 +115,7 @@ const ContentEditAlamat = () => {
             width={"163px"}
           />
         </div>
-        <div className="flex lg:hidden flex-row justify-between">
+        <div className="flex md:hidden lg:hidden flex-row justify-between">
           <DropdownValue
             title={"Kecamatan"}
             placeholder={"Pekanbaru Kota"}
@@ -137,12 +137,12 @@ const ContentEditAlamat = () => {
           placeholder={"difautari@gmail.com"}
           type={"text"}
           className={
-            "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1239px]"
+            "font-inter font-medium text-[14px] md:tetx-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[602px] lg:w-[1239px]"
           }
         />
         <div className="py-3">
           <div className="flex flex-col items-start">
-            <div className="font-inter font-semibold text-black text-[14px] lg:text-[26px]">
+            <div className="font-inter font-semibold text-black text-[14px] md:text-[20px] lg:text-[26px]">
               Nama Jalan, Gedung atau Rumah
             </div>
             <div style={{ height: 7 }}></div>
@@ -150,23 +150,24 @@ const ContentEditAlamat = () => {
               <span className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 w-full ring-opacity-50 focus:ring-gray">
                 <textarea
                   placeholder="Lorem ipsum dolor sit amet consectetur. Eu quis eget velit maecenas. Enim viverra nulla tellus eu aliquam. Augue risus sed orci at ut mauris vel. Enim donec fusce sed varius lacus ipsum ac. Sed quam commodo faucibus faucibus pellentesque magna mattis non tincidunt. Vulputate."
-                  className="font-inter font-medium focus:outline-none text-[12px] lg:text-[24px] h-[67px] lg:h-[189px] resize-none w-[350px] lg:w-[1239px]"
+                  className="font-inter font-medium focus:outline-none text-[12px] md:text-[16px] lg:text-[24px] h-[67px] lg:h-[189px] resize-none w-[350px] md:w-[602px] lg:w-[1239px]"
                   readOnly={false}
                 />
               </span>
             </form>
           </div>
         </div>
-        <div className="flex flex-row justify-start lg:py-3">
-          <button className="border-2 border-primary rounded-md pl-[26px] pr-[26px] lg:pl-11 lg:pr-11 pt-2 pb-2 font-inter font-medium text-primary text-[16px] lg:text-[28px] ">
+        <div className="flex flex-row justify-start">
+          <button className="border-2 border-primary rounded-md px-[26px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-primary text-[16px] md:text-[20px] lg:text-[28px] ">
             Cancel
           </button>
           <div className="w-[24px] lg:w-10"></div>
-          <button className="bg-primary rounded-md pl-[26px] pr-[26px] lg:pl-14  lg:pr-14 pt-2 pb-2 font-inter font-medium text-white text-[16px] lg:text-[28px]">
+          <button className="bg-primary rounded-md px-[26px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-white text-[16px] md:text-[20px] lg:text-[28px]">
             Save
           </button>
         </div>
       </div>
+      <div className="h-[40px]"></div>
     </div>
   );
 };

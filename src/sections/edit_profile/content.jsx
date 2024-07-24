@@ -31,7 +31,7 @@ const ContentEditProfile = () => {
   ];
   return (
     <div>
-      <div className="lg:h-10"></div>
+      <div className="md:h-[42px] lg:h-10"></div>
       <div className="flex flex-row w-full justify-between">
         <TextfieldProfile
           title={"Firstname"}
@@ -39,7 +39,7 @@ const ContentEditProfile = () => {
           type={"text"}
           readOnly={false}
           className={
-            "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[125px] lg:w-[580px]"
+            "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[125px] md:w-[264px] lg:w-[580px]"
           }
         />
         <TextfieldProfile
@@ -48,7 +48,7 @@ const ContentEditProfile = () => {
           type={"text"}
           readOnly={false}
           className={
-            "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[135px] lg:w-[590px]"
+            "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[125px] md:w-[264px] lg:w-[580px]"
           }
         />
       </div>
@@ -58,7 +58,7 @@ const ContentEditProfile = () => {
         readOnly={false}
         type={"email"}
         className={
-          "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1300px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[599px] lg:w-[1300px]"
         }
       />
       <TextfieldProfile
@@ -67,7 +67,7 @@ const ContentEditProfile = () => {
         readOnly={false}
         type={"text"}
         className={
-          "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1300px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[599px] lg:w-[1300px]"
         }
       />
       <div className="flex flex-row justify-between">
@@ -75,19 +75,19 @@ const ContentEditProfile = () => {
           title={"Tanggal lahir"}
           placeholder={"12"}
           options={dates}
-          className={"relative w-[104px] lg:w-[345px] "}
+          className={"relative w-[104px] md:w-[164px] lg:w-[345px] "}
         />
         <DropdownValue
           title={"Bulan lahir"}
           placeholder={"Juli"}
           options={months}
-          className={"relative w-[104px] lg:w-[345px] "}
+          className={"relative w-[104px] md:w-[164px] lg:w-[345px] "}
         />
         <DropdownValue
           title={"Tahun lahir"}
           placeholder={"2023"}
           options={years}
-          className={"relative w-[104px] lg:w-[345px] "}
+          className={"relative w-[104px] md:w-[164px] lg:w-[345px] "}
         />
       </div>
       <TextfieldProfile
@@ -96,19 +96,20 @@ const ContentEditProfile = () => {
         type={"password"}
         readOnly={false}
         className={
-          "font-inter font-medium text-[14px] lg:text-[26px] focus:outline-none w-[350px] lg:w-[1300px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[599px] lg:w-[1300px]"
         }
       />
       <div className="h-[15px] lg:h-[26px]"></div>
       <div className="flex flex-row justify-start">
-        <button className="border-2 border-primary rounded-md pl-[26px] pr-[26px] lg:pl-11 lg:pr-11 pt-2 pb-2 font-inter font-medium text-primary text-[16px] lg:text-[28px] ">
+        <button className="border-2 border-primary rounded-md px-[26px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-primary text-[16px] md:text-[20px] lg:text-[28px] ">
           Cancel
         </button>
         <div className="w-[24px] lg:w-10"></div>
-        <button className="bg-primary rounded-md pl-[26px] pr-[26px] lg:pl-14  lg:pr-14 pt-2 pb-2 font-inter font-medium text-white text-[16px] lg:text-[28px]">
+        <button className="bg-primary rounded-md px-[26px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-white text-[16px] md:text-[20px] lg:text-[28px]">
           Save
         </button>
       </div>
+      <div className="h-[174px] md:h-[80px] lg:h-0 "></div>
     </div>
   );
 };

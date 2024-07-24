@@ -25,23 +25,22 @@ const ContentProfile = () => {
   };
   return (
     <div className="lg:pl-16">
-      <div style={{ height: 40 }}></div>
+      <div className="h-[40px] md:h-[30px]"></div>
       <div className="flex flex-col lg:flex-row">
         <div className="flex flex-col items-center">
-          <div className="flex flex-col w-52 lg:w-96 items-center border border-black rounded-xl p-5">
+          <div className="flex flex-col w-52 md:w-[223px] lg:w-96 items-center border border-black rounded-xl p-[15px]">
             <img
               src={ProfileImage}
-              className="w-36 h-30 lg:w-80 lg:h-72"
+              className="w-36 h-30 md:w-[189px] md:h-[155px] lg:w-80 lg:h-72"
               alt="profile_photo"
             />
             <div style={{ height: 25 }}></div>
             <button
-              className="flex items-center w-36 lg:w-full justify-center py-2 border border-black rounded"
+              className="flex items-center w-36 md:w-[189px] h-auto lg:w-full justify-center py-2 border border-black rounded"
               onClick={handleButtonClick}
             >
               <div
-                className="font-inter font-semibold text-black text-start"
-                style={{ fontSize: 18 }}
+                className="font-inter text-[10px] md:text-[14px] lg:text-[18px] font-semibold text-black text-start"
               >
                 Pilih foto
               </div>
@@ -52,9 +51,9 @@ const ContentProfile = () => {
               style={{ display: "none" }}
               onChange={handleFileChange}
             />
-            <div style={{ height: 25 }}></div>
-            <div className="w-32 lg:w-80">
-              <div className="font-inter font-semibold text-black text-start text-xs lg:text-sm">
+            <div className="lg:h-[25px] md:h-[10px] h-[10px] "></div>
+            <div className="w-32 md:w-[189px] lg:w-80">
+              <div className="font-inter font-medium lg:font-semibold text-black text-start text-[8px] md:text-[10px] lg:text-sm">
                 Besar file: maksimum 10.000.000 bytes (10 Megabytes). Ekstensi
                 file yang diperbolehkan: .JPG .JPEG .PNG
               </div>
@@ -125,14 +124,14 @@ const ContentProfile = () => {
               type="text"
               readOnly={true}
               className={
-                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
               }
             />
             <TextfieldProfile
               title="Email"
               placeholder="bahanaaaaa@gmail.com"
               className={
-                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
               }
               type="email"
               readOnly={true}
@@ -141,7 +140,7 @@ const ContentProfile = () => {
               title="Contact Number"
               placeholder="628120929172"
               className={
-                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
               }
               type="text"
               readOnly={true}
@@ -150,7 +149,7 @@ const ContentProfile = () => {
               title="Tanggal Lahir"
               placeholder="12 Juli 2004"
               className={
-                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
               }
               type="text"
               readOnly={true}
@@ -159,7 +158,7 @@ const ContentProfile = () => {
               title="Password"
               placeholder="*************"
               className={
-                "font-inter font-medium text-[12px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
               }
               type="password"
               readOnly={true}
@@ -175,7 +174,7 @@ const ContentProfile = () => {
               </button>
             </div>
             <div className="flex flex-col lg:hidden py-5">
-              <div className="px-[15px] py-[10px] w-full h-[230px] border border-black rounded-[10px] font-inter font-medium text-[14px]">
+              <div className="px-[15px] py-[10px] md:w-[640px] w-full md:h-auto h-[230px] border border-black rounded-[10px] font-inter font-medium text-[14px] md:text-[20px] ">
                 <div className="border-b-[1px] flex items-start font-semibold px-[10px] py-[7px] ">
                   Pengaturan
                 </div>
@@ -186,7 +185,7 @@ const ContentProfile = () => {
                   <div className="flex flex-row">
                     <img src={UserIcon} alt="user" />
                     <div className="w-[10px]"></div>
-                    <div>Edit Profile</div>
+                    <div className="md:text-[16px] ">Edit Profile</div>
                   </div>
                   <img src={NextIcon} alt="next" />
                 </button>
@@ -197,7 +196,7 @@ const ContentProfile = () => {
                   <div className="flex flex-row">
                     <img src={HomeIcon} alt="user" />
                     <div className="w-[10px]"></div>
-                    <div>Edit Alamat</div>
+                    <div className="md:text-[16px] ">Edit Alamat</div>
                   </div>
                   <img src={NextIcon} alt="next" />
                 </button>
@@ -208,7 +207,7 @@ const ContentProfile = () => {
                   <div className="flex flex-row">
                     <img src={HistoryIcon} alt="user" />
                     <div className="w-[10px]"></div>
-                    <div>Riwayat Pesanan</div>
+                    <div className="md:text-[16px] ">Riwayat Pesanan</div>
                   </div>
                   <img src={NextIcon} alt="next" />
                 </button>
@@ -219,7 +218,7 @@ const ContentProfile = () => {
                   <div className="flex flex-row">
                     <img src={TruckIcon} alt="user" />
                     <div className="w-[10px]"></div>
-                    <div>Tracking My Order</div>
+                    <div className="md:text-[16px] ">Tracking My Order</div>
                   </div>
                   <img src={NextIcon} alt="next" />
                 </button>

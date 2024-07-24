@@ -7,6 +7,7 @@ import AboutUs from "./pages/aboutus";
 import Wishlist from "./pages/wishlist";
 import AllProducts from "./pages/all_product";
 import DetailProduct from "./pages/detail_product";
+import PetaniDetailProduct from "./pages/seller/detail_product_seller";
 import ChatPage from "./pages/chat";
 import CartPage from "./pages/keranjang";
 import MarketPrice from "./pages/market_price";
@@ -20,11 +21,9 @@ import Payment from "./pages/payment";
 import PembayaranPage from "./sections/payment/pembayaran";
 import SuccessPayment from "./components/specific/success";
 import PembeliLoginPage from "./pages/login";
-import PetaniLoginPage from "./pages/login_seller";
-import PetaniRegisterPage from "./pages/register_seller";
 import PembeliHomePage from "./pages/home";
-import PetaniHomePage from "./pages/home_seller";
-import PetaniProfilePage from "./pages/profile_seller";
+import PetaniHomePage from "./pages/seller/home_seller";
+import PetaniProfilePage from "./pages/seller/profile_seller";
 import MenuPesanan from "./pages/menu_pesanan";
 import HistoryTransaction from "./pages/history_transaction";
 import EditProfileToko from "./pages/edit_profile_toko";
@@ -32,6 +31,9 @@ import UploadProduct from "./pages/upload_product";
 import PembeliRegisterPage from "./pages/register";
 import MarketPricePetani from "./sections/home_seller/market_price_seller";
 import WishlistPetani from "./sections/home_seller/wishlist_seller";
+import PaymentMethod from "./sections/payment/payment_method";
+import PetaniLoginPage from "./pages/seller/login_seller";
+import PetaniRegisterPage from "./pages/seller/register_seller";
 
 function App() {
   return (
@@ -49,6 +51,7 @@ function App() {
           <Route path="/wishlistseller" element={<WishlistPetani />} />
           <Route path="/allproducts" element={<AllProducts />} />
           <Route path="/detailproduct" element={<DetailProduct />} />
+          <Route path="/detailproductseller" element={<PetaniDetailProduct />} />
           <Route path="/chat" element={<ChatPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/marketprice" element={<MarketPrice />} />
@@ -62,6 +65,7 @@ function App() {
           <Route path="/riwayatpesanan" element={<RiwayatPesanan />} />
           <Route path="/trackingorder" element={<TrackingOrder />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/paymentmethod" element={<PaymentMethod />} />
           <Route path="/pembayaran" element={<PembayaranPage />} />
           <Route path="/sucsess" element={<SuccessPayment />} />
           <Route path="/menupesanan" element={<MenuPesanan />} />

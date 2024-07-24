@@ -53,7 +53,7 @@ const CardProductAll = ({ product }) => {
         <div className="flex flex-row row-auto">
           <div>
             <button
-              className="w-[124px] h-[21px] lg:w-[261px] lg:h-[55px] flex flex-row row-auto justify-center items-center border-[1px] lg:border-2 border-gray border-opacity-50 rounded-full lg:pt-4 lg:pb-4"
+              className="w-[110px] h-[21px] lg:w-[261px] lg:h-[55px] flex flex-row row-auto justify-center items-center border-[1px] lg:border-2 border-gray border-opacity-50 rounded-full lg:pt-4 lg:pb-4"
               onClick={() => (window.location.href = "/detailproduct")}
             >
               <img src={buyIcon} className="w-[12px] h-[12px] lg:w-[24px] lg:h-[24px] " alt="buy icon" />

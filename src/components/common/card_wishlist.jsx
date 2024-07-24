@@ -5,12 +5,12 @@ import BookmarkFill from "../../assets/images/bookmark_fill.svg";
 
 const CardWishList = () => {
   return (
-    <div className="lg:py-6 py-2">
-      <div className="min-w-full flex flex-row  md:p-2 row-auto border border-gray border-opacity-50 rounded-xl h-auto overflow-hidden">
+    <div className="lg:py-6 md:py-4 py-2">
+      <div className="min-w-full flex flex-row md:p-2 row-auto border border-gray border-opacity-50 rounded-xl h-auto overflow-hidden">
         <div className="flex items-center">
           <img
             src={ImageDummy}
-            className="lg:w-[350px] lg:h-[212px] w-[200px]  h-[100px] object-fill"
+            className="lg:w-[350px] lg:h-[212px] md:w-[170px] md:h-[121px] w-[200px] h-[100px] object-fill"
             alt="sayur"
           />
         </div>

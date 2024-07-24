@@ -5,7 +5,7 @@ import ArrowBack from "../../assets/images/arrow-back.svg";
 const HeaderPayment = () => {
   return (
     <div>
-      <div className="h-[20px] lg:h-[63px] "></div>
+      <div className="h-[20px] md:h-[63px] "></div>
       <div className="flex flex-row items-center">
         <button
           className="flex items-center justify-center border border-black rounded-full w-6 h-6 lg:w-10 lg:h-10"
@@ -13,7 +13,7 @@ const HeaderPayment = () => {
         >
           <img
             src={ArrowBack}
-            className="w-3 h-3 lg:w-4 lg:h-4"
+            className="w-3 h-3 md:w-4 md:h-4"
             alt="arrow back"
           />
         </button>

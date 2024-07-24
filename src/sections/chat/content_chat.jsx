@@ -11,7 +11,7 @@ const ContentChat = () => {
         <button>
           <img
             src={ForwardIcon}
-            className="w-5 h-5 lg:w-8 lg:h-8"
+            className="w-5 h-5 md:w-8 lg:h-8"
             alt="forward"
           />
         </button>
@@ -20,7 +20,7 @@ const ContentChat = () => {
           className="flex flex-row row-auto border border-gray border-opacity-50 "
           style={{ borderRadius: 10 }}
         >
-          <div className="p-2 lg:p-6 text-xs text-start lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl">
+          <div className="p-2 md:p-[15px] lg:p-6 text-xs md:text-[16px] text-start lg:text-xl font-medium font-inter max-w-64 md:max-w-lg lg:max-w-2xl">
             Lorem ipsum dolor sit amet consectetur. Montes semper mauris est
             mollis netus amet ultrices. Turpis arcu ut dolor.
           </div>
@@ -30,7 +30,7 @@ const ContentChat = () => {
         <div>
           <img
             src={ProfilePembeli}
-            className="w-7 h-7 lg:w-10 lg:h-10"
+            className="w-7 h-7 md:w-10 md:h-10"
             alt="profile_pembeli"
           />
         </div>
@@ -40,7 +40,7 @@ const ContentChat = () => {
         <div>
           <img
             src={ProfilePenjual}
-            className="w-7 h-7 lg:w-10 lg:h-10"
+            className="w-7 h-7 md:w-10 md:h-10"
             alt="profile_pembeli"
           />
         </div>
@@ -50,7 +50,7 @@ const ContentChat = () => {
           style={{ borderRadius: 10 }}
         >
           <div className="bg-primary w-2 rounded-l-full"></div>
-          <div className="p-2 lg:p-6 text-xs text-start lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl">
+          <div className="p-2 md:p-[15px] lg:p-6 text-xs text-start md:text-[16px] lg:text-xl font-medium font-inter max-w-64 md:max-w-lg lg:max-w-2xl">
             Lorem ipsum dolor sit amet consectetur. Montes semper mauris est
             mollis netus amet ultrices. Turpis arcu ut dolor.
           </div>
@@ -69,7 +69,7 @@ const ContentChat = () => {
         <button>
           <img
             src={ForwardIcon}
-            className="w-5 h-5 lg:w-8 lg:h-8"
+            className="w-5 h-5 md:w-8 md:h-8"
             alt="forward"
           />
         </button>
@@ -78,7 +78,7 @@ const ContentChat = () => {
           className="flex flex-row row-auto border border-gray border-opacity-50 "
           style={{ borderRadius: 10 }}
         >
-          <div className="p-2 lg:p-6 text-xs text-start lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl">
+          <div className="p-2 md:p-[15px] lg:p-6 text-xs text-start md:text-[16px] lg:text-xl font-medium font-inter max-w-64 md:max-w-lg lg:max-w-2xl">
             Thank you.
           </div>
           <div className="bg-primary w-2 rounded-r-full"></div>
