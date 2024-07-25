@@ -121,8 +121,8 @@ const ContentPayment = () => {
               </div>
             </div>
           </div>
-          <button className="flex items-center justify-center bg-gray bg-opacity-20 w-5 h-5 lg:w-9 lg:h-9 rounded-full">
-            <img src={TrashIcon} className="w-[14px] h-[14px] lg:w-[22px] lg:h-[22px]" alt="sampah" />
+          <button className="flex items-center justify-center bg-gray bg-opacity-20 w-5 h-5 md:w-9 md:h-9 rounded-full">
+            <img src={TrashIcon} className="w-[14px] h-[14px] md:w-[22px] md:h-[22px]" alt="sampah" />
           </button>
         </div>
         <div style={{ height: 34 }}></div>

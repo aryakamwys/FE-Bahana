@@ -108,9 +108,8 @@ const PembeliLoginPage = () => {
               onClick={() => console.log("Facebook button clicked")}
             />
           </div>
-          <div style={{ height: 20 }}></div>
           <div
-            className="font-inter font-bold text-primary cursor-pointer lg:text-h5"
+            className="font-inter font-bold py-[20px] text-primary cursor-pointer lg:text-h5"
             onClick={() => (window.location.href = "/loginseller")}
           >
             Log in As a Seller

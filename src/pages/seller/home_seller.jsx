@@ -8,10 +8,10 @@ import NavbarPetani from "../../components/specific/navbar_seller";
 
 const PetaniHomePage = () => {
   return (
-    <div className="max-w-screen-sm lg:max-w-full pl-5 pr-5 lg:pl-[310px] lg:pr-[315px]">
+    <div className="max-w-screen-sm md:max-w-screen-md lg:max-w-full px-5 md:px-[70px] lg:px-[315px]">
       <NavbarPetani />
       <HeaderHome />
-      <div style={{ height: 74 }}></div>
+      <div className="my-[36px] lg:my-8"></div>
       <SearchBar />
       <Recomendation />
       <OurProduct />

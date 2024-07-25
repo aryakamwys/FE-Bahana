@@ -185,7 +185,7 @@ const ContentProfile = () => {
                   <div className="flex flex-row">
                     <img src={UserIcon} alt="user" />
                     <div className="w-[10px]"></div>
-                    <div className="md:text-[16px] ">Edit Profile</div>
+                    <div className="md:text-[16px]">Edit Profile</div>
                   </div>
                   <img src={NextIcon} alt="next" />
                 </button>
