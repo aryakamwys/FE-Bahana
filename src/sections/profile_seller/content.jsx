@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import TextfieldProfile from "../../components/common/textfieldProfile";
 import ProfileImage from "../../assets/images/image_profile_page.png";
 
@@ -7,13 +7,57 @@ import HomeIcon from "../../assets/images/menu_pesanan.svg";
 import TruckIcon from "../../assets/images/input.svg";
 import HistoryIcon from "../../assets/images/history_profile.svg";
 import NextIcon from "../../assets/images/next_profile.svg";
+import Cookies from "universal-cookie";
+import axios from "axios";
+const cookies = new Cookies();
 
-const ContentPetaniProfilePage = () => {
+const ContentPetaniProfilePage = (profileDataPetani) => {
+  const [profile, setProfile] = useState({});
   const fileInputRef = useRef(null);
 
   const handleButtonClick = () => {
     fileInputRef.current.click();
   };
+
+  const handleLogout = async () => {
+    try {
+      // Remove token from local storage
+      cookies.remove("token_petani");
+      cookies.remove('petaniID');
+
+      // Redirect to login page
+      window.location.href = "/loginseller";
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const fetchData = (token) => {
+    const petaniID = cookies.get("petaniID");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    axios
+      .get(`http://localhost:4000/petani/${petaniID}`, config)
+      .then((res) => {
+        setProfile(res.data.data);
+        console.log(res.data.data);
+      })
+      .catch((error) => {
+        console.log("Error fetching data:", error);
+      });
+  };
+
+  useEffect(() => {
+    const userToken = cookies.get("token_petani");
+    if (userToken) {
+      fetchData(userToken);
+    } else {
+      console.log("gada token");
+    }
+  }, []);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -22,14 +66,19 @@ const ContentPetaniProfilePage = () => {
       console.log(file);
     }
   };
+
+  if (!profile) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div className="lg:pl-16">
+    <div className="lg:pl-16" key={profileDataPetani.petaniID}>
       <div style={{ height: 40 }}></div>
       <div className="flex flex-col lg:flex-row">
         <div className="flex flex-col items-center">
           <div className="flex flex-col w-52 md:w-[223px] lg:w-96 items-center border border-black rounded-xl p-[15px]">
             <img
-              src={ProfileImage}
+              src={`http://localhost:4000/uploads/${profile.image_petani}`}
               className="w-36 h-30 md:w-[189px] md:h-[155px] lg:w-80 lg:h-72"
               alt="profile_photo"
             />
@@ -117,7 +166,7 @@ const ContentPetaniProfilePage = () => {
           <div className="flex flex-col">
             <TextfieldProfile
               title="Nama Toko"
-              placeholder="Bahnanaanna"
+              placeholder={profile.nama_petani}
               type="text"
               readOnly={true}
               className={
@@ -135,7 +184,7 @@ const ContentPetaniProfilePage = () => {
                 <form className="flex items-center justify-start ">
                   <span className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 w-full ring-opacity-50 focus:ring-gray">
                     <textarea
-                      placeholder="Lorem ipsum dolor sit amet consectetur. Eu quis eget velit maecenas. Enim viverra nulla tellus eu aliquam. Augue risus sed orci at ut mauris vel. Enim donec fusce sed varius lacus ipsum ac. Sed quam commodo faucibus faucibus pellentesque magna mattis non tincidunt. Vulputate."
+                      placeholder={profile.deskripsi}
                       className="font-inter font-medium focus:outline-none text-[12px] lg:text-[24px] h-[67px] lg:h-[189px] resize-none w-[350px] md:w-[604px] lg:w-[766px]"
                       readOnly={true}
                     />
@@ -146,7 +195,7 @@ const ContentPetaniProfilePage = () => {
 
             <TextfieldProfile
               title="Contact Number"
-              placeholder="628120929172"
+              placeholder={profile.no_telepon_petani}
               type="text"
               readOnly={true}
               className={
@@ -155,7 +204,7 @@ const ContentPetaniProfilePage = () => {
             />
             <TextfieldProfile
               title="Email"
-              placeholder="bahanaaa@gmail.com"
+              placeholder={profile.email_petani}
               type="email"
               readOnly={true}
               className={
@@ -174,7 +223,7 @@ const ContentPetaniProfilePage = () => {
             <div className="hidden lg:flex justify-end py-5">
               <button
                 className="flex items-center justify-center bg-red-500 rounded-xl w-36 h-12 "
-                onClick={() => (window.location.href = "/loginseller")}
+                onClick={handleLogout}
               >
                 <div
                   className="font-inter font-semibold text-white"

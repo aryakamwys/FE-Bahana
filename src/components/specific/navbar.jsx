@@ -5,7 +5,7 @@ const NavbarPembeli = (className) => {
   return (
     <div className="flex flex-row justify-center">
       <nav className={`bg-white fixed pt-2 z-50 ${className}`}>
-        <div className="max-w-full md:w-[748px] md:pl-[70px] md:pr-[70px] flex row-auto items-center justify-between md:border-b lg:border-b border-gray lg:pb-5 lg:pl-3 lg:pr-3 w-[350px] lg:w-[1300px]">
+        <div className="max-w-full md:w-[748px] md:pl-[70px] md:pr-[70px] flex row-auto items-center justify-between md:border-b lg:border-b border-gray lg:pb-5 lg:pl-3 lg:pr-3 w-[350px] lg:w-[1440px]">
           <a href="/home">
             <div className="text-black text-[10px] md:text-[16px] lg:text-h5 font-semibold font-inter">
               Logo Website

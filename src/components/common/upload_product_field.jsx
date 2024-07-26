@@ -1,6 +1,6 @@
 import React from "react";
 
-const UploadProductField = ({ title, type, placeholder, readOnly }) => {
+const UploadProductField = ({ title, type, placeholder, readOnly, value, onChange }) => {
   return (
     <div className="py-3">
       <div className="flex flex-col items-start">
@@ -16,7 +16,9 @@ const UploadProductField = ({ title, type, placeholder, readOnly }) => {
             <input
               type={type}
               placeholder={placeholder}
-              className="font-inter font-medium focus:outline-none text-[16px] md:text-[20px] lg:text-[24px]"
+              value={value}
+              onChange={onChange}
+              className="font-inter w-full font-medium focus:outline-none text-[16px] md:text-[20px] lg:text-[24px]"
               readOnly={readOnly}
             />
           </span>

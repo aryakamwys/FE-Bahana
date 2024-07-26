@@ -40,27 +40,20 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
+          {/* Pembeli Routes */}
           <Route path="/home" element={<PembeliHomePage />} />
-          <Route path="/homeseller" element={<PetaniHomePage />} />
           <Route path="/login" element={<PembeliLoginPage />} />
-          <Route path="/loginseller" element={<PetaniLoginPage />} />
           <Route path="/register" element={<PembeliRegisterPage />} />
-          <Route path="/registerseller" element={<PetaniRegisterPage />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/wishlistseller" element={<WishlistPetani />} />
           <Route path="/allproducts" element={<AllProducts />} />
           <Route path="/detailproduct" element={<DetailProduct />} />
-          <Route path="/detailproductseller" element={<PetaniDetailProduct />} />
           <Route path="/chat" element={<ChatPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/marketprice" element={<MarketPrice />} />
-          <Route path="/marketpriceseller" element={<MarketPricePetani />} />
           <Route path="/detailblog" element={<DetailBlog />} />
           <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/profileseller" element={<PetaniProfilePage />} />
           <Route path="/editprofile" element={<EditProfile />} />
-          <Route path="/editprofiletoko" element={<EditProfileToko />} />
           <Route path="/editalamat" element={<EditAlamat />} />
           <Route path="/riwayatpesanan" element={<RiwayatPesanan />} />
           <Route path="/trackingorder" element={<TrackingOrder />} />
@@ -70,7 +63,19 @@ function App() {
           <Route path="/sucsess" element={<SuccessPayment />} />
           <Route path="/menupesanan" element={<MenuPesanan />} />
           <Route path="/historytransaction" element={<HistoryTransaction />} />
+
+          {/* Petani Routes */}
+          <Route path="/homeseller" element={<PetaniHomePage />} />
+          <Route path="/loginseller" element={<PetaniLoginPage />} />
+          <Route path="/registerseller" element={<PetaniRegisterPage />} />
+          <Route path="/wishlistseller" element={<WishlistPetani />} />
+          <Route path="/marketpriceseller" element={<MarketPricePetani />} />
+          <Route path="/detailproductseller" element={<PetaniDetailProduct />} />
+          <Route path="/profileseller" element={<PetaniProfilePage />} />
+          <Route path="/editprofiletoko" element={<EditProfileToko />} />
           <Route path="/uploadproduct" element={<UploadProduct />} />
+
+          {/* Default Route */}
           <Route path="/" element={<Navigate to="/login" />}>
             <Route path="login" element={<LoginPage />} />
             <Route path="*" element={<Navigate to="/" />} />

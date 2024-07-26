@@ -16,28 +16,28 @@ const CardProductAll = ({ product }) => {
     <div className="max-w-sm bg-white border border-gray border-opacity-50 rounded-xl w-[165px] lg:w-full">
       <div className="p-[10px]">
         <img
-          src={imageDummy}
+          src={`http://localhost:4000/uploads/default_pfp.png`}
           className=" lg:p-6 w-[145px] h-[117px] lg:w-[350px] lg:h-[305px] "
-          alt={product.name}
+          alt={product.nama_produk}
         />
       </div>
       <div className="p-[10px] lg:p-6">
         <div
           className="font-inter text-[10px] lg:text-[25px] text-black font-semibold text-start"
         >
-          {product.name}
+          {product.nama_produk}
         </div>
         <div className="flex flex-row row-auto items-center">
           <div
             className="font-inter font-semibold text-primary text-[10px] lg:text-[25px] lg:leading-normal"
           >
-            Rp {product.price.toLocaleString()}
+            Rp {product.harga.toLocaleString()}
           </div>
           <div className="w-[5px] lg:w-[10px] "></div>
           <div
             className="font-inter text-[8px] lg:text-[20px] lg:leading-normal font-semibold text-gray opacity-50 line-through"
           >
-            Rp {product.originalPrice.toLocaleString()}
+            Rp {(product.harga + 50000).toLocaleString()}
           </div>
         </div>
         <div className="lg:h-[12px] h-[5px] "></div>
@@ -45,7 +45,7 @@ const CardProductAll = ({ product }) => {
           <img src={starIcon} className="w-[14px] h-[14px] lg:w-[24px] lg:h-[24px]" alt="star" />
           <div style={{ width: 12 }}></div>
           <div className="font-inter font-semibold text-[10px] lg:text-[20px]">
-            <span className="text-yellow">{product.rating}</span>
+            <span className="text-yellow">4.9</span>
             <span className="text-yellow ml-1">/ 5</span>
           </div>
         </div>

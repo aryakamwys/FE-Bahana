@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import LoginImage from "../../assets/images/login-image.png";
 import GoogleIcon from "../../assets/images/google.svg";
@@ -8,8 +8,35 @@ import FacebookIcon from "../../assets/images/facebook.svg";
 import ButtonWithImage from "../../components/common/button";
 import Textfield from "../../components/common/textfield";
 import Divider from "@mui/material/Divider";
+import axios from "axios";
+import Cookies from "universal-cookie";
+const cookies = new Cookies();
 
 const PetaniLoginPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    console.log(process.env.REACT_APP_BASE_URL);
+  }, []);
+
+  const handleLogin = (e) => {
+    e.preventDefault()
+    axios.post(`http://localhost:4000/petani/login`, {
+      email_petani : email,
+      password_petani : password,
+    })
+    .then((res) => {
+      const { token, petaniID } = res.data.data;
+      cookies.set("token_petani", token, { path: '/' });
+      cookies.set("petaniID", petaniID, { path: '/' });
+      window.location.href = "/homeseller"
+    }).catch((error) => {
+      setError("Login failed. Please check your credentials.");
+      console.log(error);
+    })
+  }
   return (
     <div
       id="login"
@@ -61,6 +88,8 @@ const PetaniLoginPage = () => {
               id={"email"}
               type={"email"}
               placeholder={"Email"}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className={
                 "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
               }
@@ -70,6 +99,8 @@ const PetaniLoginPage = () => {
               id={"password"}
               type={"password"}
               placeholder={"Password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className={
                 "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
               }
@@ -77,12 +108,20 @@ const PetaniLoginPage = () => {
           </div>
           <div className="h-4 lg:h-8"></div>
           <div>
-            <button
-              className="h-10 md:h-[60px] lg:h-14 flex items-center justify-center rounded-lg lg:rounded-xl bg-primary text-white font-semibold font-inter text-sm lg:text-h5 w-[350px] md:w-[563px] lg:w-[563px]"
-              onClick={() => (window.location.href = "/homeseller")}
-            >
-              Login
-            </button>
+            <form onSubmit={handleLogin}>
+              <button
+                className="h-10 md:h-[60px] lg:h-14 flex items-center justify-center rounded-lg lg:rounded-xl bg-primary text-white font-semibold font-inter text-sm lg:text-h5 w-[350px] md:w-[563px] lg:w-[563px]"
+                type="submit"
+              >
+                Login
+              </button>
+            </form>
+            {/* Error message */}
+            {error && (
+              <div className="text-red-500 text-sm font-inter font-semibold mt-2">
+                {error}
+              </div>
+            )}
           </div>
           <div style={{ height: 30 }}></div>
           <Divider className="font-inter text-h5 font-semibold px-20 md:px-0" flexItem>

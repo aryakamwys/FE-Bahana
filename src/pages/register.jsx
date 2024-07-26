@@ -3,12 +3,57 @@ import React, { useState } from "react";
 import LoginImage from "../assets/images/login-image.png";
 import Divider from "@mui/material/Divider";
 import Textfield from "../components/common/textfield";
+import axios from "axios";
 
 const PembeliRegisterPage = () => {
+  const [email, setEmail] = useState("");
+  const [nama, setNama] = useState("");
+  const [alamat, setAlamat] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [no_hp, setNoHp] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+  // const [passwordError, setPasswordError] = useState("");
+  // const [formValid, setFormValid] = useState(false);
+  // const [checkboxError, setCheckboxError] = useState("");
 
   const toggleCheck = () => {
     setIsChecked(!isChecked);
+  };
+
+  // const validatePassword = () => {
+  //   if (password !== confirmPassword) {
+  //     setPasswordError("Password dan konfirmasi password tidak cocok");
+  //     setFormValid(false);
+  //   } else {
+  //     setPasswordError("");
+  //     setFormValid(true);
+  //   }
+  // };
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    // if (!isChecked) {
+    //   setCheckboxError('Anda harus menyetujui syarat dan ketentuan serta kebijakan privasi.');
+    //   return;
+    // } else {
+    //   setCheckboxError('');
+    // }
+    // if (!formValid) return;
+    axios
+      .post("http://localhost:4000/pembeli/register", {
+        email_pembeli: email,
+        password_pembeli: password,
+        alamat_pembeli: alamat,
+        nama_pembeli: nama,
+        kontak_pembeli: no_hp,
+      })
+      .then(() => {
+        window.location.href = "/login";
+      })
+      .catch((error) => {
+        console.error("Error registering:", error);
+      });
   };
   return (
     <div
@@ -23,9 +68,7 @@ const PembeliRegisterPage = () => {
         flexItem
         className="hidden lg:block bg-black3 opacity-50"
       />
-      <div
-        className="flex flex-col items-center justify-center md:mt-8 md:mb-0 mb-28 pb-10 lg:pb-24"
-      >
+      <div className="flex flex-col items-center justify-center md:mt-8 md:mb-0 mb-28 pb-10 lg:pb-0">
         <div
           className="flex items-center justify-around bg-greenLight rounded-full p-3"
           style={{ width: 329, height: 59 }}
@@ -47,19 +90,23 @@ const PembeliRegisterPage = () => {
             </div>
           </div>
         </div>
-        <div
-          className="font-semibold font-inter text-black text-center text-3xl md:text-[50px] lg:text-6xl  mt-10"
-        >
+        <div className="font-semibold font-inter text-black text-center text-3xl md:text-[50px] lg:text-6xl  mt-10">
           Create your account
         </div>
         <div className="md:flex lg:hidden md:justify-center items-center py-4 md:pt-[52px] md:pb-[40px] lg:py-0 lg:mb-0">
-            <img src={LoginImage} className="w-60 h-40 md:w-[309px] md:h-[206px]" alt="login-image" />
-          </div>
+          <img
+            src={LoginImage}
+            className="w-60 h-40 md:w-[309px] md:h-[206px]"
+            alt="login-image"
+          />
+        </div>
         <div className="relative md:mt-0 lg:mt-10">
           <div>
-          <Textfield
+            <Textfield
               id={"username"}
               type={"text"}
+              value={nama}
+              onChange={(e) => setNama(e.target.value)}
               placeholder={"Username"}
               className={
                 "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
@@ -69,7 +116,20 @@ const PembeliRegisterPage = () => {
             <Textfield
               id={"email"}
               type={"email"}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder={"Email"}
+              className={
+                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
+              }
+            />
+            <div style={{ height: 15 }}></div>
+            <Textfield
+              id={"alamat"}
+              type={"text"}
+              value={alamat}
+              onChange={(e) => setAlamat(e.target.value)}
+              placeholder={"Alamat"}
               className={
                 "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
               }
@@ -78,6 +138,8 @@ const PembeliRegisterPage = () => {
             <Textfield
               id={"phone"}
               type={"text"}
+              value={no_hp}
+              onChange={(e) => setNoHp(e.target.value)}
               placeholder={"Phone"}
               className={
                 "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
@@ -87,6 +149,8 @@ const PembeliRegisterPage = () => {
             <Textfield
               id={"password"}
               type={"password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder={"Password"}
               className={
                 "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
@@ -94,13 +158,21 @@ const PembeliRegisterPage = () => {
             />
             <div style={{ height: 15 }}></div>
             <Textfield
-              id={"password"}
+              id={"confirm-password"}
               type={"password"}
+              value={confirmPassword}
+              onChange={(e) => {
+                setConfirmPassword(e.target.value);
+                // validatePassword();
+              }}
               placeholder={"Confirm Password"}
               className={
                 "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
               }
             />
+            {/* {passwordError && (
+              <div className="text-red-600 text-sm mt-2">{passwordError}</div>
+            )} */}
           </div>
           <div style={{ height: 20 }}></div>
           <div className="flex items-start">
@@ -125,9 +197,7 @@ const PembeliRegisterPage = () => {
                 )}
               </button>
               <div style={{ width: 10 }}></div>
-              <div
-                className="font-inter font-medium text-black text-xs md:text-base lg:text-base"
-              >
+              <div className="font-inter font-medium text-black text-xs md:text-base lg:text-base">
                 I agree with our{" "}
                 <span className="font-semibold">
                   Terms of Service and Privacy Policy
@@ -135,16 +205,18 @@ const PembeliRegisterPage = () => {
               </div>
             </div>
           </div>
+          {/* {checkboxError && (
+            <div className="text-red-600 text-sm mt-2">{checkboxError}</div>
+          )} */}
           <div style={{ height: 20 }}></div>
         </div>
 
         <div>
-        <button
-              className="h-10 md:h-[60px] lg:h-14 flex items-center justify-center rounded-lg lg:rounded-xl bg-primary text-white font-semibold font-inter text-sm lg:text-h5 w-[350px] md:w-[563px] lg:w-[563px]"
-              onClick={() => (window.location.href = "/home")}
-            >
+          <form onSubmit={handleRegister}>
+            <button className="h-10 md:h-[60px] lg:h-14 flex items-center justify-center rounded-lg lg:rounded-xl bg-primary text-white font-semibold font-inter text-sm lg:text-h5 w-[350px] md:w-[563px] lg:w-[563px]">
               Create Account
             </button>
+          </form>
         </div>
         <div style={{ height: 30 }}></div>
       </div>
