@@ -22,6 +22,7 @@ const   OurProduct = () => {
       .catch((error) => {
         console.log("Error fetching data:", error);
       });
+   
   };
 
   useEffect(() => {

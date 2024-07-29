@@ -52,7 +52,7 @@ function App() {
           <Route path="/aboutus" element={<ProtectedRoute element={AboutUs} allowedUserTypes={['pembeli', 'petani']} />} />
           <Route path="/wishlist" element={<ProtectedRoute element={Wishlist} allowedUserTypes={['pembeli']} />} />
           <Route path="/allproducts" element={<ProtectedRoute element={AllProducts} allowedUserTypes={['pembeli', 'petani']} />} />
-          <Route path="/detailproduct" element={<ProtectedRoute element={DetailProduct} allowedUserTypes={['pembeli']} />} />
+          <Route path="/detailproduct/:produkID" element={<ProtectedRoute element={DetailProduct} allowedUserTypes={['pembeli']} />} />
           <Route path="/chat" element={<ProtectedRoute element={ChatPage} allowedUserTypes={['pembeli']} />} />
           <Route path="/cart" element={<ProtectedRoute element={CartPage} allowedUserTypes={['pembeli', 'petani']} />} />
           <Route path="/marketprice" element={<ProtectedRoute element={MarketPrice} allowedUserTypes={['pembeli']} />} />

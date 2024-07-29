@@ -82,7 +82,7 @@ const ContentProfile = (profileData) => {
 
   return (
     <div>
-      <div className="lg:pl-16" key={profileData.pembeliID}>
+      <div className="lg:pl-16" key={profile.pembeliID}>
         <div className="h-[40px] md:h-[30px]"></div>
         <div className="flex flex-col lg:flex-row">
           <div className="flex flex-col items-center">

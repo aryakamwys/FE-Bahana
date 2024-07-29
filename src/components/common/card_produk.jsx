@@ -4,7 +4,7 @@ import starIcon from "../../assets/images/star.svg";
 import buyIcon from "../../assets/images/buy.svg";
 import bookmarkIcon from "../../assets/images/bookmark.svg";
 import bookmarkIconFilled from "../../assets/images/bookmark_fill2.svg";
-import Skeleton from "../../components/common/skeleton"; 
+import Skeleton from "../../components/common/skeleton";
 
 const CardProduct = ({ product }) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
@@ -18,7 +18,6 @@ const CardProduct = ({ product }) => {
       setLoading(false);
     }
   }, [product]);
-
 
   console.log(product.image_produk);
 
@@ -53,14 +52,18 @@ const CardProduct = ({ product }) => {
 
   return (
     <div className="max-w-sm bg-white border border-black rounded-xl">
-      <div className="p-[5px] lg:p-6">
+      <div></div>
+      <button
+        className="p-[5px] lg:p-6"
+        onClick={() => (window.location.href = "/detailProduct")}
+      >
         <img
           src={product.image_produk}
           alt={product.nama_produk}
           // onError={handleImageError}
           className="w-[100px] h-[84px] lg:w-[350px] lg:h-[305px]"
         />
-      </div>
+      </button>
       <div className="p-[5px] lg:p-6">
         <h2 className="font-inter text-[8px] lg:text-[25px] text-black font-semibold text-start">
           {product.nama_produk}
@@ -91,7 +94,7 @@ const CardProduct = ({ product }) => {
         <div className="flex flex-row justify-between">
           <button
             className="w-[78px] h-[18px] lg:w-[261px] lg:h-[55px] flex flex-row justify-center items-center border-[1px] lg:border-2 border-gray border-opacity-50 rounded-full lg:pt-4 lg:pb-4 transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-opacity-100 active:scale-95 active:bg-gray-200"
-            onClick={() => (window.location.href = "/detailproduct")}
+            onClick={() => (window.location.href = `/detailProduct/${product.produkID}`)}
           >
             <img
               src={buyIcon}
