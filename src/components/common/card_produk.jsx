@@ -1,18 +1,55 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import imageDummy from "../../assets/images/sayur.jpg";
 import starIcon from "../../assets/images/star.svg";
 import buyIcon from "../../assets/images/buy.svg";
 import bookmarkIcon from "../../assets/images/bookmark.svg";
 import bookmarkIconFilled from "../../assets/images/bookmark_fill2.svg";
+import Skeleton from "../../components/common/skeleton"; 
 
 const CardProduct = ({ product }) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const handleBookmarkClick = () => {
     setIsBookmarked((prev) => !prev);
   };
+  useEffect(() => {
+    if (product) {
+      setLoading(false);
+    }
+  }, [product]);
+
 
   console.log(product.image_produk);
+
+  if (loading) {
+    return (
+      <div className="max-w-sm bg-white border border-black rounded-xl">
+        <div className="p-[5px] lg:p-6">
+          <Skeleton className="w-[100px] h-[84px] lg:w-[350px] lg:h-[305px] rounded" />
+        </div>
+        <div className="p-[5px] lg:p-6">
+          <Skeleton className="h-6 w-3/4 mb-2 rounded" />
+          <div className="flex flex-row items-center">
+            <Skeleton className="h-6 w-1/2 mr-2 rounded" />
+            <Skeleton className="h-6 w-1/4 rounded" />
+          </div>
+          <div className="lg:h-[12px] h-[5px]" />
+          <div className="flex flex-row items-center justify-start">
+            <Skeleton className="w-[12px] h-[12px] lg:w-[24px] lg:h-[24px] rounded-full" />
+            <div style={{ width: 12 }} />
+            <Skeleton className="h-6 w-1/4 rounded" />
+          </div>
+          <div className="lg:h-[12px] h-[5px]" />
+          <div className="flex flex-row justify-between">
+            <Skeleton className="w-[78px] h-[18px] lg:w-[261px] lg:h-[55px] rounded-full" />
+            <div className="w-[6px] lg:w-[30px]" />
+            <Skeleton className="w-[20px] h-[20px] lg:w-[55px] lg:h-[55px] rounded-full" />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-sm bg-white border border-black rounded-xl">

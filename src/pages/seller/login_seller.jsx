@@ -16,27 +16,38 @@ const PetaniLoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     console.log(process.env.REACT_APP_BASE_URL);
   }, []);
 
   const handleLogin = (e) => {
-    e.preventDefault()
-    axios.post(`http://localhost:4000/petani/login`, {
-      email_petani : email,
-      password_petani : password,
-    })
-    .then((res) => {
-      const { token, petaniID } = res.data.data;
-      cookies.set("token_petani", token, { path: '/' });
-      cookies.set("petaniID", petaniID, { path: '/' });
-      window.location.href = "/homeseller"
-    }).catch((error) => {
-      setError("Login failed. Please check your credentials.");
-      console.log(error);
-    })
-  }
+    e.preventDefault();
+    axios
+      .post(`http://localhost:4000/petani/login`, {
+        email_petani: email,
+        password_petani: password,
+      })
+      .then((res) => {
+        const { token, petaniID } = res.data.data;
+        cookies.set("token_petani", token, { path: "/" });
+        cookies.set("petaniID", petaniID, { path: "/" });
+        setSuccess("Login successful! Redirecting to home...");
+        setError("");
+        setLoading(false);
+        setTimeout(() => {
+          window.location.href = "/home";
+        }, 2000);
+      })
+      .catch((error) => {
+        setError("Login failed. Please check your credentials.");
+        setSuccess("");
+        setLoading(false);
+        console.log(error);
+      });
+  };
   return (
     <div
       id="login"
@@ -109,22 +120,59 @@ const PetaniLoginPage = () => {
           <div className="h-4 lg:h-8"></div>
           <div>
             <form onSubmit={handleLogin}>
+              {/* Your form elements here */}
               <button
                 className="h-10 md:h-[60px] lg:h-14 flex items-center justify-center rounded-lg lg:rounded-xl bg-primary text-white font-semibold font-inter text-sm lg:text-h5 w-[350px] md:w-[563px] lg:w-[563px]"
                 type="submit"
               >
-                Login
+                {loading ? "Loading..." : "Login"}{" "}
+                {/* Show loading text while loading */}
               </button>
             </form>
-            {/* Error message */}
+            {success && (
+              <div className="flex items-center text-green-700 bg-green-100 border border-green-300 rounded-lg px-4 py-2 text-sm font-inter font-semibold mt-2">
+                <svg
+                  className="w-4 h-4 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                {success}
+              </div>
+            )}
             {error && (
-              <div className="text-red-500 text-sm font-inter font-semibold mt-2">
+              <div className="flex items-center text-red-700 bg-red-100 border border-red-300 rounded-lg px-4 py-2 text-sm font-inter font-semibold mt-2">
+                <svg
+                  className="w-4 h-4 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M18.364 5.636L5.636 18.364M5.636 5.636L18.364 18.364"
+                  ></path>
+                </svg>
                 {error}
               </div>
             )}
           </div>
           <div style={{ height: 30 }}></div>
-          <Divider className="font-inter text-h5 font-semibold px-20 md:px-0" flexItem>
+          <Divider
+            className="font-inter text-h5 font-semibold px-20 md:px-0"
+            flexItem
+          >
             or
           </Divider>
           <div style={{ height: 30 }}></div>

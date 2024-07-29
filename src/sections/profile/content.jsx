@@ -13,7 +13,11 @@ import axios from "axios";
 const cookies = new Cookies();
 const ContentProfile = (profileData) => {
   const [profile, setProfile] = useState({});
+  const [showModal, setShowModal] = useState(false);
+
   const fileInputRef = useRef(null);
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
   const handleButtonClick = () => {
     fileInputRef.current.click();
@@ -222,11 +226,76 @@ const ContentProfile = (profileData) => {
               <div className=" hidden lg:flex justify-end">
                 <button
                   type="button"
-                  class="flex items-center w-24 h-8 lg:w-36 lg:h-12 justify-center focus:outline-none font-inter font-semibold text-white text-[12px] lg:text-[18px] bg-red-600 hover:bg-red-700 focus:ring-2 focus:ring-red-300 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 "
-                  onClick={handleLogout}
+                  className="flex items-center w-24 h-8 lg:w-36 lg:h-12 justify-center focus:outline-none font-inter font-semibold text-white text-[12px] lg:text-[18px] bg-red-600 hover:bg-red-700 focus:ring-2 focus:ring-red-300 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 transition duration-200 ease-in-out transform hover:scale-105"
+                  onClick={openModal}
                 >
                   Logout
                 </button>
+
+                {showModal && (
+                  <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+                    <div className="relative p-4 w-full max-w-md max-h-full">
+                      <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <button
+                          type="button"
+                          className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center"
+                          onClick={closeModal}
+                        >
+                          <svg
+                            className="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 14"
+                          >
+                            <path
+                              stroke="currentColor"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                            />
+                          </svg>
+                          <span className="sr-only">Close modal</span>
+                        </button>
+                        <div className="p-4 md:p-5 text-center">
+                          <svg
+                            className="mx-auto mb-4 text-red-600 w-12 h-12"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              stroke="currentColor"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                            />
+                          </svg>
+                          <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                            Are you sure you want to logout?
+                          </h3>
+                          <button
+                            type="button"
+                            className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
+                            onClick={handleLogout}
+                          >
+                            Yes, I'm sure
+                          </button>
+                          <button
+                            type="button"
+                            className="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray hover:bg-gray-100 hover:text-black focus:z-10 focus:ring-2 focus:ring-gray"
+                            onClick={closeModal}
+                          >
+                            No, cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
               <div className="flex flex-col lg:hidden py-5">
                 <div className="px-[15px] py-[10px] md:w-[640px] w-full md:h-auto h-[230px] border border-black rounded-[10px] font-inter font-medium text-[14px] md:text-[20px] ">
