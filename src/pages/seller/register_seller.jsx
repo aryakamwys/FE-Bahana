@@ -8,7 +8,6 @@ import axios from "axios";
 const PetaniRegisterPage = () => {
   const [email, setEmail] = useState("");
   const [nama, setNama] = useState("");
-  const [alamat, setAlamat] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [no_hp, setNoHp] = useState("");
@@ -30,7 +29,6 @@ const PetaniRegisterPage = () => {
       .post("http://localhost:4000/petani/register", {
         email_petani: email,
         password_petani: password,
-        alamat_petani: alamat,
         nama_petani: nama,
         no_telepon_petani: no_hp,
       })
@@ -105,17 +103,6 @@ const PetaniRegisterPage = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={"Email"}
-              className={
-                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
-              }
-            />
-            <div style={{ height: 15 }}></div>
-            <Textfield
-              id={"alamat"}
-              type={"text"}
-              value={alamat}
-              onChange={(e) => setAlamat(e.target.value)}
-              placeholder={"Alamat"}
               className={
                 "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
               }

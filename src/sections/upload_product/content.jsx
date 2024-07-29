@@ -4,7 +4,9 @@ import AddProductIcon from "../../assets/images/add_product.svg";
 import AddImagesIcon from "../../assets/images/add_image2.png";
 import axios from "axios";
 import Cookies from "universal-cookie";
+import { useSnackbar } from 'notistack';
 const cookies = new Cookies();
+
 
 const ContentUploadProduct = () => {
   const [namaProduk, setNamaProduk] = useState("");
@@ -13,6 +15,7 @@ const ContentUploadProduct = () => {
   const [stokProduk, setStokProduk] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleButtonClick = () => {
     fileInputRef.current.click();
@@ -30,29 +33,34 @@ const ContentUploadProduct = () => {
       formData.append("image_produk", selectedFile);
     }
 
-    try {
-      const token = cookies.get("token_petani");
-      const response = await axios.post(
-        "http://localhost:4000/produk",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-      console.log("Product uploaded successfully", response.data);
-    } catch (err) {
-      console.error("Error uploading product:", err);
-    }
+    const token = cookies.get("token_petani");
+
+    axios.post(
+      "http://localhost:4000/produk",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
+    .then((res) => {
+      console.log(res.data.data);
+      enqueueSnackbar("Product uploaded successfully", { variant: 'success' });
+      window.location.href = "/profileseller";
+    })
+    .catch((error) => {
+      console.log(error);
+      window.alert = error;
+      enqueueSnackbar("Error uploading product", { variant: 'error' });
+    });
   };
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
       setSelectedFile(file);
-      // Optionally, you can handle the file upload here
       console.log(file);
     }
   };
@@ -160,6 +168,7 @@ const ContentUploadProduct = () => {
         <button
           className="bg-primary rounded-md pl-[26px] pr-[26px] lg:pl-14 lg:pr-14 pt-2 pb-2 font-inter font-medium text-white text-[16px] lg:text-[28px]"
           onClick={handleUploadProduct}
+          type="button"
         >
           Save
         </button>

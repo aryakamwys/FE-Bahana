@@ -1,15 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import DropdownIcon from "../../assets/images/dropdown.svg";
 import DropdownUpIcon from "../../assets/images/dropdown_up2.svg";
 
-const DropdownValue = ({ title, options, placeholder, className, width }) => {
-  const [selectedOption, setSelectedOption] = useState(null);
+const DropdownValue = ({ title, options, placeholder, className, value, onChange }) => {
+  const [selectedOption, setSelectedOption] = useState(options.find(option => option.value === value) || null);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (value) {
+      const selectedOption = options.find(option => option.value === value);
+      setSelectedOption(selectedOption);
+    }
+  }, [value, options]);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     setIsOpen(false);
+    if (onChange) {
+      onChange(option.value);
+    }
   };
 
   return (
@@ -45,7 +55,7 @@ const DropdownValue = ({ title, options, placeholder, className, width }) => {
             {options.map((option) => (
               <div
                 key={option.value}
-                className="p-4 hover:bg-gray-200 cursor-pointer hover:bg-greenLight border-b-2 border-gray border-opacity-10"
+                className="p-4 hover:bg-gray-200 cursor-pointer hover:bg-greenLight hover:bg-opacity-50 border-b-2 border-gray border-opacity-10"
                 onClick={() => handleOptionClick(option)}
               >
                 {option.label}

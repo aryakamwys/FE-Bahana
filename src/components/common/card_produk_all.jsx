@@ -22,27 +22,25 @@ const CardProductAll = ({ product }) => {
         />
       </div>
       <div className="p-[10px] lg:p-6">
-        <div
-          className="font-inter text-[10px] lg:text-[25px] text-black font-semibold text-start"
-        >
+        <div className="font-inter text-[10px] lg:text-[25px] text-black font-semibold text-start">
           {product.nama_produk}
         </div>
         <div className="flex flex-row row-auto items-center">
-          <div
-            className="font-inter font-semibold text-primary text-[10px] lg:text-[25px] lg:leading-normal"
-          >
+          <div className="font-inter font-semibold text-primary text-[10px] lg:text-[25px] lg:leading-normal">
             Rp {product.harga.toLocaleString()}
           </div>
           <div className="w-[5px] lg:w-[10px] "></div>
-          <div
-            className="font-inter text-[8px] lg:text-[20px] lg:leading-normal font-semibold text-gray opacity-50 line-through"
-          >
+          <div className="font-inter text-[8px] lg:text-[20px] lg:leading-normal font-semibold text-gray opacity-50 line-through">
             Rp {(product.harga + 50000).toLocaleString()}
           </div>
         </div>
         <div className="lg:h-[12px] h-[5px] "></div>
         <div className="flex flex-row row-auto items-center justify-start">
-          <img src={starIcon} className="w-[14px] h-[14px] lg:w-[24px] lg:h-[24px]" alt="star" />
+          <img
+            src={starIcon}
+            className="w-[14px] h-[14px] lg:w-[24px] lg:h-[24px]"
+            alt="star"
+          />
           <div style={{ width: 12 }}></div>
           <div className="font-inter font-semibold text-[10px] lg:text-[20px]">
             <span className="text-yellow">4.9</span>
@@ -53,28 +51,32 @@ const CardProductAll = ({ product }) => {
         <div className="flex flex-row row-auto">
           <div>
             <button
-              className="w-[110px] h-[21px] lg:w-[261px] lg:h-[55px] flex flex-row row-auto justify-center items-center border-[1px] lg:border-2 border-gray border-opacity-50 rounded-full lg:pt-4 lg:pb-4"
+              className="w-[78px] h-[18px] lg:w-[261px] lg:h-[55px] flex flex-row justify-center items-center border-[1px] lg:border-2 border-gray border-opacity-50 rounded-full lg:pt-4 lg:pb-4 transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-opacity-100 active:scale-95 active:bg-gray-200"
               onClick={() => (window.location.href = "/detailproduct")}
             >
-              <img src={buyIcon} className="w-[12px] h-[12px] lg:w-[24px] lg:h-[24px] " alt="buy icon" />
-              <div style={{ width: 10 }}></div>
-              <span className="font-inter font-semibold text-black text-[8px] lg:text-[16px]">
+              <img
+                src={buyIcon}
+                alt="buy icon"
+                className="w-[8px] h-[8px] lg:w-[24px] lg:h-[24px] transition-transform duration-300 ease-in-out transform hover:scale-110"
+              />
+              <div style={{ width: 10 }} />
+              <span className="font-inter font-semibold text-black text-[5px] lg:text-[16px]">
                 Beli Sekarang
               </span>
             </button>
           </div>
           <div className="w-[6px] lg:w-[30px] "></div>
           <div>
-            <button
-              className="flex items-center justify-center w-[20px] h-[20px] lg:w-[55px] lg:h-[55px] border border-gray border-opacity-50 rounded-full"
-              onClick={handleBookmarkClick}
-            >
-              <img
-                src={isBookmarked ? bookmarkIconFilled : bookmarkIcon}
-                className="w-[8px] h-[8px] lg:w-[24px] lg:h-[24px] "
-                alt="bookmark icon"
-              />
-            </button>
+          <button
+            className="flex items-center justify-center w-[20px] h-[20px] lg:w-[55px] lg:h-[55px] border border-gray border-opacity-50 rounded-full hover:border-opacity-100 active:bg-gray-200"
+            onClick={handleBookmarkClick}
+          >
+            <img
+              src={isBookmarked ? bookmarkIconFilled : bookmarkIcon}
+              alt="bookmark icon"
+              className="w-[8px] h-[8px] lg:w-[24px] lg:h-[24px] transition-transform duration-300 ease-in-out transform hover:scale-110"
+            />
+          </button>
           </div>
         </div>
       </div>

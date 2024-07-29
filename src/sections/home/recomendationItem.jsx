@@ -30,10 +30,11 @@ const Recomendation = () => {
       <div className="flex flex-row row-auto w-full items-center">
         <img
           src={ArrowLeft}
-          className="w-[20px] h-[20px] md:w-[35px] md:h-[35px] lg:w-[65px] lg:h-[65px]"
+          className="w-[20px] h-[20px] md:w-[35px] md:h-[35px] lg:w-[65px] lg:h-[65px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95"
           alt="arrow left"
           onClick={handlePreviousCard}
         />
+
         <div className="w-[5px] lg:w-[52px]"></div>
         {cards.map((card, index) => (
           <CardProductRecomendations
@@ -46,7 +47,7 @@ const Recomendation = () => {
         <div className="w-[5px] lg:w-[52px]"></div>
         <img
           src={ArrowRight}
-          className="w-[20px] h-[20px] md:w-[35px] md:h-[35px] lg:w-[65px] lg:h-[65px]"
+          className="w-[20px] h-[20px] md:w-[35px] md:h-[35px] lg:w-[65px] lg:h-[65px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95"
           alt="arrow right"
           onClick={handleNextCard}
         />

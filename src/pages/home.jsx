@@ -1,7 +1,7 @@
 import React from "react";
 import NavbarPembeli from "../components/specific/navbar";
 import HeaderHome from "../sections/home/header";
-import SearchBar from "../components/common/searchBar";
+// import SearchBar from "../components/common/searchBar";
 import Recomendation from "../sections/home/recomendationItem";
 import OurProduct from "../sections/home/ourproduct";
 import Footer from "../components/specific/footer";
@@ -12,7 +12,7 @@ const PembeliHomePage = () => {
       <NavbarPembeli />
       <HeaderHome />
       <div className="my-[36px] lg:my-8"></div>
-      <SearchBar />
+      {/* <SearchBar /> */}
       <Recomendation />
       <OurProduct />
       <Footer />

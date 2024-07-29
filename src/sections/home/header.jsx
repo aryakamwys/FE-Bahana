@@ -14,10 +14,11 @@ const HeaderHome = () => {
           <div className="h-[35px] lg:h-[65px]"></div>
           <div className="flex row-auto items-start">
             <button
-              className="w-[64px] h-[26px] md:w-[110px] md:h-[39px] lg:w-[168px] lg:h-[53px] rounded-[3px] md:rounded-[7px] lg:rounded-[10px] text-primary text-[10px] lg:text-[20px] font-inter border border-primary cursor-pointer hover:bg-primary hover:text-white"
+              type="button"
               onClick={() => (window.location.href = "/aboutus")}
+              class="w-[64px] h-[26px] md:w-[110px] md:h-[39px] lg:w-[168px] lg:h-[53px] rounded-[3px] md:rounded-[7px] lg:rounded-[10px] text-[10px] lg:text-[20px] font-inter text-primary hover:text-white border border-primary border-opacity-80 bg-opacity-80 hover:bg-primary focus:ring-2 focus:outline-none focus:ring-primary focus:ring-opacity-30 font-medium text-sm px-5 py-2.5 text-center me-2 mb-2"
             >
-              About us
+              About Us
             </button>
           </div>
         </div>

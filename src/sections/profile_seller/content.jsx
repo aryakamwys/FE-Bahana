@@ -23,7 +23,7 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
     try {
       // Remove token from local storage
       cookies.remove("token_petani");
-      cookies.remove('petaniID');
+      cookies.remove("petaniID");
 
       // Redirect to login page
       window.location.href = "/loginseller";
@@ -175,9 +175,7 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
             />
             <div className="py-3">
               <div className="flex flex-col items-start">
-                <div
-                  className="font-inter font-semibold text-black text-[12px] md:text-[14px] lg:text-[24px]"
-                >
+                <div className="font-inter font-semibold text-black text-[12px] md:text-[14px] lg:text-[24px]">
                   Deskripsi Toko
                 </div>
                 <div style={{ height: 7 }}></div>
@@ -222,15 +220,11 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
             />
             <div className="hidden lg:flex justify-end py-5">
               <button
-                className="flex items-center justify-center bg-red-500 rounded-xl w-36 h-12 "
+                type="button"
+                class="flex items-center w-24 h-8 lg:w-36 lg:h-12 justify-center focus:outline-none font-inter font-semibold text-white text-[12px] lg:text-[18px] bg-red-600 hover:bg-red-700 focus:ring-2 focus:ring-red-300 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 "
                 onClick={handleLogout}
               >
-                <div
-                  className="font-inter font-semibold text-white"
-                  style={{ fontSize: 18 }}
-                >
-                  Logout
-                </div>
+                Logout
               </button>
             </div>
             <div className="flex flex-col lg:hidden py-5">

@@ -20,7 +20,7 @@ const HeaderDetailBlog = () => {
         <div className="w-2 lg:w-5"></div>
         <div className="flex flex-col items-start">
           <div className="font-inter font-semibold text-black text-[16px] md:text-[20px] lg:text-[32px]">
-            Blog Harga Pasar
+            Musim El Nino: Pengancam Harga Pasar Indonesia
           </div>
           <div className="font-inter font-medium text-gray text-[8px] md:text-[10px] lg:text-[15px]">
             24 June 2024 ・6 min

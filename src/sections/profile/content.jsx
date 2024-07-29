@@ -23,7 +23,7 @@ const ContentProfile = (profileData) => {
     try {
       // Remove token from local storage
       cookies.remove("token_pembeli");
-      cookies.remove('pembeliID');
+      cookies.remove("pembeliID");
 
       // Redirect to login page
       window.location.href = "/login";
@@ -72,10 +72,9 @@ const ContentProfile = (profileData) => {
   }
 
   const formatDate = (date) => {
-    const options = { day: 'numeric', month: 'long', year: 'numeric' };
-    return new Intl.DateTimeFormat('id-ID', options).format(new Date(date));
+    const options = { day: "numeric", month: "long", year: "numeric" };
+    return new Intl.DateTimeFormat("id-ID", options).format(new Date(date));
   };
-
 
   return (
     <div>
@@ -200,7 +199,11 @@ const ContentProfile = (profileData) => {
               />
               <TextfieldProfile
                 title="Tanggal Lahir"
-                placeholder={profile.tanggal_lahir ? formatDate(profile.tanggal_lahir) : 'Tanggal tidak tersedia'}
+                placeholder={
+                  profile.tanggal_lahir
+                    ? formatDate(profile.tanggal_lahir)
+                    : "Tanggal tidak tersedia"
+                }
                 className={
                   "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
                 }
@@ -218,12 +221,11 @@ const ContentProfile = (profileData) => {
               />
               <div className=" hidden lg:flex justify-end">
                 <button
-                  className="flex items-center justify-center bg-red-500 rounded-xl w-24 h-8 lg:w-36 lg:h-12 "
+                  type="button"
+                  class="flex items-center w-24 h-8 lg:w-36 lg:h-12 justify-center focus:outline-none font-inter font-semibold text-white text-[12px] lg:text-[18px] bg-red-600 hover:bg-red-700 focus:ring-2 focus:ring-red-300 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 "
                   onClick={handleLogout}
                 >
-                  <div className="font-inter font-semibold text-white text-[12px] lg:text-[18px]">
-                    Logout
-                  </div>
+                  Logout
                 </button>
               </div>
               <div className="flex flex-col lg:hidden py-5">

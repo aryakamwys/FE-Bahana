@@ -46,14 +46,14 @@ const   OurProduct = () => {
         </div>
         <div className="h-[20px] lg:h-[60px] "></div>
         <div className="grid grid-cols-3 gap-x-[11px] gap-y-[13px] md:gap-x-5 md:gap-y-[34px] lg:gap-x-5 lg:gap-y-16">
-          {products.map((product) => (
+          {products.slice(0, 9).map((product) => (
             <CardProduct key={product.produkID} product={product} />
           ))}
         </div>
         <div style={{ height: 40 }}></div>
         <div>
           <button
-            className="border border-black rounded-md lg:rounded-xl p-[10px] md:p-[15px] lg:p-5 hover:bg-primary hover:text-white text-primary font-bold text-[10px] md:text-[18px] lg:text-[22px] font-inter"
+            className="border border-primary rounded-md lg:rounded-xl p-[10px] md:p-[15px] lg:p-5 hover:bg-primary hover:text-white text-primary font-bold text-[10px] md:text-[18px] lg:text-[22px] font-inter focus:ring-2 focus:outline-none focus:ring-primary focus:ring-opacity-30"
             onClick={() => (window.location.href = "/allproducts")}
           >
             See Our Product

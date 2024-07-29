@@ -8,7 +8,6 @@ import axios from "axios";
 const PembeliRegisterPage = () => {
   const [email, setEmail] = useState("");
   const [nama, setNama] = useState("");
-  const [alamat, setAlamat] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [no_hp, setNoHp] = useState("");
@@ -44,7 +43,6 @@ const PembeliRegisterPage = () => {
       .post("http://localhost:4000/pembeli/register", {
         email_pembeli: email,
         password_pembeli: password,
-        alamat_pembeli: alamat,
         nama_pembeli: nama,
         kontak_pembeli: no_hp,
       })
@@ -68,7 +66,7 @@ const PembeliRegisterPage = () => {
         flexItem
         className="hidden lg:block bg-black3 opacity-50"
       />
-      <div className="flex flex-col items-center justify-center md:mt-8 md:mb-0 mb-28 pb-10 lg:pb-0">
+      <div className="flex flex-col items-center justify-center md:mt-8 md:mb-0 mb-28 pb-10 lg:pb-16">
         <div
           className="flex items-center justify-around bg-greenLight rounded-full p-3"
           style={{ width: 329, height: 59 }}
@@ -119,17 +117,6 @@ const PembeliRegisterPage = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={"Email"}
-              className={
-                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
-              }
-            />
-            <div style={{ height: 15 }}></div>
-            <Textfield
-              id={"alamat"}
-              type={"text"}
-              value={alamat}
-              onChange={(e) => setAlamat(e.target.value)}
-              placeholder={"Alamat"}
               className={
                 "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
               }

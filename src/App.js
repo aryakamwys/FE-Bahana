@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 
-import LoginPage from "./pages/login";
+// import LoginPage from "./pages/login";
 import AboutUs from "./pages/aboutus";
 import Wishlist from "./pages/wishlist";
 import AllProducts from "./pages/all_product";
@@ -34,56 +34,57 @@ import WishlistPetani from "./pages/seller/wishlist_seller";
 import PaymentMethod from "./sections/payment/payment_method";
 import PetaniLoginPage from "./pages/seller/login_seller";
 import PetaniRegisterPage from "./pages/seller/register_seller";
+import ProtectedRoute from "./components/specific/protectedRoute";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          {/* Pembeli Routes */}
-          <Route path="/home" element={<PembeliHomePage />} />
-          <Route path="/login" element={<PembeliLoginPage />} />
+          {/* Public Routes */}
+          <Route path="/login" element={<PembeliLoginPage userType="pembeli" />} />
           <Route path="/register" element={<PembeliRegisterPage />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/allproducts" element={<AllProducts />} />
-          <Route path="/detailproduct" element={<DetailProduct />} />
-          <Route path="/chat" element={<ChatPage />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/marketprice" element={<MarketPrice />} />
-          <Route path="/detailblog" element={<DetailBlog />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/editprofile" element={<EditProfile />} />
-          <Route path="/editalamat" element={<EditAlamat />} />
-          <Route path="/riwayatpesanan" element={<RiwayatPesanan />} />
-          <Route path="/trackingorder" element={<TrackingOrder />} />
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/paymentmethod" element={<PaymentMethod />} />
-          <Route path="/pembayaran" element={<PembayaranPage />} />
-          <Route path="/sucsess" element={<SuccessPayment />} />
-          <Route path="/menupesanan" element={<MenuPesanan />} />
-          <Route path="/historytransaction" element={<HistoryTransaction />} />
-
-          {/* Petani Routes */}
-          <Route path="/homeseller" element={<PetaniHomePage />} />
-          <Route path="/loginseller" element={<PetaniLoginPage />} />
+          <Route path="/loginseller" element={<PetaniLoginPage userType="petani" />} />
           <Route path="/registerseller" element={<PetaniRegisterPage />} />
-          <Route path="/wishlistseller" element={<WishlistPetani />} />
-          <Route path="/marketpriceseller" element={<MarketPricePetani />} />
-          <Route path="/detailproductseller" element={<PetaniDetailProduct />} />
-          <Route path="/profileseller" element={<PetaniProfilePage />} />
-          <Route path="/editprofiletoko" element={<EditProfileToko />} />
-          <Route path="/uploadproduct" element={<UploadProduct />} />
+
+          {/* Protected Routes for Pembeli */}
+          <Route path="/home" element={<ProtectedRoute element={PembeliHomePage} allowedUserTypes={['pembeli']} />} />
+          <Route path="/aboutus" element={<ProtectedRoute element={AboutUs} allowedUserTypes={['pembeli', 'petani']} />} />
+          <Route path="/wishlist" element={<ProtectedRoute element={Wishlist} allowedUserTypes={['pembeli']} />} />
+          <Route path="/allproducts" element={<ProtectedRoute element={AllProducts} allowedUserTypes={['pembeli', 'petani']} />} />
+          <Route path="/detailproduct" element={<ProtectedRoute element={DetailProduct} allowedUserTypes={['pembeli']} />} />
+          <Route path="/chat" element={<ProtectedRoute element={ChatPage} allowedUserTypes={['pembeli']} />} />
+          <Route path="/cart" element={<ProtectedRoute element={CartPage} allowedUserTypes={['pembeli', 'petani']} />} />
+          <Route path="/marketprice" element={<ProtectedRoute element={MarketPrice} allowedUserTypes={['pembeli']} />} />
+          <Route path="/detailblog" element={<ProtectedRoute element={DetailBlog} allowedUserTypes={['pembeli', 'petani']} />} />
+          <Route path="/profile" element={<ProtectedRoute element={ProfilePage} allowedUserTypes={['pembeli']} />} />
+          <Route path="/editprofile" element={<ProtectedRoute element={EditProfile} allowedUserTypes={['pembeli']} />} />
+          <Route path="/editalamat" element={<ProtectedRoute element={EditAlamat} allowedUserTypes={['pembeli', 'petani']} />} />
+          <Route path="/riwayatpesanan" element={<ProtectedRoute element={RiwayatPesanan} allowedUserTypes={['pembeli']} />} />
+          <Route path="/trackingorder" element={<ProtectedRoute element={TrackingOrder} allowedUserTypes={['pembeli']} />} />
+          <Route path="/payment" element={<ProtectedRoute element={Payment} allowedUserTypes={['pembeli', 'petani']} />} />
+          <Route path="/paymentmethod" element={<ProtectedRoute element={PaymentMethod} allowedUserTypes={['pembeli', 'petani']} />} />
+          <Route path="/pembayaran" element={<ProtectedRoute element={PembayaranPage} allowedUserTypes={['pembeli', 'petani']} />} />
+          <Route path="/success" element={<ProtectedRoute element={SuccessPayment} allowedUserTypes={['pembeli', 'petani']} />} />
+
+          {/* Protected Routes for Petani */}
+          <Route path="/homeseller" element={<ProtectedRoute element={PetaniHomePage} allowedUserTypes={['petani']} />} />
+          <Route path="/wishlistseller" element={<ProtectedRoute element={WishlistPetani} allowedUserTypes={['petani']} />} />
+          <Route path="/marketpriceseller" element={<ProtectedRoute element={MarketPricePetani} allowedUserTypes={['petani']} />} />
+          <Route path="/detailproductseller" element={<ProtectedRoute element={PetaniDetailProduct} allowedUserTypes={['petani']} />} />
+          <Route path="/profileseller" element={<ProtectedRoute element={PetaniProfilePage} allowedUserTypes={['petani']} />} />
+          <Route path="/editprofiletoko" element={<ProtectedRoute element={EditProfileToko} allowedUserTypes={['petani']} />} />
+          <Route path="/menupesanan" element={<ProtectedRoute element={MenuPesanan} allowedUserTypes={['petani']} />} />
+          <Route path="/historytransaction" element={<ProtectedRoute element={HistoryTransaction} allowedUserTypes={['petani']} />} />
+          <Route path="/uploadproduct" element={<ProtectedRoute element={UploadProduct} allowedUserTypes={['petani']} />} />
 
           {/* Default Route */}
-          <Route path="/" element={<Navigate to="/login" />}>
-            <Route path="login" element={<LoginPage />} />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Route>
+          <Route path="/" element={<Navigate to="/login" />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
+
 
 export default App;
