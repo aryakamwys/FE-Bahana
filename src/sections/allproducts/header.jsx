@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 import ArrowBack from "../../assets/images/arrow-back.svg";
 import SearchBar from "../../components/common/searchBar";
 
 const HeaderAllProducts = () => {
+  const [products, setProducts] = useState([]);
   return (
     <div>
       <div className="h-[20px] md:h-[50px] lg:h-[50px] "></div>{" "}
@@ -18,7 +19,7 @@ const HeaderAllProducts = () => {
             alt="arrow back"
           />
         </button>
-        <SearchBar />
+        <SearchBar setProducts={setProducts}/>
       </div>
     </div>
   );

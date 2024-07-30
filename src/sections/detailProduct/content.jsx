@@ -18,6 +18,7 @@ const ContentDetailProduct = (produkData) => {
   const [selectedWeight, setSelectedWeight] = useState(null);
   const [product, setProduct] = useState({});
   const [calculatedPrice, setCalculatedPrice] = useState(null);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const fetchData = async (token) => {
@@ -54,7 +55,7 @@ const ContentDetailProduct = (produkData) => {
     if (product) {
       let price = product.harga;
       if (selectedWeight === 25) {
-        price *= 1; 
+        price *= 1;
       } else if (selectedWeight === 50) {
         price *= 1.25; // Naik 25% untuk berat 50
       } else if (selectedWeight === 75) {
@@ -66,6 +67,10 @@ const ContentDetailProduct = (produkData) => {
     }
   }, [selectedWeight, product]);
 
+  const handleQuantityChange = (newQuantity) => {
+    setQuantity(newQuantity);
+  };
+
   const handleBuyClick = () => {
     // Logika untuk membeli produk
     window.location.href = "/payment";
@@ -76,8 +81,18 @@ const ContentDetailProduct = (produkData) => {
   };
 
   const handleAddToCartClick = () => {
-    // Logika untuk menambahkan produk ke keranjang
-    // Misal: Simpan produk ke localStorage atau state global
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const updatedCart = [
+      ...cart,
+      {
+        ...product,
+        jumlah: quantity,
+        selectedWeight: selectedWeight,
+        calculatedPrice: calculatedPrice,
+      },
+    ];
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    alert("Produk berhasil ditambahkan ke keranjang!");
   };
 
   return (
@@ -115,7 +130,10 @@ const ContentDetailProduct = (produkData) => {
               />
             ))}
           </div>
-          <PlusMinusProduct />
+          <PlusMinusProduct
+            quantity={quantity}
+            onQuantityChange={handleQuantityChange}
+          />
           <StatusPrice />
           <div className="flex flex-col lg:h-[172px] col-auto p-1">
             <div className="flex flex-row row-auto items-center md:pt-[15px]">
@@ -146,7 +164,10 @@ const ContentDetailProduct = (produkData) => {
                 </div>
               </button>
               <div style={{ width: 25 }}></div>
-              <button className="flex flex-row row-auto items-center justify-center bg-white border border-primary md:rounded lg:rounded-xl md:w-[129px] md:h-[27px] lg:w-[275px] lg:h-[64px]">
+              <button
+                className="flex flex-row row-auto items-center justify-center bg-white border border-primary md:rounded lg:rounded-xl md:w-[129px] md:h-[27px] lg:w-[275px] lg:h-[64px]"
+                onClick={handleAddToCartClick}
+              >
                 <img
                   src={CartIcon}
                   className="md:w-[10px] md:h-[10px] lg:w-6 lg:h-6"

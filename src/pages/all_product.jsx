@@ -9,7 +9,7 @@ const AllProducts = () => {
   return (
     <div className="max-w-screen-sm md:max-w-screen-md lg:max-w-full px-5 md:px-[70px] lg:px-[310px]">
       <NavbarPembeli />
-      <HeaderAllProducts />
+      {/* <HeaderAllProducts /> */}
       <Products />
       <Footer />
     </div>

@@ -16,7 +16,7 @@ const CardProductAll = ({ product }) => {
     <div className="max-w-sm bg-white border border-gray border-opacity-50 rounded-xl w-[165px] lg:w-full">
       <div className="p-[10px]">
         <img
-          src={`http://localhost:4000/uploads/default_pfp.png`}
+          src={product.image_produk}
           className=" lg:p-6 w-[145px] h-[117px] lg:w-[350px] lg:h-[305px] "
           alt={product.nama_produk}
         />

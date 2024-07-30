@@ -52,7 +52,6 @@ const CardProduct = ({ product }) => {
 
   return (
     <div className="max-w-sm bg-white border border-black rounded-xl">
-      <div></div>
       <button
         className="p-[5px] lg:p-6"
         onClick={() => (window.location.href = "/detailProduct")}
@@ -73,8 +72,8 @@ const CardProduct = ({ product }) => {
             Rp {product.harga.toLocaleString()}
           </span>
           <div className="w-[5px] lg:w-[10px]" />
-          <span className="font-inter text-[6px] lg:text-[20px] font-semibold text-gray opacity-50 line-through">
-            Rp {(product.harga + 50000).toLocaleString()}
+          <span className="font-inter text-[6px] lg:text-[20px] font-medium text-gray opacity-50 line-through">
+            Rp {(product.harga + 150000).toLocaleString()}
           </span>
         </div>
         <div className="lg:h-[12px] h-[5px]" />
