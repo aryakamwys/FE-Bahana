@@ -1,8 +1,10 @@
 import React from "react";
 
-const PlusMinusProduct = ({ quantity, onQuantityChange }) => {
+const PlusMinusProduct = ({ quantity, maxQuantity, onQuantityChange }) => {
   const handleIncrease = () => {
-    onQuantityChange(quantity + 1);
+    if (quantity < maxQuantity) {
+      onQuantityChange(quantity + 1);
+    }
   };
 
   const handleDecrease = () => {

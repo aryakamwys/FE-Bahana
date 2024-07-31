@@ -5,6 +5,7 @@ import bankIcon from "../../assets/images/bank.svg";
 import instagramIcon from "../../assets/images/instagram_footer.svg";
 import facebookIcon from "../../assets/images/facebook_footer.svg";
 import twitterIcon from "../../assets/images/twitter_footer.svg";
+import Logo from "../../assets/images/logo.png";
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
               className="font-inter text-black font-bold text-[8px] md:text-[15px] lg:text-2xl mb-2"
               style={{ lineHeight: 1 }}
             >
-              Logo Website
+              <img src={Logo} alt="logo tani direct" />
             </div>
             <div className="lg:h-[20px]"></div>
             <div className="font-normal font-inter text-gray opacity-50 text-[6px] md:text-[10px] lg:text-[16px]">

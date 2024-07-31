@@ -6,9 +6,9 @@ import ContentPayment from "../sections/payment/content";
 
 const Payment = () => {
   return (
-    <div className="flex flex-col lg:flex-row lg:min-h-screen bg-neutral max-w-screen-sm md:max-w-screen-md lg:w-full px-5 md:px-[70px] lg:px-[315px]">
-      <div className="flex flex-col px-5 lg:px=0">
-        <div className="flex flex-col lg:px-14 lg:pb-20">
+    <div className="flex flex-col lg:flex-row lg:min-h-screen bg-neutral max-w-screen-sm md:max-w-screen-md lg:w-full px-5 md:px-[70px] lg:px-[0px]">
+      <div className="flex flex-col px-5 lg:px-0">
+        <div className="flex flex-col lg:px-[100px] lg:pb-20  lg:w-[950px]">
           <HeaderPayment />
           <ContentPayment />
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import CartIcon from "../../assets/images/cart.svg";
+import Logo from "../../assets/images/logo.png";
 
 const NavbarPetani = (className) => {
   return (
@@ -8,7 +9,7 @@ const NavbarPetani = (className) => {
         <div className="max-w-full md:w-[748px] md:pl-[70px] md:pr-[70px] flex row-auto items-center justify-between md:border-b lg:border-b border-gray lg:pb-5 lg:pl-3 lg:pr-3 w-[350px] lg:w-[1300px]">
           <a href="/homeseller">
             <div className="text-black text-[10px] md:text-[16px] lg:text-h5 font-semibold font-inter">
-              Logo Website
+            <img src={Logo} alt="logo tani direct" />
             </div>
           </a>
           <div className="flex items-center justify-between w-auto order-1">

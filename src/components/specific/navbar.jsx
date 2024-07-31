@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CartIcon from "../../assets/images/cart.svg";
+import Logo from "../../assets/images/logo.png";
 
-const NavbarPembeli = (className) => {
+const NavbarPembeli = ({className}) => {
+  const [cartItemCount, setCartItemCount] = useState(0);
+
+  useEffect(() => {
+    // Mendapatkan data keranjang dari localStorage dan memperbarui jumlah item
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCartItemCount(cart.length);
+  }, []);
   return (
     <div className="flex flex-row justify-center">
       <nav className={`bg-white fixed pt-2 z-50 ${className}`}>
         <div className="max-w-full md:w-[748px] md:pl-[70px] md:pr-[70px] flex row-auto items-center justify-between md:border-b lg:border-b border-gray lg:pb-5 lg:pl-3 lg:pr-3 w-[350px] lg:w-[1440px]">
           <a href="/home">
-            <div className="text-black text-[10px] md:text-[16px] lg:text-h5 font-semibold font-inter">
-              Logo Website
+            <div className="text-black w-[40px] h-[23px] md:w-[100px] md:h-[56px] font-semibold font-inter">
+              <img src={Logo} alt="logo tani direct" />
             </div>
           </a>
           <div className="flex items-center justify-between w-auto order-1">
@@ -54,6 +62,11 @@ const NavbarPembeli = (className) => {
           >
             <img src={CartIcon} alt="cart" />
           </button>
+          {cartItemCount > 0 && (
+              <div className="absolute top-4 right-2 w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 bg-primary text-white rounded-full flex items-center justify-center font-inter text-xs md:text-sm lg:text-base">
+                {cartItemCount}
+              </div>
+            )}
         </div>
       </nav>
       <div className="h-[20px] lg:h-[50px]"></div>

@@ -35,6 +35,9 @@ import PaymentMethod from "./sections/payment/payment_method";
 import PetaniLoginPage from "./pages/seller/login_seller";
 import PetaniRegisterPage from "./pages/seller/register_seller";
 import ProtectedRoute from "./components/specific/protectedRoute";
+import StepOne from "./pages/biodata/step1";
+import StepTwo from "./pages/biodata/step2";
+import StepThree from "./pages/biodata/step3";
 
 function App() {
   return (
@@ -46,6 +49,9 @@ function App() {
           <Route path="/register" element={<PembeliRegisterPage />} />
           <Route path="/loginseller" element={<PetaniLoginPage userType="petani" />} />
           <Route path="/registerseller" element={<PetaniRegisterPage />} />
+          <Route path="/stepone" element={<StepOne />} />
+          <Route path="/steptwo" element={<StepTwo />} />
+          <Route path="/stepthree" element={<StepThree />} />
 
           {/* Protected Routes for Pembeli */}
           <Route path="/home" element={<ProtectedRoute element={PembeliHomePage} allowedUserTypes={['pembeli']} />} />
@@ -77,6 +83,7 @@ function App() {
           <Route path="/menupesanan" element={<ProtectedRoute element={MenuPesanan} allowedUserTypes={['petani']} />} />
           <Route path="/historytransaction" element={<ProtectedRoute element={HistoryTransaction} allowedUserTypes={['petani']} />} />
           <Route path="/uploadproduct" element={<ProtectedRoute element={UploadProduct} allowedUserTypes={['petani']} />} />
+          
 
           {/* Default Route */}
           <Route path="/" element={<Navigate to="/login" />} />

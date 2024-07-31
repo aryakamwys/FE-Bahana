@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Cookies from "universal-cookie";
 
 import EditAlamatIcon from "../../assets/images/edit_alamat.svg";
 import CarrotImage from "../../assets/images/carrot.jpg";
 import TrashIcon from "../../assets/images/sampah.svg";
 import DropdownIcon from "../../assets/images/dropdown.svg";
 import DropdownUpIcon from "../../assets/images/dropdown_up2.svg";
+import ProductCardPayment from "../../components/common/card_produk_payment";
+import axios from "axios";
 
 const options = [
   {
@@ -33,7 +36,36 @@ const options = [
   },
 ];
 
+const products = [
+  // Example data
+  {
+    name: "Carrot",
+    description: "Lorem ipsum dolor sit amet blablalalblballllaf",
+    weight: "10 kg",
+    price: "Rp 100.000",
+    originalPrice: "Rp 150.000",
+  },
+  {
+    name: "Carrot",
+    description: "Lorem ipsum dolor sit amet blablalalblballllaf",
+    weight: "10 kg",
+    price: "Rp 100.000",
+    originalPrice: "Rp 150.000",
+  },
+  {
+    name: "Carrot",
+    description: "Lorem ipsum dolor sit amet blablalalblballllaf",
+    weight: "10 kg",
+    price: "Rp 100.000",
+    originalPrice: "Rp 150.000",
+  },
+  // Add more products if needed
+];
+
+const containerHeight = products.length > 1 ? "h-[300px]" : "h-[120px]";
 const ContentPayment = () => {
+  const cookies = new Cookies();
+  const [pembeli, setPembeli] = useState({});
   const [selectedOption, setSelectedOption] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -42,100 +74,84 @@ const ContentPayment = () => {
     setIsOpen(false);
   };
 
+  const fetchData = (token) => {
+    const pembeliID = cookies.get("pembeliID");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    axios
+      .get(`http://localhost:4000/pembeli/${pembeliID}`, config)
+      .then((res) => {
+        setPembeli(res.data.data);
+        console.log(res.data.data);
+      })
+      .catch((error) => {
+        console.log("Error fetching data:", error);
+      });
+  };
+
+  useEffect(() => {
+    const userToken = cookies.get("token_pembeli");
+    if (userToken) {
+      fetchData(userToken);
+    } else {
+      console.log("gada token");
+    }
+  }, []);
+
   return (
     <div>
-      <div className="flex flex-col w-[350px] md:w-full" >
+      <div className="flex flex-col w-[350px] md:w-full">
         <div style={{ height: 34 }}></div>
         <div className="flex flex-row justify-between items-center">
-          <div
-            className="font-inter text-[18px] md:text-[22px] font-semibold text-black"
-          >
+          <div className="font-inter text-[18px] md:text-[22px] font-semibold text-black">
             Delivery Address
           </div>
           <button onClick={() => (window.location.href = "/editalamat")}>
-            <img src={EditAlamatIcon} className="w-[18px] h-[18px] md:w-[25px] md:h-[25px] " alt="edit_alamat" />
-          </button>
-        </div>
-        <div className="flex flex-col items-start">
-          <div
-            className="font-inter text-[14px] md:text-[20px] font-medium text-black"
-          >
-            Difa Rindang Utari
-          </div>
-          <div
-            className="font-inter text-[14px] md:text-[20px] font-medium text-black"
-          >
-            (+62) 811-2222-2222
-          </div>
-          <div
-            className="font-inter text-[14px] md:text-[20px] font-medium text-black text-start"
-          >
-            Kostella Tanjung Duren No. 123, KOTA JAKARTA BARAT, GROGOL
-            PETAMBURAN
-          </div>
-        </div>
-        <div style={{ height: 30 }}></div>
-        <div className="flex flex-row justify-between md:border-none border border-gray p-2 lg:p-0 rounded-[5px]">
-          <div className="flex flex-row">
             <img
-              src={CarrotImage}
-              className="border-none lg:border border-gray border-opacity-50 rounded-xl w-[85px] h-[62px] md:w-[150px] md:h-[100px] "
-              alt="carrot"
+              src={EditAlamatIcon}
+              className="w-[18px] h-[18px] md:w-[25px] md:h-[25px] lg:mr-1"
+              alt="edit_alamat"
             />
-            <div style={{ width: 37 }}></div>
-            <div className="flex flex-col items-start">
-              <div
-                className="font-inter font-semibold text-black text-[14px] md:text-[20px]"
-              >
-                Nama product
-              </div>
-              <div style={{ height: 5 }}></div>
-              <div
-                className="font-inter font-medium text-black text-start text-[10px] md:text-[18px]"
-              >
-                Lorem ipsum dolor sit amet blablalalblballllaf
-              </div>
-              <div style={{ height: 5 }}></div>
-              <div className="hidden md:flex w-12 h-6">
-                <div
-                  className="border border-gray rounded-md pt-1 pb-1 pl-2 pr-2 font-inter font-medium text-black"
-                  style={{ fontSize: 10 }}
-                >
-                  10 kg
-                </div>
-              </div>
-              <div style={{ height: 5 }}></div>
-              <div className="flex flex-row items-center">
-                <div
-                  className="font-inter font-bold text-black md:text-primary text-[12px] md:text-[15px]"
-                >
-                  Rp 100.000
-                </div>
-                <div style={{ width: 10 }}></div>
-                <div
-                  className="hidden md:flex  font-inter font-normal text-gray line-through"
-                  style={{ fontSize: 10 }}
-                >
-                  Rp 150.000
-                </div>
-              </div>
-            </div>
-          </div>
-          <button className="flex items-center justify-center bg-gray bg-opacity-20 w-5 h-5 md:w-9 md:h-9 rounded-full">
-            <img src={TrashIcon} className="w-[14px] h-[14px] md:w-[22px] md:h-[22px]" alt="sampah" />
           </button>
         </div>
-        <div style={{ height: 34 }}></div>
         <div className="flex flex-col items-start">
+          <div className="font-inter text-[14px] md:text-[20px] font-medium text-black">
+            {pembeli.nama_pembeli}
+          </div>
+          <div className="font-inter text-[14px] md:text-[20px] font-medium text-black">
+            {pembeli.kontak_pembeli}
+          </div>
+          <div className="font-inter text-[14px] md:text-[20px] font-medium text-black text-start">
+            {`${pembeli.nama_alamat}, ${pembeli.detail_alamat}, ${pembeli.kecamatan}, ${pembeli.kota}, ${pembeli.provinsi}`}
+          </div>
+        </div>
+        <div style={{ height: 20 }}></div>
+        <div>
           <div
-            className="font-inter font-bold text-black text-[16px] md:text-[22px]"
+            className={`overflow-auto ${containerHeight}`}
+            style={{
+              overflowY: "scroll",
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
           >
+            {products.map((product, index) => (
+              <ProductCardPayment key={index} product={product} />
+            ))}
+          </div>
+        </div>
+        <div style={{ height: 20 }}></div>
+        <div className="flex flex-col items-start">
+          <div className="font-inter font-bold text-black text-[16px] md:text-[22px]">
             Pilih Pengiriman
           </div>
-          <div style={{ height: 20 }}></div>
+          <div style={{ height: 15 }}></div>
           <div className="flex flex-col items-start">
             <div style={{ height: 7 }}></div>
-            <div className="relative w-[350px] md:w-[583px] ">
+            <div className="relative w-[350px] md:w-[583px] lg:w-[740px] ">
               <div
                 className="flex flex-row justify-between h-[44px] md:h-[58px] items-center border border-gray-300 border-opacity-50 rounded-xl pl-10 pr-10 cursor-pointer"
                 onClick={() => setIsOpen(!isOpen)}
@@ -144,9 +160,17 @@ const ContentPayment = () => {
                   {selectedOption ? selectedOption.label : "J&T Express"}
                 </div>
                 {isOpen ? (
-                  <img src={DropdownUpIcon} className="w-[24px] h-[24px] lg:w-[38px] lg:h-[38px]"  alt="dropdown up" />
+                  <img
+                    src={DropdownUpIcon}
+                    className="w-[24px] h-[24px] lg:w-[38px] lg:h-[38px]"
+                    alt="dropdown up"
+                  />
                 ) : (
-                  <img src={DropdownIcon} className="w-[24px] h-[24px] lg:w-[38px] lg:h-[38px]" alt="dropdown" />
+                  <img
+                    src={DropdownIcon}
+                    className="w-[24px] h-[24px] lg:w-[38px] lg:h-[38px]"
+                    alt="dropdown"
+                  />
                 )}
               </div>
               {isOpen && (
@@ -157,9 +181,7 @@ const ContentPayment = () => {
                       className="p-4 hover:bg-gray-200 cursor-pointer hover:bg-greenLight border-b-2 border-gray border-opacity-10 text-[14px] lg:text-[20px]"
                       onClick={() => handleOptionClick(option)}
                     >
-                      <div
-                        className="flex flex-row justify-between font-inter font-semibold text-black text-[14px] md:text-[20px]"
-                      >
+                      <div className="flex flex-row justify-between font-inter font-semibold text-black text-[14px] md:text-[20px]">
                         <div>{option.label}</div>
                         <div className="flex flex-row">
                           <div className="ml-2">{option.price}</div>

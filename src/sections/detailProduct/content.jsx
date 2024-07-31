@@ -72,8 +72,14 @@ const ContentDetailProduct = (produkData) => {
   };
 
   const handleBuyClick = () => {
-    // Logika untuk membeli produk
-    window.location.href = "/payment";
+    const paymentData = {
+      product,
+      quantity,
+      selectedWeight,
+      calculatedPrice,
+    };
+    const paymentDataString = encodeURIComponent(JSON.stringify(paymentData));
+    window.location.href = `/payment?data=${paymentDataString}`;
   };
 
   const handleWeightClick = (weight) => {
@@ -92,7 +98,8 @@ const ContentDetailProduct = (produkData) => {
       },
     ];
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-    alert("Produk berhasil ditambahkan ke keranjang!");
+    // alert("Produk berhasil ditambahkan ke keranjang!");
+    window.location.reload();
   };
 
   return (
@@ -133,6 +140,7 @@ const ContentDetailProduct = (produkData) => {
           <PlusMinusProduct
             quantity={quantity}
             onQuantityChange={handleQuantityChange}
+            maxQuantity={product.jumlah_stok}
           />
           <StatusPrice />
           <div className="flex flex-col lg:h-[172px] col-auto p-1">

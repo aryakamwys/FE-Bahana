@@ -25,7 +25,7 @@ const ChatPage = () => {
       {isLG ? <HeaderChat /> : <NavbarPembeli />}
       <div className="pt-[10px] lg:pt-0 "></div>
       <ContentChat />
-      <TextKeyboard />
+      {/* <TextKeyboard /> */}
     </div>
   );
 };

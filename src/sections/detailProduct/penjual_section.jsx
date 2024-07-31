@@ -18,7 +18,7 @@ const PenjualSection = () => {
             <div
               className="font-inter font-semibold text-start text-black text-[12px] md:text-[16px] lg:text-[32px]"
             >
-              Nama penjualnya yanto
+              Yanto.Co
             </div>
             <div
               className="font-inter font-semibold text-gray text-opacity-50 text-[10px] md:text-[12px] lg:text-[25px]"

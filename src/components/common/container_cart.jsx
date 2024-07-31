@@ -4,17 +4,22 @@ import CartImage from "../../assets/images/carrot.jpg";
 import PlusMinusProduct from "./button_plusminus_product";
 import CheckIcon from "../../assets/images/check2.svg";
 
-const ContainerCart = ({ item, onRemoveItem }) => {
+const ContainerCart = ({ item, onItemCheck, onQuantityChange }) => {
   const [isChecked, setIsChecked] = useState(false);
   const [quantity, setQuantity] = useState(item.jumlah);
   const [calculatedPrice, setCalculatedPrice] = useState(item.calculatedPrice);
 
   const handleClick = () => {
-    setIsChecked(!isChecked);
+    // setIsChecked(!isChecked);
+    // onItemCheck(item.produkID, !isChecked);
+    const newIsChecked = !isChecked;
+    setIsChecked(newIsChecked);
+    onItemCheck(item.produkID, newIsChecked, item.calculatedPrice * quantity);
   };
 
   const handleQuantityChange = (newQuantity) => {
     setQuantity(newQuantity);
+    onQuantityChange(item.produkID, newQuantity, calculatedPrice);
     // Optionally, update the localStorage with the new quantity
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const updatedCart = cart.map((cartItem) =>
@@ -54,27 +59,18 @@ const ContainerCart = ({ item, onRemoveItem }) => {
                 {item.deskripsi_produk}
               </div>
               <div className="font-inter font-semibold text-black text-start lg:text-[30px] text-[19px]">
-                Rp{" "}
-                {calculatedPrice !== undefined
-                  ? (calculatedPrice * quantity).toLocaleString()
+              Rp{" "}
+                {item.calculatedPrice !== undefined
+                  ? (item.calculatedPrice * quantity).toLocaleString()
                   : "Loading..."}
               </div>
             </div>
           </div>
-          <div className="flex flex-col">
-            {isChecked && (
-              <button
-                onClick={() => onRemoveItem(item)}
-                className="block text-white lg:w-[106px] lg:h-[44px] bg-red-600 hover:bg-red-700 focus:ring-2 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-              >
-                Hapus
-              </button>
-            )}
-            <PlusMinusProduct
-              quantity={quantity}
-              onQuantityChange={handleQuantityChange}
-            />
-          </div>
+          <PlusMinusProduct
+            quantity={quantity}
+            onQuantityChange={handleQuantityChange}
+            maxQuantity={item.jumlah_stok}
+          />
         </div>
       </div>
     </div>

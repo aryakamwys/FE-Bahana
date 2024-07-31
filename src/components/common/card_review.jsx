@@ -34,10 +34,7 @@ const CardReview = () => {
           </div>
           <div className="md:h-4" />
           <div className="text-start font-normal font-inter text-black text-[8px] md:text-[12px] lg:text-[20px] lg:leading-snug overflow-y-auto">
-            Lorem ipsum dolor sit amet consectetur. Faucibus vel quis tellus
-            semper bibendum. Sem id facilisis fermentum erat augue cras facilisi
-            eget. Ridiculus euismod vestibulum duis eleifend. Netus placerat
-            velit pellentesque congue.
+          Produk dikemas dengan baik tanpa ada kerusakan. Kualitas pangannya sangat bagus tanpa ada bau pestisida dan hama serangga. Harga produk sangat sesuai dengan jarak pengiriman produk. 
           </div>
         </div>
       </div>

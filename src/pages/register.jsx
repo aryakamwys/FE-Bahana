@@ -42,7 +42,7 @@ const PembeliRegisterPage = () => {
         setError("");
         setLoading(false);
         setTimeout(() => {
-          window.location.href = "/home";
+          window.location.href = "/stepone";
         }, 2000);
       })
       .catch((error) => {
