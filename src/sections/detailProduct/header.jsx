@@ -5,7 +5,7 @@ import ArrowBack from "../../assets/images/arrow-back.svg";
 const HeaderDetailProduct = () => {
   return (
     <div>
-      <div style={{ height: 50 }}></div>
+      <div className="h-[20px] md:h-[70px] "></div>
       <div className="flex flex-row row-auto items-center ">
         <button
           className="flex items-center justify-center border border-black rounded-full w-6 h-6 lg:w-10 lg:h-10"
@@ -18,7 +18,7 @@ const HeaderDetailProduct = () => {
           />
         </button>
         <div className="w-2 lg:w-5"></div>
-        <div className="font-inter font-semibold text-black text-[16px] lg:text-[45px]">
+        <div className="font-inter font-semibold text-black text-[16px] md:text-[20px] lg:text-[45px]">
           Detail Product
         </div>
       </div>

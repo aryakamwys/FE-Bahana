@@ -1,31 +1,134 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import Cookies from "universal-cookie";
 import TextfieldProfile from "../../components/common/textfieldProfile";
+import { useSnackbar } from "notistack";
+import axios from "axios";
+
+const cookies = new Cookies();
 
 const ContentEditProfileToko = () => {
+  const [updatedProfile, setUpdatedProfile] = useState({});
+  const { enqueueSnackbar } = useSnackbar();
+  const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    const userToken = cookies.get("token_petani");
+    const fetchData = (token) => {
+      const pembeliID = cookies.get("petaniID");
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      axios
+        .get(`http://localhost:4000/petani/${pembeliID}`, config)
+        .then((res) => {
+          const data = res.data.data;
+          console.log("Received data:", data);
+          setUpdatedProfile(res.data.data);
+          setUpdatedProfile({
+            ...data,
+          });
+        })
+        .catch((error) => {
+          console.log("Error fetching data:", error);
+          setErrorMessage(
+            error.response ? error.response.data.message : error.message
+          );
+        });
+    };
+
+    if (userToken) {
+      fetchData(userToken);
+    } else {
+      console.log("No token found");
+    }
+  }, []);
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    const token = cookies.get("token_pembeli");
+    const petaniID = cookies.get("petaniID");
+
+    if (!updatedProfile) {
+      console.error("Updated profile is undefined");
+      return;
+    }
+
+    console.log("Updated profile before update:", updatedProfile);
+
+    const dataToUpdate = {
+      ...updatedProfile,
+    };
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+
+    axios
+      .put(`http://localhost:4000/petani/${petaniID}`, dataToUpdate, config)
+      .then((response) => {
+        const dataUser = response.data.data;
+        console.log("Updated profile response:", dataUser);
+        console.log(response.data.data);
+        setUpdatedProfile(response.data);
+        enqueueSnackbar("Profile updated successfully", { variant: "success" });
+        setErrorMessage("Successfully updated");
+      })
+      .catch((error) => {
+        enqueueSnackbar("Error updating profile", { variant: "error" });
+        if (error.message === "Network Error") {
+          setErrorMessage(
+            "Network error. Please check your internet connection."
+          );
+        } else {
+          setErrorMessage(
+            error.response ? error.response.data.message : error.message
+          );
+        }
+        console.log(error);
+      });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setUpdatedProfile((prevProfile) => ({
+      ...prevProfile,
+      [name]: value,
+    }));
+  };
+
   return (
     <div>
       <TextfieldProfile
         title={"Nama Toko"}
-        placeholder={"Low Range"}
+        placeholder={updatedProfile.nama_petani}
         type={"text"}
+        name={"nama_petani"}
+        value={updatedProfile?.nama_petani || ""}
+        onChange={handleInputChange}
         className={
-          "font-inter font-medium text-[14px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[1240px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[604px] lg:w-[1240px]"
         }
         readOnly={false}
       />
       <div className="py-3">
         <div className="flex flex-col items-start">
-          <div className="font-inter font-semibold text-black text-[14px] lg:text-[26px]">
+          <div className="font-inter font-semibold text-black text-[14px] md:text-[20px] lg:text-[26px]">
             Deskripsi Toko
           </div>
           <div style={{ height: 7 }}></div>
           <form className="flex items-center justify-start ">
             <span className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 w-full ring-opacity-50 focus:ring-gray">
               <textarea
-                placeholder="Toko ini menjual blablabla."
-                className="font-inter font-medium focus:outline-none text-[12px] lg:text-[24px] h-[67px] lg:h-[171px] resize-none w-[350px] lg:w-[1240px]"
+                placeholder={updatedProfile.deskripsi}
+                className="font-inter font-medium focus:outline-none text-[12px] md:text-[16px] lg:text-[24px] h-[67px] lg:h-[171px] resize-none w-[350px] md:w-[600px] lg:w-[1240px]"
                 readOnly={false}
+                name={"deskripsi"}
+                value={updatedProfile?.deskripsi || ""}
+                onChange={handleInputChange}
               />
             </span>
           </form>
@@ -33,29 +136,38 @@ const ContentEditProfileToko = () => {
       </div>
       <TextfieldProfile
         title={"Email"}
-        placeholder={"difautari@gmail.com"}
+        placeholder={updatedProfile.email_petani}
         type={"email"}
+        name={"email_petani"}
+        value={updatedProfile?.email_petani || ""}
+        onChange={handleInputChange}
         className={
-          "font-inter font-medium text-[14px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[1240px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[604px] lg:w-[1240px]"
         }
         readOnly={false}
       />
       <TextfieldProfile
         title="Contact Number"
-        placeholder="628120929172"
+        placeholder={updatedProfile.no_telepon_petani}
         type="text"
+        name={"no_telepon_petani"}
+        value={updatedProfile?.no_telepon_petani || ""}
+        onChange={handleInputChange}
         readOnly={false}
         className={
-          "font-inter font-medium text-[14px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[1240px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[604px] lg:w-[1240px]"
         }
       />
       <TextfieldProfile
         title="Password"
         placeholder="*************"
         type="password"
+        name={"password_petani"}
+        value={updatedProfile?.password_petani || ""}
+        onChange={handleInputChange}
         readOnly={false}
         className={
-          "font-inter font-medium text-[14px] lg:text-[24px] focus:outline-none w-[350px] lg:w-[1240px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[604px] lg:w-[1240px]"
         }
       />
       <div className="flex flex-row justify-start pt-[20px] lg:pt-0">

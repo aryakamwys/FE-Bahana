@@ -22,14 +22,20 @@ const Recomendation = () => {
   };
 
   return (
-    <div className="flex flex-col items-start" style={{ paddingTop: 63 }}>
-      <div className="font-bold font-inter text-black" style={{ fontSize: 40 }}>
+    <div className="flex flex-col items-start pt-[40px] lg:pt-[63px]">
+      <div className="font-bold font-inter text-[20px] md:text-[25px] lg:text-[40px] text-black">
         Must-Have Items
       </div>
-      <div style={{ height: 60 }}></div>
-      <div className="flex flex-row row-auto">
-        <img src={ArrowLeft} alt="arrow left" onClick={handlePreviousCard} />
-        <div style={{ width: 52 }}></div>
+      <div className="h-[20px] lg:h-[60px] "></div>
+      <div className="flex flex-row row-auto w-full items-center">
+        <img
+          src={ArrowLeft}
+          className="w-[20px] h-[20px] md:w-[35px] md:h-[35px] lg:w-[65px] lg:h-[65px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+          alt="arrow left"
+          onClick={handlePreviousCard}
+        />
+
+        <div className="w-[5px] lg:w-[52px]"></div>
         {cards.map((card, index) => (
           <CardProductRecomendations
             key={card.id}
@@ -38,8 +44,13 @@ const Recomendation = () => {
             isActive={index === currentCard}
           />
         ))}
-        <div style={{ width: 52 }}></div>
-        <img src={ArrowRight} alt="arrow right" onClick={handleNextCard} />
+        <div className="w-[5px] lg:w-[52px]"></div>
+        <img
+          src={ArrowRight}
+          className="w-[20px] h-[20px] md:w-[35px] md:h-[35px] lg:w-[65px] lg:h-[65px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+          alt="arrow right"
+          onClick={handleNextCard}
+        />
       </div>
     </div>
   );

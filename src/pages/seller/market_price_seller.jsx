@@ -3,9 +3,9 @@ import HeaderMarketPrice from "../../sections/market_price/header";
 import ContentArticle from "../../sections/market_price/content_article";
 import NavbarPetani from "../../components/specific/navbar_seller";
 
-const MarketPricePetani = () => {
+const MarketPrice = () => {
   return (
-    <div style={{ paddingLeft: 310, paddingRight: 315 }}>
+    <div className="max-w-screen-sm md:max-w-screen-md lg:max-w-full px-5 md:px-[70px] lg:px-[315px]">
       <NavbarPetani />
       <HeaderMarketPrice />
       <ContentArticle />
@@ -14,4 +14,4 @@ const MarketPricePetani = () => {
   );
 };
 
-export default MarketPricePetani;
+export default MarketPrice;

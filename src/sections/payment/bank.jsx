@@ -25,36 +25,65 @@ const BankPayment = () => {
         {banks.map((bank, index) => (
           <div key={index} className="py-2">
             <div
-              className={`border rounded-xl cursor-pointer ${
+              className={`border rounded-md h-auto lg:rounded-xl cursor-pointer ${
                 selectedBank === bank.name
                   ? "border-4 border-primary "
                   : "border-black"
               }`}
               onClick={() => setSelectedBank(bank.name)}
             >
-              <div className="flex flex-row items-center px-5 py-2 ">
-                <img src={bank.icon} alt={bank.name} />
+              <div className="flex flex-row items-center py-[5px] px-[15px] md:px-5 md:py-2 ">
+                <img
+                  src={bank.icon}
+                  className="w-[30px] h-[30px] md:h-[40px] md:w-[40px] "
+                  alt={bank.name}
+                />
                 <div style={{ width: 10 }}></div>
-                <div
-                  className="font-inter font-semibold"
-                  style={{
-                    fontSize: 15,
-                    color: "black",
-                  }}
-                >
+                <div className="font-inter text-[12px] text-black md:text-[15px] font-semibold">
                   {bank.name}
                 </div>
               </div>
             </div>
           </div>
         ))}
-        <div className="px-10 py-9">
-          <button
-            className="bg-primary w-full rounded-xl"
-            style={{ fontSize: 20 }}
-            onClick={() => (window.location.href = "/pembayaran")}
-          >
-            <div className="py-3 font-inter font-semibold text-white">
+        <div className="pt-[150px] lg:pt-0 lg:px-10 lg:py-9">
+          <div className="lg:hidden flex flex-col md:border-t-[1px] border-gray w-[350px] md:w-full py-3 lg:px-7">
+            <div className="flex items-start">
+              <div className="font-inter font-semibold text-black text-[16px] md:text-[22px]">
+                Rincian Pembayaran
+              </div>
+            </div>
+            <div style={{ height: 10 }}></div>
+            <div className="flex flex-row justify-between">
+              <div className="font-inter font-medium text-gray text-[13px] md:text-[20px]">
+                Subtotal untuk Produk
+              </div>
+              <div className="font-inter font-medium text-gray text-[13px] md:text-[20px]">
+                Rp 100.000
+              </div>
+            </div>
+            <div className="flex flex-row justify-between">
+              <div className="font-inter font-medium text-gray text-[13px] md:text-[20px]">
+                Subtotal Pengiriman{" "}
+              </div>
+              <div className="font-inter font-medium text-gray text-[13px] md:text-[20px]">
+                Rp 10.000
+              </div>
+            </div>
+            <div className="flex flex-row justify-between">
+              <div className="font-inter font-medium text-black text-[13px] md:text-[20px]">
+                Total Pembayaran{" "}
+              </div>
+              <div className="font-inter font-medium text-black text-[13px] md:text-[20px]">
+                Rp 110.000
+              </div>
+            </div>
+          </div>
+          <button className="bg-primary w-[221px] md:w-full rounded-xl text-[10px] md:text-[20px]">
+            <div
+              className="py-3 font-inter font-semibold text-white"
+              onClick={() => (window.location.href = "/pembayaran")}
+            >
               Selanjutnya
             </div>
           </button>

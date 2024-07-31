@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
-const PlusMinusProduct = () => {
-  const [count, setCount] = useState(1);
-
-  const handleIncrement = () => {
-    setCount(count + 1);
+const PlusMinusProduct = ({ quantity, onQuantityChange }) => {
+  const handleIncrease = () => {
+    onQuantityChange(quantity + 1);
   };
 
-  const handleDecrement = () => {
-    if (count > 1) {
-      setCount(count - 1);
+  const handleDecrease = () => {
+    if (quantity > 1) {
+      onQuantityChange(quantity - 1);
     }
   };
 
@@ -20,18 +18,18 @@ const PlusMinusProduct = () => {
       >
         <button
           className=" border border-gray border-opacity-50 rounded-l-[5px] lg:rounded-l-xl lg:px-[10px] py-[4] px-[5px] lg:py-[5px]"
-          onClick={handleDecrement}
+          onClick={handleDecrease}
         >
           -
         </button>
         <div
           className=" border border-gray border-opacity-50 lg:px-[10px] py-[4] px-[7px] lg:py-[5px]"
         >
-          {count}
+          {quantity}
         </div>
         <button
           className=" border border-gray border-opacity-50 rounded-r-[5px] lg:rounded-r-xl lg:px-[10px] px-[5px] py-[4] lg:py-[5px]"
-          onClick={handleIncrement}
+          onClick={handleIncrease}
         >
           +
         </button>

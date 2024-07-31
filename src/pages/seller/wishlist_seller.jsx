@@ -6,7 +6,7 @@ import NavbarPetani from "../../components/specific/navbar_seller";
 
 const WishlistPetani = () => {
   return (
-    <div style={{ paddingLeft: 310, paddingRight: 315 }}>
+    <div className="max-w-screen-sm md:max-w-screen-md lg:max-w-full px-5 md:px-[70px] lg:px-[315px]">
       <NavbarPetani />
       <BackWishlist />
       <CardWishList />
