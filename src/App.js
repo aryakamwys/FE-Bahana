@@ -32,7 +32,9 @@ import UploadProduct from "./pages/upload_product";
 import PembeliRegisterPage from "./pages/register";
 import MarketPricePetani from "./sections/home_seller/market_price_seller";
 import WishlistPetani from "./sections/home_seller/wishlist_seller";
-
+import StepOne from "./pages/biodata/step1";
+import StepTwo from "./pages/biodata/step2";
+import StepThree from "./pages/biodata/step3";
 function App() {
   return (
     <div className="App">
@@ -67,6 +69,10 @@ function App() {
           <Route path="/menupesanan" element={<MenuPesanan />} />
           <Route path="/historytransaction" element={<HistoryTransaction />} />
           <Route path="/uploadproduct" element={<UploadProduct />} />
+          <Route path="/stepone" element={<StepOne />} />
+          <Route path="/steptwo" element={<StepTwo />} />
+          <Route path="/stepthree" element={<StepThree />} />
+
           <Route path="/" element={<Navigate to="/login" />}>
             <Route path="login" element={<LoginPage />} />
             <Route path="*" element={<Navigate to="/" />} />

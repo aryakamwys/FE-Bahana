@@ -3,11 +3,12 @@ import React from "react";
 import ForwardIcon from "../../assets/images/forward.svg";
 import ProfilePembeli from "../../assets/images/profile_chat_pembeli.png";
 import ProfilePenjual from "../../assets/images/profile_chat.png";
+import TextKeyboard from "./textKey";
 
 const ContentChat = () => {
   return (
     <div>
-      <div className="flex flex-row row-auto items-end justify-end">
+      <div className="flex flex-row row-auto items-end justify-end mt-5">
         <button>
           <img
             src={ForwardIcon}
@@ -79,7 +80,7 @@ const ContentChat = () => {
           style={{ borderRadius: 10 }}
         >
           <div className="p-2 lg:p-6 text-xs md:text-[14px] leading-normal text-start lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl">
-            Thank you.
+            thank you
           </div>
           <div className="bg-primary w-2 rounded-r-full"></div>
         </div>
@@ -92,6 +93,7 @@ const ContentChat = () => {
           />
         </div>
       </div>
+      <TextKeyboard />
     </div>
   );
 };
