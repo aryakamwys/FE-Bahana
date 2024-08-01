@@ -146,7 +146,33 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
                   className="font-inter font-semibold text-black text-start"
                   style={{ fontSize: 18 }}
                 >
-                  Input Product
+                  Edit Lokasi Produk
+                </div>
+              </button>
+            </div>
+            <div className="py-1">
+              <button
+                className="flex items-center w-full justify-center py-2 border border-black rounded-lg"
+                onClick={() => (window.location.href = "/uploadproduct")}
+              >
+                <div
+                  className="font-inter font-semibold text-black text-start"
+                  style={{ fontSize: 18 }}
+                >
+                  Produk Saya
+                </div>
+              </button>
+            </div>
+            <div className="py-1">
+              <button
+                className="flex items-center w-full justify-center py-2 border border-black rounded-lg"
+                onClick={() => (window.location.href = "/uploadproduct")}
+              >
+                <div
+                  className="font-inter font-semibold text-black text-start"
+                  style={{ fontSize: 18 }}
+                >
+                  Information of Product
                 </div>
               </button>
             </div>

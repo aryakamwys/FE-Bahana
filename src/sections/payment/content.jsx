@@ -118,13 +118,13 @@ const ContentPayment = () => {
           </button>
         </div>
         <div className="flex flex-col items-start">
-          <div className="font-inter text-[14px] md:text-[20px] font-medium text-black">
+          <div className="font-inter text-[14px] md:text-[18px] font-medium text-black">
             {pembeli.nama_pembeli}
           </div>
-          <div className="font-inter text-[14px] md:text-[20px] font-medium text-black">
+          <div className="font-inter text-[14px] md:text-[18px] font-medium text-black">
             {pembeli.kontak_pembeli}
           </div>
-          <div className="font-inter text-[14px] md:text-[20px] font-medium text-black text-start">
+          <div className="font-inter text-[14px] md:text-[18px] font-medium text-black text-start">
             {`${pembeli.nama_alamat}, ${pembeli.detail_alamat}, ${pembeli.kecamatan}, ${pembeli.kota}, ${pembeli.provinsi}`}
           </div>
         </div>
@@ -144,7 +144,7 @@ const ContentPayment = () => {
           </div>
         </div>
         <div style={{ height: 20 }}></div>
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start lg:pb-[210px]">
           <div className="font-inter font-bold text-black text-[16px] md:text-[22px]">
             Pilih Pengiriman
           </div>
@@ -153,7 +153,7 @@ const ContentPayment = () => {
             <div style={{ height: 7 }}></div>
             <div className="relative w-[350px] md:w-[583px] lg:w-[740px] ">
               <div
-                className="flex flex-row justify-between h-[44px] md:h-[58px] items-center border border-gray-300 border-opacity-50 rounded-xl pl-10 pr-10 cursor-pointer"
+                className="flex flex-row justify-between h-[44px] md:h-[58px] items-center border border-gray-300 border-opacity-50 rounded-xl px-5 cursor-pointer"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <div className="w-80 h-18 flex items-center font-medium font-inter text-xl">
@@ -174,11 +174,11 @@ const ContentPayment = () => {
                 )}
               </div>
               {isOpen && (
-                <div className="absolute w-full mt-3 bg-white border border-gray-300 rounded-xl font-inter shadow-lg z-10 max-h-96 overflow-y-auto">
+                <div className="absolute w-full mt-3 bg-white border border-gray-300 rounded-xl font-inter shadow-lg z-10 max-h-96  overflow-y-auto">
                   {options.map((option) => (
                     <div
                       key={option.value}
-                      className="p-4 hover:bg-gray-200 cursor-pointer hover:bg-greenLight border-b-2 border-gray border-opacity-10 text-[14px] lg:text-[20px]"
+                      className="p-4 hover:bg-gray-200 cursor-pointer hover:bg-greenLight border-b-2 border-gray px-5 border-opacity-10 text-[14px] lg:text-[20px]"
                       onClick={() => handleOptionClick(option)}
                     >
                       <div className="flex flex-row justify-between font-inter font-semibold text-black text-[14px] md:text-[20px]">

@@ -157,7 +157,7 @@ const ContentEditAlamat = () => {
 
   return (
     <div>
-      <div className="lg:h-10"></div>
+      <div className="h-[20px] lg:h-10"></div>
       <div className="w-full">
         <TextfieldProfile
           title="Nama Lengkap"
@@ -166,7 +166,7 @@ const ContentEditAlamat = () => {
           name="nama_pembeli"
           value={updatedAlamat.nama_pembeli || ""}
           onChange={handleInputChange}
-          className="font-inter font-medium text-[14px] md:text-[16px] lg:text-[24px] focus:outline-none w-[350px] md:w-[602px] lg:w-[1239px]"
+          className="font-inter font-medium text-[14px] md:text-[16px] lg:text-[24px] focus:outline-none w-[350px] md:w-[700px] lg:w-[1400px]"
         />
         <TextfieldProfile
           title="Contact Number"
@@ -175,15 +175,15 @@ const ContentEditAlamat = () => {
           name="kontak_pembeli"
           value={updatedAlamat.kontak_pembeli || ""}
           onChange={handleInputChange}
-          className="font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[602px] lg:w-[1239px]"
+          className="font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[700px] lg:w-[1400px]"
         />
-        <div className="hidden md:flex lg:flex flex-row justify-between md:w-[599px] lg:w-[1237px]">
+        <div className="hidden md:flex lg:flex flex-row justify-between md:w-[700px] lg:w-[1390px]">
           <DropdownValue
             title="Provinsi"
             name="provinsi"
             value={updatedAlamat.provinsi || ""}
             onChange={(value) => handleInputDropdownChange("provinsi", value)}
-            className="relative w-[163px] lg:w-[258px]"
+            className="relative w-[163px] md:w-[140px] lg:w-[258px]"
             placeholder={updatedAlamat.provinsi || "Select Province"}
             options={provinces}
           />
@@ -192,7 +192,7 @@ const ContentEditAlamat = () => {
             name="kota"
             value={updatedAlamat.kota || ""}
             onChange={(value) => handleInputDropdownChange("kota", value)}
-            className="relative w-[163px] lg:w-[258px]"
+            className="relative w-[163px] md:w-[140px] lg:w-[258px]"
             placeholder={updatedAlamat.kota || "Select City"}
             options={cities}
           />
@@ -201,7 +201,7 @@ const ContentEditAlamat = () => {
             name="kecamatan"
             value={updatedAlamat.kecamatan || ""}
             onChange={(value) => handleInputDropdownChange("kecamatan", value)}
-            className="relative w-[163px] lg:w-[258px]"
+            className="relative w-[163px] md:w-[140px] lg:w-[258px]"
             placeholder={updatedAlamat.kecamatan || "Select District"}
             options={districts}
           />
@@ -210,11 +210,32 @@ const ContentEditAlamat = () => {
             name="kode_pos"
             value={updatedAlamat.kode_pos || ""}
             onChange={(value) => handleInputDropdownChange("kode_pos", value)}
-            className="relative w-[163px] lg:w-[258px]"
+            className="relative w-[163px] md:w-[140px] lg:w-[258px] "
             placeholder={updatedAlamat.kode_pos || "Select Postal Code"}
             options={postalCodes}
           />
         </div>
+        <div className="flex md:hidden lg:hidden flex-row justify-between">
+          <DropdownValue
+            title="Provinsi"
+            name="provinsi"
+            value={updatedAlamat.provinsi || ""}
+            onChange={handleInputDropdownChange}
+            placeholder={updatedAlamat.provinsi || "Select Province"}
+            options={provinces}
+            className="relative w-[163px] lg:w-[292px]"
+          />
+          <DropdownValue
+            title="Kota"
+            name="kota"
+            value={updatedAlamat.kota || ""}
+            onChange={handleInputDropdownChange}
+            placeholder={updatedAlamat.kota || "Select City"}
+            options={cities}
+            className="relative w-[163px] lg:w-[292px]"
+          />
+        </div>
+        <div className="h-[15px]"></div>
         <div className="flex md:hidden lg:hidden flex-row justify-between">
           <DropdownValue
             title="Kecamatan"
@@ -235,7 +256,7 @@ const ContentEditAlamat = () => {
             className="relative w-[163px] lg:w-[292px]"
           />
         </div>
-        <div className="lg:h-[10px]"></div>
+        <div className="h-[15px] lg:h-[10px]"></div>
         <TextfieldProfile
           title="Detail Lainnya (Cth: Blok / Unit No., Patokan)"
           placeholder={updatedAlamat.detail_alamat || ""}
@@ -243,9 +264,9 @@ const ContentEditAlamat = () => {
           value={updatedAlamat.detail_alamat || ""}
           onChange={handleInputChange}
           type="text"
-          className="font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[602px] lg:w-[1239px]"
+          className="font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[700px] lg:w-[1400px]"
         />
-        <div className="py-3">
+        <div className="pb-[25px]">
           <div className="flex flex-col items-start">
             <div className="font-inter font-semibold text-black text-[14px] md:text-[20px] lg:text-[26px]">
               Nama Jalan, Gedung atau Rumah
@@ -255,7 +276,7 @@ const ContentEditAlamat = () => {
               <span className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 w-full ring-opacity-50 focus:ring-gray">
                 <textarea
                   placeholder={updatedAlamat.nama_alamat || ""}
-                  className="font-inter font-medium focus:outline-none text-[12px] md:text-[16px] lg:text-[24px] h-[67px] lg:h-[189px] resize-none w-[350px] md:w-[602px] lg:w-[1239px]"
+                  className="font-inter font-medium focus:outline-none text-[12px] md:text-[16px] lg:text-[24px] h-[67px] lg:h-[189px] resize-none w-[350px] md:w-[700px] lg:w-[1385px]"
                   name="nama_alamat"
                   value={updatedAlamat.nama_alamat || ""}
                   onChange={handleInputChange}
@@ -265,19 +286,19 @@ const ContentEditAlamat = () => {
           </div>
         </div>
         <div className="flex flex-row justify-start">
-          <button
-            className="border-2 border-primary rounded-md px-[26px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-primary text-[16px] md:text-[20px] lg:text-[28px]"
-            onClick={() => window.history.back()}
-          >
-            Cancel
-          </button>
-          <div className="w-[24px] lg:w-10"></div>
-          <button
-            className="bg-primary rounded-md px-[26px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-white text-[16px] md:text-[20px] lg:text-[28px]"
-            onClick={handleUpdateAlamat}
-          >
-            Save
-          </button>
+        <button
+          className="flex items-center justify-center border-2 border-primary rounded-md w-[110px] h-[40px] md:w-[142px] md:h-[45px] lg:w-[180px] lg:h-[55px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-primary text-[16px] md:text-[20px] lg:text-[28px] "
+          onClick={() => window.history.back()}
+        >
+          Cancel
+        </button>
+        <div className="w-[24px] lg:w-10"></div>
+        <button
+          className="flex items-center justify-center bg-primary rounded-md w-[110px] h-[40px] md:w-[142px] md:h-[45px] lg:w-[180px] lg:h-[55px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-white text-[16px] md:text-[20px] lg:text-[28px]"
+          onClick={handleUpdateAlamat}
+        >
+          Save
+        </button>
           {errorMessage && (
           <div className="text-red-600 mt-4 text-[16px] md:text-[20px] lg:text-[28px]">
             {errorMessage}

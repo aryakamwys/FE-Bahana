@@ -71,7 +71,10 @@ const TextKeyboard = () => {
               {message.sender === "seller" && (
                 <div className="bg-primary w-2 rounded-l-full"></div>
               )}
-              <div className="p-2 lg:p-6 text-xs md:text-[14px] leading-normal text-start lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl">
+              <div
+                className="p-2 lg:p-6 text-xs md:text-[14px] leading-normal text-start lg:text-xl font-medium font-inter max-w-64 lg:max-w-2xl"
+                style={{ wordWrap: "break-word" }}
+              >
                 {message.text}
               </div>
               {message.sender === "buyer" && (
@@ -103,7 +106,7 @@ const TextKeyboard = () => {
             placeholder="Type a new message here"
             value={searchTerm}
             onChange={handleInputChange}
-            className="flex-1 px-2 lg:px-4 lg:py-2 text-xs md:text-xl lg:text-2xl font-semibold text-black opacity-70 font-inter rounded-none focus:outline-none placeholder-black"
+            className="flex-1 px-2 lg:px-6 lg:py-2 text-xs md:text-xl lg:text-2xl font-semibold text-black opacity-70 font-inter rounded-none focus:outline-none placeholder-black"
           />
           <button type="submit">
             <img

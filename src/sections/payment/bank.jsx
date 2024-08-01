@@ -46,7 +46,7 @@ const BankPayment = () => {
             </div>
           </div>
         ))}
-        <div className="pt-[150px] lg:pt-0 lg:px-10 lg:py-9">
+        <div className="pt-[150px] lg:pt-0 lg:px-0 lg:py-9">
           <div className="lg:hidden flex flex-col md:border-t-[1px] border-gray w-[350px] md:w-full py-3 lg:px-7">
             <div className="flex items-start">
               <div className="font-inter font-semibold text-black text-[16px] md:text-[22px]">
@@ -79,7 +79,8 @@ const BankPayment = () => {
               </div>
             </div>
           </div>
-          <button className="bg-primary w-[221px] md:w-full rounded-xl text-[10px] md:text-[20px]">
+          <div className="lg:h-[28px]"></div>
+          <button className="bg-[#002F19] w-[221px] md:w-full rounded-xl text-[10px] md:text-[20px]">
             <div
               className="py-3 font-inter font-semibold text-white"
               onClick={() => (window.location.href = "/pembayaran")}

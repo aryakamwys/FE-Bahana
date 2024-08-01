@@ -205,7 +205,7 @@ const ContentTrackingOrder = ({ currentStep }) => {
       <div className="flex flex-col lg:flex-row justify-between">
         <div
           className="hidden lg:flex lg:border border-gray border-opacity-50 rounded-xl"
-          style={{ width: 356, height: 658 }}
+          style={{ width: 490, height: 658 }}
         >
           <div className="hidden lg:flex flex-col items-start pl-5 pr-5 pt-8">
             <div
@@ -214,8 +214,8 @@ const ContentTrackingOrder = ({ currentStep }) => {
             >
               Lacak
             </div>
-            <div className="h-7"></div>
-            <hr className="w-[297px] border border-gray border-opacity-50" />
+            <div className="h-4"></div>
+            <hr className="w-[400px] border border-gray border-opacity-50" />
             <div className="h-7"></div>
             <DetailOrder title={"Nomor resi"} value={"SPXID091232829212"} />
             <DetailOrder title={"Pengirim"} value={"Nama Petani"} />
@@ -244,7 +244,7 @@ const ContentTrackingOrder = ({ currentStep }) => {
         
         <div className="pt-[30px] md:pt-[40px] lg:pt-0">
           <div className="border border-gray border-opacity-50  lg:pt-0 rounded-xl ">
-            <div className="flex flex-col items-start w-[350px] h-[480px] md:w-[604px] md:h-[480px] lg:w-[865px] lg:h-[658px] p-[22px] lg:p-8">
+            <div className="flex flex-col items-start w-[350px] h-[480px] md:w-[700px] md:h-[480px] lg:w-[865px] lg:h-[658px] p-[22px] lg:p-8">
               <div
                 className="font-inter font-bold text-black"
                 style={{ fontSize: 20 }}

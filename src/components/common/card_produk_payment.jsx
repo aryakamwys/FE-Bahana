@@ -15,33 +15,30 @@ const ProductCardPayment = ({ product, quantity }) => {
             className="lg:border border-gray border-opacity-20 rounded-xl w-[85px] h-[62px] md:w-[170px] md:h-[120px]"
             alt="carrot"
           />
-          <div style={{ width: 37 }}></div>
+          <div style={{ width: 15 }}></div>
           <div className="flex flex-col items-start">
             <div className="font-inter font-semibold text-black text-[14px] md:text-[20px]">
               {product.name}
             </div>
-            <div style={{ height: 5 }}></div>
             <div className="font-inter font-medium text-black text-start text-[10px] md:text-[18px]">
               {product.description}
             </div>
             <div style={{ height: 5 }}></div>
             <div className="hidden md:flex w-12 h-6">
               <div
-                className="border border-gray rounded-md pt-1 pb-1 pl-2 pr-2 font-inter font-medium text-black"
-                style={{ fontSize: 10 }}
+                className="flex items-center border border-gray rounded-md px-2 py-1 font-inter font-medium text-black text-[12px] "
               >
                 {product.weight}
               </div>
             </div>
             <div style={{ height: 5 }}></div>
             <div className="flex flex-row items-center">
-              <div className="font-inter font-bold text-black md:text-primary text-[12px] md:text-[15px]">
+              <div className="font-inter font-bold text-black md:text-primary text-[12px] md:text-[18px]">
                 {product.price}
               </div>
               <div style={{ width: 10 }}></div>
               <div
-                className="hidden md:flex font-inter font-normal text-gray line-through"
-                style={{ fontSize: 10 }}
+                className="hidden md:flex font-inter font-normal text-gray line-through text-[15px]"
               >
                 {product.originalPrice}
               </div>

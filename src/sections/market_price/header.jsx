@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ArrowBack from "../../assets/images/arrow-back.svg";
+import ArrowBack from "../../assets/images/arrow_back3.svg";
 import Skeleton from "../../components/common/skeleton"; // Adjust the import path as needed
 
 const HeaderMarketPrice = () => {
@@ -14,23 +14,23 @@ const HeaderMarketPrice = () => {
 
   return (
     <div>
-      <div className="h-[20px] md:h-[50px] lg:h-[50px] "></div>
+      <div className="h-[25px] md:h-[70px] lg:h-[50px] "></div>
       <div className="flex flex-row row-auto items-center">
         {loading ? (
           <Skeleton className="w-6 h-6 lg:w-10 lg:h-10 rounded-full" />
         ) : (
           <button
-            className="flex items-center justify-center border border-black rounded-full w-6 h-6 lg:w-10 lg:h-10"
+            className="flex items-center justify-center"
             onClick={() => window.history.back()}
           >
             <img
               src={ArrowBack}
-              className="w-3 h-3 lg:w-4 lg:h-4"
+              className="w-5 h-5 lg:w-[45px] lg:h-[45px]"
               alt="arrow back"
             />
           </button>
         )}
-        <div className="w-2 lg:w-5"></div>
+        <div className="w-2 lg:w-4"></div>
         {loading ? (
           <div>
             <Skeleton className="h-6 w-36 mb-2" />
@@ -39,11 +39,17 @@ const HeaderMarketPrice = () => {
         ) : (
           <>
             <div className="hidden lg:flex flex-col items-start">
-              <div className="font-inter font-semibold text-black" style={{ fontSize: 25 }}>
+              <div
+                className="font-inter font-semibold text-black"
+                style={{ fontSize: 25 }}
+              >
                 Blog Harga Pasar
               </div>
-              <div className="font-inter font-medium text-black" style={{ fontSize: 15 }}>
-                Update-an harga pasar dari hasil bumi
+              <div
+                className="font-inter font-medium text-black"
+                style={{ fontSize: 15 }}
+              >
+                Update-an harga pasar dari hasil pangan petani
               </div>
             </div>
             <div className="lg:hidden font-inter font-semibold text-black text-[16px] md:text-[20px] lg:text-[25px]">

@@ -31,7 +31,7 @@ const DetailImage = () => {
         <div className=" absolute flex justify-between w-[350px] lg:w-[701px]">
           <div className="p-1">
             <button
-              className="hidden lg:flex items-center rounded-l-xl bg-gray bg-opacity-20 px-1 lg:px-2 h-[70px] lg:h-[171px] "
+              className="hidden lg:flex items-center rounded-l-lg bg-gray bg-opacity-20 px-1 lg:px-2 h-[70px] lg:h-[171px] "
               onClick={handleLeftClick}
             >
               <img src={SlideLeft} alt="slide_left" />
@@ -39,7 +39,7 @@ const DetailImage = () => {
           </div>
           <div className="p-1">
             <button
-              className="flex items-center rounded-r-xl bg-gray bg-opacity-20 px-1 lg:px-2 h-[70px] lg:h-[171px] "
+              className="flex items-center rounded-r-lg bg-gray bg-opacity-20 px-1 lg:px-2 h-[70px] lg:h-[171px] "
               onClick={handleRightClick}
             >
               <img src={SlideRight} alt="slide_right" />
@@ -49,21 +49,21 @@ const DetailImage = () => {
         <div className="p-1">
           <img
             src={CarrotImage}
-            className="border border-gray border-opacity-50 rounded-xl w-[80px] h-[70px] lg:w-[170px] lg:h-[170px]"
+            className="border border-gray border-opacity-50 rounded-lg w-[80px] h-[70px] lg:w-[170px] lg:h-[170px]"
             alt="carrot"
           />
         </div>
         <div className="p-1">
           <img
             src={CarrotImage}
-            className="border border-gray border-opacity-50 rounded-xl w-[80px] h-[70px] lg:w-[170px] lg:h-[170px] "
+            className="border border-gray border-opacity-50 rounded-lg w-[80px] h-[70px] lg:w-[170px] lg:h-[170px] "
             alt="carrot"
           />
         </div>
         <div className="p-1">
           <img
             src={CarrotImage}
-            className="border border-gray border-opacity-50 rounded-xl w-[80px] h-[70px] lg:w-[170px] lg:h-[170px]"
+            className="border border-gray border-opacity-50 rounded-lg w-[80px] h-[70px] lg:w-[170px] lg:h-[170px]"
             alt="carrot"
           />
         </div>

@@ -15,7 +15,7 @@ const Payment = () => {
         <div>
           <hr className="hidden lg:flex w-full" />
           <div className="h-[301px] lg:h-0 "></div>
-          <div className="flex flex-col w-[350px] md:w-full py-3 lg:px-7">
+          <div className="flex flex-col w-[350px] md:w-full py-3 lg:px-[100px]">
             <div className="flex items-start">
               <div className="font-inter font-semibold text-black text-[16px] lg:text-[22px]">
                 Rincian Pembayaran

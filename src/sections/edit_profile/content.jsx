@@ -153,7 +153,7 @@ const ContentEditProfile = () => {
 
   return (
     <div>
-      <div className="md:h-[42px] lg:h-10"></div>
+      <div className="h-[20px] lg:h-10"></div>
       <TextfieldProfile
         title={"Nama Lengkap"}
         placeholder={updatedProfile.nama_pembeli || ""}
@@ -163,7 +163,7 @@ const ContentEditProfile = () => {
         value={updatedProfile?.nama_pembeli || ""}
         onChange={handleInputChange}
         className={
-          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[599px] lg:w-[1300px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[700px] lg:w-[1400px]"
         }
       />
       <TextfieldProfile
@@ -175,7 +175,7 @@ const ContentEditProfile = () => {
         value={updatedProfile?.email_pembeli || ""}
         onChange={handleInputChange}
         className={
-          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[599px] lg:w-[1300px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[700px] lg:w-[1400px]"
         }
       />
       <TextfieldProfile
@@ -187,10 +187,10 @@ const ContentEditProfile = () => {
         value={updatedProfile?.kontak_pembeli || ""}
         onChange={handleInputChange}
         className={
-          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[599px] lg:w-[1300px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[700px] lg:w-[1400px]"
         }
       />
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row md:w-[700px] lg:w-[1525px] justify-between">
         <DropdownValue
           title={"Tanggal lahir"}
           placeholder={updatedProfile.tanggal_lahir?.day || ""}
@@ -201,7 +201,7 @@ const ContentEditProfile = () => {
           }))}
           value={updatedProfile.tanggal_lahir?.day || ""}
           onChange={(value) => handleDateChange("day", value)}
-          className={"relative w-[104px] md:w-[164px] lg:w-[345px] "}
+          className={"relative w-[104px] md:w-[184px] lg:w-[400px] "}
         />
         <DropdownValue
           title={"Bulan lahir"}
@@ -210,7 +210,8 @@ const ContentEditProfile = () => {
           options={months}
           value={updatedProfile.tanggal_lahir?.month || ""}
           onChange={(value) => handleDateChange("month", value)}
-          className={"relative w-[104px] md:w-[164px] lg:w-[345px] "}
+          className={"relative w-[104px] md:w-[184px] lg:w-[400px] "}
+          paddingLeft={"md:pl-24 lg:pl-0"}
         />
         <DropdownValue
           title={"Tahun lahir"}
@@ -219,9 +220,11 @@ const ContentEditProfile = () => {
           options={years}
           value={updatedProfile.tanggal_lahir?.year || ""}
           onChange={(value) => handleDateChange("year", value)}
-          className={"relative w-[104px] md:w-[164px] lg:w-[345px] "}
+          className={"relative w-[104px] md:w-[184px] lg:w-[400px] pb-[10px]"}
+          paddingLeft={"md:pl-24 lg:pl-0"}
         />
       </div>
+      <div className="lg:h-[20px]"></div>
       <TextfieldProfile
         title={"Password"}
         placeholder={"*************"}
@@ -231,20 +234,20 @@ const ContentEditProfile = () => {
         value={updatedProfile.password_pembeli || ""}
         onChange={handleInputChange}
         className={
-          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[599px] lg:w-[1300px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[700px] lg:w-[1400px]"
         }
       />
-      <div className="h-[15px] lg:h-[26px]"></div>
+      <div className="h-[10px] lg:h-[26px]"></div>
       <div className="flex flex-row justify-start">
         <button
-          className="border-2 border-primary rounded-md px-[26px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-primary text-[16px] md:text-[20px] lg:text-[28px] "
+          className="flex items-center justify-center border-2 border-primary rounded-md w-[110px] h-[40px] md:w-[142px] md:h-[45px] lg:w-[180px] lg:h-[55px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-primary text-[16px] md:text-[20px] lg:text-[28px] "
           onClick={() => window.history.back()}
         >
           Cancel
         </button>
         <div className="w-[24px] lg:w-10"></div>
         <button
-          className="bg-primary rounded-md px-[26px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-white text-[16px] md:text-[20px] lg:text-[28px]"
+          className="flex items-center justify-center bg-primary rounded-md w-[110px] h-[40px] md:w-[142px] md:h-[45px] lg:w-[180px] lg:h-[55px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-white text-[16px] md:text-[20px] lg:text-[28px]"
           onClick={handleUpdate}
         >
           Save

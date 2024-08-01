@@ -86,10 +86,10 @@ const ContentProfile = (profileData) => {
         <div className="h-[40px] md:h-[30px]"></div>
         <div className="flex flex-col lg:flex-row">
           <div className="flex flex-col items-center">
-            <div className="flex flex-col w-52 md:w-[223px] lg:w-96 items-center border border-black rounded-xl p-[15px]">
+            <div className="flex flex-col w-[173px] md:w-[223px] lg:w-96 items-center border border-black rounded-xl p-[15px]">
               <img
                 src={`http://localhost:4000/uploads/${profile.image_pembeli}`}
-                className="w-36 h-30 md:w-[189px] md:h-[155px] lg:w-80 lg:h-72"
+                className="w-[139px] h-[121px] md:w-[189px] md:h-[155px] lg:w-80 lg:h-72"
                 alt="profile_photo"
               />
               <div style={{ height: 25 }}></div>
@@ -172,7 +172,7 @@ const ContentProfile = (profileData) => {
             </div>
           </div>
           <div style={{ width: 50 }}></div>
-          <div className="max-w-full lg:pl-14 lg:pr-4">
+          <div className="max-w-full">
             <div className="flex flex-col">
               <TextfieldProfile
                 title="Nama"
@@ -180,14 +180,14 @@ const ContentProfile = (profileData) => {
                 type="text"
                 readOnly={true}
                 className={
-                  "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
+                  "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[700px] lg:w-[900px] "
                 }
               />
               <TextfieldProfile
                 title="Email"
                 placeholder={profile.email_pembeli}
                 className={
-                  "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
+                  "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[700px] lg:w-[900px]"
                 }
                 type="email"
                 readOnly={true}
@@ -196,7 +196,7 @@ const ContentProfile = (profileData) => {
                 title="Contact Number"
                 placeholder={profile.kontak_pembeli}
                 className={
-                  "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
+                  "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[700px] lg:w-[900px]"
                 }
                 type="text"
                 readOnly={true}
@@ -209,7 +209,7 @@ const ContentProfile = (profileData) => {
                     : "Tanggal tidak tersedia"
                 }
                 className={
-                  "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
+                  "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[700px] lg:w-[900px]"
                 }
                 type="text"
                 readOnly={true}
@@ -218,15 +218,16 @@ const ContentProfile = (profileData) => {
                 title="Password"
                 placeholder="*************"
                 className={
-                  "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
+                  "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[700px] lg:w-[900px]"
                 }
                 type="password"
                 readOnly={true}
               />
+              <div className="lg:h-[15px]"></div>
               <div className=" hidden lg:flex justify-end">
                 <button
                   type="button"
-                  className="flex items-center w-24 h-8 lg:w-36 lg:h-12 justify-center focus:outline-none font-inter font-semibold text-white text-[12px] lg:text-[18px] bg-red-600 hover:bg-red-700 focus:ring-2 focus:ring-red-300 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 transition duration-200 ease-in-out transform hover:scale-105"
+                  className="flex items-center w-24 h-8 lg:w-36 lg:h-12 justify-center focus:outline-none font-inter font-semibold text-white text-[12px] lg:text-[18px] bg-red-600 hover:bg-red-700 focus:ring-2 focus:ring-red-300 rounded-lg text-sm px-5 py-2.5  mb-2 transition duration-200 ease-in-out transform hover:scale-105"
                   onClick={openModal}
                 >
                   Logout
@@ -298,12 +299,12 @@ const ContentProfile = (profileData) => {
                 )}
               </div>
               <div className="flex flex-col lg:hidden py-5">
-                <div className="px-[15px] py-[10px] md:w-[640px] w-full md:h-auto h-[230px] border border-black rounded-[10px] font-inter font-medium text-[14px] md:text-[20px] ">
+                <div className="p-[15px]  md:w-full lg:hidden w-full md:h-auto h-[230px] border border-black rounded-[10px] font-inter font-medium text-[14px] md:text-[20px] ">
                   <div className="border-b-[1px] flex items-start font-semibold px-[10px] py-[7px] ">
                     Pengaturan
                   </div>
                   <button
-                    className="flex flex-row w-full justify-between border-b-[1px] py-[10px] px-[15px]"
+                    className="flex flex-row w-full justify-between border-b-[1px] p-[15px]"
                     onClick={() => (window.location.href = "/editprofile")}
                   >
                     <div className="flex flex-row">

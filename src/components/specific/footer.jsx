@@ -13,21 +13,21 @@ const Footer = () => {
       <div className="h-[25px] md:h-[75px] lg:h-[120px]"></div>
       <footer className="w-[350px] md:w-full lg:w-full mx-auto  lg:px-4">
         <div className="flex flex-row items-start justify-between">
-          <div className="flex flex-col text-start w-[62px] md:w-[150px] lg:w-[400px]">
+          <div className="flex flex-col text-start w-[80px] md:w-[150px] lg:w-[500px]">
             <div
               className="font-inter text-black font-bold text-[8px] md:text-[15px] lg:text-2xl mb-2"
               style={{ lineHeight: 1 }}
             >
-              <img src={Logo} alt="logo tani direct" />
+              <img src={Logo} className="lg:w-[120px] lg:h-[67px]" alt="logo tani direct" />
             </div>
             <div className="lg:h-[20px]"></div>
-            <div className="font-normal font-inter text-gray opacity-50 text-[6px] md:text-[10px] lg:text-[16px]">
+            <div className="font-normal font-inter text-gray opacity-50 text-[5px] md:text-[10px] lg:text-[16px]">
               The website specializes in reducing farmers’ dependency on
               middlemen.
             </div>
           </div>
-          <div className="flex flex-row w-full justify-between lg:justify-around">
-            <div className="w-full flex flex-col items-start ml-[10px] md:ml-[27px] lg:ml-[87px]">
+          <div className="flex flex-row w-full items-start justify-between lg:justify-around">
+            <div className="w-full flex flex-col items-start ml-[20px] md:ml-[27px] lg:ml-[87px]">
               <div
                 className="font-inter text-black font-bold text-[8px] md:text-[12px] lg:text-lg mb-2"
                 style={{ lineHeight: 1 }}
@@ -36,21 +36,21 @@ const Footer = () => {
               </div>
               <a href="#">
                 <div
-                  className="text-gray opacity-50 font-inter text-[6px] md:text-[10px] lg:text-[16px]"
+                  className="text-gray opacity-50 font-inter py-[0px] lg:py-[7px] text-[6px] md:text-[10px] lg:text-[16px]"
                 >
                   Must-Have Items
                 </div>
               </a>
               <a href="#">
                 <div
-                  className="text-gray opacity-50 font-inter text-[6px] md:text-[10px] lg:text-[16px]"
+                  className="text-gray opacity-50 font-inter py-[0px] lg:py-[7px] text-[6px] md:text-[10px] lg:text-[16px]"
                 >
                   Produk Utama
                 </div>
               </a>
               <a href="#">
                 <div
-                  className="text-gray opacity-50 font-inter text-[6px] md:text-[10px] lg:text-[16px]"
+                  className="text-gray opacity-50 font-inter py-[0px] lg:py-[7px] text-[6px] md:text-[10px] lg:text-[16px]"
                 >
                   Wishlist
                 </div>
@@ -65,21 +65,21 @@ const Footer = () => {
               </div>
               <a href="#">
                 <div
-                  className="text-gray opacity-50 font-inter text-[6px] md:text-[10px] lg:text-[16px]"
+                  className="text-gray opacity-50 font-inter py-[0px] lg:py-[7px] text-[6px] md:text-[10px] lg:text-[16px]"
                 >
                   Term of use
                 </div>
               </a>
               <a href="#">
                 <div
-                  className="text-gray opacity-50 font-inter text-[6px] md:text-[10px] lg:text-[16px]"
+                  className="text-gray opacity-50 font-inter py-[0px] lg:py-[7px] text-[6px] md:text-[10px] lg:text-[16px]"
                 >
                   Blog
                 </div>
               </a>
               <a href="#">
                 <div
-                  className="text-gray opacity-50 font-inter text-[6px] md:text-[10px] lg:text-[16px]"
+                  className="text-gray opacity-50 font-inter py-[0px] lg:py-[7px] text-[6px] md:text-[10px] lg:text-[16px]"
                 >
                   Cookies Policy
                 </div>
@@ -94,35 +94,35 @@ const Footer = () => {
               </div>
               <a href="/aboutus">
                 <div
-                  className="text-gray opacity-50 font-inter text-[6px] md:text-[10px] lg:text-[16px]"
+                  className="text-gray opacity-50 font-inter py-[0px] lg:py-[7px] text-[6px] md:text-[10px] lg:text-[16px]"
                 >
                   About us
                 </div>
               </a>
               <a href="#">
                 <div
-                  className="text-gray opacity-50 font-inter text-[6px] md:text-[10px] lg:text-[16px]"
+                  className="text-gray opacity-50 font-inter py-[0px] lg:py-[7px] text-[6px] md:text-[10px] lg:text-[16px]"
                 >
                   Contact us
                 </div>
               </a>
               <a href="/product">
                 <div
-                  className="text-gray opacity-50 font-inter text-[6px] md:text-[10px] lg:text-[16px]"
+                  className="text-gray opacity-50 font-inter py-[0px] lg:py-[7px] text-[6px] md:text-[10px] lg:text-[16px]"
                 >
                   TaniDirect
                 </div>
               </a>
             </div>
           </div>
-          <div className="flex flex-col items-start w-[75px] md:w-[170px] lg:w-[250px]">
+          <div className="flex flex-col items-start w-[110px] md:w-[170px] lg:w-[250px]">
             <div
               className="text-black1 font-inter font-bold text-[8px] md:text-[12px] lg:text-[16px] mb-2"
               style={{ lineHeight: 1 }}
             >
               Payment Methods
             </div>
-            <div className="flex flex-row row-auto justify-between">
+            <div className="flex flex-row row-auto justify-between py-[5px] lg:py-[8px]">
               <img src={qrisIcon} className="w-[29px] h-[12px] md:w-[41px] md:h-[13px] lg:w-[50px] lg:h-[18px] " alt="QRIS" />
               <div style={{ width: 39 }}></div>
               <img src={bankIcon} className="w-[13px] h-[13px] md:2-[15px] md:h-[15px] lg:w-[20px] lg:h-[20px]" alt="QRIS" />
@@ -130,7 +130,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="pt-[7px] pb-[7px] md:py-[15px] lg:pt-8 lg:pb-8">
+      <div className="pt-[7px] pb-[7px] md:py-[15px] lg:py-8">
         <hr className="border-gray opacity-50" style={{ borderWidth: 1 }} />
       </div>
       <div className="flex flex-row row-auto justify-end">

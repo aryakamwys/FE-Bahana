@@ -13,7 +13,7 @@ const Wishlist = () => {
   }, []);
 
   return (
-    <div className="max-w-screen-sm md:max-w-screen-md lg:max-w-full px-5 md:px-[70px] lg:px-[315px]">
+    <div className="max-w-screen-sm md:max-w-screen-md lg:max-w-full px-5 md:px-[10px] lg:px-[240px]">
       <NavbarPembeli />
       <BackWishlist />
       {bookmarkedProducts.length > 0 ? (
@@ -23,7 +23,7 @@ const Wishlist = () => {
       ) : (
         <p>No bookmarked products</p>
       )}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -9,7 +9,7 @@ import ArrowBack from "../../assets/images/arrow-back.svg";
 // import NavbarPembeli from "../../components/specific/navbar";
 
 const PaymentMethod = () => {
-  const [selectedPayment, setSelectedPayment] = useState(null);
+  const [selectedPayment, setSelectedPayment] = useState("QRIS");
 
   return (
     <div className="flex flex-col lg:min-h-screen bg-neutral md:max-w-screen-md max-w-screen-sm lg:w-full md:px-[70px] px-5">

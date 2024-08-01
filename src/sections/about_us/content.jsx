@@ -16,37 +16,36 @@ const ContentAboutUs = () => {
             alt="imagePadi"
           />
           <div className="flex flex-col items-start w-[204px] md:w-[312px] lg:w-[610px]">
-            <div className="font-semibold font-inter text-black text-[18px] md:text-[28px] lg:text-[50px] ">
+            <div className="font-bold font-inter text-black text-[18px] md:text-[28px] lg:text-[50px] ">
               About Us
             </div>
             <div className="h-[5px] lg:h-[24px]"></div>
-            <div className="font-inter text-black font-medium text-start text-[11px] md:text-[16px] lg:text-[25px] lg:leading-normal">
-              Lorem ipsum dolor sit amet consectetur. Sed sed at elit magnis
-              mollis. Erat molestie ornare pulvinar nulla pellentesque sagittis
-              dui quis. Non varius venenatis lacus arcu tincidunt vulputate
-              duis. Ac tempus placerat sed nec at quisque semper senectus. Neque
-              amet diam condimen tum auctor posuere euismod.
+            <div className="font-inter text-black font-semibold text-start text-[11px] md:text-[16px] lg:text-[25px] lg:leading-normal">
+              TaniDirect is a website as for distribute the agricultural product
+              from the farm into the traders especially for lower middle-class
+              SMEs without any price gaps for each economy agents. We realize
+              that the start of country developments is created form economic
+              balance. As the our slogan says support farmers for easier life's
+              traders.
             </div>
           </div>
         </div>
         <div className="h-[53px] lg:h-[138] "></div>
         <div className="flex flex-row row-auto justify-between items-center">
           <div className="flex flex-col items-start w-[349px] md:w-[383px] lg:w-[1190px]">
-            <div className="font-inter font-semibold text-black  text-[16px] md:text-[28px] lg:text-[50px]">
+            <div className="font-inter font-bold text-black  text-[16px] md:text-[28px] lg:text-[50px]">
               How can we help farmers
             </div>
             <div className="h-[5px] lg:h-[24px]"></div>
-            <div className="font-inter font-medium text-black text-start text-[11px] md:text-[14px] lg:text-[25px] lg:leading-normal w-[204px] md:w-[383px] lg:w-[616px] ">
-              Lorem ipsum dolor sit amet consectetur. Et nisl purus mattis
-              ultrices ultrices convallis. Ullamcorper faucibus id non purus
-              nunc neque. In scelerisque amet tempus sem eleifend lectus.
-              Blandit elementum auctor ullamcorper ornare imperdiet ut.
+            <div className="font-inter font-semibold text-black text-start text-[11px] md:text-[14px] lg:text-[25px] lg:leading-normal w-[204px] md:w-[383px] lg:w-[616px] ">
+              Our main goals is to make the farmer feels the enjoyment when
+              using our website. This conclude that we need to adapt the
+              agricultural trend into our website. We always check all the
+              possibilities especially the features that help the farmers.
             </div>
             <div className="h-[10px] lg:h-[58px]"></div>
             <div>
-              <div
-                className="flex flex-row row-auto items-center"
-              >
+              <div className="flex flex-row row-auto items-center">
                 <img
                   src={ProfileDummy}
                   className="w-[35px] h-[35px] lg:w-18 lg:h-18"
@@ -68,9 +67,7 @@ const ContentAboutUs = () => {
             </div>
             <div style={{ height: 27 }}></div>
             <div>
-              <div
-                className="flex flex-row row-auto items-center"
-              >
+              <div className="flex flex-row row-auto items-center">
                 <img
                   src={ProfileDummy}
                   className="w-[35px] h-[35px] lg:w-18 lg:h-18"
@@ -92,9 +89,7 @@ const ContentAboutUs = () => {
             </div>
             <div style={{ height: 27 }}></div>
             <div>
-              <div
-                className="flex flex-row row-auto items-center"
-              >
+              <div className="flex flex-row row-auto items-center">
                 <img
                   src={ProfileDummy}
                   className="w-[35px] h-[35px] lg:w-18 lg:h-18"

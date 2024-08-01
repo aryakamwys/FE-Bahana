@@ -10,8 +10,8 @@ const StatusPrice = () => {
   return (
     <div>
       <div
-        className={`flex items-center justify-center rounded-full font-inter text-[10px] lg:text-[16px] font-medium w-[96px] h-[28px] md:w-[77px] md:h-[22px] lg:w-[155px] lg:h-[54px] ${
-          worthBuying? "bg-greenLight text-primary" : "bg-danger bg-opacity-20 text-danger"
+        className={`flex items-center justify-center rounded-full font-inter text-[10px] lg:text-[20px] font-medium  md:w-[77px] md:h-[22px] lg:w-[155px] lg:h-[54px] ${
+          worthBuying? "bg-greenLight w-[96px] h-[28px] lg:w-[155px] lg:h-[54px]  text-primary" : "bg-danger bg-opacity-20 w-[105px] h-[28px]  lg:w-[180px] lg:h-[54px]  text-danger"
         }`}
         onClick={handleClick}
       >

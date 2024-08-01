@@ -6,22 +6,22 @@ import ChatIcon from "../../assets/images/chat.svg";
 const PenjualSection = () => {
   return (
     <div>
-      <div className="h-[20px]  md:h-[52px]"></div>
-      <div className="flex flex-row row-auto w-[350px] md:w-full border-t-[1px] border-b-[1px] md:py-[20px] py-[27px] border-gray border-opacity-50 items-center justify-between">
+      <div className="h-[0px]  md:h-[52px]"></div>
+      <div className="flex flex-row row-auto w-[350px] md:w-full border-t-[1px] border-b-[1px] md:py-[20px] py-[10px] border-gray border-opacity-50 items-center justify-between">
         <div className="flex flex-row row-auto">
           <img
             src={ProfilePenjual}
             className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] lg:w-[100px] lg:h-[100px] "
             alt="profile_penjual"
           />
-          <div className="flex flex-col items-start pl-8">
+          <div className="flex flex-col items-start justify-center  pl-8">
             <div
-              className="font-inter font-semibold text-start text-black text-[12px] md:text-[16px] lg:text-[32px]"
+              className="font-inter font-semibold text-start text-black text-[12px] md:text-[16px] lg:text-[28px]"
             >
               Yanto.Co
             </div>
             <div
-              className="font-inter font-semibold text-gray text-opacity-50 text-[10px] md:text-[12px] lg:text-[25px]"
+              className="font-inter font-semibold text-gray text-opacity-50 text-[10px] md:text-[12px] lg:text-[20px]"
             >
               Aktif 10 Menit yang lalu
             </div>
