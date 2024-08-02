@@ -14,7 +14,7 @@ const HeaderMarketPrice = () => {
 
   return (
     <div>
-      <div className="h-[25px] md:h-[70px] lg:h-[50px] "></div>
+      <div className="h-[30px] md:h-[80px] lg:h-[70px]"></div>
       <div className="flex flex-row row-auto items-center">
         {loading ? (
           <Skeleton className="w-6 h-6 lg:w-10 lg:h-10 rounded-full" />

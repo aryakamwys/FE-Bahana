@@ -5,7 +5,7 @@ import ArrowBack from "../../assets/images/arrow_back3.svg";
 const HeaderDetailBlog = () => {
   return (
     <div>
-      <div className="h-[20px] md:h-[70px] lg:h-[50px] "></div>
+      <div className="h-[30px] md:h-[80px] lg:h-[70px]"></div>
       <div className="flex flex-row row-auto items-center">
         <button
           className="flex items-center justify-center"

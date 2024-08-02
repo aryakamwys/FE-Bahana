@@ -22,7 +22,6 @@ const PembeliRegisterPage = () => {
     setIsChecked(!isChecked);
   };
 
-
   const handleRegister = (e) => {
     e.preventDefault();
     axios
@@ -87,117 +86,118 @@ const PembeliRegisterPage = () => {
             </div>
           </div>
         </div>
-        <div className="font-semibold font-inter text-black text-center text-3xl md:text-[50px] lg:text-6xl  mt-10">
-          Create your account
-        </div>
-        <div className="md:flex lg:hidden md:justify-center items-center py-4 md:pt-[52px] md:pb-[40px] lg:py-0 lg:mb-0">
-          <img
-            src={LoginImage}
-            className="w-60 h-40 md:w-[309px] md:h-[206px]"
-            alt="login-image"
-          />
-        </div>
-        <div className="relative md:mt-0 lg:mt-10">
-          <div>
-            <Textfield
-              id={"username"}
-              type={"text"}
-              value={nama}
-              onChange={(e) => setNama(e.target.value)}
-              placeholder={"Username"}
-              className={
-                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
-              }
+        <div>
+          <div className="font-semibold font-inter text-black text-center text-3xl md:text-[50px] lg:text-6xl  mt-10">
+            Create your account
+          </div>
+          <div className="md:flex lg:hidden md:justify-center items-center py-4 md:pt-[52px] md:pb-[40px] lg:py-0 lg:mb-0">
+            <img
+              src={LoginImage}
+              className="w-60 h-40 md:w-[309px] md:h-[206px]"
+              alt="login-image"
             />
-            <div style={{ height: 15 }}></div>
-            <Textfield
-              id={"email"}
-              type={"email"}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder={"Email"}
-              className={
-                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
-              }
-            />
-            <div style={{ height: 15 }}></div>
-            <Textfield
-              id={"phone"}
-              type={"text"}
-              value={no_hp}
-              onChange={(e) => setNoHp(e.target.value)}
-              placeholder={"Phone"}
-              className={
-                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
-              }
-            />
-            <div style={{ height: 15 }}></div>
-            <Textfield
-              id={"password"}
-              type={"password"}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder={"Password"}
-              className={
-                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
-              }
-            />
-            <div style={{ height: 15 }}></div>
-            <Textfield
-              id={"confirm-password"}
-              type={"password"}
-              value={confirmPassword}
-              onChange={(e) => {
-                setConfirmPassword(e.target.value);
-                // validatePassword();
-              }}
-              placeholder={"Confirm Password"}
-              className={
-                "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
-              }
-            />
-            {/* {passwordError && (
+          </div>
+          <div className="relative md:mt-0 lg:mt-10">
+            <div>
+              <Textfield
+                id={"username"}
+                type={"text"}
+                value={nama}
+                onChange={(e) => setNama(e.target.value)}
+                placeholder={"Username"}
+                className={
+                  "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
+                }
+              />
+              <div style={{ height: 15 }}></div>
+              <Textfield
+                id={"email"}
+                type={"email"}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder={"Email"}
+                className={
+                  "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
+                }
+              />
+              <div style={{ height: 15 }}></div>
+              <Textfield
+                id={"phone"}
+                type={"text"}
+                value={no_hp}
+                onChange={(e) => setNoHp(e.target.value)}
+                placeholder={"Phone"}
+                className={
+                  "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
+                }
+              />
+              <div style={{ height: 15 }}></div>
+              <Textfield
+                id={"password"}
+                type={"password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder={"Password"}
+                className={
+                  "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
+                }
+              />
+              <div style={{ height: 15 }}></div>
+              <Textfield
+                id={"confirm-password"}
+                type={"password"}
+                value={confirmPassword}
+                onChange={(e) => {
+                  setConfirmPassword(e.target.value);
+                  // validatePassword();
+                }}
+                placeholder={"Confirm Password"}
+                className={
+                  "h-10 md:h-[60px] lg:h-16 border border-gray rounded-xl font-inter font-semibold lg:text-h5 pl-5 w-[350px] md:w-[563px] lg:w-[563px]"
+                }
+              />
+              {/* {passwordError && (
               <div className="text-red-600 text-sm mt-2">{passwordError}</div>
             )} */}
-          </div>
-          <div style={{ height: 20 }}></div>
-          <div className="flex items-start">
-            <div className="flex flex-row items-center">
-              <button
-                className="w-5 h-5 rounded-md border border-black flex items-center justify-center"
-                onClick={toggleCheck}
-              >
-                {isChecked && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 text-black"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                )}
-              </button>
-              <div style={{ width: 10 }}></div>
-              <div className="font-inter font-medium text-black text-xs md:text-base lg:text-base">
-                I agree with our{" "}
-                <span className="font-semibold">
-                  Terms of Service and Privacy Policy
-                </span>
+            </div>
+            <div style={{ height: 20 }}></div>
+            <div className="flex items-start">
+              <div className="flex flex-row items-center">
+                <button
+                  className="w-5 h-5 rounded-md border border-black flex items-center justify-center"
+                  onClick={toggleCheck}
+                >
+                  {isChecked && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 text-black"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  )}
+                </button>
+                <div style={{ width: 10 }}></div>
+                <div className="font-inter font-medium text-black text-xs md:text-base lg:text-base">
+                  I agree with our{" "}
+                  <span className="font-semibold">
+                    Terms of Service and Privacy Policy
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          {/* {checkboxError && (
+            {/* {checkboxError && (
             <div className="text-red-600 text-sm mt-2">{checkboxError}</div>
           )} */}
-          <div style={{ height: 20 }}></div>
-        </div>
+            <div style={{ height: 20 }}></div>
+          </div>
 
-        <div>
+          <div>
             <form onSubmit={handleRegister}>
               {/* Your form elements here */}
               <button
@@ -247,6 +247,7 @@ const PembeliRegisterPage = () => {
               </div>
             )}
           </div>
+        </div>
         <div style={{ height: 30 }}></div>
       </div>
     </div>

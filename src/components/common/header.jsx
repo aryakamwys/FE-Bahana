@@ -2,14 +2,14 @@ import React from "react";
 
 import ArrowBack from "../../assets/images/arrow_back3.svg";
 
-const BackWishlist = () => {
+const Header = ({onClick, title}) => {
   return (
     <div>
       <div className="h-[30px] md:h-[80px] lg:h-[70px] "></div>{" "}
       <div className="flex flex-row row-auto items-center ">
       <button
           className="flex items-center justify-center"
-          onClick={() => window.history.back()}
+          onClick={onClick}
         >
           <img
             src={ArrowBack}
@@ -19,11 +19,11 @@ const BackWishlist = () => {
         </button>
         <div className="w-2 lg:w-5"></div>
         <div className="font-inter font-semibold text-black text-[16px] md:text-[20px] lg:text-[35px]">
-          Wishlist
+          {title}
         </div>
       </div>
     </div>
   );
 };
 
-export default BackWishlist;
+export default Header;

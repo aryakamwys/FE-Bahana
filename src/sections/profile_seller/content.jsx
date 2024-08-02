@@ -191,8 +191,7 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
             </div>
           </div>
         </div>
-        <div style={{ width: 50 }}></div>
-        <div className="max-w-full lg:pl-14 lg:pr-4">
+        <div className="max-w-full lg:px-10">
           <div className="flex flex-col">
             <TextfieldProfile
               title="Nama Toko"
@@ -200,10 +199,10 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
               type="text"
               readOnly={true}
               className={
-                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[700px] lg:w-[900px]"
               }
             />
-            <div className="py-3">
+            <div className="pb-3">
               <div className="flex flex-col items-start">
                 <div className="font-inter font-semibold text-black text-[12px] md:text-[14px] lg:text-[24px]">
                   Deskripsi Toko
@@ -213,7 +212,7 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
                   <span className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 w-full ring-opacity-50 focus:ring-gray">
                     <textarea
                       placeholder={profile.deskripsi}
-                      className="font-inter font-medium focus:outline-none text-[12px] lg:text-[24px] h-[67px] lg:h-[189px] resize-none w-[350px] md:w-[604px] lg:w-[766px]"
+                      className="font-inter font-medium focus:outline-none text-[12px] lg:text-[24px] h-[67px] lg:h-[189px] resize-none w-[350px] md:w-[700px] lg:w-[900px]"
                       readOnly={true}
                     />
                   </span>
@@ -227,7 +226,7 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
               type="text"
               readOnly={true}
               className={
-                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[700px] lg:w-[900px]"
               }
             />
             <TextfieldProfile
@@ -236,7 +235,7 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
               type="email"
               readOnly={true}
               className={
-                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[700px] lg:w-[900px]"
               }
             />
             <TextfieldProfile
@@ -245,7 +244,7 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
               type="password"
               readOnly={true}
               className={
-                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[604px] lg:w-[766px]"
+                "font-inter font-medium text-[12px] md:text-[14px] lg:text-[24px] focus:outline-none w-[350px] md:w-[700px] lg:w-[900px]"
               }
             />
             <div className=" hidden lg:flex justify-end">

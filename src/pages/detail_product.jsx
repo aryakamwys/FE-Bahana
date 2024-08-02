@@ -8,6 +8,7 @@ import ReviewRatings from "../sections/detailProduct/review_rating";
 import Footer from "../components/specific/footer";
 
 import CartIcon from "../assets/images/keranjang.svg";
+import Header from "../components/common/header";
 
 const DetailProduct = () => {
   const isLg = useMediaQuery({ minWidth: 768 }); // adjust the breakpoint as needed
@@ -15,7 +16,7 @@ const DetailProduct = () => {
   return (
     <div className="max-w-screen-sm md:max-w-screen-md lg:max-w-full px-5 md:px-[10px] lg:px-[240px]">
       <NavbarPembeli />
-      <HeaderDetailProduct />
+      <Header title={"Product Description"} onClick={() => window.history.back()} />
       <ContentDetailProduct />
       <PenjualSection />
       <ReviewRatings />

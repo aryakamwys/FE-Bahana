@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CartIcon from "../../assets/images/cart.svg";
 import Logo from "../../assets/images/logo.png";
 
-const NavbarPembeli = ({className}) => {
+const NavbarPembeli = ({ className }) => {
   const [cartItemCount, setCartItemCount] = useState(0);
 
   useEffect(() => {
@@ -63,10 +63,10 @@ const NavbarPembeli = ({className}) => {
             <img src={CartIcon} alt="cart" />
           </button>
           {cartItemCount > 0 && (
-              <div className="absolute top-2 right-0  md:top-4 lg:right-2 w-3 h-3 md:w-5 md:h-5 lg:w-6 lg:h-6 bg-primary text-white rounded-full flex items-center justify-center font-inter text-[8px] md:text-sm lg:text-base">
-                {cartItemCount}
-              </div>
-            )}
+            <div className="absolute top-2 right-0  md:top-4 lg:right-2 w-3 h-3 md:w-5 md:h-5 lg:w-6 lg:h-6 bg-primary text-white rounded-full flex items-center justify-center font-inter text-[8px] md:text-sm lg:text-base">
+              {cartItemCount}
+            </div>
+          )}
         </div>
       </nav>
       <div className="h-[20px] lg:h-[50px]"></div>
