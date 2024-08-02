@@ -25,9 +25,7 @@ const DetailImage = () => {
   return (
     <div>
       <div className="h-[10px] lg:h-[25px] "></div>
-      <div
-        className="relative flex flex-row row-auto w-[350px] h-[70px] lg:w-[701px] lg:h-[171px] "
-      >
+      <div className="relative flex flex-row row-auto w-[350px] h-[70px] lg:w-[701px] lg:h-[171px] ">
         <div className=" absolute flex justify-between w-[350px] lg:w-[701px]">
           <div className="p-1">
             <button

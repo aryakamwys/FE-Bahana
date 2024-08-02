@@ -62,9 +62,7 @@ const QRISPayment = () => {
           </div>
         </div>
       </div>
-      <button
-        className="bg-[#002F19] w-[221px] md:w-full rounded-xl text-[10px] md:text-[20px]"
-      >
+      <button className="bg-[#002F19] w-[221px] md:w-full rounded-xl text-[10px] md:text-[20px]">
         <div
           className="py-3 font-inter font-semibold text-white"
           onClick={() => (window.location.href = "/success")}

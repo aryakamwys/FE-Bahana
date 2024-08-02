@@ -23,21 +23,25 @@ const CardWishList = ({ product }) => {
               {product.nama_produk}
             </h2>
             <div className="flex items-center justify-center bg-gray bg-opacity-15 rounded-full sm:p-[5px] lg:w-[40px] lg:h-[40px] md:w-[25px] md:h-[25px] w-[20px] h-[20px] md:p-[7px]  p-[5px]">
-              <img src={BookmarkFill} className="w-[8px] h-[8px] md:w-[10px] md:h-[10px] lg:w-[15px] lg:h-[15px]" alt="bookmark fill" />
+              <img
+                src={BookmarkFill}
+                className="w-[8px] h-[8px] md:w-[10px] md:h-[10px] lg:w-[15px] lg:h-[15px]"
+                alt="bookmark fill"
+              />
             </div>
           </div>
           <div className="lg:block hidden" style={{ height: 12 }} />
           <p className="font-inter font-medium w-[195px] h-[24px] md:w-[390px] md:h-[51px] lg:w-[746px] lg:h-[121px] text-black text-start lg:text-[20px] text-[10px] mt-1 md:text-[0.9rem]  overflow-hidden">
-          {product.deskripsi_produk}
+            {product.deskripsi_produk}
           </p>
           <div className="lg:block hidden" style={{ height: 12 }} />
           <div className="flex flex-row row-auto items-center">
             <span className="font-inter font-bold text-primary  lg:text-[30px] text-[12px]  md:text-[20px]">
-            Rp {product.harga.toLocaleString()}
+              Rp {product.harga.toLocaleString()}
             </span>
             <div style={{ width: 10 }} />
             <span className="font-inter font-normal text-gray text-opacity-50 line-through lg:text-[20px] text-[10px] md:text-[16px]">
-            Rp {(product.harga + 150000).toLocaleString()}
+              Rp {(product.harga + 150000).toLocaleString()}
             </span>
           </div>
         </div>

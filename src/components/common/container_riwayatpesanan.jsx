@@ -15,28 +15,20 @@ const ContainerRiwayatPesanan = () => {
             alt="carrot"
           />
           <div className="flex flex-col items-start  justify-end">
-            <div
-              className="w-[250px] md:w-[530px] lg:w-[1040px] h-[20px] md:h-[30px] lg:h-[45px] text-start overflow-y-hidden font-inter font-semibold text-black text-[14px] md:text-[22px] lg:text-[30px] "
-            >
+            <div className="w-[250px] md:w-[530px] lg:w-[1040px] h-[20px] md:h-[30px] lg:h-[45px] text-start overflow-y-hidden font-inter font-semibold text-black text-[14px] md:text-[22px] lg:text-[30px] ">
               Nama product loren ipsum ddee
             </div>
             <div className="h-2"></div>
-            <div
-              className="w-[250px] md:w-[530px] h-[30px] md:h-[45px] lg:h-[55px] text-start overflow-y-hidden font-inter font-medium text-black text-[10px] md:text-[12px] lg:text-[17px] "
-            >
+            <div className="w-[250px] md:w-[530px] h-[30px] md:h-[45px] lg:h-[55px] text-start overflow-y-hidden font-inter font-medium text-black text-[10px] md:text-[12px] lg:text-[17px] ">
               Lorem ipsum dolor sit amet consectetur. In in pellentesque
               sollicitudin aliquam tincidunt fermentum pharetra.
             </div>
             <div className="py-3">
-              <div
-                className="font-inter font-medium text-black pt-1 pb-1 px-[10px] md:px-[14px]  lg:px-4 border border-black rounded-sm lg:rounded-xl text-[10px] md:text-[12px] lg:text-[20px] "
-              >
+              <div className="font-inter font-medium text-black pt-1 pb-1 px-[10px] md:px-[14px]  lg:px-4 border border-black rounded-sm lg:rounded-xl text-[10px] md:text-[12px] lg:text-[20px] ">
                 5 kg
               </div>
             </div>
-            <div
-              className="font-inter font-bold text-primary text-[12px] md:text-[14px] lg:text-[25px]"
-            >
+            <div className="font-inter font-bold text-primary text-[12px] md:text-[14px] lg:text-[25px]">
               Total Pesanan: Rp 100.000
             </div>
           </div>
@@ -51,17 +43,23 @@ const ContainerRiwayatPesanan = () => {
         <div className="flex flex-row items-center justify-between border-b-[1px] lg:border-b-2 border-gray border-opacity-20 py-2 lg:py-5">
           <div className="flex flex-row items-center">
             <div>
-              <img src={TruckIcon} className="w-[20px] h-[20px] md:w-[24px] md:h-[24px]" alt="truck" />
+              <img
+                src={TruckIcon}
+                className="w-[20px] h-[20px] md:w-[24px] md:h-[24px]"
+                alt="truck"
+              />
             </div>
             <div className="w-[6px]"></div>
-            <div
-              className="font-inter font-normal text-black text-[10px] md:text-[16px] lg:text-[22px]"
-            >
+            <div className="font-inter font-normal text-black text-[10px] md:text-[16px] lg:text-[22px]">
               Pesanan telah sampai diterima oleh yang bersangkutan
             </div>
           </div>
           <button onClick={() => (window.location.href = "/trackingorder")}>
-            <img src={ArrowNext} className="w-[20px] h-[20px] md:w-[24px] md:h-[24px]" alt="next" />
+            <img
+              src={ArrowNext}
+              className="w-[20px] h-[20px] md:w-[24px] md:h-[24px]"
+              alt="next"
+            />
           </button>
         </div>
       </div>

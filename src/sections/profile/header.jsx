@@ -7,7 +7,7 @@ const HeaderProfile = () => {
     <div>
       <div className="h-[30px] md:h-[80px] lg:h-[70px] "></div>{" "}
       <div className="flex flex-row row-auto items-center ">
-      <button
+        <button
           className="flex items-center justify-center"
           onClick={() => window.history.back()}
         >

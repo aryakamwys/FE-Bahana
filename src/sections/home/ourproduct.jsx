@@ -5,7 +5,7 @@ import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 
-const   OurProduct = () => {
+const OurProduct = () => {
   const [products, setProducts] = useState([]);
 
   const fetchData = (token) => {
@@ -22,7 +22,6 @@ const   OurProduct = () => {
       .catch((error) => {
         console.log("Error fetching data:", error);
       });
-   
   };
 
   useEffect(() => {

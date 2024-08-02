@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const AuthButtonGroup = () => {
   return (
@@ -15,15 +15,13 @@ const AuthButtonGroup = () => {
 };
 
 const AuthButton = ({ variant, children }) => {
-  const className = variant === 'primary'
-    ? 'bg-primary rounded-full flex items-center justify-center text-neutral font-inter font-bold'
-    : 'flex items-center justify-center text-primary font-inter font-bold';
+  const className =
+    variant === "primary"
+      ? "bg-primary rounded-full flex items-center justify-center text-neutral font-inter font-bold"
+      : "flex items-center justify-center text-primary font-inter font-bold";
 
   return (
-    <div
-      className={className}
-      style={{ width: 146, height: 40 }}
-    >
+    <div className={className} style={{ width: 146, height: 40 }}>
       {children}
     </div>
   );

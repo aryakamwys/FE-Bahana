@@ -36,9 +36,7 @@ const ContentChat = () => {
           />
         </div>
       </div>
-      <div className="h-7 lg:h-6"></div>
-      ?
-      <div className="h-7 lg:h-6"></div>
+      <div className="h-7 lg:h-6"></div>?<div className="h-7 lg:h-6"></div>
       <div className="flex flex-row row-auto items-end justify-end">
         <button>
           <img

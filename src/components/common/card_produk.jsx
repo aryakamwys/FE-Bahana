@@ -13,7 +13,9 @@ const CardProduct = ({ product }) => {
   const handleBookmarkClick = () => {
     const bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
     if (isBookmarked) {
-      const updatedBookmarks = bookmarks.filter(item => item.produkID !== product.produkID);
+      const updatedBookmarks = bookmarks.filter(
+        (item) => item.produkID !== product.produkID
+      );
       localStorage.setItem("bookmarks", JSON.stringify(updatedBookmarks));
     } else {
       bookmarks.push(product);
@@ -26,7 +28,9 @@ const CardProduct = ({ product }) => {
     if (product) {
       setLoading(false);
       const bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
-      setIsBookmarked(bookmarks.some(item => item.produkID === product.produkID));
+      setIsBookmarked(
+        bookmarks.some((item) => item.produkID === product.produkID)
+      );
     }
   }, [product]);
 
@@ -103,7 +107,9 @@ const CardProduct = ({ product }) => {
         <div className="flex flex-row justify-between">
           <button
             className="w-[78px] h-[18px] md:w-[116px] md:h-[28px] lg:w-[261px] lg:h-[55px] flex flex-row justify-center items-center border-[1px] lg:border-2 border-gray border-opacity-50 rounded-full lg:pt-4 lg:pb-4 transition-all duration-300 ease-in-out transform hover:scale-95 hover:border-opacity-100 active:scale-95 active:bg-gray-200"
-            onClick={() => (window.location.href = `/detailProduct/${product.produkID}`)}
+            onClick={() =>
+              (window.location.href = `/detailProduct/${product.produkID}`)
+            }
           >
             <img
               src={buyIcon}

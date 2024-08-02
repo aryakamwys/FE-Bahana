@@ -106,7 +106,11 @@ const PembeliLoginPage = () => {
 
       {/* Login Form */}
       <div>
-        <div className={`${isLogin ? "lg:pb-0" : "lg:pb-[54px]"} flex flex-col w-full items-center justify-center md:my-5 lg:mt-0 lg:mb-0 mt-6 mb-6`}>
+        <div
+          className={`${
+            isLogin ? "lg:pb-0" : "lg:pb-[54px]"
+          } flex flex-col w-full items-center justify-center md:my-5 lg:mt-0 lg:mb-0 mt-6 mb-6`}
+        >
           {/* Login/Register Button */}
           <div
             className="flex items-center justify-around bg-greenLight rounded-full p-3"
@@ -276,10 +280,10 @@ const PembeliLoginPage = () => {
             <div
               className={`${
                 isLogin ? "translate-x-full" : "translate-x-0"
-              } transition duration-500 ease-in-out transform flex flex-col w-full items-center justify-center md:my-8 lg:my-7  mt-6 mb-6`}
+              } transition duration-500 ease-in-out transform flex flex-col w-full items-center justify-center md:my-8 lg:my-[37px]  mt-6 mb-6`}
             >
               {/* Welcome Message */}
-              <div className="font-semibold font-inter text-black text-center md:mt-1 my-5 leading-normal text-3xl md:text-[50px] lg:text-6xl">
+              <div className="font-semibold font-inter text-black text-center md:mt-1 mt-10 leading-normal text-3xl md:text-[50px] lg:text-6xl">
                 Create an Account!
               </div>
 

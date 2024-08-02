@@ -1,6 +1,13 @@
 import React from "react";
 
-const UploadProductField = ({ title, type, placeholder, readOnly, value, onChange }) => {
+const UploadProductField = ({
+  title,
+  type,
+  placeholder,
+  readOnly,
+  value,
+  onChange,
+}) => {
   return (
     <div className="py-3">
       <div className="flex flex-col items-start">

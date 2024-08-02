@@ -81,7 +81,10 @@ const ContentEditAlamat = () => {
           },
         };
 
-        const res = await axios.get(`http://localhost:4000/pembeli/${pembeliID}`, config);
+        const res = await axios.get(
+          `http://localhost:4000/pembeli/${pembeliID}`,
+          config
+        );
         console.log("Received data:", res.data.data);
         setUpdatedAlamat(res.data.data);
       } catch (error) {
@@ -118,7 +121,11 @@ const ContentEditAlamat = () => {
     };
 
     try {
-      const response = await axios.put(`http://localhost:4000/pembeli/${pembeliID}`, dataToUpdate, config);
+      const response = await axios.put(
+        `http://localhost:4000/pembeli/${pembeliID}`,
+        dataToUpdate,
+        config
+      );
       console.log("Updated alamat response:", response.data.data);
       setUpdatedAlamat(response.data);
       enqueueSnackbar("Alamat updated successfully", { variant: "success" });
@@ -126,7 +133,9 @@ const ContentEditAlamat = () => {
     } catch (error) {
       enqueueSnackbar("Error updating alamat", { variant: "error" });
       if (error.message === "Network Error") {
-        setErrorMessage("Network error. Please check your internet connection.");
+        setErrorMessage(
+          "Network error. Please check your internet connection."
+        );
       } else {
         setErrorMessage(
           error.response ? error.response.data.message : error.message
@@ -286,24 +295,24 @@ const ContentEditAlamat = () => {
           </div>
         </div>
         <div className="flex flex-row justify-start">
-        <button
-          className="flex items-center justify-center border-2 border-primary rounded-md w-[110px] h-[40px] md:w-[142px] md:h-[45px] lg:w-[180px] lg:h-[55px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-primary text-[16px] md:text-[20px] lg:text-[28px] "
-          onClick={() => window.history.back()}
-        >
-          Cancel
-        </button>
-        <div className="w-[24px] lg:w-10"></div>
-        <button
-          className="flex items-center justify-center bg-primary rounded-md w-[110px] h-[40px] md:w-[142px] md:h-[45px] lg:w-[180px] lg:h-[55px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-white text-[16px] md:text-[20px] lg:text-[28px]"
-          onClick={handleUpdateAlamat}
-        >
-          Save
-        </button>
+          <button
+            className="flex items-center justify-center border-2 border-primary rounded-md w-[110px] h-[40px] md:w-[142px] md:h-[45px] lg:w-[180px] lg:h-[55px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-primary text-[16px] md:text-[20px] lg:text-[28px] "
+            onClick={() => window.history.back()}
+          >
+            Cancel
+          </button>
+          <div className="w-[24px] lg:w-10"></div>
+          <button
+            className="flex items-center justify-center bg-primary rounded-md w-[110px] h-[40px] md:w-[142px] md:h-[45px] lg:w-[180px] lg:h-[55px] md:px-[33px] lg:px-11 py-2 font-inter font-medium text-white text-[16px] md:text-[20px] lg:text-[28px]"
+            onClick={handleUpdateAlamat}
+          >
+            Save
+          </button>
           {errorMessage && (
-          <div className="text-red-600 mt-4 text-[16px] md:text-[20px] lg:text-[28px]">
-            {errorMessage}
-          </div>
-        )}
+            <div className="text-red-600 mt-4 text-[16px] md:text-[20px] lg:text-[28px]">
+              {errorMessage}
+            </div>
+          )}
         </div>
       </div>
       <div className="h-[40px]"></div>

@@ -71,11 +71,11 @@ const ContainerCart = ({ item, onItemCheck, onQuantityChange }) => {
             </div>
           </div>
           <div className="px-5">
-          <PlusMinusProduct
-            quantity={quantity}
-            onQuantityChange={handleQuantityChange}
-            maxQuantity={item.jumlah_stok}
-          />
+            <PlusMinusProduct
+              quantity={quantity}
+              onQuantityChange={handleQuantityChange}
+              maxQuantity={item.jumlah_stok}
+            />
           </div>
         </div>
       </div>

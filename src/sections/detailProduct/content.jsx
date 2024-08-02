@@ -13,12 +13,13 @@ import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 
-const ContentDetailProduct = (produkData) => {
+const ContentDetailProduct = () => {
   const { produkID } = useParams();
   const [selectedWeight, setSelectedWeight] = useState(null);
   const [product, setProduct] = useState({});
   const [calculatedPrice, setCalculatedPrice] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const [productDetails, setProductDetails] = useState({});
 
   useEffect(() => {
     const fetchData = async (token) => {
@@ -67,19 +68,35 @@ const ContentDetailProduct = (produkData) => {
     }
   }, [selectedWeight, product]);
 
+  useEffect(() => {
+    if (product) {
+      setProductDetails({
+        product,
+        quantity,
+        selectedWeight,
+        calculatedPrice,
+      });
+    }
+  }, [product, quantity, selectedWeight, calculatedPrice, setProductDetails]);
+
   const handleQuantityChange = (newQuantity) => {
     setQuantity(newQuantity);
   };
 
   const handleBuyClick = () => {
-    const paymentData = {
-      product,
-      quantity,
-      selectedWeight,
-      calculatedPrice,
-    };
-    const paymentDataString = encodeURIComponent(JSON.stringify(paymentData));
-    window.location.href = `/payment?data=${paymentDataString}`;
+    const checkedProducts =
+      JSON.parse(localStorage.getItem("checkedProducts")) || [];
+    const updatedProducts = [
+      ...checkedProducts,
+      {
+        ...product,
+        jumlah: quantity,
+        selectedWeight: selectedWeight,
+        calculatedPrice: calculatedPrice,
+      },
+    ];
+    localStorage.setItem("checkedProducts", JSON.stringify(updatedProducts));
+    window.location.href = "/payment";
   };
 
   const handleWeightClick = (weight) => {
@@ -98,7 +115,7 @@ const ContentDetailProduct = (produkData) => {
       },
     ];
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-    // alert("Produk berhasil ditambahkan ke keranjang!");
+    alert("Produk berhasil ditambahkan ke keranjang!");
     window.location.reload();
   };
 

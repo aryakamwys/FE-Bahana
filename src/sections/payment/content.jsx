@@ -13,64 +13,73 @@ const options = [
   {
     label: "J&T Express",
     value: "J&T Express",
-    price: "Rp 30.000",
-    discountPrice: "Rp 35.000",
+    price: 30000,
+    discountPrice: 35000,
   },
   {
     label: "JNE Express",
     value: "JNE Express",
-    price: "Rp 25.000",
-    discountPrice: "Rp 30.000",
+    price: 25000,
+    discountPrice: 30000,
   },
   {
     label: "Si Cepat Express",
     value: "Si Cepat Express",
-    price: "Rp 15.000",
-    discountPrice: "Rp 20.000",
+    price: 15000,
+    discountPrice: 20000,
   },
   {
     label: "Ninja Express",
     value: "Ninja Express",
-    price: "Rp 15.000",
-    discountPrice: "Rp 20.000",
+    price: 15000,
+    discountPrice: 20000,
   },
 ];
 
-const products = [
-  // Example data
-  {
-    name: "Carrot",
-    description: "Lorem ipsum dolor sit amet blablalalblballllaf",
-    weight: "10 kg",
-    price: "Rp 100.000",
-    originalPrice: "Rp 150.000",
-  },
-  {
-    name: "Carrot",
-    description: "Lorem ipsum dolor sit amet blablalalblballllaf",
-    weight: "10 kg",
-    price: "Rp 100.000",
-    originalPrice: "Rp 150.000",
-  },
-  {
-    name: "Carrot",
-    description: "Lorem ipsum dolor sit amet blablalalblballllaf",
-    weight: "10 kg",
-    price: "Rp 100.000",
-    originalPrice: "Rp 150.000",
-  },
-  // Add more products if needed
-];
+// const products = [
+//   // Example data
+//   {
+//     name: "Carrot",
+//     description: "Lorem ipsum dolor sit amet blablalalblballllaf",
+//     weight: "10 kg",
+//     price: "Rp 100.000",
+//     originalPrice: "Rp 150.000",
+//   },
+//   {
+//     name: "Carrot",
+//     description: "Lorem ipsum dolor sit amet blablalalblballllaf",
+//     weight: "10 kg",
+//     price: "Rp 100.000",
+//     originalPrice: "Rp 150.000",
+//   },
+//   {
+//     name: "Carrot",
+//     description: "Lorem ipsum dolor sit amet blablalalblballllaf",
+//     weight: "10 kg",
+//     price: "Rp 100.000",
+//     originalPrice: "Rp 150.000",
+//   },
+//   // Add more products if needed
+// ];
 
-const containerHeight = products.length > 1 ? "h-[300px]" : "h-[120px]";
-const ContentPayment = () => {
+const ContentPayment = ({ setShippingCost }) => {
   const cookies = new Cookies();
   const [pembeli, setPembeli] = useState({});
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(options[0]);
   const [isOpen, setIsOpen] = useState(false);
+  const [productItems, setProductItems] = useState([]);
+  const containerHeight = productItems.length > 1 ? "h-[300px]" : "h-[120px]";
+  const [checkedProducts, setCheckedProducts] = useState([]);
+
+  useEffect(() => {
+    const storedProducts =
+      JSON.parse(localStorage.getItem("checkedProducts")) || [];
+    setCheckedProducts(storedProducts);
+  }, []);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
+    setShippingCost(option.price);
     setIsOpen(false);
   };
 
@@ -94,12 +103,24 @@ const ContentPayment = () => {
 
   useEffect(() => {
     const userToken = cookies.get("token_pembeli");
+    const product = JSON.parse(localStorage.getItem("checkedProducts") || []);
+    setProductItems(product);
     if (userToken) {
       fetchData(userToken);
     } else {
       console.log("gada token");
     }
   }, []);
+
+  const handleRemoveProduct = (productId) => {
+    const updatedProducts = checkedProducts.filter(
+      (product) => product.produkID !== productId
+    );
+    setCheckedProducts(updatedProducts);
+    localStorage.setItem("checkedProducts", JSON.stringify(updatedProducts));
+    alert("Product deleted");
+    window.location.reload();
+  };
 
   return (
     <div>
@@ -138,8 +159,13 @@ const ContentPayment = () => {
               msOverflowStyle: "none",
             }}
           >
-            {products.map((product, index) => (
-              <ProductCardPayment key={index} product={product} />
+            {productItems.map((product, index) => (
+              <ProductCardPayment
+                key={index}
+                product={product}
+                quantity={product.jumlah}
+                onRemove={handleRemoveProduct}
+              />
             ))}
           </div>
         </div>
@@ -157,7 +183,7 @@ const ContentPayment = () => {
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <div className="w-80 h-18 flex items-center font-medium font-inter text-xl">
-                  {selectedOption ? selectedOption.label : "J&T Express"}
+                  {selectedOption.label}
                 </div>
                 {isOpen ? (
                   <img
@@ -184,9 +210,11 @@ const ContentPayment = () => {
                       <div className="flex flex-row justify-between font-inter font-semibold text-black text-[14px] md:text-[20px]">
                         <div>{option.label}</div>
                         <div className="flex flex-row">
-                          <div className="ml-2">{option.price}</div>
+                          <div className="ml-2">
+                            Rp {option.price.toLocaleString()}
+                          </div>
                           <div className="ml-2 line-through text-gray text-opacity-30 text-[14px] lg:text-[20px]">
-                            {option.discountPrice}
+                            Rp {(option.price + 20000).toLocaleString()}
                           </div>
                         </div>
                       </div>

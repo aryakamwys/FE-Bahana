@@ -32,22 +32,23 @@ const CartPage = () => {
   };
 
   const handleQuantityChange = (productId, newQuantity, itemPrice) => {
-    const oldQuantity = cartItems.find(item => item.produkID === productId).jumlah;
+    const oldQuantity = cartItems.find(
+      (item) => item.produkID === productId
+    ).jumlah;
     const difference = newQuantity - oldQuantity;
 
-    setCartItems(prevCartItems =>
-      prevCartItems.map(item =>
-        item.produkID === productId
-          ? { ...item, jumlah: newQuantity }
-          : item
+    setCartItems((prevCartItems) =>
+      prevCartItems.map((item) =>
+        item.produkID === productId ? { ...item, jumlah: newQuantity } : item
       )
     );
 
     if (checkedItems[productId]) {
-      setTotalPrice(prevTotalPrice => prevTotalPrice + (difference * itemPrice));
+      setTotalPrice(
+        (prevTotalPrice) => prevTotalPrice + difference * itemPrice
+      );
     }
   };
-
 
   const handleRemoveItem = () => {
     const updatedCart = cartItems.filter(
@@ -66,6 +67,7 @@ const CartPage = () => {
     );
     localStorage.setItem("checkedProducts", JSON.stringify(checkedProducts));
     // Redirect to payment page or perform any other actions
+    window.location.href = "/payment";
   };
 
   const isAnyChecked = Object.values(checkedItems).some(

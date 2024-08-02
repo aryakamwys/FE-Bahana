@@ -25,19 +25,19 @@ const DetailProduct = () => {
           className="bg-primary rounded-md lg:rounded-xl w-[151px] h-[27px] lg:w-[205px] lg:h-[64px] "
           onClick={() => (window.location.href = "/payment")}
         >
-          <div
-            className="flex items-start justify-center text-white font-inter font-medium text-[10px] lg:text-[20px] "
-          >
+          <div className="flex items-start justify-center text-white font-inter font-medium text-[10px] lg:text-[20px] ">
             Buy
           </div>
         </button>
         <div style={{ width: 25 }}></div>
         <button className="flex flex-row row-auto items-center justify-center bg-white border border-primary rounded-md lg:rounded-xl w-[184px] h-[27px] lg:w-[275px] lg:h-[64px]">
-          <img src={CartIcon} className="w-[10px] h-[10px] lg:w-6 lg:h-6" alt="cart icon" />
+          <img
+            src={CartIcon}
+            className="w-[10px] h-[10px] lg:w-6 lg:h-6"
+            alt="cart icon"
+          />
           <div className="w-[7px] lg:w-[10px]"></div>
-          <div
-            className="flex items-center justify-center text-primary font-inter font-medium text-[10px] lg:text-[20px]"
-          >
+          <div className="flex items-center justify-center text-primary font-inter font-medium text-[10px] lg:text-[20px]">
             Masukkan Keranjang
           </div>
         </button>

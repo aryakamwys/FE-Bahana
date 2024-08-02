@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeaderPayment from "../sections/payment/header";
 import Divider from "@mui/material/Divider";
 import PaymentMethod from "../sections/payment/payment_method";
 import ContentPayment from "../sections/payment/content";
 
 const Payment = () => {
+  const [checkedProducts, setCheckedProducts] = useState([]);
+  const [shippingCost, setShippingCost] = useState(0);
+
+  useEffect(() => {
+    const products = JSON.parse(localStorage.getItem("checkedProducts")) || [];
+    setCheckedProducts(products);
+  }, []);
+
+  const calculateSubtotal = () => {
+    return checkedProducts.reduce(
+      (total, product) => total + product.calculatedPrice * product.jumlah,
+      0
+    );
+  };
+
+  const subtotal = calculateSubtotal();
+  const totalPayment = subtotal + shippingCost;
+
   return (
     <div className="flex flex-col lg:flex-row lg:min-h-screen bg-neutral max-w-screen-sm md:max-w-screen-md lg:w-full px-5 md:px-[70px] lg:px-[0px]">
       <div className="flex flex-col px-5 lg:px-0">
         <div className="flex flex-col lg:px-[100px] lg:pb-20  lg:w-[950px]">
           <HeaderPayment />
-          <ContentPayment />
+          <ContentPayment setShippingCost={setShippingCost} />
         </div>
         <div>
           <hr className="hidden lg:flex w-full" />
@@ -27,7 +45,7 @@ const Payment = () => {
                 Subtotal untuk Produk
               </div>
               <div className="font-inter font-medium text-gray text-[13px] lg:text-[20px]">
-                Rp 100.000
+                Rp {subtotal.toLocaleString()}
               </div>
             </div>
             <div className="flex flex-row justify-between">
@@ -35,7 +53,7 @@ const Payment = () => {
                 Subtotal Pengiriman{" "}
               </div>
               <div className="font-inter font-medium text-gray text-[13px] lg:text-[20px]">
-                Rp 10.000
+                Rp {shippingCost.toLocaleString()}
               </div>
             </div>
             <div className="flex flex-row justify-between">
@@ -43,7 +61,7 @@ const Payment = () => {
                 Total Pembayaran{" "}
               </div>
               <div className="font-inter font-medium text-black text-[13px] lg:text-[20px]">
-                Rp 110.000
+                Rp {totalPayment.toLocaleString()}
               </div>
             </div>
           </div>

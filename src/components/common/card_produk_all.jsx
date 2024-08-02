@@ -65,7 +65,9 @@ const CardProductAll = ({ product }) => {
           <div>
             <button
               className="w-[120px] h-[18px] lg:w-[200px] lg:h-[55px] flex flex-row justify-center items-center border-[1px] lg:border-2 border-gray border-opacity-20 rounded-full lg:pt-4 lg:pb-4 transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-opacity-100 active:scale-95 active:bg-gray-200"
-              onClick={() => (window.location.href = `/detailproduct/${product.produkID}`)}
+              onClick={() =>
+                (window.location.href = `/detailproduct/${product.produkID}`)
+              }
             >
               <img
                 src={buyIcon}

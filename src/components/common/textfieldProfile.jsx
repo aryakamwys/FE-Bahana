@@ -1,6 +1,15 @@
 import React from "react";
 
-const TextfieldProfile = ({ title, placeholder, type, readOnly, className, value, onChange, name }) => {
+const TextfieldProfile = ({
+  title,
+  placeholder,
+  type,
+  readOnly,
+  className,
+  value,
+  onChange,
+  name,
+}) => {
   return (
     <div className="pb-5">
       <div className="flex flex-col items-start">

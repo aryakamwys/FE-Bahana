@@ -241,7 +241,7 @@ const ContentTrackingOrder = ({ currentStep }) => {
             <DetailOrder title={"Estimasi tiba"} value={"28 - 29 April 2024"} />
           </div>
         </div>
-        
+
         <div className="pt-[30px] md:pt-[40px] lg:pt-0">
           <div className="border border-gray border-opacity-50  lg:pt-0 rounded-xl ">
             <div className="flex flex-col items-start w-[350px] h-[480px] md:w-[700px] md:h-[480px] lg:w-[865px] lg:h-[658px] p-[22px] lg:p-8">

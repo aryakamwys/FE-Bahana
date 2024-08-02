@@ -1,14 +1,18 @@
 import React from "react";
 
-
 const ContentHistoryTransaction = () => {
   return (
     <div>
-      <div className="overflow-x-auto py-10">
+      <div className="overflow-x-auto py-4 md:py-10">
         <table className="w-full text-xl font-inter text-black">
           <thead className=" ">
             <tr className="text-[10px] md:text-[18px] lg:text-2xl font-bold bg-gray bg-opacity-10">
-              <th scope="col" className="px-3 md:px-6 py-3 text-left rounded-s-lg">Customer</th>
+              <th
+                scope="col"
+                className="px-3 md:px-6 py-3 text-left rounded-s-lg"
+              >
+                Customer
+              </th>
               <th className="px-3 md:px-6 py-3 ">Method</th>
               <th className="px-3 md:px-6 py-3 ">Time</th>
               <th className="px-3 md:px-6 py-3 rounded-e-lg">Amount</th>

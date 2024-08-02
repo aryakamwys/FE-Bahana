@@ -15,14 +15,10 @@ const PenjualSection = () => {
             alt="profile_penjual"
           />
           <div className="flex flex-col items-start justify-center  pl-8">
-            <div
-              className="font-inter font-semibold text-start text-black text-[12px] md:text-[16px] lg:text-[28px]"
-            >
+            <div className="font-inter font-semibold text-start text-black text-[12px] md:text-[16px] lg:text-[28px]">
               Yanto.Co
             </div>
-            <div
-              className="font-inter font-semibold text-gray text-opacity-50 text-[10px] md:text-[12px] lg:text-[20px]"
-            >
+            <div className="font-inter font-semibold text-gray text-opacity-50 text-[10px] md:text-[12px] lg:text-[20px]">
               Aktif 10 Menit yang lalu
             </div>
           </div>
@@ -32,7 +28,11 @@ const PenjualSection = () => {
           onClick={() => (window.location.href = "/chat")}
         >
           <div className="flex flex-row row-auto items-center justify-center">
-            <img src={ChatIcon} className="w-[10px] h-[10px] md:w-[12px] md:h-[12px] lg:w-[24px] lg:h-[24px] " alt="icon_chat" />
+            <img
+              src={ChatIcon}
+              className="w-[10px] h-[10px] md:w-[12px] md:h-[12px] lg:w-[24px] lg:h-[24px] "
+              alt="icon_chat"
+            />
             <div style={{ width: 10 }}></div>
             <div className="text-[8px] md:text-[10px] lg:text-[20px] font-medium font-inter text-white ">
               Chat Penjual

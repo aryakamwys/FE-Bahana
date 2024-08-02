@@ -3,7 +3,7 @@ import axiosInstance from "./api";
 
 export const loginUser = async (email, password, userType) => {
   try {
-    let endpoint = '';
+    let endpoint = "";
     let loginData = {};
 
     if (userType === "pembeli") {

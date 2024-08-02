@@ -3,13 +3,23 @@ import React, { useEffect, useState } from "react";
 import DropdownIcon from "../../assets/images/dropdown.svg";
 import DropdownUpIcon from "../../assets/images/dropdown_up2.svg";
 
-const DropdownValue = ({ title, options, placeholder, className, value, onChange, paddingLeft }) => {
-  const [selectedOption, setSelectedOption] = useState(options.find(option => option.value === value) || null);
+const DropdownValue = ({
+  title,
+  options,
+  placeholder,
+  className,
+  value,
+  onChange,
+  paddingLeft,
+}) => {
+  const [selectedOption, setSelectedOption] = useState(
+    options.find((option) => option.value === value) || null
+  );
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     if (value) {
-      const selectedOption = options.find(option => option.value === value);
+      const selectedOption = options.find((option) => option.value === value);
       setSelectedOption(selectedOption);
     }
   }, [value, options]);

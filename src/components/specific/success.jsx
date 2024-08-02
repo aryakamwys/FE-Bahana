@@ -21,22 +21,22 @@ const SuccessPayment = () => {
   return (
     <div>
       <div className=" h-64 w-64">
-      {images.map((image, index) => (
-        <img
-          key={index}
-          src={image}
-          className={` w-full h-full transition-opacity duration-500 ease-out ${
-            index === currentImageIndex ? "opacity-100" : "opacity-0"
-          }`}
-          alt={`animation-${index}`}
-        />
-      ))}
-      <div>
         {images.map((image, index) => (
-          <p key={index}>{image}</p>
+          <img
+            key={index}
+            src={image}
+            className={` w-full h-full transition-opacity duration-500 ease-out ${
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
+            }`}
+            alt={`animation-${index}`}
+          />
         ))}
+        <div>
+          {images.map((image, index) => (
+            <p key={index}>{image}</p>
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };

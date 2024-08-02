@@ -102,6 +102,7 @@ const ContentEditProfileToko = () => {
 
   return (
     <div>
+      <div className="h-[20px] lg:h-10"></div>
       <TextfieldProfile
         title={"Nama Toko"}
         placeholder={updatedProfile.nama_petani}
@@ -110,11 +111,11 @@ const ContentEditProfileToko = () => {
         value={updatedProfile?.nama_petani || ""}
         onChange={handleInputChange}
         className={
-          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[604px] lg:w-[1240px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[700px] lg:w-[1400px]"
         }
         readOnly={false}
       />
-      <div className="py-3">
+      <div className="pb-3">
         <div className="flex flex-col items-start">
           <div className="font-inter font-semibold text-black text-[14px] md:text-[20px] lg:text-[26px]">
             Deskripsi Toko
@@ -124,7 +125,7 @@ const ContentEditProfileToko = () => {
             <span className="flex items-center justify-start rounded-md ring-1 ring-gray p-5 w-full ring-opacity-50 focus:ring-gray">
               <textarea
                 placeholder={updatedProfile.deskripsi}
-                className="font-inter font-medium focus:outline-none text-[12px] md:text-[16px] lg:text-[24px] h-[67px] lg:h-[171px] resize-none w-[350px] md:w-[600px] lg:w-[1240px]"
+                className="font-inter font-medium focus:outline-none text-[12px] md:text-[16px] lg:text-[24px] h-[67px] lg:h-[171px] resize-none w-[350px] md:w-[700px] lg:w-[1380px]"
                 readOnly={false}
                 name={"deskripsi"}
                 value={updatedProfile?.deskripsi || ""}
@@ -142,7 +143,7 @@ const ContentEditProfileToko = () => {
         value={updatedProfile?.email_petani || ""}
         onChange={handleInputChange}
         className={
-          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[604px] lg:w-[1240px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[700px] lg:w-[1400px]"
         }
         readOnly={false}
       />
@@ -155,7 +156,7 @@ const ContentEditProfileToko = () => {
         onChange={handleInputChange}
         readOnly={false}
         className={
-          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[604px] lg:w-[1240px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[700px] lg:w-[1400px]"
         }
       />
       <TextfieldProfile
@@ -167,7 +168,7 @@ const ContentEditProfileToko = () => {
         onChange={handleInputChange}
         readOnly={false}
         className={
-          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[604px] lg:w-[1240px]"
+          "font-inter font-medium text-[14px] md:text-[16px] lg:text-[26px] focus:outline-none w-[350px] md:w-[700px] lg:w-[1400px]"
         }
       />
       <div className="flex flex-row justify-start pt-[20px] lg:pt-0">

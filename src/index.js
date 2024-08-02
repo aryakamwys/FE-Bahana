@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css'; // Tambahkan ini
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { AuthProvider } from './context/authContext';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css"; // Tambahkan ini
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { AuthProvider } from "./context/authContext";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +11,7 @@ ReactDOM.render(
       <App />
     </AuthProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 reportWebVitals();

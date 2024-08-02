@@ -4,9 +4,8 @@ import AddProductIcon from "../../assets/images/add_product.svg";
 import AddImagesIcon from "../../assets/images/add_image2.png";
 import axios from "axios";
 import Cookies from "universal-cookie";
-import { useSnackbar } from 'notistack';
+import { useSnackbar } from "notistack";
 const cookies = new Cookies();
-
 
 const ContentUploadProduct = () => {
   const [namaProduk, setNamaProduk] = useState("");
@@ -35,26 +34,25 @@ const ContentUploadProduct = () => {
 
     const token = cookies.get("token_petani");
 
-    axios.post(
-      "http://localhost:4000/produk",
-      formData,
-      {
+    axios
+      .post("http://localhost:4000/produk", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,
         },
-      }
-    )
-    .then((res) => {
-      console.log(res.data.data);
-      enqueueSnackbar("Product uploaded successfully", { variant: 'success' });
-      window.location.href = "/profileseller";
-    })
-    .catch((error) => {
-      console.log(error);
-      window.alert = error;
-      enqueueSnackbar("Error uploading product", { variant: 'error' });
-    });
+      })
+      .then((res) => {
+        console.log(res.data.data);
+        enqueueSnackbar("Product uploaded successfully", {
+          variant: "success",
+        });
+        window.location.href = "/profileseller";
+      })
+      .catch((error) => {
+        console.log(error);
+        window.alert = error;
+        enqueueSnackbar("Error uploading product", { variant: "error" });
+      });
   };
 
   const handleFileChange = (event) => {

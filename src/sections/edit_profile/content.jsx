@@ -147,8 +147,7 @@ const ContentEditProfile = () => {
   };
 
   if (!updatedProfile) {
-    return (<div>Loading...</div>
-    );
+    return <div>Loading...</div>;
   }
 
   return (

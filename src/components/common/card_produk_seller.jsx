@@ -22,27 +22,25 @@ const PetaniCardProduct = ({ product }) => {
         />
       </div>
       <div className="p-[5px] md:px-[15px] md:py-[9px] lg:p-6">
-        <div
-          className="font-inter text-[8px] md:text-[10px] lg:text-[25px] text-black font-semibold text-start"
-        >
+        <div className="font-inter text-[8px] md:text-[10px] lg:text-[25px] text-black font-semibold text-start">
           {product.nama_produk}
         </div>
         <div className="flex flex-row row-auto items-center">
-          <div
-            className="font-inter font-semibold text-primary text-[8px] md:text-[12px] lg:text-[25px] lg:leading-normal"
-          >
+          <div className="font-inter font-semibold text-primary text-[8px] md:text-[12px] lg:text-[25px] lg:leading-normal">
             Rp {product.harga.toLocaleString()}
           </div>
           <div className="w-[5px] lg:w-[10px] "></div>
-          <div
-            className="font-inter text-[6px] md:text-[10px] lg:text-[20px] lg:leading-normal font-semibold text-gray opacity-50 line-through"
-          >
+          <div className="font-inter text-[6px] md:text-[10px] lg:text-[20px] lg:leading-normal font-semibold text-gray opacity-50 line-through">
             Rp {(product.harga + 50000).toLocaleString()}
           </div>
         </div>
         <div className="lg:h-[12px] h-[5px] "></div>
         <div className="flex flex-row row-auto items-center justify-start">
-          <img src={starIcon} className="w-[12px] h-[12px] md:w-[18px] md:[18px] lg:w-[24px] lg:h-[24px]" alt="star" />
+          <img
+            src={starIcon}
+            className="w-[12px] h-[12px] md:w-[18px] md:[18px] lg:w-[24px] lg:h-[24px]"
+            alt="star"
+          />
           <div style={{ width: 12 }}></div>
           <div className="font-inter font-semibold text-[8px] md:text-[14px] lg:text-[20px]">
             <span className="text-yellow">4.9</span>
@@ -56,7 +54,11 @@ const PetaniCardProduct = ({ product }) => {
               className="w-[78px] h-[18px] md:w-[116px] md:h-[28px] lg:w-[261px] lg:h-[55px] flex flex-row row-auto justify-center items-center border-[1px] lg:border-2 border-gray border-opacity-50 rounded-full lg:pt-4 lg:pb-4"
               onClick={() => (window.location.href = "/detailproduct")}
             >
-              <img src={buyIcon} className="w-[8px] h-[8px] md:w-[12px] md:h-[12px] lg:w-[24px] lg:h-[24px] " alt="buy icon" />
+              <img
+                src={buyIcon}
+                className="w-[8px] h-[8px] md:w-[12px] md:h-[12px] lg:w-[24px] lg:h-[24px] "
+                alt="buy icon"
+              />
               <div style={{ width: 10 }}></div>
               <span className="font-inter font-semibold text-black text-[5px] md:text-[8px] lg:text-[16px]">
                 Beli Sekarang
