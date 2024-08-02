@@ -1,8 +1,79 @@
 import React from "react";
 
 import QRISImage from "../../assets/images/qris_image.png";
+import axios from "axios";
+import Cookies from "universal-cookie";
 
 const QRISPayment = () => {
+  const handlePayment = async () => {
+    try {
+      // Mengambil data dari localStorage
+      const products =
+        JSON.parse(localStorage.getItem("checkedProducts")) || [];
+      const totalHarga = products.reduce(
+        (acc, item) => acc + item.harga * item.jumlah,
+        0
+      );
+
+      // Mengambil pembeliID dari cookies
+      const cookies = new Cookies();
+      const pembeliID = cookies.get("pembeliID");
+
+      if (!pembeliID) {
+        alert("User not logged in");
+        return;
+      }
+
+      const token = cookies.get("token_pembeli");
+
+      // Membuat transaksi di backend
+      const response = await axios.post(
+        "http://localhost:4000/transaksi",
+        {
+          tanggal_transaksi: new Date().toISOString(),
+          metode_pembayaran: "midtrans",
+          pembeliID: pembeliID, // Ganti dengan ID pembeli yang sesuai
+          produkID: products.map(({ produkID, jumlah }) => ({
+            produkID,
+            jumlah,
+          })),
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      
+
+      // Menampilkan pop-up Snap
+      if (response.data.data && response.data.data.midtransToken) {
+        window.snap.pay(response.data.data.midtransToken, {
+          onSuccess: function (result) {
+            alert("Payment successful");
+            window.location.href = "/success";
+          },
+          onPending: function (result) {
+            alert("Waiting for payment confirmation");
+          },
+          onError: function (result) {
+            alert("Payment failed");
+          },
+          onClose: function () {
+            alert("Transaction canceled");
+          },
+        });
+      } else if (response.data.data.redirect_url) {
+        window.location.href = response.data.data.redirect_url; 
+      } else {
+        alert("Failed to get Midtrans token");
+      }
+    } catch (error) {
+      console.error("Error processing payment:", error);
+      alert(error);
+    }
+  };
   return (
     <div className="flex flex-col items-center">
       <div className="flex flex-col border border-black rounded-xl w-[240px] h-[303px] md:w-[369px] md:h-[440px] ">
@@ -65,7 +136,7 @@ const QRISPayment = () => {
       <button className="bg-[#002F19] w-[221px] md:w-full rounded-xl text-[10px] md:text-[20px]">
         <div
           className="py-3 font-inter font-semibold text-white"
-          onClick={() => (window.location.href = "/success")}
+          onClick={handlePayment}
         >
           Buat Pesanan
         </div>
