@@ -35,6 +35,8 @@ import WishlistPetani from "./sections/home_seller/wishlist_seller";
 import StepOne from "./pages/biodata/step1";
 import StepTwo from "./pages/biodata/step2";
 import StepThree from "./pages/biodata/step3";
+import ProductIn from "./pages/informasiProduk";
+import MyProduct from "./pages/produksaya";
 function App() {
   return (
     <div className="App">
@@ -72,6 +74,8 @@ function App() {
           <Route path="/stepone" element={<StepOne />} />
           <Route path="/steptwo" element={<StepTwo />} />
           <Route path="/stepthree" element={<StepThree />} />
+          <Route path="/informasiproduct" element={<ProductIn />} />
+          <Route path="/myproduct" element={<MyProduct />} />
 
           <Route path="/" element={<Navigate to="/login" />}>
             <Route path="login" element={<LoginPage />} />

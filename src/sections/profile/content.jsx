@@ -8,6 +8,8 @@ import HomeIcon from "../../assets/images/home_profile.svg";
 import TruckIcon from "../../assets/images/truck_profile.svg";
 import HistoryIcon from "../../assets/images/history_profile.svg";
 import NextIcon from "../../assets/images/next_profile.svg";
+import Back from "../../assets/images/vectorback.png";
+import Down from "../../assets/images/arrow.png";
 
 const ContentProfile = () => {
   const fileInputRef = useRef(null);
@@ -224,6 +226,110 @@ const ContentProfile = () => {
                   <img src={NextIcon} alt="next" />
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+        {/* KONTEN EDIT LOKASI PRODCT FIXED DI PROFILE */}
+        <div className="w-full fixed flex justify-center items-center h-[100vh] z-40 bg-blur backdrop-blur-md bg-white/30 inset-0 ">
+          <div className=" lg:w-[800px] lg:h-[400px]  xl:w-[1112px] xl:h-[482px] w-[350px] h-[192px] md:w-[638px] md:h-[353px] bg-[#003E22] bg-opacity-85 rounded-xl    text-white ">
+            <div className="w-full flex justify-between items-center lg:border-none border-b border-white px-3 md:px-5 md:py-3 py-2">
+              <button className="flex items-center gap-1 md:gap-2">
+                <img
+                  src={Back}
+                  alt=""
+                  className="w-[8px] h-[8px] md:w-[14px] md:h-[14px] "
+                />
+                <p className="text-[10px] md:text-[20px] lg:text-[22px] font-semibold">
+                  Back
+                </p>
+              </button>
+              <h1 className="text-[12px] font-semibold  md:text-[20px] lg:text-[28px] ">
+                Edit Lokasi Yang di Hasilkan
+              </h1>
+
+              <span className="text-[12px]  md:text-[20px] lg:text-[28px] font-semibold">
+                X
+              </span>
+            </div>
+            <div className="mt-2 items-center md:px-5 lg:gap-8 md:gap-6 justify-start md:mt-7 flex gap-[14px] px-3">
+              <div className="flex flex-col items-start justify-start  gap-[2px]  md:gap-[8px]">
+                <label
+                  for="provinsi"
+                  class="block text-white text-[12px] font-medium  md:text-[20px] lg:text-[26px] "
+                >
+                  Provinsi
+                </label>
+                <div class="relative">
+                  <select
+                    id="provinsi"
+                    class="block appearance-none text-[10px] bg-white   lg:w-[225px] lg:h-[55px] lg:rounded-lg xl:w-[292px] xl:h-[70px] lg:text-[24px] text-gray border border-gray-400 hover:border-gray-500 px-2 md:w-[180px] md:h-[40px] w-[100px] h-[24px] rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                  >
+                    <option>Jawa Barat</option>
+                    <option>Jawa Tengah</option>
+                    <option>Jawa Timur</option>
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <img src={Down} alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col items-start justify-start  gap-[2px] md:gap-[8px]  ">
+                <label
+                  for="provinsi"
+                  class="block text-white text-[12px] font-medium  md:text-[20px]  lg:text-[26px]"
+                >
+                  Kota/Kab
+                </label>
+                <div class="relative">
+                  <select
+                    id="provinsi"
+                    class="block appearance-none text-[10px] bg-white  lg:w-[225px] lg:h-[55px] lg:rounded-lg xl:w-[292px] xl:h-[70px] lg:text-[24px] text-gray border border-gray-400 hover:border-gray-500 px-2 md:w-[180px] md:h-[40px] w-[100px] h-[24px] rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                  >
+                    <option>Bandung</option>
+                    <option>Bogor</option>
+                    <option>Buah Batu</option>
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <img src={Down} alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col items-start justify-start  gap-[2px] md:gap-[8px] ">
+                <label
+                  for="provinsi"
+                  class="block text-white text-[12px] font-medium  md:text-[20px]  lg:text-[26px]"
+                >
+                  Kacamatan
+                </label>
+                <div class="relative">
+                  <select
+                    id="provinsi"
+                    class="block appearance-none text-[10px]  lg:w-[225px] lg:h-[55px] lg:rounded-lg xl:w-[292px] xl:h-[70px] lg:text-[24px] bg-white text-gray border border-gray-400 hover:border-gray-500 px-2 md:w-[180px] md:h-[40px] w-[100px] h-[24px] rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                  >
+                    <option>Bojongsoang</option>
+                    <option>Baleendah</option>
+                    <option>Dayeuhkolot</option>
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <img src={Down} alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="px-3 md:px-5 flex items-center gap-1 md:gap-2 mt-2 md:mt-7">
+              <input
+                type="checkbox"
+                className="w-[15px] h-[15px] md:w-[25px] md:h-[25px] rounded-md lg:w-[32px] lg:h-[32px] "
+              />
+              <h1 className="text-[7px] font-medium md:text-[12px] lg:text-[16px] xl:text-[20px] ">
+                Saya menyetujui Syarat & Ketentuan serta Kebijakan
+                Privasi pengaturan alamat di TaniDirect.
+              </h1>
+            </div>
+            <div className="w-full justify-center items-center flex mt-8 md:mt-12 lg:mt-14 xl:mt-18">
+              <button className="text-[12px] font-bold lg:w-[428px] lg:h-[44px] lg:text-[20px] text-primary border md:w-[315px] md:h-[44px] md:text-[20px] flex justify-center items-center border-black rounded-md w-[180px] h-[28px] p-2 bg-white ">
+                Simpan
+              </button>
             </div>
           </div>
         </div>
