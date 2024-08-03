@@ -69,7 +69,7 @@ const CardProduct = ({ product }) => {
     <div className="w-[110px] h-[190px] md:w-[188px] md:h-[282px] lg:w-[400px] lg:h-[585px] bg-white border border-gray border-opacity-30 rounded-xl">
       <button
         className="p-[5px] md:p-[13px] lg:p-4"
-        onClick={() => (window.location.href = "/detailProduct")}
+        onClick={() => (window.location.href = `/detailProduct/${product.produkID}` )}
       >
         <img
           src={product.image_produk}

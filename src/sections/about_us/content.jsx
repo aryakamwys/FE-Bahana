@@ -20,7 +20,7 @@ const ContentAboutUs = () => {
               About Us
             </div>
             <div className="h-[5px] lg:h-[24px]"></div>
-            <div className="font-inter text-black font-semibold text-start text-[11px] md:text-[16px] lg:text-[25px] lg:leading-normal">
+            <div className="font-inter text-black font-medium text-start text-[11px] md:text-[16px] lg:text-[25px] lg:leading-normal">
               TaniDirect is a website as for distribute the agricultural product
               from the farm into the traders especially for lower middle-class
               SMEs without any price gaps for each economy agents. We realize
@@ -37,7 +37,7 @@ const ContentAboutUs = () => {
               How can we help farmers
             </div>
             <div className="h-[5px] lg:h-[24px]"></div>
-            <div className="font-inter font-semibold text-black text-start text-[11px] md:text-[14px] lg:text-[25px] lg:leading-normal w-[204px] md:w-[383px] lg:w-[616px] ">
+            <div className="font-inter font-medium text-black text-start text-[11px] md:text-[14px] lg:text-[25px] lg:leading-normal w-[204px] md:w-[383px] lg:w-[616px] ">
               Our main goals is to make the farmer feels the enjoyment when
               using our website. This conclude that we need to adapt the
               agricultural trend into our website. We always check all the

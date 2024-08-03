@@ -7,20 +7,88 @@ import HomeIcon from "../../assets/images/menu_pesanan.svg";
 import TruckIcon from "../../assets/images/input.svg";
 import HistoryIcon from "../../assets/images/history_profile.svg";
 import NextIcon from "../../assets/images/next_profile.svg";
+import BackIcon from "../../assets/images/back.svg";
+import CloseIcon from "../../assets/images/close.svg";
+import CheckIcon from "../../assets/images/check4.svg";
 import Cookies from "universal-cookie";
 import axios from "axios";
+import DropdownValue from "../../components/common/dropdown_value";
 const cookies = new Cookies();
 
+const provinces = [
+  { label: "Aceh", value: "Aceh" },
+  { label: "Bali", value: "Bali" },
+  { label: "East Java", value: "East Java" },
+  { label: "West Java", value: "West Java" },
+  { label: "Central Java", value: "Central Java" },
+  { label: "Yogyakarta", value: "Yogyakarta" },
+  { label: "North Sumatra", value: "North Sumatra" },
+  { label: "South Sulawesi", value: "South Sulawesi" },
+  { label: "Papua", value: "Papua" },
+  { label: "Riau", value: "Riau" },
+];
+
+const cities = [
+  { label: "Pekanbaru", value: "Pekanbaru" },
+  { label: "Dumai", value: "Dumai" },
+  { label: "Bengkalis", value: "Bengkalis" },
+  { label: "Rokan Hulu", value: "Rokan Hulu" },
+  { label: "Siak", value: "Siak" },
+  { label: "Kampar", value: "Kampar" },
+  { label: "Indragiri Hulu", value: "Indragiri Hulu" },
+  { label: "Kuantan Singingi", value: "Kuantan Singingi" },
+  { label: "Pelalawan", value: "Pelalawan" },
+  { label: "Rokan Hilir", value: "Rokan Hilir" },
+];
+
+const districts = [
+  { label: "Pekanbaru Kota", value: "Pekanbaru Kota" },
+  { label: "Sail", value: "Sail" },
+  { label: "Tenayan Raya", value: "Tenayan Raya" },
+  { label: "Marpoyan Damai", value: "Marpoyan Damai" },
+  { label: "Rumbai", value: "Rumbai" },
+  { label: "Rumbai Pesisir", value: "Rumbai Pesisir" },
+  { label: "Bukit Raya", value: "Bukit Raya" },
+  { label: "Tampan", value: "Tampan" },
+  { label: "Sukajadi", value: "Sukajadi" },
+  { label: "Lima Puluh", value: "Lima Puluh" },
+];
+
+const postalCodes = [
+  { label: "28111", value: "28111" },
+  { label: "28112", value: "28112" },
+  { label: "28113", value: "28113" },
+  { label: "28114", value: "28114" },
+  { label: "28115", value: "28115" },
+  { label: "28116", value: "28116" },
+  { label: "28117", value: "28117" },
+  { label: "28118", value: "28118" },
+  { label: "28119", value: "28119" },
+  { label: "28121", value: "28121" },
+];
+
 const ContentPetaniProfilePage = (profileDataPetani) => {
+  const [isChecked, setIsChecked] = useState(false);
   const [profile, setProfile] = useState({});
   const [showModal, setShowModal] = useState(false);
+  const [showModalAddress, setShowModalAddress] = useState(false);
+  const [updatedAlamat, setUpdatedAlamat] = useState({});
 
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
+  const openModalAddress = () => setShowModalAddress(true);
+  const closeModalAddress = () => setShowModalAddress(false);
   const fileInputRef = useRef(null);
 
   const handleButtonClick = () => {
     fileInputRef.current.click();
+  };
+
+  const handleClick = () => {
+    // setIsChecked(!isChecked);
+    // onItemCheck(item.produkID, !isChecked);
+    const newIsChecked = !isChecked;
+    setIsChecked(newIsChecked);
   };
 
   const handleLogout = async () => {
@@ -69,6 +137,13 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
       // handle the file upload logic here
       console.log(file);
     }
+  };
+
+  const handleInputDropdownChange = (name, value) => {
+    setUpdatedAlamat((prevProfile) => ({
+      ...prevProfile,
+      [name]: value,
+    }));
   };
 
   if (!profile) {
@@ -140,7 +215,7 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
             <div className="py-1">
               <button
                 className="flex items-center w-full justify-center py-2 border border-black rounded-lg"
-                onClick={() => (window.location.href = "/uploadproduct")}
+                onClick={openModalAddress}
               >
                 <div
                   className="font-inter font-semibold text-black text-start"
@@ -153,20 +228,20 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
             <div className="py-1">
               <button
                 className="flex items-center w-full justify-center py-2 border border-black rounded-lg"
-                onClick={() => (window.location.href = "/uploadproduct")}
+                onClick={() => (window.location.href = "/myproduct")}
               >
                 <div
                   className="font-inter font-semibold text-black text-start"
                   style={{ fontSize: 18 }}
                 >
-                  Produk Saya
+                  My Product
                 </div>
               </button>
             </div>
             <div className="py-1">
               <button
                 className="flex items-center w-full justify-center py-2 border border-black rounded-lg"
-                onClick={() => (window.location.href = "/uploadproduct")}
+                onClick={() => (window.location.href = "/informasiproduct")}
               >
                 <div
                   className="font-inter font-semibold text-black text-start"
@@ -314,6 +389,94 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
                           onClick={closeModal}
                         >
                           No, cancel
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {showModalAddress && (
+                <div className="fixed inset-0 flex items-center justify-center z-50 bg-white backdrop-blur-sm bg-opacity-20">
+                  <div className="relative p-4 w-full max-w-6xl max-h-full">
+                    <div className="bg-primary bg-opacity-80 p-10 rounded-xl">
+                      <div className="flex flex-row justify-between">
+                        <div className="flex flex-row items-center justify-start cursor-pointer" onClick={closeModalAddress}>
+                          <img src={BackIcon} alt="back" />
+                          <div className="pl-[10px] font-inter text-[22px] font-bold text-white">
+                            Back
+                          </div>
+                        </div>
+                        <div className="font-inter text-[28px] font-bold text-white">
+                          Edit Lokasi Produk Dihasilkan
+                        </div>
+                        <button onClick={closeModalAddress}>
+                          <img src={CloseIcon} alt="close" />
+                        </button>
+                      </div>
+                      <div className="h-[60px]"></div>
+                      <div className="hidden md:flex lg:flex flex-row justify-between md:w-[700px] lg:w-[1005px]">
+                        <DropdownValue
+                          title="Provinsi"
+                          textColor={"text-white"}
+                          name="provinsi"
+                          value={updatedAlamat.provinsi || ""}
+                          onChange={(value) =>
+                            handleInputDropdownChange("provinsi", value)
+                          }
+                          className="relative w-[163px] md:w-[140px] lg:w-[258px] text-[26px]"
+                          placeholder={
+                            updatedAlamat.provinsi || "Select Province"
+                          }
+                          options={provinces}
+                        />
+                        <DropdownValue
+                          title="Kota"
+                          textColor={"text-white"}
+                          name="kota"
+                          value={updatedAlamat.kota || ""}
+                          onChange={(value) =>
+                            handleInputDropdownChange("kota", value)
+                          }
+                          className="relative w-[163px] md:w-[140px] lg:w-[258px]"
+                          placeholder={updatedAlamat.kota || "Select City"}
+                          options={cities}
+                        />
+                        <DropdownValue
+                          title="Kecamatan"
+                          textColor={"text-white"}
+                          name="kecamatan"
+                          value={updatedAlamat.kecamatan || ""}
+                          onChange={(value) =>
+                            handleInputDropdownChange("kecamatan", value)
+                          }
+                          className="relative w-[163px] md:w-[140px] lg:w-[258px]"
+                          placeholder={
+                            updatedAlamat.kecamatan || "Select District"
+                          }
+                          options={districts}
+                        />
+                      </div>
+                      <div className="h-[27px]"></div>
+                      <div className="flex flex-row items-center justify-start">
+                        <button
+                          className={`lg:w-8 lg:h-8 border w-[15px] h-[15px] md:w-5 md:h-5 border-black  rounded-sm lg:rounded-lg flex items-center justify-center ${
+                            isChecked ? "bg-black" : "bg-white"
+                          }`}
+                          onClick={handleClick}
+                        >
+                          {isChecked ? <img src={CheckIcon} alt="check" /> : ""}
+                        </button>
+                        <div className="w-[15px]"></div>
+                        <div className="font-inter text-[20px] font-medium text-white">
+                          Saya menyetujui Syarat & Ketentuan serta Kebijakan
+                          Privasi pengaturan alamat di TaniDirect.
+                        </div>
+                      </div>
+                      <div className="h-[64px]"></div>
+                      <div className="flex items-center justify-center">
+                        <button className="flex items-center justify-center w-[428px] h-[44px] rounded-xl bg-white font-inter text-[20px] font-bold text-primary"  onClick={console.log("Update data adderess")}>
+                          Simpan
                         </button>
                       </div>
                     </div>

@@ -22,6 +22,7 @@ const PembeliLoginPage = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     console.log(process.env.REACT_APP_BASE_URL);
@@ -85,6 +86,14 @@ const PembeliLoginPage = () => {
         setLoading(false);
         console.error("Error registering:", error);
       });
+  };
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -251,19 +260,19 @@ const PembeliLoginPage = () => {
                 <ButtonWithImage
                   imgSrc={GoogleIcon}
                   text="Continue with Google"
-                  onClick={() => console.log("Google button clicked")}
+                  onClick={handleOpenModal}
                 />
                 <div style={{ height: 20 }}></div>
                 <ButtonWithImage
                   imgSrc={AppleIcon}
                   text="Continue with Apple"
-                  onClick={() => console.log("Apple button clicked")}
+                  onClick={handleOpenModal}
                 />
                 <div style={{ height: 20 }}></div>
                 <ButtonWithImage
                   imgSrc={FacebookIcon}
                   text="Continue with Facebook"
-                  onClick={() => console.log("Facebook button clicked")}
+                  onClick={handleOpenModal}
                 />
               </div>
               <button
@@ -439,6 +448,25 @@ const PembeliLoginPage = () => {
           )}
         </div>
       </div>
+      {isModalOpen && (
+        <div className="fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-full bg-black backdrop-blur-sm  bg-opacity-40">
+          <div className="relative  w-full max-w-xl bg-white rounded-3xl shadow ">
+            <div className="flex flex-col items-center p-10">
+              <h2 className="text-2xl font-semibold font-inter text-black">
+                Feature Unavailable
+              </h2>
+              <div className="h-5"></div>
+              <h4 className="text-lg font-normal font-inter text-black">
+                This feature is currently unavailable. We are working hard to
+                bring this feature to you soon 😊
+              </h4>
+            </div>
+            <div className="py-4 border-t border-gray border-opacity-40 font-inter text-3xl font-bold text-primary cursor-pointer" onClick={handleCloseModal}>
+              OK
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

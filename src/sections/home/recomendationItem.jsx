@@ -5,7 +5,7 @@ import ArrowRight from "../../assets/images/arrow_right.svg";
 import ArrowLeft from "../../assets/images/arrow_left.svg";
 
 const Recomendation = () => {
-  const [currentCard, setCurrentCard] = useState(0);
+  const [currentCard, setCurrentCard] = useState(1);
   const cards = [
     { id: 1, image: "image1", title: "Card 1" },
     { id: 2, image: "image2", title: "Card 2" },

@@ -38,6 +38,8 @@ import ProtectedRoute from "./components/specific/protectedRoute";
 import StepOne from "./pages/biodata/step1";
 import StepTwo from "./pages/biodata/step2";
 import StepThree from "./pages/biodata/step3";
+import ProductIn from "./pages/product_information";
+import MyProduct from "./pages/my_product";
 
 function App() {
   return (
@@ -301,6 +303,24 @@ function App() {
             element={
               <ProtectedRoute
                 element={UploadProduct}
+                allowedUserTypes={["petani"]}
+              />
+            }
+          />
+          <Route
+            path="/informasiproduct"
+            element={
+              <ProtectedRoute
+                element={ProductIn}
+                allowedUserTypes={["petani"]}
+              />
+            }
+          />
+          <Route
+            path="/myproduct"
+            element={
+              <ProtectedRoute
+                element={MyProduct}
                 allowedUserTypes={["petani"]}
               />
             }

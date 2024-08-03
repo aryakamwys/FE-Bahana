@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CartIcon from "../../assets/images/cart.svg";
 import Logo from "../../assets/images/logo.png";
 
-const NavbarPembeli = ({ className }) => {
+const NavbarPetani = ({ className }) => {
   const [cartItemCount, setCartItemCount] = useState(0);
 
   useEffect(() => {
@@ -73,4 +73,4 @@ const NavbarPembeli = ({ className }) => {
     </div>
   );
 };
-export default NavbarPembeli;
+export default NavbarPetani;
