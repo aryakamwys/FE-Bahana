@@ -1,10 +1,10 @@
 import React from "react";
 
 import ImageDummy from "../../assets/images/sayur.jpg";
-import love from "../../assets/images/lope.png";
-import eye from "../../assets/images/eye.png";
-import cart from "../../assets/images/shopping-bag.png";
-import layers from "../../assets/images/layers.png";
+import love from "../../assets/images/love.svg";
+import eye from "../../assets/images/eye.svg";
+import cart from "../../assets/images/shop.svg";
+import layers from "../../assets/images/layers.svg";
 
 const CardProduct = () => {
   return (
@@ -65,53 +65,60 @@ const CardProduct = () => {
           </div>
         </div>
       </div>
-      <div className="">
-        <div className="flex justify-between  items-center flex-wrap gap-3 ">
-          <div className="flex md:flex-row w-[130px] items-center gap-2 ">
-            <img
-              src={eye}
-              alt=""
-              className="md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] "
-            />
-            <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
-              Dilihat
-            </p>
-            <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
-              1033
-            </p>
-          </div>
-          <div className="flex items-center gap-2 w-[130px]">
-            <img
-              src={love}
-              alt=""
-              className="md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] "
-            />
-            <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
-              Dilihat
-            </p>
-            <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
-              1033
-            </p>
-          </div>
 
-          <div className="flex items-center gap-2 w-[130px]">
-            <img
-              src={layers}
-              alt=""
-              className="md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] "
-            />
-            <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
-              Dilihat
-            </p>
-            <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
-              1033
-            </p>
-          </div>
-          <div className="flex items-center gap-2 w-[130px]">
-            <img src={cart} alt="" className="md:w-[30px] md:h-[30px] " />
-            <p className="text-[10px] md:text-[15px] font-semibold">Dilihat</p>
-            <p className="text-[10px] md:text-[15px] font-semibold">1033</p>
-          </div>
+      <div className="flex justify-between w-full items-center flex-wrap gap-3 ">
+        <div className="flex md:flex-row  items-center gap-2 b w-[130px] md:w-auto g-slate-900 ">
+          <img
+            src={eye}
+            alt=""
+            className="md:w-[30px] md:h-[30px] w-[15px] h-[15px] lg:w-[40px] lg:h-[40px] "
+          />
+          <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
+            Dilihat
+          </p>
+          <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
+            1033
+          </p>
+        </div>
+        <div className="flex items-center gap-2 w-[130px] md:w-auto ">
+          <img
+            src={love}
+            alt=""
+            className="md:w-[30px] md:h-[30px] w-[15px] h-[15px] lg:w-[40px] lg:h-[40px] "
+          />
+          <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
+            Dilihat
+          </p>
+          <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
+            1033
+          </p>
+        </div>
+
+        <div className="flex items-center gap-2 w-[130px] md:w-auto ">
+          <img
+            src={layers}
+            alt=""
+            className="md:w-[30px] md:h-[30px] w-[15px] h-[15px] lg:w-[40px] lg:h-[40px] "
+          />
+          <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
+            Dilihat
+          </p>
+          <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
+            1033
+          </p>
+        </div>
+        <div className="flex items-center gap-2 w-[130px] md:w-auto ">
+          <img
+            src={cart}
+            alt=""
+            className="md:w-[30px] md:h-[30px] w-[15px] h-[15px] lg:w-[40px] lg:h-[40px]"
+          />
+          <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
+            Dilihat
+          </p>
+          <p className="text-[10px] md:text-[15px] lg:text-[25px] font-semibold">
+            1033
+          </p>
         </div>
       </div>
     </div>

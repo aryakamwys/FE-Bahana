@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderProduk from "./headerproduk";
-import Image from "../../assets/images/imageup.png";
+import galeri from "../../assets/images/galeri.png";
 import Down from "../../assets/images/arrow.png";
 import peta from "../../assets/images/basemap.png";
 
@@ -29,11 +29,18 @@ const Produk = () => {
             >
               Product Images
             </label>
-            <img
-              src={Image}
-              alt=""
-              className="w-[110px] h-[110px] md:w-[200px]  md:h-[200px] lg:w-[300px] lg:h-[300px] "
-            />
+            <div className="w-[110px] h-[110px] md:w-[200px]  md:h-[200px] lg:w-[300px] lg:h-[300px] border border-dashed rounded-lg border-opacity-50 flex items-center justify-center ">
+              <div className="flex flex-col items-center gap-1">
+                <img
+                  src={galeri}
+                  alt=""
+                  className="w-[25px] h-[25px] md:w-[40px] md:h-[40px] lg:w-[80px] lg:h-[80px] "
+                />
+                <p className="text-[10px] font-semibold md:text-[16px] lg:text-[22px] ">
+                  + Add Image
+                </p>
+              </div>
+            </div>
             <label
               htmlFor=""
               className=" mt-3 text-[16px] md:text-[25px] font-semibold  lg:text-[32px] "
@@ -109,11 +116,18 @@ const Produk = () => {
           <h1 className="text-[16px] md:text-[25px] font-bold text-[#2570EB] mb-2 lg:text-[32px] ">
             Information of Farmer
           </h1>
-          <img
-            src={Image}
-            alt=""
-            className="w-[110px] h-[110px] md:w-[200px]  md:h-[200px] md:mt-2  md:mb-2 lg:w-[300px] lg:h-[300px] "
-          />
+          <div className="w-[110px] h-[110px] md:w-[200px]  md:h-[200px] lg:w-[300px] lg:h-[300px] border border-dashed rounded-lg border-opacity-50 flex items-center justify-center ">
+            <div className="flex flex-col items-center gap-1">
+              <img
+                src={galeri}
+                alt=""
+                className="w-[25px] h-[25px] md:w-[40px] md:h-[40px] lg:w-[80px] lg:h-[80px] "
+              />
+              <p className="text-[10px] font-semibold md:text-[16px] lg:text-[22px] ">
+                + Add Image
+              </p>
+            </div>
+          </div>
           <div className="flex flex-col gap-2 w-full items-start justify-start mb-3 mt-1">
             <label
               htmlFor=""
@@ -131,7 +145,7 @@ const Produk = () => {
 
             <textarea
               placeholder="A detailed description of the product helps customers to learn more about the product."
-              className="border-black border-opacity-40 border-[0.1px] md:h-[142px] h-[98px] rounded-md  p-3  flex justify-center items-center  placeholder:text-[10px] md:placeholder:text-[16px] lg:h-[151px]  w-full placeholder:text-[#B0B0B0]"
+              className="border-black border-opacity-40 border-[0.1px] md:h-[142px] h-[98px] rounded-md  p-3  flex justify-center items-center  placeholder:text-[10px] md:placeholder:text-[16px] lg:placeholder:text-[22px] lg:h-[151px]  w-full placeholder:text-[#B0B0B0]"
             ></textarea>
           </div>
           <h1 className="text-[12px] font-semibold md:text-[20px] lg:text-[26px] ">
