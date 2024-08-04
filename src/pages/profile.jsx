@@ -1,6 +1,5 @@
 import React from "react";
 import NavbarPembeli from "../components/specific/navbar";
-import HeaderProfile from "../sections/profile/header";
 import ContentProfile from "../sections/profile/content";
 import Footer from "../components/specific/footer";
 import Header from "../components/common/header";

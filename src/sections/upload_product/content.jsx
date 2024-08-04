@@ -32,10 +32,14 @@ const ContentUploadProduct = () => {
       formData.append("image_produk", selectedFile);
     }
 
+    // Retrieve petaniID from cookies
+    const petaniID = cookies.get("petaniID");
+    formData.append("petaniID", petaniID);
+
     const token = cookies.get("token_petani");
 
     axios
-      .post("http://localhost:4000/produk", formData, {
+      .post(`${process.env.REACT_APP_BASE_URL}/produk`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,
@@ -50,7 +54,8 @@ const ContentUploadProduct = () => {
       })
       .catch((error) => {
         console.log(error);
-        window.alert = error;
+        // window.alert = error;
+        alert("upload failed");
         enqueueSnackbar("Error uploading product", { variant: "error" });
       });
   };

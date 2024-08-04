@@ -9,6 +9,7 @@ import Skeleton from "../../components/common/skeleton";
 const CardProduct = ({ product }) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [loading, setLoading] = useState(true);
+  const cloudinaryBaseURL = process.env.REACT_APP_IMAGE_URL;
 
   const handleBookmarkClick = () => {
     const bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
@@ -22,6 +23,7 @@ const CardProduct = ({ product }) => {
       localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     }
     setIsBookmarked((prev) => !prev);
+    console.log(product.image_produk);
   };
 
   useEffect(() => {
@@ -33,8 +35,6 @@ const CardProduct = ({ product }) => {
       );
     }
   }, [product]);
-
-  console.log(product.image_produk);
 
   if (loading) {
     return (
@@ -72,7 +72,8 @@ const CardProduct = ({ product }) => {
         onClick={() => (window.location.href = `/detailProduct/${product.produkID}` )}
       >
         <img
-          src={product.image_produk}
+          // src={`/static/${product.image_produk}`}
+          src={`https://res.cloudinary.com/dqj2k0khn/image/upload/v1722727432/${product.image_produk}`}
           alt={product.nama_produk}
           // onError={handleImageError}
           className="w-[100px] h-[84px] md:w-[158px] md:h-[118px] lg:w-[350px] lg:h-[305px]"

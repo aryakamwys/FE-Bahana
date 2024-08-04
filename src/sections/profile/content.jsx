@@ -14,6 +14,8 @@ const cookies = new Cookies();
 const ContentProfile = (profileData) => {
   const [profile, setProfile] = useState({});
   const [showModal, setShowModal] = useState(false);
+  const cloudinaryBaseURL = process.env.REACT_APP_IMAGE_URL;
+  const baseURL = process.env.REACT_APP_BASE_URL;
 
   const fileInputRef = useRef(null);
   const openModal = () => setShowModal(true);
@@ -38,18 +40,28 @@ const ContentProfile = (profileData) => {
 
   const fetchData = (token) => {
     const pembeliID = cookies.get("pembeliID");
+    if (!pembeliID) {
+      console.error("Pembeli ID not found in cookies");
+      return;
+    }
     const config = {
       headers: {
         Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Credentials": "false",
       },
     };
     axios
-      .get(`http://localhost:4000/pembeli/${pembeliID}`, config)
+      .get(`https://api-tani-direct.vercel.app/pembeli/${pembeliID}`, config)
+      // .get(`http://localhost:4000/pembeli/${pembeliID}`, config)
       .then((res) => {
         setProfile(res.data.data);
         console.log(res.data.data);
       })
-      .catch((error) => {
+      .catch((error, res) => {
+        // console.log(res.data.data);
         console.log("Error fetching data:", error);
       });
   };
@@ -88,7 +100,7 @@ const ContentProfile = (profileData) => {
           <div className="flex flex-col items-center">
             <div className="flex flex-col w-[173px] md:w-[223px] lg:w-96 items-center border border-black rounded-xl p-[15px]">
               <img
-                src={`http://localhost:4000/uploads/${profile.image_pembeli}`}
+                src={`https://res.cloudinary.com/dqj2k0khn/image/upload/v1722727432/${profile.image_pembeli}`}
                 className="w-[139px] h-[121px] md:w-[189px] md:h-[155px] lg:w-80 lg:h-72"
                 alt="profile_photo"
               />

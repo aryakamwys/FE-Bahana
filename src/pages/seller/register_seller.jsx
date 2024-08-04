@@ -26,7 +26,7 @@ const PetaniRegisterPage = () => {
     // }
     // if (!formValid) return;
     axios
-      .post("http://localhost:4000/petani/register", {
+      .post(`${process.env.REACT_APP_BASE_URL}/petani/register`, {
         email_petani: email,
         password_petani: password,
         nama_petani: nama,

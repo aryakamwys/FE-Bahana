@@ -35,6 +35,10 @@ const PembeliLoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
+      // .post(`https://api-tani-direct.vercel.app/pembeli/login`, {
+      //   email_pembeli: email,
+      //   password_pembeli: password,
+      // })
       .post(`http://localhost:4000/pembeli/login`, {
         email_pembeli: email,
         password_pembeli: password,

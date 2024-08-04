@@ -124,12 +124,18 @@ const ContentDetailProduct = () => {
       <div className="h-[30px] lg:h-[20px]"></div>
       <div className="flex flex-col md:flex-row row-auto">
         <div>
-          <img
-            // src={`http://localhost:4000/uploads/${product.image_produk}`}
-            src={ProductImage}
+          {/* <img
+            // src={product?.image_produk}
+            // src={ProductImage}
+
             className="border border-gray border-opacity-50 md:rounded-lg lg:rounded-2xl w-[350px] h-[222px] lg:w-[700px] lg:h-[434px] "
             alt="productimage"
-          />
+          /> */}
+          <img
+            src="http://localhost:4000/uploads/image_produk-1722679327131-59551793.jpeg"
+            class="border border-gray border-opacity-50 md:rounded-lg lg:rounded-2xl w-[350px] h-[222px] lg:w-[700px] lg:h-[434px] "
+            alt="productimage"
+          ></img>
           <DetailImage />
         </div>
         <div style={{ width: 36 }}></div>

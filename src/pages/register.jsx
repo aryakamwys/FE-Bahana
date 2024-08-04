@@ -25,7 +25,7 @@ const PembeliRegisterPage = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/pembeli/register", {
+      .post(`${process.env.REACT_APP_BASE_URL}/pembeli/register`, {
         email_pembeli: email,
         password_pembeli: password,
         nama_pembeli: nama,

@@ -110,6 +110,7 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
       headers: {
         Authorization: `Bearer ${token}`,
       },
+      withCredentials: true,
     };
     axios
       .get(`http://localhost:4000/petani/${petaniID}`, config)
@@ -399,7 +400,7 @@ const ContentPetaniProfilePage = (profileDataPetani) => {
               {showModalAddress && (
                 <div className="fixed inset-0 flex items-center justify-center z-50 bg-white backdrop-blur-sm bg-opacity-20">
                   <div className="relative p-4 w-full max-w-6xl max-h-full">
-                    <div className="bg-primary bg-opacity-80 p-10 rounded-xl">
+                    <div className="bg-primary bg-opacity-90 p-10 rounded-xl">
                       <div className="flex flex-row justify-between">
                         <div className="flex flex-row items-center justify-start cursor-pointer" onClick={closeModalAddress}>
                           <img src={BackIcon} alt="back" />
