@@ -10,6 +10,7 @@ import Textfield from "../components/common/textfield";
 import Divider from "@mui/material/Divider";
 import axios from "axios";
 import Cookies from "universal-cookie";
+import request from "../utils/config";
 const cookies = new Cookies();
 const PembeliLoginPage = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -34,12 +35,12 @@ const PembeliLoginPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    axios
+    request
       // .post(`https://api-tani-direct.vercel.app/pembeli/login`, {
       //   email_pembeli: email,
       //   password_pembeli: password,
       // })
-      .post(`http://localhost:4000/pembeli/login`, {
+      .post(`/pembeli/login/`, {
         email_pembeli: email,
         password_pembeli: password,
       })

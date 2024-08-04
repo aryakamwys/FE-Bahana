@@ -10,7 +10,10 @@ import HistoryIcon from "../../assets/images/history_profile.svg";
 import NextIcon from "../../assets/images/next_profile.svg";
 import Cookies from "universal-cookie";
 import axios from "axios";
+import request from "../../utils/config";
+
 const cookies = new Cookies();
+
 const ContentProfile = (profileData) => {
   const [profile, setProfile] = useState({});
   const [showModal, setShowModal] = useState(false);
@@ -40,30 +43,18 @@ const ContentProfile = (profileData) => {
 
   const fetchData = (token) => {
     const pembeliID = cookies.get("pembeliID");
-    if (!pembeliID) {
-      console.error("Pembeli ID not found in cookies");
-      return;
-    }
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Credentials": "false",
-      },
-    };
-    axios
-      .get(`https://api-tani-direct.vercel.app/pembeli/${pembeliID}`, config)
+
+    request
+      .get(`/pembeli/${pembeliID}`)
       // .get(`http://localhost:4000/pembeli/${pembeliID}`, config)
       .then((res) => {
-        setProfile(res.data.data);
-        console.log(res.data.data);
+        setProfile(res.data?.data);
+        console.log(res.data?.data);
       })
-      .catch((error, res) => {
-        // console.log(res.data.data);
-        console.log("Error fetching data:", error);
-      });
+      // .catch((error, res) => {
+      //   // console.log(res.data.data);
+      //   console.log("Error fetching data:", error);
+      // });
   };
 
   useEffect(() => {
